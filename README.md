@@ -5,7 +5,7 @@
 [![Allocations](https://img.shields.io/badge/Hot%20Path-0%20allocs-brightgreen)](#生产落地与安全基线)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-高性能、零内存分配（0-Alloc）的 OpenTelemetry 语义属性扁平化归一库。
+面向 OpenTelemetry 语义属性的扁平化归一库，支持零堆分配的分类查找与只读 Peer 枚举。
 
 把 OpenTelemetry（OTLP）span / resource 属性映射成**扁平的、逐 span 落库的字段**（例如高性能存入 ClickHouse）：提供两个正交的分类列 `technology` + `entity_type`，外加 HTTP / URL / network / DB core 字段、出站 `peer.*`、operation name、resource name、service、env 和 version。
 
@@ -31,6 +31,11 @@
     - [端点字段的 OTel 官方迁移依据 (`server.address` & `server.port`)](#端点字段的-otel-官方迁移依据-serveraddress--serverport)
   - [4. 全量属性编织 (`semconvweave`)](#4-全量属性编织-semconvweave)
 - [与 DataDog 的实质差异](#与-datadog-的实质差异)
+- [性能基准与复现](#性能基准与复现)
+  - [第一阶段：完整 Span 投影优化](#第一阶段完整-span-投影优化)
+  - [第二阶段：选择性迁移与稀疏投影](#第二阶段选择性迁移与稀疏投影)
+  - [完整报告与原始证据](#完整报告与原始证据)
+  - [复现方法](#复现方法)
 - [生产落地与安全基线](#生产落地与安全基线)
   - [零堆分配（0-Alloc）热路径契约](#零堆分配0-alloc热路径契约)
   - [基数与 PII 安全边界](#基数与-pii-安全边界)
@@ -44,7 +49,7 @@
 
 ## 核心特性
 
-- **极致性能与 0 堆分配**：输入直接基于 Collector `pcommon.Map` 与 `ptrace.SpanKind`，无包装对象、无中间 Map，热路径核心提取保持 0 allocation。
+- **零堆分配的分类与只读枚举**：输入直接基于 Collector `pcommon.Map` 与 `ptrace.SpanKind`；分类查找和只读 Peer 枚举的分配边界见[热路径契约](#零堆分配0-alloc热路径契约)，完整 Span 投影的实测分配见[性能基准](#性能基准与复现)。
 - **双正交分类模型**：独立拆分细粒度技术轴（`technology`）与有界角色轴（`entity_type`），彻底解决传统映射中技术被强行坍缩或角色污染的问题。
 - **双代兼容与跨版本平滑演进**：以 **SemConv v1.41.0** 为 canonical 基准，所有查找均保证“新属性优先、旧属性兜底”，自动统一 1.30 等跨版本厂商命名变更（如 `mssql` 统一为 `microsoft.sql_server`）。
 - **完整的出站对端识别 (`peer.*`)**：覆盖 13 个标准对端属性提取，支持高吞吐快照枚举、指纹生成及 ClickHouse ALIAS 读时显示名计算。
@@ -383,15 +388,137 @@ decision := weave.SpanAttribute(sourceAttrs, "SELECT * FROM users", "db.system",
 
 ---
 
+## 性能基准与复现
+
+完整 Span 投影经过两阶段优化。第一阶段以原始实现为对照，第二阶段再以第一阶段的优化实现为对照。下面列出两次通过协议判定的实验中全部用例；中间一次无结论实验也保留在报告索引中。
+
+**测量环境**：2026-09-16，Apple M4、macOS / `darwin/arm64`、Go 1.25.4、pdata v1.55.0、`GOMAXPROCS=1`。每组对照与候选编译进同一个测试二进制；每个版本采集 8 次独立进程样本，交替执行顺序，预热 100 ms/case，正式测量 200 ms/case。工作站后台负载未受控，协议按 MAD 判断噪声。
+
+表中耗时为 8 次样本的中位数；`ns/op` 为每次操作的纳秒数，`B/op` 为每次操作的堆分配字节数，`allocs/op` 为每次操作的堆分配次数。耗时降低按 `1 - 优化后 / 优化前` 计算。MAD（中位绝对偏差）、阈值和所有样本见各轮报告与统计 JSON。
+
+这些是历史版本上的合成热缓存微基准，不代表当前提交、其他硬件或端到端 Collector 的吞吐、p99。DB 用例使用预先脱敏的查询文本，不计自定义 SQL sanitizer 的成本。公开文件是已脱敏的历史副本，原封存标识与公开字节校验的区别见 [发布说明](benchmarks/README.md)。
+
+### 第一阶段：完整 Span 投影优化
+
+对比 `BenchmarkProjectSpanBaseline` 与 `BenchmarkProjectSpanCandidate`。候选实现组合使用规则筛选、协议工作位和批量复制；测量支持该组合的效果，不单独分摊各项优化的收益。BR-001 的判定为 **`passed`**。
+
+| Case | 优化前 ns/op | 优化后 ns/op | 耗时降低 | B/op（前 → 后） | allocs/op（前 → 后） |
+|---|---:|---:|---:|---:|---:|
+| Unchanged8 | 1,201.50 | 320.75 | 73.3% | 832 → 544 | 15 → 12 |
+| Unchanged32 | 4,326.00 | 1,010.65 | 76.6% | 3,328 → 2,016 | 41 → 36 |
+| Unchanged64 | 9,806.00 | 1,942.00 | 80.2% | 6,912 → 3,808 | 74 → 68 |
+| CanonicalHTTP8 | 1,151.00 | 712.05 | 38.1% | 832 → 544 | 15 → 12 |
+| HTTP | 1,790.00 | 1,511.00 | 15.6% | 1,160 → 872 | 24 → 21 |
+| DB | 1,334.50 | 1,135.50 | 14.9% | 824 → 536 | 15 → 12 |
+| RPC | 1,599.50 | 1,475.50 | 7.8% | 896 → 608 | 20 → 17 |
+| MissingContext | 997.70 | 830.60 | 16.7% | 784 → 656 | 13 → 11 |
+| Invalid | 1,094.00 | 993.40 | 9.2% | 944 → 816 | 16 → 14 |
+| Mixed | 24,220.50 | 10,613.50 | 56.2% | 16,512 → 10,400 | 233 → 203 |
+
+`UnchangedN` 表示 N 个无需转换的属性。此轮 `Mixed` 的一次操作会遍历 9 个 fixture，表中耗时与分配均按整轮计。
+
+来源：[BS-001 协议](benchmarks/suites/b-001_span-projection/scenarios/bs-001_bitmap-dispatch.md)、[BR-001 完整报告](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/RESULT.md)、[统计 JSON](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/summary.json)、[全部原始样本与诊断](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts)。
+
+### 第二阶段：选择性迁移与稀疏投影
+
+对比 `BenchmarkSelectiveProjectionPrior` 与 `BenchmarkSelectiveProjectionCandidate`。`Prior` 是冻结的第一阶段优化实现，候选实现增加选择性上下文处理和稀疏输出构造。两列均来自 BR-003 内部的配对测量，不能与 BR-001 的绝对数值直接拼接。
+
+BR-002 因时间离散度较大判为 **`inconclusive`**。BR-003 是协议允许的一次完整复测，判定为 **`passed`**；两轮样本分别保存，没有合并或剔除。
+
+| Case | 优化前 ns/op | 优化后 ns/op | 耗时降低 | B/op（前 → 后） | allocs/op（前 → 后） |
+|---|---:|---:|---:|---:|---:|
+| Unchanged8 | 321.55 | 294.20 | 8.5% | 544 → 544 | 12 → 12 |
+| Unchanged32 | 988.20 | 892.15 | 9.7% | 2,016 → 2,016 | 36 → 36 |
+| Unchanged64 | 1,906.50 | 1,709.00 | 10.4% | 3,808 → 3,808 | 68 → 68 |
+| CanonicalHTTP8 | 698.45 | 489.70 | 29.9% | 544 → 544 | 12 → 12 |
+| HTTP | 1,547.00 | 1,496.50 | 3.3% | 872 → 872 | 21 → 21 |
+| DB | 1,127.00 | 816.75 | 27.5% | 536 → 536 | 12 → 12 |
+| RPC | 1,471.50 | 1,111.50 | 24.5% | 608 → 608 | 17 → 17 |
+| MissingContext | 817.90 | 565.70 | 30.8% | 656 → 656 | 11 → 11 |
+| Invalid | 985.10 | 630.15 | 36.0% | 816 → 816 | 14 → 14 |
+| Sparse1Of32 | 2,805.00 | 1,048.00 | 62.6% | 2,016 → 2,016 | 36 → 36 |
+| Sparse2Of32 | 3,032.00 | 1,219.50 | 59.8% | 2,016 → 2,016 | 36 → 36 |
+| Dense32 | 3,855.50 | 3,463.50 | 10.2% | 6,960 → 6,960 | 138 → 138 |
+| Sparse1Of64 | 6,937.50 | 1,951.00 | 71.9% | 3,808 → 3,808 | 68 → 68 |
+| Sparse2Of64 | 7,376.50 | 2,218.00 | 69.9% | 3,808 → 3,808 | 68 → 68 |
+| Dense64 | 7,534.00 | 6,968.00 | 7.5% | 14,384 → 14,384 | 267 → 267 |
+| Sparse1Of128 | 20,208.00 | 3,793.50 | 81.2% | 7,520 → 7,520 | 132 → 132 |
+| Sparse2Of128 | 20,966.50 | 4,231.50 | 79.8% | 7,520 → 7,520 | 132 → 132 |
+| Dense128 | 14,988.00 | 13,493.00 | 10.0% | 29,360 → 29,360 | 524 → 524 |
+| CanonicalDB8 | 929.65 | 567.00 | 39.0% | 528 → 528 | 12 → 12 |
+| CanonicalRPC8 | 1,079.00 | 664.80 | 38.4% | 528 → 528 | 12 → 12 |
+| Mixed | 103,865.00 | 49,200.50 | 52.6% | 88,848 → 88,848 | 1,628 → 1,628 |
+
+`Sparse1OfN` / `Sparse2OfN` 表示 N 个属性中有 1 / 2 个转换候选；Dense 用例包含密集的旧式 HTTP header 属性。此轮 `Mixed` 的一次操作遍历 20 个 fixture，因此与第一阶段的 `Mixed` 不是同一个工作量。
+
+本轮所有用例的分配字节数和次数均未变化。HTTP、DB、RPC、MissingContext、Invalid 五个用例的候选/对照耗时比几何均值为 `0.748084`，在本轮定义下相当于约 25.2% 的耗时降低。
+
+来源：[BS-002 协议](benchmarks/suites/b-001_span-projection/scenarios/bs-002_selective-migration.md)、[BR-003 完整报告](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/RESULT.md)、[统计 JSON](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts/summary.json)、[全部原始样本与诊断](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts)。
+
+### 完整报告与原始证据
+
+| 实验 | 对照与目的 | 原始结论 | 报告 | 统计与全部样本 |
+|---|---|---|---|---|
+| BR-001 | 原始实现 → 第一阶段完整投影优化 | `passed` | [报告](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/RESULT.md) | [summary.json](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/summary.json) · [artifacts/](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts) |
+| BR-002 | 第一阶段实现 → 选择性迁移；首轮噪声较大 | `inconclusive` | [报告](benchmarks/suites/b-001_span-projection/runs/br-002_selective-sparse/RESULT.md) | [summary.json](benchmarks/suites/b-001_span-projection/runs/br-002_selective-sparse/artifacts/summary.json) · [artifacts/](benchmarks/suites/b-001_span-projection/runs/br-002_selective-sparse/artifacts) |
+| BR-003 | 同一实现与协议的完整复测 | `passed` | [报告](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/RESULT.md) | [summary.json](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts/summary.json) · [artifacts/](benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts) |
+
+[实验总索引](benchmarks/BENCHMARKS.md)提供 Suite、Scenario 和 Run 的关联。CPU profiles 见 BR-001 的 [Baseline](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/cpu-Baseline.pprof) 与 [Candidate](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/cpu-Candidate.pprof)，可直接阅读对应的 [Baseline top](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/cpu-Baseline-top.txt) 与 [Candidate top](benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/cpu-Candidate-top.txt)。原报告注明应用层采样稀疏，因此这些 profiles 只作补充诊断，不作精确 CPU 成本分解。
+
+### 复现方法
+
+需要 Go 1.25+ 和 Python 3。以下历史协议脚本面向 macOS，其中选择性迁移脚本调用 `sysctl`；在其他平台可先使用下面的 Go 基准入口，但不能据此宣称复现了原环境。
+
+先获取代码，并验证公开证据的文件大小与 SHA-256：
+
+```bash
+git clone https://github.com/XiaoWeiKIN/otel-semconv-normalizer.git
+cd otel-semconv-normalizer
+python3 benchmarks/verify_publication.py
+```
+
+如果只想复核已有样本的统计，无需重新测量。以下命令在临时目录重算 BR-003，并与发布的统计文件比较；`diff` 无输出且退出 0 表示一致：
+
+```bash
+summary_output=$(mktemp -d "${TMPDIR:-/tmp}/otel-summary.XXXXXX")
+cp benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts/repeat-*.txt "$summary_output/"
+python3 benchmarks/suites/b-001_span-projection/scripts/summarize_selective.py "$summary_output"
+diff benchmarks/suites/b-001_span-projection/runs/br-003_selective-sparse-repeat/artifacts/summary.json "$summary_output/summary.json"
+```
+
+仅查看当前代码的基准入口，可运行：
+
+```bash
+GOMAXPROCS=1 go test -run '^$' -bench '^(BenchmarkProjectSpan(Baseline|Candidate)|BenchmarkSelectiveProjection(Prior|Candidate))$' -benchmem ./semconvweave
+```
+
+按 8 次交替进程采样的协议重新测量时，使用仓库中的 [第一阶段脚本](benchmarks/suites/b-001_span-projection/scripts/run.py) 和 [第二阶段脚本](benchmarks/suites/b-001_span-projection/scripts/run_selective.py)。下面为两组实验创建独立临时目录，避免覆盖历史记录；完整执行需要数分钟。
+
+```bash
+benchmark_output=$(mktemp -d "${TMPDIR:-/tmp}/otel-bench.XXXXXX")
+
+python3 benchmarks/suites/b-001_span-projection/scripts/run.py "$benchmark_output/stage1"
+cp benchmarks/suites/b-001_span-projection/runs/br-001_bitmap-bulk-copy/artifacts/summarize.py "$benchmark_output/stage1/summarize.py"
+python3 "$benchmark_output/stage1/summarize.py"
+
+python3 benchmarks/suites/b-001_span-projection/scripts/run_selective.py "$benchmark_output/stage2"
+```
+
+第一阶段的统计脚本读取自身目录下的样本，因此先复制到新目录再执行。第二阶段脚本会自动生成 `summary.json`，并记录当前 subject / harness 内容身份。两组目录分别保留 `repeat-*.txt`、预热、正确性检查、编译器诊断和统计结果；第一阶段另生成 CPU profiles，第二阶段另生成源码快照和反汇编。
+
+新输出对应当前 checkout 与本机环境。历史脱敏快照是证据子集，不能单独当作完整仓库构建；历史结论仍以各 Run 的报告和原始样本为准。公开副本完整性由 [PUBLICATION_MANIFEST.json](benchmarks/PUBLICATION_MANIFEST.json) 校验。
+
+---
+
 ## 生产落地与安全基线
 
 ### 零堆分配（0-Alloc）热路径契约
 
-在高并发指标与链路数据管道中，任何内存分配都会急剧增加 GC 压力。
+分配边界取决于具体入口、输入类型和目标切片容量。完整 Span 投影会创建独立持有数据的 Map，其 `B/op` 与 `allocs/op` 已列在上面的对比表中。
 
-- **标量 Getter 契约**：所有 `Get*` 核心函数在标准 current/legacy 查找路径上保证 **0 allocation**。
-- **快照复用契约**：`GetPeerTags` 产出只读快照；通过调用方传入预分配的 `dst` 切片，`peerTags.AppendFlattened(dst)` 保证 **0 allocation**。
-- **自动化门禁**：仓内集成严苛的 Benchmark 与 hard allocation 单元测试，杜绝任何性能劣化代码合入。
+- **分类查找**：`GetTechnology`、`GetEntityType` 的关键 current/legacy 字符串属性路径由 [`testing.AllocsPerRun` 测试](compatibility_benchmark_test.go)断言零分配。
+- **快照复用**：`GetPeerTags` 产出只读快照；`PeerTags.AppendFlattened(dst)` 在调用方提供足够剩余容量时零分配，容量不足则会增长切片。见[容量边界测试](peer_tags_test.go)。
+- **需要分配的入口**：`GetFlattenedPeerTags` 在有值时生成字符串，`SetPeerTags` 写入属性 Map，`ProjectSpan` 构造独立输出。应按具体 API 和输入测量，不能把分类路径的零分配结论推广到全部 `Get*` 或完整投影。
 
 ### 基数与 PII 安全边界
 

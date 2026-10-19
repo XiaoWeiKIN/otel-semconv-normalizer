@@ -1,0 +1,7 @@
+/*.test
+*.out
+.DS_Store
+.idea/
+.env
+.env.*
+tools/semconv-weave-gen/_*/

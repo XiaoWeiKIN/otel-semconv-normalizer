@@ -1,0 +1,11 @@
+# Canonical Registry Review
+
+- Registry: OpenTelemetry Semantic Conventions v1.41.0
+- Weaver: v0.25.0
+- Resolved groups: {{ ctx.groups | length }}
+
+## Resolved group index
+
+{% for group in ctx.groups %}
+- `{{ group.id }}` (`{{ group.type }}`)
+{% endfor %}

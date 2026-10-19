@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "status": "release-ready",
+  "canonical_target": "https://opentelemetry.io/schemas/1.41.0",
+  "candidate_matrix_sha256": "a987e20f0ff5fd3a607d6eacf83f03f18ddead30b13109257b5e34aa7dfc889d",
+  "required_urls": [
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.41.0",
+      "requirement": "required",
+      "reason": "Canonical target is always required by the provider contract.",
+      "classifier_owner": "otel-semconv-normalizer/semconv-maintainers",
+      "collector_owner": "otel-semconv-normalizer/compatibility-maintainers",
+      "evidence": [
+        "schema:opentelemetry-1.41.0#sha256=d73002442a640ce74a185359843b9046884d16eec198c3576d2dcc779deaf740",
+        "registry:v1.41.0@e018fe6f91862f5ed63c082f87697cddac596784#sha256=6e2a13d9ccac76327bbb79578eced858b14fddbc96facbf56aab16a5b19cee93"
+      ],
+      "source_registry_status": "parsed",
+      "domains": {
+        "resources": "canonical_noop",
+        "spans": "canonical_noop",
+        "span_events": "canonical_noop",
+        "span_names": "canonical_noop",
+        "event_names": "canonical_noop"
+      }
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.7.0",
+      "requirement": "required",
+      "reason": "Public compatibility fixture explicitly selects this Schema URL.",
+      "classifier_owner": "otel-semconv-normalizer/semconv-maintainers",
+      "collector_owner": "otel-semconv-normalizer/compatibility-maintainers",
+      "evidence": [
+        "github.com/XiaoWeiKIN/otel-semconv-normalizer@16a5f5e9e4774c0d4c11180182454bc25a631e03:tools/semconv-weave-gen/testdata/corpus/public-schema-urls.json:2#sha256=061b13ad778f06846b2a98ec9788f663c685cefc7cab37eade9fc2a996199bb0"
+      ],
+      "source_registry_status": "manual_audit_required",
+      "domains": {
+        "resources": "translated",
+        "spans": "translated",
+        "span_events": "translated",
+        "span_names": "pass_through",
+        "event_names": "pass_through"
+      }
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.4.0",
+      "requirement": "required",
+      "reason": "Public compatibility fixture explicitly selects this Schema URL.",
+      "classifier_owner": "otel-semconv-normalizer/semconv-maintainers",
+      "collector_owner": "otel-semconv-normalizer/compatibility-maintainers",
+      "evidence": [
+        "github.com/XiaoWeiKIN/otel-semconv-normalizer@16a5f5e9e4774c0d4c11180182454bc25a631e03:tools/semconv-weave-gen/testdata/corpus/public-schema-urls.json:3#sha256=061b13ad778f06846b2a98ec9788f663c685cefc7cab37eade9fc2a996199bb0"
+      ],
+      "source_registry_status": "manual_audit_required",
+      "domains": {
+        "resources": "translated",
+        "spans": "translated",
+        "span_events": "translated",
+        "span_names": "pass_through",
+        "event_names": "pass_through"
+      }
+    }
+  ],
+  "optional_urls": [
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.40.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.39.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.38.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.37.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.36.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.35.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.34.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.33.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.32.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.31.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.30.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.29.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.28.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.27.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.26.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.25.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.24.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.23.1",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.23.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.22.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.21.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.20.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.19.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.18.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.17.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.16.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.15.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.14.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.13.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.12.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.11.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.10.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.9.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.8.0",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.6.1",
+      "disposition": "unknown"
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.5.0",
+      "disposition": "unknown"
+    }
+  ]
+}

@@ -1,0 +1,2013 @@
+{
+  "schema_version": 1,
+  "review_owner": "otel-semconv-normalizer/semconv-reviewers",
+  "weaver_diff": [
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0242:http.flavor",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0243:http.host",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0244:http.request_content_length",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0245:http.response_content_length",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0246:http.target",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0360:net.peer.name",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0361:net.peer.port",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0362:net.sock.family",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0363:net.sock.peer.name",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0492:http.client_ip",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0522:http.request_content_length_uncompressed",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0523:http.method",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0524:http.response_content_length_uncompressed",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0525:http.status_code",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0537:net.host.ip",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0538:net.sock.host.addr",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0539:net.sock.host.port",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0540:net.peer.ip",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0541:net.sock.peer.addr",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0542:net.sock.peer.port",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0543:net.protocol.name",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0544:net.protocol.version",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0545:net.transport",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0557:http.server_name",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0558:net.host.name",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0560:net.host.port",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0564:http.url",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0565:http.scheme",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0566:http.user_agent",
+      "action": "translated"
+    }
+  ],
+  "decisions": [
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:01",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.method` &rarr; `http.request.method` | Now captures only 9 common HTTP methods by default (configurable) plus `_OTHER` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.method",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.method",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:02",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "http.response.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "http.response.status_code",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.status_code",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.status_code",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:03",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.request.header.<key>` | &bullet; Dash (`\"-\"`) to underscore (`\"_\"`) normalization in `<key>` has been removed<br>&bullet; On HTTP server spans: now must be provided to sampler requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.request.header.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.request.header.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:04",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.response.header.<key>` | Dash (`\"-\"`) to underscore (`\"_\"`) normalization in `<key>` has been removed requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.response.header.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.response.header.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:05",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.request_content_length",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "http.request.body.size",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.request_content_length",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "http.request.body.size",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.request_content_length",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.request_content_length",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:06",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.response_content_length",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "http.response.body.size",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.response_content_length",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "http.response.body.size",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.response_content_length",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.response_content_length",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:07",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `user_agent.original` | &bullet; On HTTP client spans: Recommended &rarr; Opt-In<br>&bullet; On HTTP server spans: now must be provided to sampler<br>&bullet; See note if [migrating from <= v1.18.0](#migrating-from--v1180) requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "user_agent.original",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "user_agent.original",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:08",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.protocol.name",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.protocol.name",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.protocol.name",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.protocol.name",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.protocol.name",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.protocol.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:09",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.protocol.version",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.protocol.version",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.protocol.version",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.protocol.version",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.protocol.version",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.protocol.version",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:10",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.sock.family` | Removed requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.sock.family",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.family",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:11",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.sock.peer.addr",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.peer.address",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.sock.peer.addr",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.peer.address",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.sock.peer.addr",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.peer.addr",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:12",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.sock.peer.port",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.peer.port",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.sock.peer.port",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.peer.port",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.sock.peer.port",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.peer.port",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:13",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.sock.peer.name` | Removed requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.sock.peer.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.peer.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:14",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: New: `http.request.method_original` | Only captured when `http.request.method` is `_OTHER` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.request.method_original",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.request.method_original",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:common-attributes-across-http-client-and-server-spans:15",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: New: `error.type` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "error.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "error.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-client-span-attributes:01",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.url",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "url.full",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.url",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "url.full",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.url",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.url",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-client-span-attributes:02",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.resend_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "http.request.resend_count",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.resend_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "http.request.resend_count",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.resend_count",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.resend_count",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-client-span-attributes:03",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.peer.name` &rarr; `server.address` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.peer.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.peer.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-client-span-attributes:04",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.peer.port` &rarr; `server.port` | Now captured even when same as default port for scheme requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.peer.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.peer.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:01",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.route` | No change requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.route",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.route",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:02",
+      "classification": "split_merge",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.target` &rarr; `url.path` and `url.query` | Split into two separate attributes requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.target",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.target",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:03",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.scheme` &rarr; `url.scheme` | Now factors in [X-Forwarded-Proto][], [Forwarded#proto][] headers requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.scheme",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.scheme",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:04",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.client_ip",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "client.address",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.client_ip",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "client.address",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.client_ip",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.client_ip",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:05",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.host.name` &rarr; `server.address` | Now based only on [Host][Host header], [:authority][HTTP/2 authority], [X-Forwarded-Host][], [Forwarded#host][] headers requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.host.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.host.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:06",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `net.host.port` &rarr; `server.port` | &bullet; Now based only on [Host][Host header], [:authority][HTTP/2 authority], [X-Forwarded-Host][X-Forwarded-Host], [Forwarded#host][] headers<br>&bullet; Now captured even when same as default port for scheme requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.host.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.host.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:07",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.sock.host.addr",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.local.address",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.sock.host.addr",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.local.address",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.sock.host.addr",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.host.addr",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-server-span-attributes:08",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.sock.host.port",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.local.port",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.sock.host.port",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.local.port",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.sock.host.port",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.host.port",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:http-span-names:method-other",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: The `{http.method}` portion of span names is replace by `HTTP` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$span.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$span.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:pre-1.17:client-name",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: - `HTTP {http.method}` &rarr; `{summary}` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$span.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$span.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:pre-1.17:server-name-no-route",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: When `http.route` is not available:<br> `HTTP {http.method}` &rarr; requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$span.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$span.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:pre-1.17:server-name-route",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: When `http.route` is available:<br> `{http.route}` &rarr; requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$span.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$span.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:pre-1.18:user-agent",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.user_agent",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "user_agent.original",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.user_agent",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "user_agent.original",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.user_agent",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.user_agent",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "guide:pre-1.19:http-flavor",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: `http.flavor` &rarr; `network.protocol.version` requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.flavor",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.flavor",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.13.0:spans:00:00:net.peer.ip",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.peer.ip -> net.sock.peer.addr requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.peer.ip",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.peer.ip",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.13.0:spans:00:01:net.host.ip",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.host.ip -> net.sock.host.addr requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.host.ip",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.host.ip",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.15.0:spans:00:00:http.retry_count",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.retry_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "http.resend_count",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.retry_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "http.resend_count",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.retry_count",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.retry_count",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.17.0:spans:00:01:messaging.protocol",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "messaging.protocol",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "net.app.protocol.name",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "messaging.protocol",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "net.app.protocol.name",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "messaging.protocol",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "messaging.protocol",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.17.0:spans:00:02:messaging.protocol_version",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "messaging.protocol_version",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "net.app.protocol.version",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "messaging.protocol_version",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "net.app.protocol.version",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "messaging.protocol_version",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "messaging.protocol_version",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.19.0:spans:02:00:http.user_agent",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.user_agent",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "user_agent.original",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.user_agent",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "user_agent.original",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.user_agent",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.user_agent",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.20.0:spans:00:00:net.app.protocol.name",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.app.protocol.name",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "net.protocol.name",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.app.protocol.name",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "net.protocol.name",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.app.protocol.name",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.app.protocol.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.20.0:spans:00:01:net.app.protocol.version",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.app.protocol.version",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "net.protocol.version",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.app.protocol.version",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "net.protocol.version",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.app.protocol.version",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.app.protocol.version",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:00:net.host.name",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.host.name -> server.address requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.host.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.host.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:01:net.host.port",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.host.port -> server.port requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.host.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.host.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:02:net.sock.peer.name",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.sock.peer.name -> server.socket.domain requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.sock.peer.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.peer.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:03:net.sock.host.addr",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.sock.host.addr -> server.socket.address requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.sock.host.addr",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.host.addr",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:04:net.sock.host.port",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: net.sock.host.port -> server.socket.port requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "net.sock.host.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "net.sock.host.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:01:05:http.client_ip",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.client_ip",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "client.address",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.client_ip",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "client.address",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.client_ip",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.client_ip",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:00:net.protocol.name",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.protocol.name",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.protocol.name",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.protocol.name",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.protocol.name",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.protocol.name",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.protocol.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:01:net.protocol.version",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.protocol.version",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.protocol.version",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.protocol.version",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.protocol.version",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.protocol.version",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.protocol.version",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:02:net.host.connection.type",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.connection.type",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.connection.type",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.connection.type",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.connection.type",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.connection.type",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.connection.type",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:03:net.host.connection.subtype",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.connection.subtype",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.connection.subtype",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.connection.subtype",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.connection.subtype",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.connection.subtype",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.connection.subtype",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:04:net.host.carrier.name",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.carrier.name",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.carrier.name",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.carrier.name",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.carrier.name",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.carrier.name",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.carrier.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:05:net.host.carrier.mcc",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.carrier.mcc",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.carrier.mcc",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.carrier.mcc",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.carrier.mcc",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.carrier.mcc",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.carrier.mcc",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:06:net.host.carrier.mnc",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.carrier.mnc",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.carrier.mnc",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.carrier.mnc",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.carrier.mnc",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.carrier.mnc",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.carrier.mnc",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:02:07:net.host.carrier.icc",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "net.host.carrier.icc",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "network.carrier.icc",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "net.host.carrier.icc",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "network.carrier.icc",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "net.host.carrier.icc",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "net.host.carrier.icc",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:00:http.method",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: http.method -> http.request.method requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.method",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.method",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:01:http.status_code",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "http.response.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "http.response.status_code",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.status_code",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.status_code",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:02:http.scheme",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review: http.scheme -> url.scheme requires split, value-domain, requirement, producer, or span context not available to the static projection API.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "http.scheme",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.scheme",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:03:http.url",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.url",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "url.full",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.url",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "url.full",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.url",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.url",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:04:http.request_content_length",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.request_content_length",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "http.request.body.size",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.request_content_length",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "http.request.body.size",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.request_content_length",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.request_content_length",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.21.0:spans:03:05:http.response_content_length",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 defines this rename for an already recorded attribute. Requirement-level changes do not prevent preserving the recorded value; contextual value rules run separately.",
+      "golden": [
+        {
+          "name": "source-only",
+          "input_key": "http.response_content_length",
+          "input_type": "string",
+          "input_value": "value",
+          "expected_action": "translated",
+          "expected_key": "http.response.body.size",
+          "expected_type": "string",
+          "expected_value": "value"
+        },
+        {
+          "name": "target-wins",
+          "input_key": "http.response_content_length",
+          "input_type": "string",
+          "input_value": "old",
+          "target_present": true,
+          "target_value": "new",
+          "expected_action": "suppress",
+          "expected_key": "http.response.body.size",
+          "expected_type": "string",
+          "expected_value": "new"
+        },
+        {
+          "name": "wrong-type",
+          "input_key": "http.response_content_length",
+          "input_type": "int",
+          "input_value": "42",
+          "expected_action": "pass_through",
+          "expected_key": "http.response_content_length",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.22.0:spans:01:00:http.resend_count",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide evidence proves a one-to-one key rename with unchanged source value and no runtime context requirement.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "http.resend_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "http.request.resend_count",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "http.resend_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "http.request.resend_count",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "http.resend_count",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "http.resend_count",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    }
+  ]
+}

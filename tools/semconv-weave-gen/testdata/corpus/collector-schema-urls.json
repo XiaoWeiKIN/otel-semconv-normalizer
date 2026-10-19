@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "repository": "github.com/XiaoWeiKIN/otel-semconv-normalizer",
+  "commit": "16a5f5e9e4774c0d4c11180182454bc25a631e03",
+  "files": [
+    {
+      "path": "tools/semconv-weave-gen/testdata/corpus/public-schema-urls.json",
+      "sha256": "061b13ad778f06846b2a98ec9788f663c685cefc7cab37eade9fc2a996199bb0"
+    }
+  ],
+  "observations": [
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.7.0",
+      "reason": "Public compatibility fixture explicitly selects this Schema URL.",
+      "classifier_owner": "otel-semconv-normalizer/semconv-maintainers",
+      "collector_owner": "otel-semconv-normalizer/compatibility-maintainers",
+      "evidence": [
+        {
+          "path": "tools/semconv-weave-gen/testdata/corpus/public-schema-urls.json",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "schema_url": "https://opentelemetry.io/schemas/1.4.0",
+      "reason": "Public compatibility fixture explicitly selects this Schema URL.",
+      "classifier_owner": "otel-semconv-normalizer/semconv-maintainers",
+      "collector_owner": "otel-semconv-normalizer/compatibility-maintainers",
+      "evidence": [
+        {
+          "path": "tools/semconv-weave-gen/testdata/corpus/public-schema-urls.json",
+          "line": 3
+        }
+      ]
+    }
+  ]
+}

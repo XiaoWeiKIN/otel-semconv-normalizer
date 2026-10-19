@@ -1,0 +1,4648 @@
+{
+  "baseline": {
+    "semconv_version": ""
+  },
+  "changes": {
+    "entities": [
+      {
+        "name": "android",
+        "type": "added"
+      },
+      {
+        "name": "app",
+        "type": "added"
+      },
+      {
+        "name": "aws.ecs",
+        "type": "added"
+      },
+      {
+        "name": "aws.eks",
+        "type": "added"
+      },
+      {
+        "name": "aws.log",
+        "type": "added"
+      },
+      {
+        "name": "browser",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker",
+        "type": "added"
+      },
+      {
+        "name": "cloud",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.app",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.org",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.process",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.space",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.system",
+        "type": "added"
+      },
+      {
+        "name": "container",
+        "type": "added"
+      },
+      {
+        "name": "container.image",
+        "type": "added"
+      },
+      {
+        "name": "container.runtime",
+        "type": "added"
+      },
+      {
+        "name": "deployment",
+        "type": "added"
+      },
+      {
+        "name": "device",
+        "type": "added"
+      },
+      {
+        "name": "faas",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.application",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.service",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.workload",
+        "type": "added"
+      },
+      {
+        "name": "gcp.cloud_run",
+        "type": "added"
+      },
+      {
+        "name": "gcp.gce",
+        "type": "added"
+      },
+      {
+        "name": "gcp.gce.instance_group_manager",
+        "type": "added"
+      },
+      {
+        "name": "heroku",
+        "type": "added"
+      },
+      {
+        "name": "host",
+        "type": "added"
+      },
+      {
+        "name": "host.cpu",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cluster",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cronjob",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job",
+        "type": "added"
+      },
+      {
+        "name": "k8s.namespace",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota",
+        "type": "added"
+      },
+      {
+        "name": "os",
+        "type": "added"
+      },
+      {
+        "name": "otel.scope",
+        "type": "added"
+      },
+      {
+        "name": "process",
+        "type": "added"
+      },
+      {
+        "name": "process.executable",
+        "type": "added"
+      },
+      {
+        "name": "process.runtime",
+        "type": "added"
+      },
+      {
+        "name": "service",
+        "type": "added"
+      },
+      {
+        "name": "service.instance",
+        "type": "added"
+      },
+      {
+        "name": "service.namespace",
+        "type": "added"
+      },
+      {
+        "name": "telemetry.distro",
+        "type": "added"
+      },
+      {
+        "name": "telemetry.sdk",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repo",
+        "type": "added"
+      },
+      {
+        "name": "webengine",
+        "type": "added"
+      },
+      {
+        "name": "zos.software",
+        "type": "added"
+      }
+    ],
+    "events": [
+      {
+        "name": "app.jank",
+        "type": "added"
+      },
+      {
+        "name": "app.screen.click",
+        "type": "added"
+      },
+      {
+        "name": "app.widget.click",
+        "type": "added"
+      },
+      {
+        "name": "az.resource.log",
+        "type": "added"
+      },
+      {
+        "name": "azure.resource.log",
+        "type": "added"
+      },
+      {
+        "name": "browser.web_vital",
+        "type": "added"
+      },
+      {
+        "name": "db.client.operation.exception",
+        "type": "added"
+      },
+      {
+        "name": "exception",
+        "type": "added"
+      },
+      {
+        "name": "faas.invocation.exception",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag",
+        "type": "removed"
+      },
+      {
+        "name": "feature_flag.evaluation",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.assistant.message",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.choice",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.inference.operation.details",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.operation.exception",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.content.completion",
+        "type": "removed"
+      },
+      {
+        "name": "gen_ai.content.prompt",
+        "type": "removed"
+      },
+      {
+        "name": "gen_ai.evaluation.result",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.system.message",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.message",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.user.message",
+        "type": "added"
+      },
+      {
+        "name": "http.client.request.exception",
+        "type": "added"
+      },
+      {
+        "name": "http.server.request.exception",
+        "type": "added"
+      },
+      {
+        "name": "messaging.create.exception",
+        "type": "added"
+      },
+      {
+        "name": "messaging.process.exception",
+        "type": "added"
+      },
+      {
+        "name": "messaging.receive.exception",
+        "type": "added"
+      },
+      {
+        "name": "messaging.send.exception",
+        "type": "added"
+      },
+      {
+        "name": "messaging.settle.exception",
+        "type": "added"
+      },
+      {
+        "name": "rpc.client.call.exception",
+        "type": "added"
+      },
+      {
+        "name": "rpc.message",
+        "type": "added"
+      },
+      {
+        "name": "rpc.server.call.exception",
+        "type": "added"
+      },
+      {
+        "name": "session.end",
+        "type": "added"
+      },
+      {
+        "name": "session.start",
+        "type": "added"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "aspnetcore.authentication.authenticate.duration",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.challenges",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.forbids",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.sign_ins",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.sign_outs",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authorization.attempts",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.authenticate.duration",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.check_password_attempts",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.sign_ins",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.sign_outs",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.two_factor_clients_forgotten",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.two_factor_clients_remembered",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.check_password_attempts",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.create.duration",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.delete.duration",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.generated_tokens",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.update.duration",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.verify_token_attempts",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.memory_pool.allocated",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.memory_pool.evicted",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.memory_pool.pooled",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.memory_pool.rented",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.client.active_instance.count",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.client.operation.request_charge",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.active",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.duration",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.errors",
+        "type": "added"
+      },
+      {
+        "name": "cicd.system.errors",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker.count",
+        "type": "added"
+      },
+      {
+        "name": "container.cpu.usage",
+        "type": "added"
+      },
+      {
+        "name": "container.filesystem.available",
+        "type": "added"
+      },
+      {
+        "name": "container.filesystem.capacity",
+        "type": "added"
+      },
+      {
+        "name": "container.filesystem.usage",
+        "type": "added"
+      },
+      {
+        "name": "container.memory.available",
+        "type": "added"
+      },
+      {
+        "name": "container.memory.paging.faults",
+        "type": "added"
+      },
+      {
+        "name": "container.memory.rss",
+        "type": "added"
+      },
+      {
+        "name": "container.memory.working_set",
+        "type": "added"
+      },
+      {
+        "name": "container.uptime",
+        "type": "added"
+      },
+      {
+        "name": "cpu.frequency",
+        "type": "added"
+      },
+      {
+        "name": "cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "cpu.utilization",
+        "type": "added"
+      },
+      {
+        "name": "cpython.gc.collected_objects",
+        "type": "added"
+      },
+      {
+        "name": "cpython.gc.collections",
+        "type": "added"
+      },
+      {
+        "name": "cpython.gc.uncollectable_objects",
+        "type": "added"
+      },
+      {
+        "name": "db.client.connections.create_time",
+        "note": "Replaced by `db.client.connection.create_time` with unit `s`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.client.connections.use_time",
+        "note": "Replaced by `db.client.connection.use_time` with unit `s`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.client.connections.wait_time",
+        "note": "Replaced by `db.client.connection.wait_time` with unit `s`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.client.cosmosdb.active_instance.count",
+        "type": "added"
+      },
+      {
+        "name": "db.client.cosmosdb.operation.request_charge",
+        "type": "added"
+      },
+      {
+        "name": "db.client.response.returned_rows",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.assembly.count",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.exceptions",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.collections",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.heap.total_allocated",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.last_collection.heap.fragmentation.size",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.last_collection.heap.size",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.last_collection.memory.committed_size",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.pause.time",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.jit.compilation.time",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.jit.compiled_il.size",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.jit.compiled_methods",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.monitor.lock_contentions",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.process.cpu.count",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.process.cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.process.memory.working_set",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.thread_pool.queue.length",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.thread_pool.thread.count",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.thread_pool.work_item.count",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.timer.count",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.operation.duration",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.operation.time_per_output_chunk",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.operation.time_to_first_chunk",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.client.token.usage",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.server.request.duration",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.server.time_per_output_token",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.server.time_to_first_token",
+        "type": "added"
+      },
+      {
+        "name": "go.config.gogc",
+        "type": "added"
+      },
+      {
+        "name": "go.cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "go.goroutine.count",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.allocated",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.allocations",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.gc.cycles",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.gc.goal",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.gc.pause.duration",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.limit",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.used",
+        "type": "added"
+      },
+      {
+        "name": "go.processor.limit",
+        "type": "added"
+      },
+      {
+        "name": "go.schedule.duration",
+        "type": "added"
+      },
+      {
+        "name": "hw.battery.charge",
+        "type": "added"
+      },
+      {
+        "name": "hw.battery.charge.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.battery.time_left",
+        "type": "added"
+      },
+      {
+        "name": "hw.cpu.speed",
+        "type": "added"
+      },
+      {
+        "name": "hw.cpu.speed.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.energy",
+        "type": "added"
+      },
+      {
+        "name": "hw.errors",
+        "type": "added"
+      },
+      {
+        "name": "hw.fan.speed",
+        "type": "added"
+      },
+      {
+        "name": "hw.fan.speed.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.fan.speed_ratio",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.io",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.memory.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.memory.usage",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.memory.utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.host.ambient_temperature",
+        "type": "added"
+      },
+      {
+        "name": "hw.host.energy",
+        "type": "added"
+      },
+      {
+        "name": "hw.host.heating_margin",
+        "type": "added"
+      },
+      {
+        "name": "hw.host.power",
+        "type": "added"
+      },
+      {
+        "name": "hw.logical_disk.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.logical_disk.usage",
+        "type": "added"
+      },
+      {
+        "name": "hw.logical_disk.utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.memory.size",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.bandwidth.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.bandwidth.utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.io",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.packets",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.up",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.endurance_utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.size",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.smart",
+        "type": "added"
+      },
+      {
+        "name": "hw.power",
+        "type": "added"
+      },
+      {
+        "name": "hw.power_supply.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.power_supply.usage",
+        "type": "added"
+      },
+      {
+        "name": "hw.power_supply.utilization",
+        "type": "added"
+      },
+      {
+        "name": "hw.status",
+        "type": "added"
+      },
+      {
+        "name": "hw.tape_drive.operations",
+        "type": "added"
+      },
+      {
+        "name": "hw.temperature",
+        "type": "added"
+      },
+      {
+        "name": "hw.temperature.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.voltage",
+        "type": "added"
+      },
+      {
+        "name": "hw.voltage.limit",
+        "type": "added"
+      },
+      {
+        "name": "hw.voltage.nominal",
+        "type": "added"
+      },
+      {
+        "name": "jvm.buffer.memory.used",
+        "type": "added"
+      },
+      {
+        "name": "jvm.file_descriptor.count",
+        "type": "added"
+      },
+      {
+        "name": "jvm.file_descriptor.limit",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.limit",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.limit.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.limit.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.limit.utilization",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.limit_utilization",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.request",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.request.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.request.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.request.utilization",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.cpu.request_utilization",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.ephemeral_storage.limit",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.ephemeral_storage.request",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.limit",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.limit.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.limit.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.request",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.request.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.memory.request.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.ready",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.restart.count",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.status.reason",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.status.state",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.storage.limit",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.storage.request",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cronjob.active_jobs",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cronjob.job.active",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.current_scheduled_nodes",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.desired_scheduled_nodes",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.misscheduled_nodes",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.node.current_scheduled",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.node.desired_scheduled",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.node.misscheduled",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.node.ready",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.ready_nodes",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.available_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.pod.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.pod.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.current_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.max_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.metric.target.cpu.average_utilization",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.metric.target.cpu.average_value",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.metric.target.cpu.value",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.min_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.pod.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.pod.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.pod.max",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.pod.min",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.active_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.desired_successful_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.failed_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.max_parallel_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.pod.active",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.pod.desired_successful",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.pod.failed",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.pod.max_parallel",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.pod.successful",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.successful_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.namespace.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.allocatable.cpu",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.allocatable.ephemeral_storage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.allocatable.memory",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.allocatable.pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.condition.status",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.cpu.allocatable",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.cpu.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.ephemeral_storage.allocatable",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.filesystem.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.filesystem.capacity",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.filesystem.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.allocatable",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.paging.faults",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.rss",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.memory.working_set",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.network.errors",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.network.io",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.pod.allocatable",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container.cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container.cpu.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container.memory.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container.memory.working_set",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.uptime",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.storage.capacity",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.storage.capacity",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.storage.request",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.cpu.time",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.cpu.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.filesystem.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.filesystem.capacity",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.filesystem.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.memory.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.memory.paging.faults",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.memory.rss",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.memory.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.memory.working_set",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.network.errors",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.network.io",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.status.reason",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.uptime",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.capacity",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.inode.count",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.inode.free",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.inode.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.volume.usage",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.available_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.pod.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.pod.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replication_controller.available_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replication_controller.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.available_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.pod.available",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.pod.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.cpu.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.cpu.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.cpu.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.cpu.request.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.ephemeral_storage.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.ephemeral_storage.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.ephemeral_storage.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.ephemeral_storage.request.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.hugepage_count.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.hugepage_count.request.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.memory.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.memory.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.memory.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.memory.request.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.object_count.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.object_count.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.persistentvolumeclaim_count.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.persistentvolumeclaim_count.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.storage.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.storage.request.used",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.endpoint.count",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.load_balancer.ingress.count",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.current_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.desired_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.pod.current",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.pod.desired",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.pod.ready",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.pod.updated",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.ready_pods",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.updated_pods",
+        "type": "added"
+      },
+      {
+        "name": "mcp.client.operation.duration",
+        "type": "added"
+      },
+      {
+        "name": "mcp.client.session.duration",
+        "type": "added"
+      },
+      {
+        "name": "mcp.server.operation.duration",
+        "type": "added"
+      },
+      {
+        "name": "mcp.server.session.duration",
+        "type": "added"
+      },
+      {
+        "name": "messaging.client.consumed.messages",
+        "type": "added"
+      },
+      {
+        "name": "messaging.client.operation.duration",
+        "type": "added"
+      },
+      {
+        "name": "messaging.client.published.messages",
+        "type": "added"
+      },
+      {
+        "name": "messaging.client.sent.messages",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.net.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.net.tcp.connection.accepted",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.operation.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.procedure.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.rpc.authrefresh.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.rpc.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.client.rpc.retransmit.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.fh.stale.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.io",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.net.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.net.tcp.connection.accepted",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.operation.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.procedure.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.repcache.requests",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.rpc.count",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.thread.count",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.max",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.mean",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.min",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.p50",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.p90",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.p99",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.delay.stddev",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.time",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.utilization",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.cpu.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.cpu.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.cpu.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.cpu.request.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.ephemeral_storage.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.ephemeral_storage.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.ephemeral_storage.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.ephemeral_storage.request.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.hugepage_count.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.hugepage_count.request.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.memory.limit.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.memory.limit.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.memory.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.memory.request.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.object_count.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.object_count.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.persistentvolumeclaim_count.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.persistentvolumeclaim_count.used",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.storage.request.hard",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.storage.request.used",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.log.exported",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.log.inflight",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.metric_data_point.exported",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.metric_data_point.inflight",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.operation.duration",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.span.exported",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.span.exported.count",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.span.inflight",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.exporter.span.inflight.count",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.log.created",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.metric_reader.collection.duration",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.log.processed",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.log.queue.capacity",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.log.queue.size",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.span.processed",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.span.processed.count",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.span.queue.capacity",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.processor.span.queue.size",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.span.ended",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.span.ended.count",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.span.live",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.span.live.count",
+        "type": "added"
+      },
+      {
+        "name": "otel.sdk.span.started",
+        "type": "added"
+      },
+      {
+        "name": "process.unix.file_descriptor.count",
+        "type": "added"
+      },
+      {
+        "name": "process.uptime",
+        "type": "added"
+      },
+      {
+        "name": "process.windows.handle.count",
+        "type": "added"
+      },
+      {
+        "name": "rpc.client.call.duration",
+        "type": "added"
+      },
+      {
+        "name": "rpc.client.duration",
+        "note": "Replaced by `rpc.client.call.duration` with unit `s`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.client.request.size",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.client.requests_per_rpc",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.client.response.size",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.client.responses_per_rpc",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.server.call.duration",
+        "type": "added"
+      },
+      {
+        "name": "rpc.server.duration",
+        "note": "Replaced by `rpc.server.call.duration` with unit `s`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.server.request.size",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.server.requests_per_rpc",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.server.response.size",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.server.responses_per_rpc",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "system.disk.limit",
+        "type": "added"
+      },
+      {
+        "name": "system.filesystem.limit",
+        "type": "added"
+      },
+      {
+        "name": "system.linux.memory.slab.usage",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.available",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.limit",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.page_size",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.reserved",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.surplus",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.usage",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.utilization",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.shared",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.slab.usage",
+        "type": "added"
+      },
+      {
+        "name": "system.network.connection.count",
+        "type": "added"
+      },
+      {
+        "name": "system.network.packet.count",
+        "type": "added"
+      },
+      {
+        "name": "system.network.packet.dropped",
+        "type": "added"
+      },
+      {
+        "name": "system.uptime",
+        "type": "added"
+      },
+      {
+        "name": "v8js.gc.duration",
+        "type": "added"
+      },
+      {
+        "name": "v8js.heap.space.available_size",
+        "type": "added"
+      },
+      {
+        "name": "v8js.heap.space.physical_size",
+        "type": "added"
+      },
+      {
+        "name": "v8js.memory.heap.limit",
+        "type": "added"
+      },
+      {
+        "name": "v8js.memory.heap.space.available_size",
+        "type": "added"
+      },
+      {
+        "name": "v8js.memory.heap.space.physical_size",
+        "type": "added"
+      },
+      {
+        "name": "v8js.memory.heap.used",
+        "type": "added"
+      },
+      {
+        "name": "v8js.resource.active",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.count",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.duration",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.time_to_approval",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.time_to_merge",
+        "type": "added"
+      },
+      {
+        "name": "vcs.contributor.count",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.count",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.lines_delta",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.revisions_delta",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.time",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.count",
+        "type": "added"
+      },
+      {
+        "new_name": "db.client.connection.count",
+        "note": "Replaced by `db.client.connection.count`.",
+        "old_name": "db.client.connections.usage",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.idle.max",
+        "note": "Replaced by `db.client.connection.idle.max`.",
+        "old_name": "db.client.connections.idle.max",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.idle.min",
+        "note": "Replaced by `db.client.connection.idle.min`.",
+        "old_name": "db.client.connections.idle.min",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.max",
+        "note": "Replaced by `db.client.connection.max`.",
+        "old_name": "db.client.connections.max",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.pending_requests",
+        "note": "Replaced by `db.client.connection.pending_requests`.",
+        "old_name": "db.client.connections.pending_requests",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.timeouts",
+        "note": "Replaced by `db.client.connection.timeouts`.",
+        "old_name": "db.client.connections.timeouts",
+        "type": "renamed"
+      },
+      {
+        "new_name": "jvm.buffer.memory.used",
+        "note": "Replaced by `jvm.buffer.memory.used`.",
+        "old_name": "jvm.buffer.memory.usage",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.consumed.messages",
+        "note": "Replaced by `messaging.client.consumed.messages`.",
+        "old_name": "messaging.process.messages",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.consumed.messages",
+        "note": "Replaced by `messaging.client.consumed.messages`.",
+        "old_name": "messaging.receive.messages",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.operation.duration",
+        "note": "Replaced by `messaging.client.operation.duration`.",
+        "old_name": "messaging.publish.duration",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.operation.duration",
+        "note": "Replaced by `messaging.client.operation.duration`.",
+        "old_name": "messaging.receive.duration",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.sent.messages",
+        "note": "Replaced by `messaging.client.sent.messages`.",
+        "old_name": "messaging.publish.messages",
+        "type": "renamed"
+      },
+      {
+        "new_name": "process.unix.file_descriptor.count",
+        "note": "Replaced by `process.unix.file_descriptor.count`.",
+        "old_name": "process.open_file_descriptor.count",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.memory.linux.available",
+        "note": "Replaced by `system.memory.linux.available`.",
+        "old_name": "system.linux.memory.available",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.memory.linux.shared",
+        "note": "Replaced by `system.memory.linux.shared`.",
+        "old_name": "system.memory.shared",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.network.connection.count",
+        "note": "Replaced by `system.network.connection.count`.",
+        "old_name": "system.network.connections",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.network.packet.count",
+        "note": "Replaced by `system.network.packet.count`.",
+        "old_name": "system.network.packets",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.network.packet.dropped",
+        "note": "Replaced by `system.network.packet.dropped`.",
+        "old_name": "system.network.dropped",
+        "type": "renamed"
+      }
+    ],
+    "registry_attributes": [
+      {
+        "name": "android.app.state",
+        "type": "added"
+      },
+      {
+        "name": "app.build_id",
+        "type": "added"
+      },
+      {
+        "name": "app.installation.id",
+        "type": "added"
+      },
+      {
+        "name": "app.jank.frame_count",
+        "type": "added"
+      },
+      {
+        "name": "app.jank.period",
+        "type": "added"
+      },
+      {
+        "name": "app.jank.threshold",
+        "type": "added"
+      },
+      {
+        "name": "app.screen.coordinate.x",
+        "type": "added"
+      },
+      {
+        "name": "app.screen.coordinate.y",
+        "type": "added"
+      },
+      {
+        "name": "app.screen.id",
+        "type": "added"
+      },
+      {
+        "name": "app.screen.name",
+        "type": "added"
+      },
+      {
+        "name": "app.widget.id",
+        "type": "added"
+      },
+      {
+        "name": "app.widget.name",
+        "type": "added"
+      },
+      {
+        "name": "artifact.attestation.filename",
+        "type": "added"
+      },
+      {
+        "name": "artifact.attestation.hash",
+        "type": "added"
+      },
+      {
+        "name": "artifact.attestation.id",
+        "type": "added"
+      },
+      {
+        "name": "artifact.filename",
+        "type": "added"
+      },
+      {
+        "name": "artifact.hash",
+        "type": "added"
+      },
+      {
+        "name": "artifact.purl",
+        "type": "added"
+      },
+      {
+        "name": "artifact.version",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.result",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authentication.scheme",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authorization.policy",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.authorization.result",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.error_code",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.password_check_result",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.result",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.result",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.sign_in.type",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.token_purpose",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.token_verified",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user.update_type",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.identity.user_type",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.memory_pool.owner",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.sign_in.is_persistent",
+        "type": "added"
+      },
+      {
+        "name": "aspnetcore.user.is_authenticated",
+        "type": "added"
+      },
+      {
+        "name": "aws.bedrock.guardrail.id",
+        "type": "added"
+      },
+      {
+        "name": "aws.bedrock.knowledge_base.id",
+        "type": "added"
+      },
+      {
+        "name": "aws.extended_request_id",
+        "type": "added"
+      },
+      {
+        "name": "aws.kinesis.stream_name",
+        "type": "added"
+      },
+      {
+        "name": "aws.lambda.resource_mapping.id",
+        "type": "added"
+      },
+      {
+        "name": "aws.secretsmanager.secret.arn",
+        "type": "added"
+      },
+      {
+        "name": "aws.sns.topic.arn",
+        "type": "added"
+      },
+      {
+        "name": "aws.sqs.queue.url",
+        "type": "added"
+      },
+      {
+        "name": "aws.step_functions.activity.arn",
+        "type": "added"
+      },
+      {
+        "name": "aws.step_functions.state_machine.arn",
+        "type": "added"
+      },
+      {
+        "name": "az.namespace",
+        "type": "added"
+      },
+      {
+        "name": "az.service_request_id",
+        "type": "added"
+      },
+      {
+        "name": "azure.client.id",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.connection.mode",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.consistency.level",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.operation.contacted_regions",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.operation.request_charge",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.request.body.size",
+        "type": "added"
+      },
+      {
+        "name": "azure.cosmosdb.response.sub_status_code",
+        "type": "added"
+      },
+      {
+        "name": "azure.resource_provider.namespace",
+        "type": "added"
+      },
+      {
+        "name": "azure.service.request.id",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.consistency.level",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.coordinator.dc",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.coordinator.id",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.page.size",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.query.idempotent",
+        "type": "added"
+      },
+      {
+        "name": "cassandra.speculative_execution.count",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.action.name",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.name",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.result",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.id",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.state",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.run.url.full",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.task.name",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.task.run.id",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.task.run.result",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.task.run.url.full",
+        "type": "added"
+      },
+      {
+        "name": "cicd.pipeline.task.type",
+        "type": "added"
+      },
+      {
+        "name": "cicd.system.component",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker.id",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker.name",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker.state",
+        "type": "added"
+      },
+      {
+        "name": "cicd.worker.url.full",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.app.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.app.instance.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.app.name",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.org.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.org.name",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.process.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.process.type",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.space.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.space.name",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.system.id",
+        "type": "added"
+      },
+      {
+        "name": "cloudfoundry.system.instance.id",
+        "type": "added"
+      },
+      {
+        "name": "code.column.number",
+        "type": "added"
+      },
+      {
+        "name": "code.file.path",
+        "type": "added"
+      },
+      {
+        "name": "code.function",
+        "note": "Value should be included in `code.function.name` which is expected to be a fully-qualified name.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "code.function.name",
+        "type": "added"
+      },
+      {
+        "name": "code.line.number",
+        "type": "added"
+      },
+      {
+        "name": "code.namespace",
+        "note": "Value should be included in `code.function.name` which is expected to be a fully-qualified name.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "container.csi.plugin.name",
+        "type": "added"
+      },
+      {
+        "name": "container.csi.volume.id",
+        "type": "added"
+      },
+      {
+        "name": "container.runtime.description",
+        "type": "added"
+      },
+      {
+        "name": "container.runtime.name",
+        "type": "added"
+      },
+      {
+        "name": "container.runtime.version",
+        "type": "added"
+      },
+      {
+        "name": "cpu.logical_number",
+        "type": "added"
+      },
+      {
+        "name": "cpu.mode",
+        "type": "added"
+      },
+      {
+        "name": "cpython.gc.generation",
+        "type": "added"
+      },
+      {
+        "name": "db.client.connection.pool.name",
+        "type": "added"
+      },
+      {
+        "name": "db.client.connection.state",
+        "type": "added"
+      },
+      {
+        "name": "db.connection_string",
+        "note": "Replaced by `server.address` and `server.port`.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.cosmosdb.consistency_level",
+        "type": "added"
+      },
+      {
+        "name": "db.cosmosdb.operation_type",
+        "note": "Removed, no replacement at this time.\n",
+        "type": "obsoleted"
+      },
+      {
+        "name": "db.cosmosdb.regions_contacted",
+        "type": "added"
+      },
+      {
+        "name": "db.cosmosdb.status_code",
+        "note": "Use `db.response.status_code` instead.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.instance.id",
+        "note": "Removed, no general replacement at this time. For Elasticsearch, use `db.elasticsearch.node.name` instead.\n",
+        "type": "obsoleted"
+      },
+      {
+        "name": "db.jdbc.driver_classname",
+        "note": "Removed, no replacement at this time.\n",
+        "type": "obsoleted"
+      },
+      {
+        "name": "db.mssql.instance_name",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "db.operation.batch.size",
+        "type": "added"
+      },
+      {
+        "name": "db.operation.parameter",
+        "type": "added"
+      },
+      {
+        "name": "db.query.summary",
+        "type": "added"
+      },
+      {
+        "name": "db.redis.database_index",
+        "note": "Uncategorized.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.response.returned_rows",
+        "type": "added"
+      },
+      {
+        "name": "db.response.status_code",
+        "type": "added"
+      },
+      {
+        "name": "db.sql.table",
+        "note": "Replaced by `db.collection.name`, but only if not extracting the value from `db.query.text`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "db.stored_procedure.name",
+        "type": "added"
+      },
+      {
+        "name": "db.system.name",
+        "type": "added"
+      },
+      {
+        "name": "db.user",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "deployment.environment.name",
+        "type": "added"
+      },
+      {
+        "name": "deployment.id",
+        "type": "added"
+      },
+      {
+        "name": "deployment.name",
+        "type": "added"
+      },
+      {
+        "name": "deployment.status",
+        "type": "added"
+      },
+      {
+        "name": "dns.answers",
+        "type": "added"
+      },
+      {
+        "name": "dotnet.gc.heap.generation",
+        "type": "added"
+      },
+      {
+        "name": "elasticsearch.node.name",
+        "type": "added"
+      },
+      {
+        "name": "enduser.pseudo.id",
+        "type": "added"
+      },
+      {
+        "name": "enduser.role",
+        "note": "Use `user.roles` instead.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "enduser.scope",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "error.message",
+        "type": "added"
+      },
+      {
+        "name": "event.name",
+        "note": "The value of this attribute MUST now be set as the value of the EventName field on the LogRecord to indicate that the LogRecord represents an Event.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "exception.escaped",
+        "note": "It's no longer recommended to record exceptions that are handled and do not escape the scope of a span.\n",
+        "type": "obsoleted"
+      },
+      {
+        "name": "feature_flag.context.id",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.error.message",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.evaluation.error.message",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.evaluation.reason",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.provider.name",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.result.reason",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.result.value",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.result.variant",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.set.id",
+        "type": "added"
+      },
+      {
+        "name": "feature_flag.version",
+        "type": "added"
+      },
+      {
+        "name": "file.accessed",
+        "type": "added"
+      },
+      {
+        "name": "file.attributes",
+        "type": "added"
+      },
+      {
+        "name": "file.changed",
+        "type": "added"
+      },
+      {
+        "name": "file.created",
+        "type": "added"
+      },
+      {
+        "name": "file.fork_name",
+        "type": "added"
+      },
+      {
+        "name": "file.group.id",
+        "type": "added"
+      },
+      {
+        "name": "file.group.name",
+        "type": "added"
+      },
+      {
+        "name": "file.inode",
+        "type": "added"
+      },
+      {
+        "name": "file.mode",
+        "type": "added"
+      },
+      {
+        "name": "file.modified",
+        "type": "added"
+      },
+      {
+        "name": "file.owner.id",
+        "type": "added"
+      },
+      {
+        "name": "file.owner.name",
+        "type": "added"
+      },
+      {
+        "name": "file.symbolic_link.target_path",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.application.container",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.application.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.application.location",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.service.criticality_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.service.environment_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.service.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.workload.criticality_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.workload.environment_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub.workload.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.application.container",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.application.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.application.location",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.service.criticality_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.service.environment_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.service.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.workload.criticality_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.workload.environment_type",
+        "type": "added"
+      },
+      {
+        "name": "gcp.apphub_destination.workload.id",
+        "type": "added"
+      },
+      {
+        "name": "gcp.client.service",
+        "type": "added"
+      },
+      {
+        "name": "gcp.gce.instance_group_manager.name",
+        "type": "added"
+      },
+      {
+        "name": "gcp.gce.instance_group_manager.region",
+        "type": "added"
+      },
+      {
+        "name": "gcp.gce.instance_group_manager.zone",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.agent.description",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.agent.id",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.agent.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.agent.version",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.completion",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "gen_ai.conversation.id",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.data_source.id",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.embeddings.dimension.count",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.evaluation.explanation",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.evaluation.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.evaluation.score.label",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.evaluation.score.value",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.input.messages",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.openai.request.response_format",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.openai.request.seed",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.openai.request.service_tier",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.openai.response.service_tier",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.openai.response.system_fingerprint",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.operation.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.output.messages",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.output.type",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.prompt",
+        "note": "Removed, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "gen_ai.prompt.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.provider.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.choice.count",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.encoding_formats",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.frequency_penalty",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.presence_penalty",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.seed",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.stop_sequences",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.stream",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.request.top_k",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.response.time_to_first_chunk",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.retrieval.documents",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.retrieval.query.text",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.system_instructions",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.token.type",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.call.arguments",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.call.id",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.call.result",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.definitions",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.description",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.name",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.tool.type",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.usage.cache_creation.input_tokens",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.usage.cache_read.input_tokens",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.usage.input_tokens",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.usage.output_tokens",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.usage.reasoning.output_tokens",
+        "type": "added"
+      },
+      {
+        "name": "gen_ai.workflow.name",
+        "type": "added"
+      },
+      {
+        "name": "geo.continent.code",
+        "type": "added"
+      },
+      {
+        "name": "geo.country.iso_code",
+        "type": "added"
+      },
+      {
+        "name": "geo.locality.name",
+        "type": "added"
+      },
+      {
+        "name": "geo.location.lat",
+        "type": "added"
+      },
+      {
+        "name": "geo.location.lon",
+        "type": "added"
+      },
+      {
+        "name": "geo.postal_code",
+        "type": "added"
+      },
+      {
+        "name": "geo.region.iso_code",
+        "type": "added"
+      },
+      {
+        "name": "go.cpu.detailed_state",
+        "type": "added"
+      },
+      {
+        "name": "go.cpu.state",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.detailed_type",
+        "type": "added"
+      },
+      {
+        "name": "go.memory.type",
+        "type": "added"
+      },
+      {
+        "name": "http.flavor",
+        "note": "Split into `network.protocol.name` and `network.protocol.version`",
+        "type": "uncategorized"
+      },
+      {
+        "name": "http.host",
+        "note": "Replaced by one of `server.address`, `client.address` or `http.request.header.host`, depending on the usage.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "http.request_content_length",
+        "note": "Replaced by `http.request.header.content-length`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "http.response_content_length",
+        "note": "Replaced by `http.response.header.content-length`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "http.target",
+        "note": "Split to `url.path` and `url.query`.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "hw.battery.capacity",
+        "type": "added"
+      },
+      {
+        "name": "hw.battery.chemistry",
+        "type": "added"
+      },
+      {
+        "name": "hw.battery.state",
+        "type": "added"
+      },
+      {
+        "name": "hw.bios_version",
+        "type": "added"
+      },
+      {
+        "name": "hw.driver_version",
+        "type": "added"
+      },
+      {
+        "name": "hw.enclosure.type",
+        "type": "added"
+      },
+      {
+        "name": "hw.firmware_version",
+        "type": "added"
+      },
+      {
+        "name": "hw.gpu.task",
+        "type": "added"
+      },
+      {
+        "name": "hw.id",
+        "type": "added"
+      },
+      {
+        "name": "hw.limit_type",
+        "type": "added"
+      },
+      {
+        "name": "hw.logical_disk.raid_level",
+        "type": "added"
+      },
+      {
+        "name": "hw.logical_disk.state",
+        "type": "added"
+      },
+      {
+        "name": "hw.memory.type",
+        "type": "added"
+      },
+      {
+        "name": "hw.model",
+        "type": "added"
+      },
+      {
+        "name": "hw.name",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.logical_addresses",
+        "type": "added"
+      },
+      {
+        "name": "hw.network.physical_address",
+        "type": "added"
+      },
+      {
+        "name": "hw.parent",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.smart_attribute",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.state",
+        "type": "added"
+      },
+      {
+        "name": "hw.physical_disk.type",
+        "type": "added"
+      },
+      {
+        "name": "hw.sensor_location",
+        "type": "added"
+      },
+      {
+        "name": "hw.serial_number",
+        "type": "added"
+      },
+      {
+        "name": "hw.state",
+        "type": "added"
+      },
+      {
+        "name": "hw.tape_drive.operation_type",
+        "type": "added"
+      },
+      {
+        "name": "hw.type",
+        "type": "added"
+      },
+      {
+        "name": "hw.vendor",
+        "type": "added"
+      },
+      {
+        "name": "ios.app.state",
+        "type": "added"
+      },
+      {
+        "name": "jsonrpc.protocol.version",
+        "type": "added"
+      },
+      {
+        "name": "jsonrpc.request.id",
+        "type": "added"
+      },
+      {
+        "name": "jvm.gc.cause",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.status.reason",
+        "type": "added"
+      },
+      {
+        "name": "k8s.container.status.state",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cronjob.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.cronjob.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.daemonset.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.deployment.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.metric.type",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.scaletargetref.api_version",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.scaletargetref.kind",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.scaletargetref.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hpa.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.hugepage.size",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.job.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.namespace.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.namespace.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.namespace.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.condition.status",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.condition.type",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.node.system_container.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.reclaim_policy",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolume.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.persistentvolumeclaim.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.hostname",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.ip",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.start_time",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.status.phase",
+        "type": "added"
+      },
+      {
+        "name": "k8s.pod.status.reason",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicaset.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.replicationcontroller.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.resource_name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.resourcequota.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.endpoint.address_type",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.endpoint.condition",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.endpoint.zone",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.publish_not_ready_addresses",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.selector",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.traffic_distribution",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.type",
+        "type": "added"
+      },
+      {
+        "name": "k8s.service.uid",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.annotation",
+        "type": "added"
+      },
+      {
+        "name": "k8s.statefulset.label",
+        "type": "added"
+      },
+      {
+        "name": "k8s.storageclass.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.volume.name",
+        "type": "added"
+      },
+      {
+        "name": "k8s.volume.type",
+        "type": "added"
+      },
+      {
+        "name": "linux.memory.slab.state",
+        "type": "added"
+      },
+      {
+        "name": "log.record.original",
+        "type": "added"
+      },
+      {
+        "name": "mainframe.lpar.name",
+        "type": "added"
+      },
+      {
+        "name": "mcp.method.name",
+        "type": "added"
+      },
+      {
+        "name": "mcp.protocol.version",
+        "type": "added"
+      },
+      {
+        "name": "mcp.resource.uri",
+        "type": "added"
+      },
+      {
+        "name": "mcp.session.id",
+        "type": "added"
+      },
+      {
+        "name": "message.compressed_size",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "message.id",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "message.type",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "message.uncompressed_size",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "messaging.consumer.group.name",
+        "type": "added"
+      },
+      {
+        "name": "messaging.destination.subscription.name",
+        "type": "added"
+      },
+      {
+        "name": "messaging.destination_publish.anonymous",
+        "note": "Removed. No replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "messaging.destination_publish.name",
+        "note": "Removed. No replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "messaging.kafka.destination.partition",
+        "note": "Record string representation of the partition id in `messaging.destination.partition.id` attribute.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "messaging.kafka.offset",
+        "type": "added"
+      },
+      {
+        "name": "messaging.rocketmq.client_group",
+        "note": "Replaced by `messaging.consumer.group.name` on the consumer spans. No replacement for producer spans.\n",
+        "type": "uncategorized"
+      },
+      {
+        "name": "net.peer.name",
+        "note": "Replaced by `server.address` on client spans and `client.address` on server spans.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "net.peer.port",
+        "note": "Replaced by `server.port` on client spans and `client.port` on server spans.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "net.sock.family",
+        "note": "Split to `network.transport` and `network.type`.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "net.sock.peer.name",
+        "note": "Removed. No replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "network.connection.state",
+        "type": "added"
+      },
+      {
+        "name": "network.interface.name",
+        "type": "added"
+      },
+      {
+        "name": "nfs.operation.name",
+        "type": "added"
+      },
+      {
+        "name": "nfs.server.repcache.status",
+        "type": "added"
+      },
+      {
+        "name": "nodejs.eventloop.state",
+        "type": "added"
+      },
+      {
+        "name": "onc_rpc.procedure.name",
+        "type": "added"
+      },
+      {
+        "name": "onc_rpc.procedure.number",
+        "type": "added"
+      },
+      {
+        "name": "onc_rpc.program.name",
+        "type": "added"
+      },
+      {
+        "name": "onc_rpc.version",
+        "type": "added"
+      },
+      {
+        "name": "openai.api.type",
+        "type": "added"
+      },
+      {
+        "name": "openai.request.service_tier",
+        "type": "added"
+      },
+      {
+        "name": "openai.response.service_tier",
+        "type": "added"
+      },
+      {
+        "name": "openai.response.system_fingerprint",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.name",
+        "type": "added"
+      },
+      {
+        "name": "openshift.clusterquota.uid",
+        "type": "added"
+      },
+      {
+        "name": "oracle.db.domain",
+        "type": "added"
+      },
+      {
+        "name": "oracle.db.instance.name",
+        "type": "added"
+      },
+      {
+        "name": "oracle.db.name",
+        "type": "added"
+      },
+      {
+        "name": "oracle.db.pdb",
+        "type": "added"
+      },
+      {
+        "name": "oracle.db.service",
+        "type": "added"
+      },
+      {
+        "name": "oracle_cloud.realm",
+        "type": "added"
+      },
+      {
+        "name": "otel.component.name",
+        "type": "added"
+      },
+      {
+        "name": "otel.component.type",
+        "type": "added"
+      },
+      {
+        "name": "otel.event.name",
+        "type": "added"
+      },
+      {
+        "name": "otel.scope.schema_url",
+        "type": "added"
+      },
+      {
+        "name": "otel.span.parent.origin",
+        "type": "added"
+      },
+      {
+        "name": "otel.span.sampling_result",
+        "type": "added"
+      },
+      {
+        "name": "pprof.location.is_folded",
+        "type": "added"
+      },
+      {
+        "name": "pprof.mapping.has_filenames",
+        "type": "added"
+      },
+      {
+        "name": "pprof.mapping.has_functions",
+        "type": "added"
+      },
+      {
+        "name": "pprof.mapping.has_inline_frames",
+        "type": "added"
+      },
+      {
+        "name": "pprof.mapping.has_line_numbers",
+        "type": "added"
+      },
+      {
+        "name": "pprof.profile.comment",
+        "type": "added"
+      },
+      {
+        "name": "pprof.profile.doc_url",
+        "type": "added"
+      },
+      {
+        "name": "pprof.profile.drop_frames",
+        "type": "added"
+      },
+      {
+        "name": "pprof.profile.keep_frames",
+        "type": "added"
+      },
+      {
+        "name": "pprof.scope.default_sample_type",
+        "type": "added"
+      },
+      {
+        "name": "pprof.scope.sample_type_order",
+        "type": "added"
+      },
+      {
+        "name": "process.args_count",
+        "type": "added"
+      },
+      {
+        "name": "process.context_switch.type",
+        "type": "added"
+      },
+      {
+        "name": "process.environment_variable",
+        "type": "added"
+      },
+      {
+        "name": "process.executable.build_id.gnu",
+        "type": "added"
+      },
+      {
+        "name": "process.executable.build_id.go",
+        "type": "added"
+      },
+      {
+        "name": "process.executable.build_id.htlhash",
+        "type": "added"
+      },
+      {
+        "name": "process.executable.build_id.profiling",
+        "type": "added"
+      },
+      {
+        "name": "process.linux.cgroup",
+        "type": "added"
+      },
+      {
+        "name": "process.state",
+        "type": "added"
+      },
+      {
+        "name": "process.title",
+        "type": "added"
+      },
+      {
+        "name": "process.working_directory",
+        "type": "added"
+      },
+      {
+        "name": "profile.frame.type",
+        "type": "added"
+      },
+      {
+        "name": "rpc.grpc.status_code",
+        "note": "Use string representation of the gRPC status code on the `rpc.response.status_code` attribute.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.jsonrpc.error_code",
+        "note": "Use string representation of the error code on the `rpc.response.status_code` attribute.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.jsonrpc.error_message",
+        "note": "Use the span status description when reporting JSON-RPC spans.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.message.compressed_size",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.message.id",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.message.type",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.message.uncompressed_size",
+        "note": "Deprecated, no replacement at this time.",
+        "type": "obsoleted"
+      },
+      {
+        "name": "rpc.method_original",
+        "type": "added"
+      },
+      {
+        "name": "rpc.request.metadata",
+        "type": "added"
+      },
+      {
+        "name": "rpc.response.metadata",
+        "type": "added"
+      },
+      {
+        "name": "rpc.response.status_code",
+        "type": "added"
+      },
+      {
+        "name": "rpc.service",
+        "note": "Value should be included in `rpc.method` which is expected to be a fully-qualified name.",
+        "type": "uncategorized"
+      },
+      {
+        "name": "rpc.system.name",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.category",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.description",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.license",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.name",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.reference",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.ruleset.name",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.uuid",
+        "type": "added"
+      },
+      {
+        "name": "security_rule.version",
+        "type": "added"
+      },
+      {
+        "name": "service.criticality",
+        "type": "added"
+      },
+      {
+        "name": "service.peer.name",
+        "type": "added"
+      },
+      {
+        "name": "service.peer.namespace",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.hugepages.state",
+        "type": "added"
+      },
+      {
+        "name": "system.memory.linux.slab.state",
+        "type": "added"
+      },
+      {
+        "name": "system.paging.fault.type",
+        "type": "added"
+      },
+      {
+        "name": "test.case.name",
+        "type": "added"
+      },
+      {
+        "name": "test.case.result.status",
+        "type": "added"
+      },
+      {
+        "name": "test.suite.name",
+        "type": "added"
+      },
+      {
+        "name": "test.suite.run.status",
+        "type": "added"
+      },
+      {
+        "name": "user.email",
+        "type": "added"
+      },
+      {
+        "name": "user.full_name",
+        "type": "added"
+      },
+      {
+        "name": "user.hash",
+        "type": "added"
+      },
+      {
+        "name": "user.id",
+        "type": "added"
+      },
+      {
+        "name": "user.name",
+        "type": "added"
+      },
+      {
+        "name": "user.roles",
+        "type": "added"
+      },
+      {
+        "name": "user_agent.os.name",
+        "type": "added"
+      },
+      {
+        "name": "user_agent.os.version",
+        "type": "added"
+      },
+      {
+        "name": "user_agent.synthetic.type",
+        "type": "added"
+      },
+      {
+        "name": "v8js.gc.type",
+        "type": "added"
+      },
+      {
+        "name": "v8js.heap.space.name",
+        "type": "added"
+      },
+      {
+        "name": "v8js.resource.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.id",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.state",
+        "type": "added"
+      },
+      {
+        "name": "vcs.change.title",
+        "type": "added"
+      },
+      {
+        "name": "vcs.line_change.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.owner.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.provider.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.base.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.base.revision",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.base.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.head.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.head.revision",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.head.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.ref.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.change.id",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.change.title",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.ref.name",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.ref.revision",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.ref.type",
+        "type": "added"
+      },
+      {
+        "name": "vcs.repository.url.full",
+        "type": "added"
+      },
+      {
+        "name": "vcs.revision_delta.direction",
+        "type": "added"
+      },
+      {
+        "name": "zos.smf.id",
+        "type": "added"
+      },
+      {
+        "name": "zos.sysplex.name",
+        "type": "added"
+      },
+      {
+        "new_name": "android.app.state",
+        "note": "Replaced by `android.app.state`.",
+        "old_name": "android.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "azure.client.id",
+        "note": "Replaced by `azure.client.id`.",
+        "old_name": "db.cosmosdb.client_id",
+        "type": "renamed"
+      },
+      {
+        "new_name": "azure.cosmosdb.connection.mode",
+        "note": "Replaced by `azure.cosmosdb.connection.mode`.",
+        "old_name": "db.cosmosdb.connection_mode",
+        "type": "renamed"
+      },
+      {
+        "new_name": "azure.cosmosdb.operation.request_charge",
+        "note": "Replaced by `azure.cosmosdb.operation.request_charge`.",
+        "old_name": "db.cosmosdb.request_charge",
+        "type": "renamed"
+      },
+      {
+        "new_name": "azure.cosmosdb.request.body.size",
+        "note": "Replaced by `azure.cosmosdb.request.body.size`.",
+        "old_name": "db.cosmosdb.request_content_length",
+        "type": "renamed"
+      },
+      {
+        "new_name": "azure.cosmosdb.response.sub_status_code",
+        "note": "Replaced by `azure.cosmosdb.response.sub_status_code`.",
+        "old_name": "db.cosmosdb.sub_status_code",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.consistency.level",
+        "note": "Replaced by `cassandra.consistency.level`.",
+        "old_name": "db.cassandra.consistency_level",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.coordinator.dc",
+        "note": "Replaced by `cassandra.coordinator.dc`.",
+        "old_name": "db.cassandra.coordinator.dc",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.coordinator.id",
+        "note": "Replaced by `cassandra.coordinator.id`.",
+        "old_name": "db.cassandra.coordinator.id",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.page.size",
+        "note": "Replaced by `cassandra.page.size`.",
+        "old_name": "db.cassandra.page_size",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.query.idempotent",
+        "note": "Replaced by `cassandra.query.idempotent`.",
+        "old_name": "db.cassandra.idempotence",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cassandra.speculative_execution.count",
+        "note": "Replaced by `cassandra.speculative_execution.count`.",
+        "old_name": "db.cassandra.speculative_execution_count",
+        "type": "renamed"
+      },
+      {
+        "new_name": "client.address",
+        "note": "Replaced by `client.address`.",
+        "old_name": "http.client_ip",
+        "type": "renamed"
+      },
+      {
+        "new_name": "code.column.number",
+        "note": "Replaced by `code.column.number`.",
+        "old_name": "code.column",
+        "type": "renamed"
+      },
+      {
+        "new_name": "code.file.path",
+        "note": "Replaced by `code.file.path`.",
+        "old_name": "code.filepath",
+        "type": "renamed"
+      },
+      {
+        "new_name": "code.line.number",
+        "note": "Replaced by `code.line.number`.",
+        "old_name": "code.lineno",
+        "type": "renamed"
+      },
+      {
+        "new_name": "container.label",
+        "note": "Replaced by `container.label`.",
+        "old_name": "container.labels",
+        "type": "renamed"
+      },
+      {
+        "new_name": "container.runtime.name",
+        "note": "Replaced by `container.runtime.name`.",
+        "old_name": "container.runtime",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cpu.logical_number",
+        "note": "Replaced by `cpu.logical_number`.",
+        "old_name": "system.cpu.logical_number",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cpu.mode",
+        "note": "Replaced by `cpu.mode`.",
+        "old_name": "container.cpu.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cpu.mode",
+        "note": "Replaced by `cpu.mode`.",
+        "old_name": "process.cpu.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "cpu.mode",
+        "note": "Replaced by `cpu.mode`.",
+        "old_name": "system.cpu.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.pool.name",
+        "note": "Replaced by `db.client.connection.pool.name`.",
+        "old_name": "db.client.connections.pool.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.pool.name",
+        "note": "Replaced by `db.client.connection.pool.name`.",
+        "old_name": "pool.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.state",
+        "note": "Replaced by `db.client.connection.state`.",
+        "old_name": "db.client.connections.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.client.connection.state",
+        "note": "Replaced by `db.client.connection.state`.",
+        "old_name": "state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.collection.name",
+        "note": "Replaced by `db.collection.name`.",
+        "old_name": "db.cassandra.table",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.collection.name",
+        "note": "Replaced by `db.collection.name`.",
+        "old_name": "db.cosmosdb.container",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.collection.name",
+        "note": "Replaced by `db.collection.name`.",
+        "old_name": "db.mongodb.collection",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.namespace",
+        "note": "Replaced by `db.namespace`.",
+        "old_name": "db.elasticsearch.cluster.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.namespace",
+        "note": "Replaced by `db.namespace`.",
+        "old_name": "db.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.operation.name",
+        "note": "Replaced by `db.operation.name`.",
+        "old_name": "db.operation",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.operation.parameter",
+        "note": "Replaced by `db.operation.parameter`.",
+        "old_name": "db.elasticsearch.path_parts",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.query.text",
+        "note": "Replaced by `db.query.text`.",
+        "old_name": "db.statement",
+        "type": "renamed"
+      },
+      {
+        "new_name": "db.system.name",
+        "note": "Replaced by `db.system.name`.",
+        "old_name": "db.system",
+        "type": "renamed"
+      },
+      {
+        "new_name": "deployment.environment.name",
+        "note": "Replaced by `deployment.environment.name`.",
+        "old_name": "deployment.environment",
+        "type": "renamed"
+      },
+      {
+        "new_name": "elasticsearch.node.name",
+        "note": "Replaced by `elasticsearch.node.name`.",
+        "old_name": "db.elasticsearch.node.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "feature_flag.provider.name",
+        "note": "Replaced by `feature_flag.provider.name`.",
+        "old_name": "feature_flag.provider_name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "feature_flag.result.variant",
+        "note": "Replaced by `feature_flag.result.variant`.",
+        "old_name": "feature_flag.variant",
+        "type": "renamed"
+      },
+      {
+        "new_name": "gen_ai.provider.name",
+        "note": "Replaced by `gen_ai.provider.name`.",
+        "old_name": "gen_ai.system",
+        "type": "renamed"
+      },
+      {
+        "new_name": "gen_ai.usage.input_tokens",
+        "note": "Replaced by `gen_ai.usage.input_tokens`.",
+        "old_name": "gen_ai.usage.prompt_tokens",
+        "type": "renamed"
+      },
+      {
+        "new_name": "gen_ai.usage.output_tokens",
+        "note": "Replaced by `gen_ai.usage.output_tokens`.",
+        "old_name": "gen_ai.usage.completion_tokens",
+        "type": "renamed"
+      },
+      {
+        "new_name": "http.request.body.size",
+        "note": "Replaced by `http.request.body.size`.",
+        "old_name": "http.request_content_length_uncompressed",
+        "type": "renamed"
+      },
+      {
+        "new_name": "http.request.method",
+        "note": "Replaced by `http.request.method`.",
+        "old_name": "http.method",
+        "type": "renamed"
+      },
+      {
+        "new_name": "http.response.body.size",
+        "note": "Replaced by `http.response.body.size`.",
+        "old_name": "http.response_content_length_uncompressed",
+        "type": "renamed"
+      },
+      {
+        "new_name": "http.response.status_code",
+        "note": "Replaced by `http.response.status_code`.",
+        "old_name": "http.status_code",
+        "type": "renamed"
+      },
+      {
+        "new_name": "ios.app.state",
+        "note": "Replaced by `ios.app.state`.",
+        "old_name": "ios.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "jsonrpc.protocol.version",
+        "note": "Replaced by `jsonrpc.protocol.version`.",
+        "old_name": "rpc.jsonrpc.version",
+        "type": "renamed"
+      },
+      {
+        "new_name": "jsonrpc.request.id",
+        "note": "Replaced by `jsonrpc.request.id`.",
+        "old_name": "rpc.jsonrpc.request_id",
+        "type": "renamed"
+      },
+      {
+        "new_name": "k8s.pod.label",
+        "note": "Replaced by `k8s.pod.label`.",
+        "old_name": "k8s.pod.labels",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.client.id",
+        "note": "Replaced by `messaging.client.id`.",
+        "old_name": "messaging.client_id",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.consumer.group.name",
+        "note": "Replaced by `messaging.consumer.group.name`.",
+        "old_name": "messaging.eventhubs.consumer.group",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.consumer.group.name",
+        "note": "Replaced by `messaging.consumer.group.name`.",
+        "old_name": "messaging.kafka.consumer.group",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.destination.subscription.name",
+        "note": "Replaced by `messaging.destination.subscription.name`.",
+        "old_name": "messaging.servicebus.destination.subscription_name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.kafka.offset",
+        "note": "Replaced by `messaging.kafka.offset`.",
+        "old_name": "messaging.kafka.message.offset",
+        "type": "renamed"
+      },
+      {
+        "new_name": "messaging.operation.type",
+        "note": "Replaced by `messaging.operation.type`.",
+        "old_name": "messaging.operation",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.connection.state",
+        "note": "Replaced by `network.connection.state`.",
+        "old_name": "system.network.state",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.local.address",
+        "note": "Replaced by `network.local.address`.",
+        "old_name": "net.host.ip",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.local.address",
+        "note": "Replaced by `network.local.address`.",
+        "old_name": "net.sock.host.addr",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.local.port",
+        "note": "Replaced by `network.local.port`.",
+        "old_name": "net.sock.host.port",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.peer.address",
+        "note": "Replaced by `network.peer.address`.",
+        "old_name": "net.peer.ip",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.peer.address",
+        "note": "Replaced by `network.peer.address`.",
+        "old_name": "net.sock.peer.addr",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.peer.port",
+        "note": "Replaced by `network.peer.port`.",
+        "old_name": "net.sock.peer.port",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.protocol.name",
+        "note": "Replaced by `network.protocol.name`.",
+        "old_name": "net.protocol.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.protocol.version",
+        "note": "Replaced by `network.protocol.version`.",
+        "old_name": "net.protocol.version",
+        "type": "renamed"
+      },
+      {
+        "new_name": "network.transport",
+        "note": "Replaced by `network.transport`.",
+        "old_name": "net.transport",
+        "type": "renamed"
+      },
+      {
+        "new_name": "otel.scope.name",
+        "note": "Replaced by `otel.scope.name`.",
+        "old_name": "otel.library.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "otel.scope.version",
+        "note": "Replaced by `otel.scope.version`.",
+        "old_name": "otel.library.version",
+        "type": "renamed"
+      },
+      {
+        "new_name": "process.context_switch.type",
+        "note": "Replaced by `process.context_switch.type`.",
+        "old_name": "process.context_switch_type",
+        "type": "renamed"
+      },
+      {
+        "new_name": "process.state",
+        "note": "Replaced by `process.state`.",
+        "old_name": "system.process.status",
+        "type": "renamed"
+      },
+      {
+        "new_name": "process.state",
+        "note": "Replaced by `process.state`.",
+        "old_name": "system.processes.status",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.request.metadata",
+        "note": "Replaced by `rpc.request.metadata`.",
+        "old_name": "rpc.connect_rpc.request.metadata",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.request.metadata",
+        "note": "Replaced by `rpc.request.metadata`.",
+        "old_name": "rpc.grpc.request.metadata",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.response.metadata",
+        "note": "Replaced by `rpc.response.metadata`.",
+        "old_name": "rpc.connect_rpc.response.metadata",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.response.metadata",
+        "note": "Replaced by `rpc.response.metadata`.",
+        "old_name": "rpc.grpc.response.metadata",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.response.status_code",
+        "note": "Replaced by `rpc.response.status_code`.",
+        "old_name": "rpc.connect_rpc.error_code",
+        "type": "renamed"
+      },
+      {
+        "new_name": "rpc.system.name",
+        "note": "Replaced by `rpc.system.name`.",
+        "old_name": "rpc.system",
+        "type": "renamed"
+      },
+      {
+        "new_name": "server.address",
+        "note": "Replaced by `server.address`.",
+        "old_name": "http.server_name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "server.address",
+        "note": "Replaced by `server.address`.",
+        "old_name": "net.host.name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "server.address",
+        "note": "Replaced by `server.address`.",
+        "old_name": "tls.client.server_name",
+        "type": "renamed"
+      },
+      {
+        "new_name": "server.port",
+        "note": "Replaced by `server.port`.",
+        "old_name": "net.host.port",
+        "type": "renamed"
+      },
+      {
+        "new_name": "service.peer.name",
+        "note": "Replaced by `service.peer.name`.",
+        "old_name": "peer.service",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.paging.fault.type",
+        "note": "Replaced by `system.paging.fault.type`.",
+        "old_name": "process.paging.fault_type",
+        "type": "renamed"
+      },
+      {
+        "new_name": "system.paging.fault.type",
+        "note": "Replaced by `system.paging.fault.type`.",
+        "old_name": "system.paging.type",
+        "type": "renamed"
+      },
+      {
+        "new_name": "url.full",
+        "note": "Replaced by `url.full`.",
+        "old_name": "http.url",
+        "type": "renamed"
+      },
+      {
+        "new_name": "url.scheme",
+        "note": "Replaced by `url.scheme`.",
+        "old_name": "http.scheme",
+        "type": "renamed"
+      },
+      {
+        "new_name": "user_agent.original",
+        "note": "Replaced by `user_agent.original`.",
+        "old_name": "http.user_agent",
+        "type": "renamed"
+      }
+    ],
+    "spans": []
+  },
+  "head": {
+    "semconv_version": ""
+  }
+}

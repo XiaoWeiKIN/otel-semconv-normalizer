@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "go_toolchain": "go1.25.12",
+  "weaver": {
+    "release": "v0.25.0",
+    "commit": "a177fb605e66ef8d3b333302459c805091bfedd7",
+    "checksum_manifest": "upstream/weaver/sha256.sum",
+    "assets": [
+      {
+        "platform": "darwin/arm64",
+        "path": "upstream/weaver/weaver-aarch64-apple-darwin.tar.xz",
+        "sha256": "32f1c4e9092f0ba4fe48b259ce3dc1d65c756db7f759fadf5338ebacdf53a3df"
+      },
+      {
+        "platform": "linux/amd64",
+        "path": "upstream/weaver/weaver-x86_64-unknown-linux-gnu.tar.xz",
+        "sha256": "8cbf46fc0137311eab7fd3860cb841031bb772f8613acc5923fa9ef3879c0cd5"
+      }
+    ]
+  },
+  "source_registry": {
+    "tag": "v1.26.0",
+    "commit": "9adff435c76ea3b8cba89babefc832d3dd3c1ab9",
+    "archive": "upstream/registry/semantic-conventions-v1.26.0-model.tar",
+    "sha256": "ecf8658f85d2e06281470ec1d11d27534a6090f6e689343e757ba4ab7e1d1ece"
+  },
+  "target_registry": {
+    "tag": "v1.41.0",
+    "commit": "e018fe6f91862f5ed63c082f87697cddac596784",
+    "archive": "upstream/registry/semantic-conventions-v1.41.0-model.tar",
+    "sha256": "6e2a13d9ccac76327bbb79578eced858b14fddbc96facbf56aab16a5b19cee93"
+  },
+  "schema": {
+    "url": "https://opentelemetry.io/schemas/1.41.0",
+    "path": "schema/opentelemetry-1.41.0.yaml",
+    "sha256": "d73002442a640ce74a185359843b9046884d16eec198c3576d2dcc779deaf740"
+  },
+  "migration_guides": [
+    {
+      "domain": "db",
+      "path": "guides/db-migration.md",
+      "sha256": "52746f889ec489c988d49a8cbd2ab021d33bff436d81dfff307c0bec7a67e32d"
+    },
+    {
+      "domain": "http",
+      "path": "guides/http-migration.md",
+      "sha256": "2726327180ab7910de371ecdc65dc52bcd10c09b24ea39800408024fe63fe4b1"
+    },
+    {
+      "domain": "rpc",
+      "path": "guides/rpc-migration.md",
+      "sha256": "30a1b88fae6dc349f6ca5bb3095b2c7cd4f793bd63601f234c68e504faaa306b"
+    }
+  ],
+  "local_inputs": [
+    "audit/compatibility-matrix.json",
+    "audit/db-rpc-decisions.json",
+    "audit/db-rpc-obligations.json",
+    "audit/http-url-network-decisions.json",
+    "audit/http-url-network-obligations.json",
+    "audit/migration-audit-v1.41.0.yaml",
+    "audit/required-source-urls-draft.json",
+    "audit/required-source-urls.yaml",
+    "corpus/canonical-technology-aliases.json",
+    "corpus/collector-schema-urls.json",
+    "local/policies/otelmap-canonical.rego",
+    "local/templates/registry/otelmap-weave/registry-model.json.j2",
+    "local/templates/registry/otelmap-weave/registry-review.md.j2",
+    "local/templates/registry/otelmap-weave/weaver.yaml"
+  ],
+  "checksum_manifest": "checksums.txt"
+}

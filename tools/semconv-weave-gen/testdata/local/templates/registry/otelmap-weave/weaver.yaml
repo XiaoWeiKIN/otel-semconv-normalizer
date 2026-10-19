@@ -1,0 +1,14 @@
+whitespace_control:
+  trim_blocks: true
+  lstrip_blocks: true
+  keep_trailing_newline: true
+
+templates:
+  - template: registry-model.json.j2
+    filter: .
+    application_mode: single
+    file_name: registry-model.json
+  - template: registry-review.md.j2
+    filter: .
+    application_mode: single
+    file_name: registry-review.md

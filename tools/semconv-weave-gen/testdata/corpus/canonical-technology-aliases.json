@@ -1,0 +1,162 @@
+{
+  "schema_version": 2,
+  "repository": "github.com/XiaoWeiKIN/otel-semconv-normalizer",
+  "commit": "16a5f5e9e4774c0d4c11180182454bc25a631e03",
+  "source_path": "internal/semconvmeta/meta.go",
+  "source_sha256": "2a9f30beee322428bffec73ae1f1347b3285b7ce2caaaae1de20ee05481b742e",
+  "owner": "otel-semconv-normalizer/semconv-maintainers",
+  "aliases": [
+    {
+      "domain": "db",
+      "source": "adabas",
+      "target": "softwareag.adabas",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "rpc",
+      "source": "apache_dubbo",
+      "target": "dubbo",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "cache",
+      "target": "intersystems.cache",
+      "projection_allowed": false,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "rpc",
+      "source": "connect_rpc",
+      "target": "connectrpc",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "cosmosdb",
+      "target": "azure.cosmosdb",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "db2",
+      "target": "ibm.db2",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "dynamodb",
+      "target": "aws.dynamodb",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "firebird",
+      "target": "firebirdsql",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "h2",
+      "target": "h2database",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "hanadb",
+      "target": "sap.hana",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "informix",
+      "target": "ibm.informix",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "ingres",
+      "target": "actian.ingres",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "intersystems_cache",
+      "target": "intersystems.cache",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "maxdb",
+      "target": "sap.maxdb",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "mssql",
+      "target": "microsoft.sql_server",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "netezza",
+      "target": "ibm.netezza",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "oracle",
+      "target": "oracle.db",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "redshift",
+      "target": "aws.redshift",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    },
+    {
+      "domain": "db",
+      "source": "spanner",
+      "target": "gcp.spanner",
+      "projection_allowed": true,
+      "owner": "otel-semconv-normalizer/semconv-maintainers",
+      "rationale": "Pinned DB/RPC migration Guide and canonical v1.41.0 value contract."
+    }
+  ]
+}

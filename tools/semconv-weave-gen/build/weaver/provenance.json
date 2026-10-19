@@ -1,0 +1,142 @@
+{
+  "schema_version": 2,
+  "weaver": {
+    "release": "v0.25.0",
+    "commit": "a177fb605e66ef8d3b333302459c805091bfedd7",
+    "platform": "darwin/arm64",
+    "archive": "upstream/weaver/weaver-aarch64-apple-darwin.tar.xz",
+    "archive_sha256": "32f1c4e9092f0ba4fe48b259ce3dc1d65c756db7f759fadf5338ebacdf53a3df",
+    "executable_sha256": "46398df2c9c91d989c5432a664573f42ace31e9e9331111709618cd8fae9ef58"
+  },
+  "source_registry": {
+    "tag": "v1.26.0",
+    "commit": "9adff435c76ea3b8cba89babefc832d3dd3c1ab9",
+    "archive": "upstream/registry/semantic-conventions-v1.26.0-model.tar",
+    "archive_sha256": "ecf8658f85d2e06281470ec1d11d27534a6090f6e689343e757ba4ab7e1d1ece"
+  },
+  "target_registry": {
+    "tag": "v1.41.0",
+    "commit": "e018fe6f91862f5ed63c082f87697cddac596784",
+    "archive": "upstream/registry/semantic-conventions-v1.41.0-model.tar",
+    "archive_sha256": "6e2a13d9ccac76327bbb79578eced858b14fddbc96facbf56aab16a5b19cee93"
+  },
+  "local_inputs": [
+    {
+      "path": "checksums.txt",
+      "sha256": "bee94f19502215bea0e0e82e581314c4c3d8113e219cf077705d8d100837d009"
+    },
+    {
+      "path": "input-lock.json",
+      "sha256": "91e15ddb95ceaef16c0cafb71bd2172efaf9d84faaff0e36592f5ec7f6c731d7"
+    },
+    {
+      "path": "local/policies/otelmap-canonical.rego",
+      "sha256": "586de5b221b6de3ca68e0ba2733b597b6369e21e488b05c93071fb612107b273"
+    },
+    {
+      "path": "local/templates/registry/otelmap-weave/registry-model.json.j2",
+      "sha256": "ca6d69477cabf6f4af2f591bdf3d330e2103b9022cd14771b733af8f6f3949a5"
+    },
+    {
+      "path": "local/templates/registry/otelmap-weave/registry-review.md.j2",
+      "sha256": "7ef5af984ba2125a4131f43a1753c1dd673646c1b92f13ec01f336534169bd90"
+    },
+    {
+      "path": "local/templates/registry/otelmap-weave/weaver.yaml",
+      "sha256": "04b3821549e58c04b2dfa1e16160989e6ae7862b7b3a91ec9df723c894274e68"
+    }
+  ],
+  "commands": [
+    {
+      "name": "registry check",
+      "argv": [
+        "${STAGING}/tool/weaver-aarch64-apple-darwin/weaver",
+        "registry",
+        "check",
+        "--quiet",
+        "--registry",
+        "${STAGING}/registry/target/semantic-conventions-v1.41.0/model",
+        "--follow-symlinks=false",
+        "--include-unreferenced=false",
+        "--v2=false",
+        "--diagnostic-format=json",
+        "--diagnostic-stdout=true",
+        "--config",
+        "${STAGING}/config/.weaver.toml",
+        "--policy",
+        "${STAGING}/local-inputs/policies"
+      ]
+    },
+    {
+      "name": "registry generate",
+      "argv": [
+        "${STAGING}/tool/weaver-aarch64-apple-darwin/weaver",
+        "registry",
+        "generate",
+        "otelmap-weave",
+        "${STAGING}/artifacts",
+        "--quiet",
+        "--registry",
+        "${STAGING}/registry/target/semantic-conventions-v1.41.0/model",
+        "--follow-symlinks=false",
+        "--include-unreferenced=false",
+        "--v2=false",
+        "--diagnostic-format=json",
+        "--diagnostic-stdout=true",
+        "--templates",
+        "${STAGING}/local-inputs/templates",
+        "--policy",
+        "${STAGING}/local-inputs/policies"
+      ]
+    },
+    {
+      "name": "registry diff",
+      "argv": [
+        "${STAGING}/tool/weaver-aarch64-apple-darwin/weaver",
+        "registry",
+        "diff",
+        "--quiet",
+        "--registry",
+        "${STAGING}/registry/target/semantic-conventions-v1.41.0/model",
+        "--follow-symlinks=false",
+        "--include-unreferenced=false",
+        "--v2=false",
+        "--diagnostic-format=json",
+        "--diagnostic-stdout=true",
+        "--config",
+        "${STAGING}/config/.weaver.toml",
+        "--baseline-registry",
+        "${STAGING}/registry/source/semantic-conventions-v1.26.0/model",
+        "--format=json",
+        "--output",
+        "${STAGING}/artifacts/diff/v1.26.0-to-v1.41.0"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "diff/v1.26.0-to-v1.41.0/diff.json",
+      "sha256": "f84540f9826ebf8e84769d1ed888bb515aacaaca510f5e22a8cac2d7c8921693"
+    },
+    {
+      "path": "findings-check.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "findings-diff.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "findings-generate.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "registry-model.json",
+      "sha256": "51a59589f2a35589e5dd2945f5ed09bdb2d9c8ff4c1f59c0d6b30a2a59e5e933"
+    },
+    {
+      "path": "registry-review.md",
+      "sha256": "a90c8a90b6c4cb1dec7b0ea453c9e3c69c27ac14ca99b954da43f47a1f0776c9"
+    }
+  ]
+}

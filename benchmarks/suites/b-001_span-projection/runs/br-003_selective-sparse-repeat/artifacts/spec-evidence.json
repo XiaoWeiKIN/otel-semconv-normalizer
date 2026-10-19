@@ -1,0 +1,303 @@
+{
+  "catalog": {
+    "id": "io.github.xiaoweikin.engineering-specifications",
+    "revision": "ae5aba751b4227e95e1c0ba45410f74bfefc46f7",
+    "sha256": "a038769993a50c50eb4e693e9fd8042cb99ef7db22dd98181387f6037e7c44e6",
+    "version": "1.5.0"
+  },
+  "consumer": {
+    "id": "repo-foundry",
+    "repository_head": "07bcebdae9887a42e8f10a02278f00158f990c57",
+    "router_version": 5,
+    "worktree_clean": false
+  },
+  "evidence_type": "repo-foundry/requirement-activation",
+  "finding_lifecycle": {
+    "maximum_effective_level": "Advisory",
+    "reason": "RepoFoundry exports verified activation context but does not produce or adjudicate compliance findings.",
+    "supported": false
+  },
+  "receipt": {
+    "adapter_id": "codex",
+    "capsule": {
+      "budget_bytes": 32768,
+      "budget_override_reason": "",
+      "bytes": 30876,
+      "mode": "requirements",
+      "sha256": "6e7ea554d633938e5607d908cea1f99bdf19eca2801e45300d01b626a4eb9d88"
+    },
+    "context_epoch": 7,
+    "decision": "activated",
+    "planned_paths": [
+      "semconvweave/**",
+      "semconvweave/*.go",
+      "tools/semconv-weave-gen/**",
+      "tools/semconv-weave-gen/**/*.go",
+      "docs/schema-normalization-design.md",
+      "benchmarks/**"
+    ],
+    "session_id": "normalization-fix",
+    "turn_id": "implement"
+  },
+  "requirements": [
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "SEM-NAME-001",
+      "requirement_block_sha256": "b4edda8a9cbd8fa5b7296b398d17f79b0fd4e848734109d2b976abf48f55df0e",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "core/semantic-naming",
+        "path": "docs/agent-guides/managed/core/semantic-naming.md",
+        "sha256": "29b6e5e19edaa3d87457a8418a4d020f563348c7d0fe6f7d3ab24a4c702c9e11",
+        "version": "1.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "SEM-SURFACE-001",
+      "requirement_block_sha256": "1a220995720c3bd5d9b0a048baac45f65a85da00010e2619bfefc29f1e377580",
+      "selection_source": "direct",
+      "spec": {
+        "id": "core/semantic-naming",
+        "path": "docs/agent-guides/managed/core/semantic-naming.md",
+        "sha256": "29b6e5e19edaa3d87457a8418a4d020f563348c7d0fe6f7d3ab24a4c702c9e11",
+        "version": "1.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "SEM-VERB-001",
+      "requirement_block_sha256": "95cb49a04182b35aa7d63429996bd3431a8032b8630a44c79788879384c6f523",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "core/semantic-naming",
+        "path": "docs/agent-guides/managed/core/semantic-naming.md",
+        "sha256": "29b6e5e19edaa3d87457a8418a4d020f563348c7d0fe6f7d3ab24a4c702c9e11",
+        "version": "1.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "DATA-NORMALIZE-001",
+      "requirement_block_sha256": "52ff169b96ee2602227aa6cb31466e05f395d51b8e3e0c8a7b4a95cc02d90da7",
+      "selection_source": "direct",
+      "spec": {
+        "id": "core/data-boundaries",
+        "path": "docs/agent-guides/managed/core/data-boundaries.md",
+        "sha256": "644ffec3b6a1dbdb3e05797f665a9282e90397ca587850902c737cc2f2b9b5c2",
+        "version": "0.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "DATA-SHAPE-001",
+      "requirement_block_sha256": "fd6d584240d4dcd9f59ca21c118abb4c718de5ef991d6fe2acbbdc4e5496388c",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "core/data-boundaries",
+        "path": "docs/agent-guides/managed/core/data-boundaries.md",
+        "sha256": "644ffec3b6a1dbdb3e05797f665a9282e90397ca587850902c737cc2f2b9b5c2",
+        "version": "0.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "DATA-PARSE-001",
+      "requirement_block_sha256": "00b8584fc4a3b5d292b6aa78c569074826da4796fc51ae880ede22ec7f5d4205",
+      "selection_source": "direct",
+      "spec": {
+        "id": "core/data-boundaries",
+        "path": "docs/agent-guides/managed/core/data-boundaries.md",
+        "sha256": "644ffec3b6a1dbdb3e05797f665a9282e90397ca587850902c737cc2f2b9b5c2",
+        "version": "0.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "DATA-EFFECT-001",
+      "requirement_block_sha256": "74f5116541daaf34236a52358d034881cf946147840538747ffb36fdaa3634f5",
+      "selection_source": "direct",
+      "spec": {
+        "id": "core/data-boundaries",
+        "path": "docs/agent-guides/managed/core/data-boundaries.md",
+        "sha256": "644ffec3b6a1dbdb3e05797f665a9282e90397ca587850902c737cc2f2b9b5c2",
+        "version": "0.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "SEM-TYPE-001",
+      "requirement_block_sha256": "ff133dfd3ff002f2c23afd22aa35dca34bb9695f04bf2d02b043ac908f39cdb6",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "core/semantic-naming",
+        "path": "docs/agent-guides/managed/core/semantic-naming.md",
+        "sha256": "29b6e5e19edaa3d87457a8418a4d020f563348c7d0fe6f7d3ab24a4c702c9e11",
+        "version": "1.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-API-001",
+      "requirement_block_sha256": "576b3bc0fb5fd8febfeef67468cd22b582bd6407802a710d00a7ca752e3c8a8f",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "SEM-COMPAT-001",
+      "requirement_block_sha256": "b0e728db627724aea3ebaee51f5ca66b7503844f90057ff6c2ab6b4ec7dc5ff5",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "core/semantic-naming",
+        "path": "docs/agent-guides/managed/core/semantic-naming.md",
+        "sha256": "29b6e5e19edaa3d87457a8418a4d020f563348c7d0fe6f7d3ab24a4c702c9e11",
+        "version": "1.1.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-COMPAT-001",
+      "requirement_block_sha256": "9d5f3347ce95af2d79f8e42dcb80c6fc50f0b400219ee5ae0c70b27168b245a8",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-GENERATE-001",
+      "requirement_block_sha256": "fae16ec87dbbf357478bf35ad5f61095b69cafd12da666f808ce2b2d0be6791c",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-FORMAT-001",
+      "requirement_block_sha256": "6cee2cdf66e6bfd312fc6116af6ef58287300ad4c49415ab7cc63e53853cbdb7",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-TEST-001",
+      "requirement_block_sha256": "e4a92759b5005713db531f90365232b58a973bf21ec5234e5a556ce20ecb794d",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-NAME-001",
+      "requirement_block_sha256": "9fd590f8aaa491f19e9a9cd86ed35c287699fddf4fa851df2a6c1eb3de692dd5",
+      "selection_source": "context_dependency",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    },
+    {
+      "automated_enforcement": {
+        "effective": "Advisory",
+        "published": "Advisory",
+        "source": "legacy_default"
+      },
+      "id": "GO-NAME-002",
+      "requirement_block_sha256": "cb877d307e0a2e09b79f2501f3e1acfe432956a9cdb891dd62d1474a1f98890b",
+      "selection_source": "direct",
+      "spec": {
+        "id": "languages/go",
+        "path": "docs/agent-guides/managed/languages/go.md",
+        "sha256": "1d6a82e7380425b65983531f80a43442e35d831a2b65cb7ebc17918c1c0ee68b",
+        "version": "0.4.1"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "sha256": "bbe63d7c359d0614195c648e115bb1eee21a889aaec47266035ebc485cb846d1",
+  "whole_specs": []
+}

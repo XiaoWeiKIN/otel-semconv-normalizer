@@ -1,0 +1,48 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave
+cpu: Apple M4
+BenchmarkSelectiveProjectionPrior/Unchanged8         	  378817	       335.1 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionPrior/Unchanged32        	  111428	      1044 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionPrior/Unchanged64        	   59571	      2019 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionPrior/CanonicalHTTP8     	  168307	       734.3 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionPrior/HTTP               	   78930	      1552 ns/op	     872 B/op	      21 allocs/op
+BenchmarkSelectiveProjectionPrior/DB                 	  104221	      1176 ns/op	     536 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionPrior/RPC                	   81327	      1511 ns/op	     608 B/op	      17 allocs/op
+BenchmarkSelectiveProjectionPrior/MissingContext     	  141344	       865.0 ns/op	     656 B/op	      11 allocs/op
+BenchmarkSelectiveProjectionPrior/Invalid            	  114735	      1050 ns/op	     816 B/op	      14 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse1Of32        	   42002	      2879 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse2Of32        	   37987	      3164 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionPrior/Dense32            	   29980	      3966 ns/op	    6960 B/op	     138 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse1Of64        	   16545	      7229 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse2Of64        	   15843	      7586 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionPrior/Dense64            	   15386	      7840 ns/op	   14384 B/op	     267 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse1Of128       	    6186	     20752 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionPrior/Sparse2Of128       	    6008	     21318 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionPrior/Dense128           	    8845	     15451 ns/op	   29360 B/op	     524 allocs/op
+BenchmarkSelectiveProjectionPrior/CanonicalDB8       	  131770	       982.7 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionPrior/CanonicalRPC8      	  109446	      1126 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionPrior/Mixed              	    1104	    105542 ns/op	   88848 B/op	    1628 allocs/op
+BenchmarkSelectiveProjectionCandidate/Unchanged8     	  427311	       304.7 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/Unchanged32    	  130888	       954.5 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Unchanged64    	   66399	      1778 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalHTTP8 	  258147	       497.1 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/HTTP           	   82116	      1502 ns/op	     872 B/op	      21 allocs/op
+BenchmarkSelectiveProjectionCandidate/DB             	  147537	       854.5 ns/op	     536 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/RPC            	  108812	      1157 ns/op	     608 B/op	      17 allocs/op
+BenchmarkSelectiveProjectionCandidate/MissingContext 	  205362	       585.1 ns/op	     656 B/op	      11 allocs/op
+BenchmarkSelectiveProjectionCandidate/Invalid        	  192351	       658.3 ns/op	     816 B/op	      14 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of32    	  112304	      1126 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of32    	   86707	      1380 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense32        	   30914	      3934 ns/op	    6960 B/op	     138 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of64    	   56241	      2107 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of64    	   53299	      2274 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense64        	   16734	      7073 ns/op	   14384 B/op	     267 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of128   	   30380	      4010 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of128   	   24182	      4917 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense128       	    9508	     14138 ns/op	   29360 B/op	     524 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalDB8   	  209712	       598.8 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalRPC8  	  178878	       702.9 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/Mixed          	    2347	     59172 ns/op	   88848 B/op	    1628 allocs/op
+PASS
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave	5.375s

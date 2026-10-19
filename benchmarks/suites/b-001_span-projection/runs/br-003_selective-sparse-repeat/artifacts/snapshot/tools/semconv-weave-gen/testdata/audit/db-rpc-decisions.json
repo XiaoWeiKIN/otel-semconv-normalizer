@@ -1,0 +1,5078 @@
+{
+  "schema_version": 1,
+  "review_owner": "otel-span-classifier/semconv-reviewers",
+  "weaver_diff": [
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0105:db.connection_string",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0107:db.cosmosdb.operation_type",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0109:db.cosmosdb.status_code",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0110:db.instance.id",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0111:db.jdbc.driver_classname",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0112:db.mssql.instance_name",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0116:db.redis.database_index",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0119:db.sql.table",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0122:db.user",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0349:message.compressed_size",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0350:message.id",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0351:message.type",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0352:message.uncompressed_size",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0414:rpc.grpc.status_code",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0415:rpc.jsonrpc.error_code",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0416:rpc.jsonrpc.error_message",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0417:rpc.message.compressed_size",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0418:rpc.message.id",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0419:rpc.message.type",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0420:rpc.message.uncompressed_size",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0425:rpc.service",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0481:db.cosmosdb.client_id",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0482:db.cosmosdb.connection_mode",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0483:db.cosmosdb.request_charge",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0484:db.cosmosdb.request_content_length",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0485:db.cosmosdb.sub_status_code",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0486:db.cassandra.consistency_level",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0487:db.cassandra.coordinator.dc",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0488:db.cassandra.coordinator.id",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0489:db.cassandra.page_size",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0490:db.cassandra.idempotence",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0491:db.cassandra.speculative_execution_count",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0502:db.client.connections.pool.name",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0504:db.client.connections.state",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0506:db.cassandra.table",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0507:db.cosmosdb.container",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0508:db.mongodb.collection",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0509:db.elasticsearch.cluster.name",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0510:db.name",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0511:db.operation",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0512:db.elasticsearch.path_parts",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0513:db.statement",
+      "action": "pass_through"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0514:db.system",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0516:db.elasticsearch.node.name",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0527:rpc.jsonrpc.version",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0528:rpc.jsonrpc.request_id",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0551:rpc.connect_rpc.request.metadata",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0552:rpc.grpc.request.metadata",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0553:rpc.connect_rpc.response.metadata",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0554:rpc.grpc.response.metadata",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0555:rpc.connect_rpc.error_code",
+      "action": "translated"
+    },
+    {
+      "obligation_id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0556:rpc.system",
+      "action": "translated"
+    }
+  ],
+  "decisions": [
+    {
+      "obligation_id": "db-guide:span-attributes:01",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.connection_string` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.connection_string",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.connection_string",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:02",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.user` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.user",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.user",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:03",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `network.transport` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "network.transport",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "network.transport",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:04",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `network.type` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "network.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "network.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:05",
+      "classification": "split_merge",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.name` | Removed, integrated into the new `db.namespace`. Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:06",
+      "classification": "split_merge",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.redis.database_index` | Removed, integrated into the new `db.namespace`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.redis.database_index",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.redis.database_index",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:07",
+      "classification": "split_merge",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.mssql.instance_name` | Removed, integrated into the new `db.namespace`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.mssql.instance_name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.mssql.instance_name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:08",
+      "classification": "split_merge",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.instance.id` | Removed, replaced by `server.address` or integrated into `db.namespace` as appropriate",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.instance.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.instance.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:09",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:10",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.statement` &rarr; `db.query.text` | Clarified, SHOULD be collected by default only if there is sanitization that excludes sensitive information",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.statement",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.statement",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:11",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.operation",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.operation.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.operation",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.operation.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.operation",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.operation",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:12",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `db.sql.table` &rarr; `db.collection.name` | Should not be captured if extracting the value from `db.query.text` since there could be multiple. Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.sql.table",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.sql.table",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:13",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.table",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.table",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.table",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.table",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:14",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.mongodb.collection",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.mongodb.collection",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.mongodb.collection",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.mongodb.collection",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:15",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.container",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:16",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.query.summary`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.query.summary",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.query.summary",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:17",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.operation.batch.size`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.operation.batch.size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.operation.batch.size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:18",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.response.status_code`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.response.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.response.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:19",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.stored_procedure.name`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.stored_procedure.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.stored_procedure.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:20",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `error.type`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "error.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "error.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:21",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.operation.parameter.<key>` | _Not marked stable yet_",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.operation.parameter.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.operation.parameter.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:22",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.query.parameter.<key>` | _Not marked stable yet_",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.query.parameter.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.query.parameter.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-attributes:23",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `db.response.returned_rows` | _Not marked stable yet_",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.response.returned_rows",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.response.returned_rows",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:span-name:01",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: The recommended span name has changed.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$span.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$span.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:01:adabas",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "adabas",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "softwareag.adabas"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "adabas",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:02:cache",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | InterSystems Cach\u00e9 (old alias)     | `cache`               | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cache",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "cache"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:03:intersystems_cache",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "intersystems_cache",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "intersystems.cache"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "intersystems_cache",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:04:cloudscape",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Cloudscape                         | `cloudscape`          | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cloudscape",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "cloudscape"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:05:coldfusion",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | ColdFusion                         | `coldfusion`          | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "coldfusion",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "coldfusion"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:06:cosmosdb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cosmosdb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "azure.cosmosdb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cosmosdb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:07:db2",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "db2",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.db2"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "db2",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:08:dynamodb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "dynamodb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "aws.dynamodb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "dynamodb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:09:edb",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | EnterpriseDB                       | `edb`                 | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "edb",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "edb"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:10:filemaker",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | FileMaker                          | `filemaker`           | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "filemaker",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "filemaker"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:11:firebird",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "firebird",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "firebirdsql"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "firebird",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:12:firstsql",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | FirstSQL                           | `firstsql`            | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "firstsql",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "firstsql"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:13:h2",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "h2",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "h2database"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "h2",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:14:hanadb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "hanadb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "sap.hana"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "hanadb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:15:informix",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "informix",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.informix"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "informix",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:16:ingres",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "ingres",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "actian.ingres"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "ingres",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:17:interbase",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | InterBase                          | `interbase`           | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "interbase",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "interbase"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:18:maxdb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "maxdb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "sap.maxdb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "maxdb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:19:mssql",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "mssql",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "microsoft.sql_server"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "mssql",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:20:mssqlcompact",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Microsoft SQL Server Compact       | `mssqlcompact`        | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "mssqlcompact",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "mssqlcompact"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:21:netezza",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "netezza",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.netezza"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "netezza",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:22:oracle",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "oracle",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "oracle.db"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "oracle",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:23:pervasive",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Pervasive PSQL                     | `pervasive`           | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "pervasive",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "pervasive"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:24:pointbase",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | PointBase                          | `pointbase`           | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "pointbase",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "pointbase"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:25:progress",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Progress Database                  | `progress`            | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "progress",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "progress"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:26:redshift",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "redshift",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "aws.redshift"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "redshift",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:27:spanner",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "spanner",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "gcp.spanner"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "spanner",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:28:sybase",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Sybase                             | `sybase`              | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "sybase",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "sybase"
+        }
+      ]
+    },
+    {
+      "obligation_id": "db-guide:system-values:29:vertica",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | Vertica                            | `vertica`             | Removed                    |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "vertica",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "vertica"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:mssql",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "mssql",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "microsoft.sql_server"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "mssql",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:dynamodb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "dynamodb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "aws.dynamodb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "dynamodb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:cosmosdb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cosmosdb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "azure.cosmosdb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cosmosdb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:redshift",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "redshift",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "aws.redshift"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "redshift",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:spanner",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "spanner",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "gcp.spanner"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "spanner",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:oracle",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "oracle",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "oracle.db"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "oracle",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:hanadb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "hanadb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "sap.hana"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "hanadb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:maxdb",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "maxdb",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "sap.maxdb"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "maxdb",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:adabas",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "adabas",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "softwareag.adabas"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "adabas",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:ingres",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "ingres",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "actian.ingres"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "ingres",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:informix",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "informix",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.informix"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "informix",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:netezza",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "netezza",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.netezza"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "netezza",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:firebird",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "firebird",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "firebirdsql"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "firebird",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:intersystems_cache",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "intersystems_cache",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "intersystems.cache"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "intersystems_cache",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:cache",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: cache -> intersystems.cache",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "cache",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "cache"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:db2",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "db2",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "ibm.db2"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "db2",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:db:h2",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "h2",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "h2database"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "h2",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:rpc:apache_dubbo",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "apache_dubbo",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "dubbo"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "apache_dubbo",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "root-alias:rpc:connect_rpc",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "connect_rpc",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "connectrpc"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "connect_rpc",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:deprecated-events:01",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.message` event | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.message",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.message",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:deprecated-events:02",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.message.type` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.message.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.message.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:deprecated-events:03",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.message.id` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.message.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.message.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:deprecated-events:04",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.message.compressed_size` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.message.compressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.message.compressed_size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:deprecated-events:05",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.message.uncompressed_size` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.message.uncompressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.message.uncompressed_size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:event-names:exception",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.client.call.exception` and `rpc.server.call.exception`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "$event.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "$event.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:01",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:02",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.method` | Now contains fully-qualified method name (e.g., `com.example.ExampleService/exampleMethod`), also now marked as sampling-relevant",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.method",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.method",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:03",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.service` | Removed, integrated into `rpc.method`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.service",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.service",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:04",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `network.transport` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "network.transport",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "network.transport",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:05",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `network.type` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "network.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "network.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:06",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `rpc.grpc.status_code` &rarr; `rpc.response.status_code` | Changed from int to string (e.g., `0` &rarr; `\"OK\"`)",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.grpc.status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.grpc.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:07",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.status_code",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.error_code",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:08",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.grpc.request.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.request.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.grpc.request.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.request.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.grpc.request.metadata.<key>",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.grpc.request.metadata.<key>",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:09",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.grpc.response.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.grpc.response.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.grpc.response.metadata.<key>",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.grpc.response.metadata.<key>",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:10",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.request.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.request.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.request.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.request.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.request.metadata.<key>",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.request.metadata.<key>",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:11",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.response.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.response.metadata.<key>",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.metadata.<key>",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.response.metadata.<key>",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.response.metadata.<key>",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:12",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `server.address` | Now marked as sampling-relevant;<br>Now it\u2019s taken from static configuration and can be any string identifying a group of server instances.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "server.address",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "server.address",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:13",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `server.port` | Now marked as sampling-relevant;<br>Now it\u2019s taken from static configuration.",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "server.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "server.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:14",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `error.type`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "error.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "error.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:15",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: New: `rpc.method_original` | Original method name when `rpc.method` is set to `_OTHER`",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.method_original",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.method_original",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:16",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `client.address` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "client.address",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "client.address",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:span-attributes:17",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: `client.port` | Removed",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "client.port",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "client.port",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:system-values:01:apache_dubbo",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "apache_dubbo",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "dubbo"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "apache_dubbo",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:system-values:02:connect_rpc",
+      "classification": "deterministic_value_map",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "connect_rpc",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "connectrpc"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "connect_rpc",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        },
+        {
+          "name": "unregistered-custom-value",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "unregistered.custom",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "unregistered.custom"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:system-values:03:java_rmi",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | `java_rmi`                        | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) | Removed, but can still be used as a custom value |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "java_rmi",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "java_rmi"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:system-values:04:dotnet_wcf",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | `dotnet_wcf`                      | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) | Removed, but can still be used as a custom value |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "dotnet_wcf",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "dotnet_wcf"
+        }
+      ]
+    },
+    {
+      "obligation_id": "rpc-guide:system-values:05:jsonrpc",
+      "classification": "removed_requirement_stability",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: | New: `jsonrpc`                    | [#2503](https://github.com/open-telemetry/semantic-conventions/pull/2503) |                                                  |",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "jsonrpc",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "string",
+          "expected_value": "jsonrpc"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:all:00:00:message.type",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "message.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.message.type",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "message.type",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.message.type",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "message.type",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "message.type",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:all:00:01:message.id",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "message.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.message.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "message.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.message.id",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "message.id",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "message.id",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:all:00:02:message.compressed_size",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "message.compressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.message.compressed_size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "message.compressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.message.compressed_size",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "message.compressed_size",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "message.compressed_size",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:all:00:03:message.uncompressed_size",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "message.uncompressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.message.uncompressed_size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "message.uncompressed_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.message.uncompressed_size",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "message.uncompressed_size",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "message.uncompressed_size",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:00:00:db.name",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: db.name -> db.namespace",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:01:00:db.sql.table",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: db.sql.table -> db.collection.name",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.sql.table",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.sql.table",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:01:01:db.mongodb.collection",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.mongodb.collection",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.mongodb.collection",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.mongodb.collection",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.mongodb.collection",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:01:02:db.cosmosdb.container",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.container",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.container",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:01:03:db.cassandra.table",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.table",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.table",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.collection.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.table",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.table",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:03:00:db.operation",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "OTel v1.41.0 migration preserves the recorded value and case; no parsing or inference is needed for this attribute.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.operation",
+          "input_type": "string",
+          "input_value": "MiXeD-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.operation.name",
+          "expected_type": "string",
+          "expected_value": "MiXeD-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.operation",
+          "input_type": "string",
+          "input_value": "legacy",
+          "target_present": true,
+          "target_value": "canonical",
+          "expected_action": "suppress",
+          "expected_key": "db.operation.name",
+          "expected_type": "string",
+          "expected_value": "canonical"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.operation",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.operation",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.25.0:spans:05:00:db.statement",
+      "classification": "context_recompute",
+      "action": "pass_through",
+      "reason": "Conservative review preserves source because the obligation requires sanitization, merge, type/value conversion, producer context, name recompute, or removed/custom-value policy: db.statement -> db.query.text",
+      "golden": [
+        {
+          "name": "source-preserved",
+          "input_key": "db.statement",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.statement",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.27.0:spans:00:00:db.elasticsearch.cluster.name",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.elasticsearch.cluster.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.namespace",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.elasticsearch.cluster.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.namespace",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.elasticsearch.cluster.name",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.elasticsearch.cluster.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:00:db.system",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:01:db.cassandra.coordinator.dc",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.coordinator.dc",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.coordinator.dc",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.coordinator.dc",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.coordinator.dc",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.coordinator.dc",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.coordinator.dc",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:02:db.cassandra.coordinator.id",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.coordinator.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.coordinator.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.coordinator.id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.coordinator.id",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.coordinator.id",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.coordinator.id",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:03:db.cassandra.consistency_level",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.consistency_level",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.consistency.level",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.consistency_level",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.consistency.level",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.consistency_level",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.consistency_level",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:04:db.cassandra.idempotence",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.idempotence",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.query.idempotent",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.idempotence",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.query.idempotent",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.idempotence",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.idempotence",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:05:db.cassandra.page_size",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.page_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.page.size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.page_size",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.page.size",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.page_size",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.page_size",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:06:db.cassandra.speculative_execution_count",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.speculative_execution_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "cassandra.speculative_execution.count",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.speculative_execution_count",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "cassandra.speculative_execution.count",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.speculative_execution_count",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.speculative_execution_count",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:07:db.cosmosdb.client_id",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.client_id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.client.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.client_id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.client.id",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.client_id",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.client_id",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:08:db.cosmosdb.connection_mode",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.connection_mode",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.connection.mode",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.connection_mode",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.connection.mode",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.connection_mode",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.connection_mode",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:09:db.cosmosdb.consistency_level",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.consistency_level",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.consistency.level",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.consistency_level",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.consistency.level",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.consistency_level",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.consistency_level",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:10:db.cosmosdb.request_charge",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.request_charge",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.operation.request_charge",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.request_charge",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.operation.request_charge",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.request_charge",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.request_charge",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:11:db.cosmosdb.request_content_length",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.request_content_length",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.request.body.size",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.request_content_length",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.request.body.size",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.request_content_length",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.request_content_length",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:12:db.cosmosdb.regions_contacted",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.regions_contacted",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.operation.contacted_regions",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.regions_contacted",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.operation.contacted_regions",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.regions_contacted",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.regions_contacted",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:13:db.cosmosdb.sub_status_code",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cosmosdb.sub_status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "azure.cosmosdb.response.sub_status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cosmosdb.sub_status_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "azure.cosmosdb.response.sub_status_code",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cosmosdb.sub_status_code",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cosmosdb.sub_status_code",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.30.0:all:02:14:db.elasticsearch.node.name",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.elasticsearch.node.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "elasticsearch.node.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.elasticsearch.node.name",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "elasticsearch.node.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.elasticsearch.node.name",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.elasticsearch.node.name",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:02:rpc.connect_rpc.error_code",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.status_code",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.status_code",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.error_code",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.error_code",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:03:rpc.connect_rpc.request.metadata",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.request.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.request.metadata",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.request.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.request.metadata",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.request.metadata",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.request.metadata",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:04:rpc.connect_rpc.response.metadata",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.connect_rpc.response.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.metadata",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.connect_rpc.response.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.metadata",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.connect_rpc.response.metadata",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.connect_rpc.response.metadata",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:05:rpc.grpc.request.metadata",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.grpc.request.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.request.metadata",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.grpc.request.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.request.metadata",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.grpc.request.metadata",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.grpc.request.metadata",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:06:rpc.grpc.response.metadata",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.grpc.response.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.response.metadata",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.grpc.response.metadata",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.response.metadata",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.grpc.response.metadata",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.grpc.response.metadata",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:07:rpc.jsonrpc.request_id",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.jsonrpc.request_id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "jsonrpc.request.id",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.jsonrpc.request_id",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "jsonrpc.request.id",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.jsonrpc.request_id",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.jsonrpc.request_id",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:08:rpc.jsonrpc.version",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.jsonrpc.version",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "jsonrpc.protocol.version",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.jsonrpc.version",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "jsonrpc.protocol.version",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.jsonrpc.version",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.jsonrpc.version",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.39.0:all:00:09:rpc.system",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "rpc.system",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "rpc.system.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "rpc.system",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "rpc.system",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.8.0:spans:00:00:db.cassandra.keyspace",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.cassandra.keyspace",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.cassandra.keyspace",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.cassandra.keyspace",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.cassandra.keyspace",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    },
+    {
+      "obligation_id": "schema:1.8.0:spans:00:01:db.hbase.namespace",
+      "classification": "pure_rename",
+      "action": "translated",
+      "reason": "Pinned Schema/Guide and classifier alias evidence agree on a deterministic one-to-one key or value mapping.",
+      "golden": [
+        {
+          "name": "legacy-string",
+          "input_key": "db.hbase.namespace",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": false,
+          "expected_action": "translated",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "legacy-value"
+        },
+        {
+          "name": "canonical-target-wins",
+          "input_key": "db.hbase.namespace",
+          "input_type": "string",
+          "input_value": "legacy-value",
+          "target_present": true,
+          "target_value": "canonical-value",
+          "expected_action": "suppress",
+          "expected_key": "db.name",
+          "expected_type": "string",
+          "expected_value": "canonical-value"
+        },
+        {
+          "name": "wrong-type-preserved",
+          "input_key": "db.hbase.namespace",
+          "input_type": "int",
+          "input_value": "42",
+          "target_present": false,
+          "expected_action": "pass_through",
+          "expected_key": "db.hbase.namespace",
+          "expected_type": "int",
+          "expected_value": "42"
+        }
+      ]
+    }
+  ]
+}

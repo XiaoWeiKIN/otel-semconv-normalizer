@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave
+cpu: Apple M4
+BenchmarkProjectSpanBaseline/Unchanged8         	  209130	      1189 ns/op	     832 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/Unchanged32        	   56714	      4288 ns/op	    3328 B/op	      41 allocs/op
+BenchmarkProjectSpanBaseline/Unchanged64        	   24691	      9665 ns/op	    6912 B/op	      74 allocs/op
+BenchmarkProjectSpanBaseline/CanonicalHTTP8     	  213933	      1143 ns/op	     832 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/HTTP               	  136432	      1778 ns/op	    1160 B/op	      24 allocs/op
+BenchmarkProjectSpanBaseline/DB                 	  185506	      1334 ns/op	     824 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/RPC                	  153981	      1589 ns/op	     896 B/op	      20 allocs/op
+BenchmarkProjectSpanBaseline/MissingContext     	  248620	       991.5 ns/op	     784 B/op	      13 allocs/op
+BenchmarkProjectSpanBaseline/Invalid            	  225532	      1074 ns/op	     944 B/op	      16 allocs/op
+BenchmarkProjectSpanBaseline/Mixed              	   10000	     23966 ns/op	   16512 B/op	     233 allocs/op
+PASS

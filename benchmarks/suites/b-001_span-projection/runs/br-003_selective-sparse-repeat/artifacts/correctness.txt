@@ -1,0 +1,1 @@
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave	1.999s

@@ -473,6 +473,8 @@ flowchart LR
 
 ## 本地开发与测试
 
+历史性能实验的脚本、全部样本、报告和 CPU profiles 见 [benchmarks/](benchmarks/README.md)。这些是明确标注的脱敏副本，包含原始 `inconclusive` 结果；公开文件可用独立清单校验。
+
 本项目为纯 Go 单体库，无外部服务依赖，拉取仓库后即可执行完整测试套件：
 
 ```bash

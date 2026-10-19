@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave
+cpu: Apple M4
+BenchmarkProjectSpanBaseline/Unchanged32         	  241256	      4396 ns/op	    3328 B/op	      41 allocs/op
+PASS

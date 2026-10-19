@@ -1,0 +1,25 @@
+{
+  "subject": {
+    "go.mod": "89c4a08054447933333ef1949d8e7610eb99995f823891629d27f8cba5f3501f",
+    "go.sum": "155fff9880a5eaece590e6fe11da1d75bc9af20b381d457e9c5843722649bc91",
+    "semconvweave/abi.go": "98425caa0ecfa9cbd67d7cdfd03831f1d3edcefaa515b433c30e2cbfaf9b0273",
+    "semconvweave/db_migration.go": "2f89665157f72f29db0316e6d219305af0dc05dff15202e31770422c4e3f07e9",
+    "semconvweave/generated_contract.go": "6c39680ee2fcb54604ea5d239840347909e5a864bda4ccd3c38b23641d83e1ad",
+    "semconvweave/http_migration.go": "c016d1c80e829020f5470d201d85a9a53f80356e9b3c88928ffeedd6cfa028a9",
+    "semconvweave/name_projection.go": "4ff3f78df8573e8dc524b5009d540b4a54d8d7cc2e860dd62301f0319c78a8d1",
+    "semconvweave/projection.go": "b4f8a1e2a035a1f4146afacdb4950f18d56f97cb7610ff49ff9755cf2dcae50b",
+    "semconvweave/rpc_migration.go": "bcd285c50df8c9d196829f88ede7e3b4d59d289dee3e4eccce62f092d4f1ce6e",
+    "semconvweave/runtime.go": "68f5cdec5220ea01eb8fcf3695b8e0690afd02b8ea777592740f7e95915bb201",
+    "semconvweave/semantic_projection.go": "f95e596b467bf2f1213f2146d71510227f5fdc58d0b2f79904ed486c005fc6df",
+    "semconvweave/span_migration.go": "84aac024968b64a2664a08518f35d3fc3415fe12348b2fe83ac9f0cd5715d459",
+    "semconvweave/zz_generated_support_manifest.go": "f019dd3e291b1023dedcb5da56979f4f70f2e0496e251bbab988efe1ff87fa1c",
+    "semconvweave/zz_generated_weaves.go": "32b7bfe58d746eb79f440e972d8ad9bed4c6fa3920fb371b33efa4f974b41768"
+  },
+  "subject_sha256": "b0d42643e6ae21d4f656fdeace0898f052f46ea4103ffdc767ff6e1e943aa38c",
+  "harness": {
+    "semconvweave/projection_baseline_test.go": "502c28a950e2c6e71930ff6b0cd76e09693520b408beffea546211489e1c0be7",
+    "semconvweave/projection_optimization_test.go": "b45c296da79cc1aa83a987279464e09a53a19bad15a7afe002de790586280240",
+    "benchmarks/suites/b-001_span-projection/scripts/run.py": "45a4ea6555a120b96de5373bf2c07b2de1f307882068d7041ffd80e9164842d7"
+  },
+  "harness_sha256": "e57b29c0b8dfc9f491de44ddbb5605cb1e2bea15b94d02709238d6221bcf00e2"
+}

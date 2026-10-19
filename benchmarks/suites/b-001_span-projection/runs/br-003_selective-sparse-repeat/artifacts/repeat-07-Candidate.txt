@@ -1,0 +1,26 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave
+cpu: Apple M4
+BenchmarkSelectiveProjectionCandidate/Unchanged8         	  879093	       298.5 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/Unchanged32        	  270409	       891.1 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Unchanged64        	  142194	      1698 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalHTTP8     	  531762	       484.2 ns/op	     544 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/HTTP               	  163882	      1489 ns/op	     872 B/op	      21 allocs/op
+BenchmarkSelectiveProjectionCandidate/DB                 	  307848	       810.2 ns/op	     536 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/RPC                	  221289	      1122 ns/op	     608 B/op	      17 allocs/op
+BenchmarkSelectiveProjectionCandidate/MissingContext     	  431427	       566.4 ns/op	     656 B/op	      11 allocs/op
+BenchmarkSelectiveProjectionCandidate/Invalid            	  402198	       632.4 ns/op	     816 B/op	      14 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of32        	  231930	      1051 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of32        	  199400	      1237 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense32            	   69279	      3469 ns/op	    6960 B/op	     138 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of64        	  123444	      1951 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of64        	  108922	      2215 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense64            	   34192	      7001 ns/op	   14384 B/op	     267 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse1Of128       	   62067	      3795 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionCandidate/Sparse2Of128       	   56802	      4239 ns/op	    7520 B/op	     132 allocs/op
+BenchmarkSelectiveProjectionCandidate/Dense128           	   15032	     15031 ns/op	   29360 B/op	     524 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalDB8       	  450470	       573.7 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/CanonicalRPC8      	  382096	       660.7 ns/op	     528 B/op	      12 allocs/op
+BenchmarkSelectiveProjectionCandidate/Mixed              	    4886	     48501 ns/op	   88848 B/op	    1628 allocs/op
+PASS

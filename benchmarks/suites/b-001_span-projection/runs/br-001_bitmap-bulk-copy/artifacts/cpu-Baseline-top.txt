@@ -1,0 +1,62 @@
+File: projection.test
+Type: cpu
+Time: 2026-09-16 13:21:13 JST
+Duration: 1.16s, Total samples = 990ms (85.14%)
+Showing nodes accounting for 990ms, 100% of 990ms total
+      flat  flat%   sum%        cum   cum%
+     800ms 80.81% 80.81%      800ms 80.81%  runtime.kevent
+      60ms  6.06% 86.87%       90ms  9.09%  go.opentelemetry.io/collector/pdata/pcommon.Map.Get
+      30ms  3.03% 89.90%       30ms  3.03%  runtime.memequal
+      20ms  2.02% 91.92%       20ms  2.02%  runtime.duffcopy
+      10ms  1.01% 92.93%      120ms 12.12%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan.func1 (inline)
+      10ms  1.01% 93.94%       10ms  1.01%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSemanticSpanAttribute
+      10ms  1.01% 94.95%       90ms  9.09%  go.opentelemetry.io/collector/pdata/pcommon.Map.PutEmpty
+      10ms  1.01% 95.96%       10ms  1.01%  internal/runtime/atomic.(*UnsafePointer).Load (inline)
+      10ms  1.01% 96.97%       10ms  1.01%  runtime.(*pageAlloc).find
+      10ms  1.01% 97.98%       10ms  1.01%  runtime.(*timer).unlockAndRun
+      10ms  1.01% 98.99%       10ms  1.01%  runtime.duffzero
+      10ms  1.01%   100%       10ms  1.01%  runtime.nextFreeFast (inline)
+         0     0%   100%      180ms 18.18%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan
+         0     0%   100%       10ms  1.01%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineSpanAttribute
+         0     0%   100%       20ms  2.02%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineSpanAttributeWithContext
+         0     0%   100%       20ms  2.02%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineHas (inline)
+         0     0%   100%       10ms  1.01%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineHasHTTP
+         0     0%   100%       20ms  2.02%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectHTTP
+         0     0%   100%       20ms  2.02%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectRPC
+         0     0%   100%       10ms  1.01%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineRemove
+         0     0%   100%      180ms 18.18%  github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan.func1
+         0     0%   100%      120ms 12.12%  go.opentelemetry.io/collector/pdata/pcommon.Map.Range (inline)
+         0     0%   100%       10ms  1.01%  runtime.(*mcache).nextFree
+         0     0%   100%       10ms  1.01%  runtime.(*mcache).refill
+         0     0%   100%       10ms  1.01%  runtime.(*mcentral).cacheSpan
+         0     0%   100%       10ms  1.01%  runtime.(*mcentral).grow
+         0     0%   100%       10ms  1.01%  runtime.(*mheap).alloc
+         0     0%   100%       10ms  1.01%  runtime.(*mheap).alloc.func1
+         0     0%   100%       10ms  1.01%  runtime.(*mheap).allocSpan
+         0     0%   100%       10ms  1.01%  runtime.(*pageAlloc).allocToCache
+         0     0%   100%       10ms  1.01%  runtime.(*timers).check
+         0     0%   100%       10ms  1.01%  runtime.(*timers).run
+         0     0%   100%       10ms  1.01%  runtime.(*unwinder).initAt
+         0     0%   100%       10ms  1.01%  runtime.callers
+         0     0%   100%       10ms  1.01%  runtime.callers.func1
+         0     0%   100%       10ms  1.01%  runtime.findRunnable
+         0     0%   100%      390ms 39.39%  runtime.gcMarkTermination.func3
+         0     0%   100%      410ms 41.41%  runtime.gcStart.func4
+         0     0%   100%       10ms  1.01%  runtime.gopreempt_m (inline)
+         0     0%   100%       10ms  1.01%  runtime.goschedImpl
+         0     0%   100%       20ms  2.02%  runtime.growslice
+         0     0%   100%       20ms  2.02%  runtime.mProf_Malloc
+         0     0%   100%       40ms  4.04%  runtime.mallocgc
+         0     0%   100%       10ms  1.01%  runtime.mallocgcSmallScanHeader
+         0     0%   100%       30ms  3.03%  runtime.mallocgcSmallScanNoHeader
+         0     0%   100%       10ms  1.01%  runtime.morestack
+         0     0%   100%      800ms 80.81%  runtime.netpoll
+         0     0%   100%       20ms  2.02%  runtime.newobject
+         0     0%   100%       10ms  1.01%  runtime.newstack
+         0     0%   100%       20ms  2.02%  runtime.profilealloc
+         0     0%   100%       10ms  1.01%  runtime.schedule
+         0     0%   100%      800ms 80.81%  runtime.startTheWorldWithSema
+         0     0%   100%       10ms  1.01%  runtime.stkbucket
+         0     0%   100%      820ms 82.83%  runtime.systemstack
+         0     0%   100%      180ms 18.18%  testing.(*B).run1.func1
+         0     0%   100%      180ms 18.18%  testing.(*B).runN

@@ -134,7 +134,7 @@ status 等处理器只在相关源字段出现时执行；非法类型仍会设�
 失效引用。其他情况逐项构造投影结果；上下文专属的 `net.peer.name/port` 仍显式加入
 候选筛选。所有路径都返回独立持有嵌套值的 Map，源 Span 不变。
 
-性能对照与差分测试保留在 `semconvweave/*_test.go`。可在本地运行微基准；结果取决于输入与运行环境。
+性能对照与差分测试保留在 `semconvweave/*_test.go`。可在本地运行微基准；结果取决于输入与运行环境。历史协议、样本与结果见 [benchmarks/](../benchmarks/README.md)，公开副本的来源和校验限制见目录说明。
 
 静态 IR 审计中的 pass-through 表示“不能作为单属性纯改名执行”，不等同于新入口不支持。
 生成规则与手写上下文规则分别验证；`TestMigrationGuideAttributeCoverage` 对锁定的

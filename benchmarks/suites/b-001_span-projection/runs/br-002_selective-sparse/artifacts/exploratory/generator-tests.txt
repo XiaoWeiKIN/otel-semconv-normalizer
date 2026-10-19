@@ -1,0 +1,21 @@
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/compile-typed-ir	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/generate-db-rpc-audit	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/generate-http-audit	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/generate-runtime-artifacts	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/generate-url-policy	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/validate-combined-audit	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/validate-http-audit	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/validate-url-policy	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/verify-inputs	[no test files]
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/verify-release-evidence	[no test files]
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/verify-runtime-benchstat	(cached)
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/cmd/weaver-baseline	[no test files]
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/emitter	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/inputlock	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/migrationaudit	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/registrydiff	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/releaseevidence	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/typedir	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/urlpolicy	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/weaverbaseline	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/tools/semconv-weave-gen/internal/weaverevidence	(cached)

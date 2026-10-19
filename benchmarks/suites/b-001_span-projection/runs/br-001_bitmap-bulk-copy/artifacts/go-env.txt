@@ -1,0 +1,4 @@
+darwin
+arm64
+go1.25.4
+/workspace/otel-semconv-normalizer/go.mod

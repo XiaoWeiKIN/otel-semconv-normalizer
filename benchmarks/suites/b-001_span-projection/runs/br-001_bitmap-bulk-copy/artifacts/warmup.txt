@@ -1,0 +1,25 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave
+cpu: Apple M4
+BenchmarkProjectSpanBaseline/Unchanged8         	   73044	      1489 ns/op	     832 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/Unchanged32        	   27596	      4333 ns/op	    3328 B/op	      41 allocs/op
+BenchmarkProjectSpanBaseline/Unchanged64        	   12054	     10013 ns/op	    6912 B/op	      74 allocs/op
+BenchmarkProjectSpanBaseline/CanonicalHTTP8     	  103339	      1185 ns/op	     832 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/HTTP               	   69232	      1771 ns/op	    1160 B/op	      24 allocs/op
+BenchmarkProjectSpanBaseline/DB                 	   93639	      1330 ns/op	     824 B/op	      15 allocs/op
+BenchmarkProjectSpanBaseline/RPC                	   76464	      1593 ns/op	     896 B/op	      20 allocs/op
+BenchmarkProjectSpanBaseline/MissingContext     	  123505	       997.2 ns/op	     784 B/op	      13 allocs/op
+BenchmarkProjectSpanBaseline/Invalid            	  109869	      2057 ns/op	     944 B/op	      16 allocs/op
+BenchmarkProjectSpanBaseline/Mixed              	    5017	     24713 ns/op	   16512 B/op	     233 allocs/op
+BenchmarkProjectSpanCandidate/Unchanged8        	  371924	       328.4 ns/op	     544 B/op	      12 allocs/op
+BenchmarkProjectSpanCandidate/Unchanged32       	  120780	       990.8 ns/op	    2016 B/op	      36 allocs/op
+BenchmarkProjectSpanCandidate/Unchanged64       	   63334	      1911 ns/op	    3808 B/op	      68 allocs/op
+BenchmarkProjectSpanCandidate/CanonicalHTTP8    	  180692	       701.4 ns/op	     544 B/op	      12 allocs/op
+BenchmarkProjectSpanCandidate/HTTP              	   81781	      1501 ns/op	     872 B/op	      21 allocs/op
+BenchmarkProjectSpanCandidate/DB                	  107976	      1152 ns/op	     536 B/op	      12 allocs/op
+BenchmarkProjectSpanCandidate/RPC               	   82884	      1949 ns/op	     608 B/op	      17 allocs/op
+BenchmarkProjectSpanCandidate/MissingContext    	  102181	      1013 ns/op	     656 B/op	      11 allocs/op
+BenchmarkProjectSpanCandidate/Invalid           	  122326	      1023 ns/op	     816 B/op	      14 allocs/op
+BenchmarkProjectSpanCandidate/Mixed             	   10000	     10883 ns/op	   10400 B/op	     203 allocs/op
+PASS

@@ -1,0 +1,4 @@
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer	(cached)
+?   	github.com/XiaoWeiKIN/otel-semconv-normalizer/cmd/export-semconvmeta	[no test files]
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/internal/semconvmeta	(cached)
+ok  	github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave	5.965s

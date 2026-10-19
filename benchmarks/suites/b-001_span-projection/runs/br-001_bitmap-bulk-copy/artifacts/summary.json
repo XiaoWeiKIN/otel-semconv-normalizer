@@ -1,0 +1,225 @@
+{
+  "cases": {
+    "Unchanged8": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1201.5,
+        "mad_ns": 14.5,
+        "bytes": 832.0,
+        "allocs": 15.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 320.75,
+        "mad_ns": 0.9499999999999886,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.26695796920516024,
+      "noise_band": 0.045090168855571114,
+      "threshold": 0.7,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Unchanged32": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 4326.0,
+        "mad_ns": 33.5,
+        "bytes": 3328.0,
+        "allocs": 41.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1010.65,
+        "mad_ns": 20.25,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "ratio": 0.2336222838650023,
+      "noise_band": 0.08334145305341388,
+      "threshold": 0.7,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Unchanged64": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 9806.0,
+        "mad_ns": 85.0,
+        "bytes": 6912.0,
+        "allocs": 74.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1942.0,
+        "mad_ns": 21.5,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "ratio": 0.19804201509280034,
+      "noise_band": 0.05921766933504845,
+      "threshold": 0.7,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "CanonicalHTTP8": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1151.0,
+        "mad_ns": 4.5,
+        "bytes": 832.0,
+        "allocs": 15.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 712.05,
+        "mad_ns": 5.650000000000034,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.6186359687228496,
+      "noise_band": 0.03553343947441692,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "HTTP": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1790.0,
+        "mad_ns": 12.5,
+        "bytes": 1160.0,
+        "allocs": 24.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1511.0,
+        "mad_ns": 5.0,
+        "bytes": 872.0,
+        "allocs": 21.0
+      },
+      "ratio": 0.8441340782122905,
+      "noise_band": 0.030876921199841756,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "DB": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1334.5,
+        "mad_ns": 6.0,
+        "bytes": 824.0,
+        "allocs": 15.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1135.5,
+        "mad_ns": 5.5,
+        "bytes": 536.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.8508804795803672,
+      "noise_band": 0.02801924142003224,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "RPC": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1599.5,
+        "mad_ns": 4.5,
+        "bytes": 896.0,
+        "allocs": 20.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1475.5,
+        "mad_ns": 3.5,
+        "bytes": 608.0,
+        "allocs": 17.0
+      },
+      "ratio": 0.9224757736792748,
+      "noise_band": 0.015556369328817493,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "MissingContext": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 997.7,
+        "mad_ns": 5.149999999999977,
+        "bytes": 784.0,
+        "allocs": 13.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 830.6,
+        "mad_ns": 3.3000000000000114,
+        "bytes": 656.0,
+        "allocs": 11.0
+      },
+      "ratio": 0.8325147840032073,
+      "noise_band": 0.027404711549301145,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Invalid": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 1094.0,
+        "mad_ns": 4.0,
+        "bytes": 944.0,
+        "allocs": 16.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 993.4000000000001,
+        "mad_ns": 4.0,
+        "bytes": 816.0,
+        "allocs": 14.0
+      },
+      "ratio": 0.9080438756855577,
+      "noise_band": 0.02304864758226967,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Mixed": {
+      "Baseline": {
+        "n": 8,
+        "median_ns": 24220.5,
+        "mad_ns": 217.5,
+        "bytes": 16512.0,
+        "allocs": 233.0
+      },
+      "Candidate": {
+        "n": 8,
+        "median_ns": 10613.5,
+        "mad_ns": 73.5,
+        "bytes": 10400.0,
+        "allocs": 203.0
+      },
+      "ratio": 0.43820317499638733,
+      "noise_band": 0.04771541637397114,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    }
+  },
+  "slow_geometric_mean": 0.7518317014649316
+}

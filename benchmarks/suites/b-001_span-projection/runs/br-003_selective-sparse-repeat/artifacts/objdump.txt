@@ -1,0 +1,2327 @@
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan(SB) /workspace/otel-semconv-normalizer/semconvweave/span_migration.go
+  span_migration.go:106			0x100250560		f9400b90		MOVD 16(R28), R16												
+  span_migration.go:106			0x100250564		d10a03f1		SUB $640, RSP, R17												
+  span_migration.go:106			0x100250568		eb10023f		CMP R16, R17													
+  span_migration.go:106			0x10025056c		54004109		BLS 520(PC)													
+  span_migration.go:106			0x100250570		d10c03f4		SUB $768, RSP, R20												
+  span_migration.go:106			0x100250574		a93ffa9d		STP (R29, R30), -8(R20)												
+  span_migration.go:106			0x100250578		9100029f		MOVD R20, RSP													
+  span_migration.go:106			0x10025057c		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:106			0x100250580		f901dfe1		MOVD R1, 952(RSP)												
+  span_migration.go:106			0x100250584		f901e3e2		MOVD R2, 960(RSP)												
+  map.go:242				0x100250588		790763e0		MOVH R0, 944(RSP)												
+  map.go:242				0x10025058c		f90173e2		MOVD R2, 736(RSP)												
+  map.go:242				0x100250590		f9016fe1		MOVD R1, 728(RSP)												
+  span_migration.go:106			0x100250594		a915ffff		STP (ZR, ZR), 344(RSP)												
+  span_migration.go:106			0x100250598		a916ffff		STP (ZR, ZR), 360(RSP)												
+  span_migration.go:106			0x10025059c		a917ffff		STP (ZR, ZR), 376(RSP)												
+  span_migration.go:106			0x1002505a0		f900c7ff		MOVD ZR, 392(RSP)												
+  generated_span.go:147			0x1002505a4		3980003b		MOVB (R1), R27													
+  span_migration.go:107			0x1002505a8		d503201f		NOOP														
+  span_migration.go:108			0x1002505ac		f00009c0		ADRP 1290240(PC), R0												
+  span_migration.go:108			0x1002505b0		91148000		ADD $1312, R0, R0												
+  span_migration.go:108			0x1002505b4		97f71f33		CALL runtime.newobject(SB)											
+  span_migration.go:108			0x1002505b8		f90177e0		MOVD R0, 744(RSP)												
+  map.go:22				0x1002505bc		d0000740		ADRP 958464(PC), R0												
+  map.go:22				0x1002505c0		91278000		ADD $2528, R0, R0												
+  map.go:22				0x1002505c4		97f71f2f		CALL runtime.newobject(SB)											
+  map.go:22				0x1002505c8		f9017be0		MOVD R0, 752(RSP)												
+  map.go:23				0x1002505cc		d503201f		NOOP														
+  state.go:22				0x1002505d0		90000940		ADRP 1212416(PC), R0												
+  state.go:22				0x1002505d4		91308000		ADD $3104, R0, R0												
+  state.go:22				0x1002505d8		97f71f2a		CALL runtime.newobject(SB)											
+  state.go:25				0x1002505dc		d503201f		NOOP														
+  type.go:83				0x1002505e0		b24003e1		ORR $1, ZR, R1													
+  type.go:83				0x1002505e4		889ffc01		STLRW R1, (R0)													
+  generated_status.go:53		0x1002505e8		f9416fe1		MOVD 728(RSP), R1												
+  generated_status.go:53		0x1002505ec		a9468c22		LDP 104(R1), (R2, R3)												
+  span_migration.go:108			0x1002505f0		b0001ebb		ADRP 4018176(PC), R27												
+  span_migration.go:108			0x1002505f4		b9462364		MOVWU 1568(R27), R4												
+  span_migration.go:108			0x1002505f8		34000264		CBZW R4, 19(PC)													
+  state.go:22				0x1002505fc		f900cbe0		MOVD R0, 400(RSP)												
+  generated_status.go:53		0x100250600		f900abe2		MOVD R2, 336(RSP)												
+  generated_status.go:53		0x100250604		f90087e3		MOVD R3, 264(RSP)												
+  span_migration.go:108			0x100250608		f94177e1		MOVD 744(RSP), R1												
+  span_migration.go:108			0x10025060c		a9401023		LDP (R1), (R3, R4)												
+  span_migration.go:108			0x100250610		f9400825		MOVD 16(R1), R5													
+  span_migration.go:108			0x100250614		97f8c2cf		CALL runtime.gcWriteBarrier6(SB)										
+  span_migration.go:108			0x100250618		f9417be6		MOVD 752(RSP), R6												
+  span_migration.go:108			0x10025061c		a9000f26		STP (R6, R3), (R25)												
+  span_migration.go:108			0x100250620		a9011320		STP (R0, R4), 16(R25)												
+  span_migration.go:108			0x100250624		a9021722		STP (R2, R5), 32(R25)												
+  span_migration.go:108			0x100250628		f00009c0		ADRP 1290240(PC), R0												
+  span_migration.go:108			0x10025062c		91148000		ADD $1312, R0, R0												
+  span_migration.go:108			0x100250630		97f7211c		CALL runtime.wbZero(SB)												
+  span_migration.go:108			0x100250634		f940cbe0		MOVD 400(RSP), R0												
+  generated_span.go:103			0x100250638		f9416fe1		MOVD 728(RSP), R1												
+  span_migration.go:108			0x10025063c		f940abe2		MOVD 336(RSP), R2												
+  span_migration.go:108			0x100250640		f94087e3		MOVD 264(RSP), R3												
+  span_migration.go:108			0x100250644		f94177ee		MOVD 744(RSP), R14												
+  span_migration.go:108			0x100250648		a9007ddf		STP (ZR, ZR), (R14)												
+  span_migration.go:108			0x10025064c		a9017ddf		STP (ZR, ZR), 16(R14)												
+  span_migration.go:108			0x100250650		a9027ddf		STP (ZR, ZR), 32(R14)												
+  span_migration.go:108			0x100250654		f90019df		MOVD ZR, 48(R14)												
+  span_migration.go:108			0x100250658		f9417bef		MOVD 752(RSP), R15												
+  span_migration.go:108			0x10025065c		f90001cf		MOVD R15, (R14)													
+  span_migration.go:108			0x100250660		a90089c0		STP (R0, R2), 8(R14)												
+  span_migration.go:108			0x100250664		f9000dc3		MOVD R3, 24(R14)												
+  generated_span.go:103			0x100250668		a941402f		LDP 16(R1), (R15, R16)												
+  generated_span.go:114			0x10025066c		b9809431		MOVW 148(R1), R17												
+  span_migration.go:109			0x100250670		a91b7fff		STP (ZR, ZR), 432(RSP)												
+  span_migration.go:109			0x100250674		a91c7fff		STP (ZR, ZR), 448(RSP)												
+  span_migration.go:109			0x100250678		a91d7fff		STP (ZR, ZR), 464(RSP)												
+  span_migration.go:109			0x10025067c		a91b43ef		STP (R15, R16), 432(RSP)											
+  span_migration.go:109			0x100250680		b901c3f1		MOVW R17, 448(RSP)												
+  span_migration.go:109			0x100250684		910c23fb		ADD $776, RSP, R27												
+  span_migration.go:109			0x100250688		a940436f		LDP (R27), (R15, R16)												
+  span_migration.go:109			0x10025068c		f9418ff1		MOVD 792(RSP), R17												
+  span_migration.go:109			0x100250690		f900e7ef		MOVD R15, 456(RSP)												
+  span_migration.go:109			0x100250694		a91d47f0		STP (R16, R17), 464(RSP)											
+  span_migration.go:111			0x100250698		910ac3fb		ADD $688, RSP, R27												
+  span_migration.go:111			0x10025069c		a9007f7f		STP (ZR, ZR), (R27)												
+  span_migration.go:111			0x1002506a0		910b03fb		ADD $704, RSP, R27												
+  span_migration.go:111			0x1002506a4		a9007f7f		STP (ZR, ZR), (R27)												
+  span_migration.go:115			0x1002506a8		d503201f		NOOP														
+  map.go:242				0x1002506ac		f940142f		MOVD 40(R1), R15												
+  map.go:242				0x1002506b0		f900a7ef		MOVD R15, 328(RSP)												
+  map.go:242				0x1002506b4		aa1f03e0		MOVD ZR, R0													
+  span_migration.go:137			0x1002506b8		aa1f03e2		MOVD ZR, R2													
+  span_migration.go:144			0x1002506bc		aa1f03e3		MOVD ZR, R3													
+  span_migration.go:144			0x1002506c0		aa1f03e4		MOVD ZR, R4													
+  span_migration.go:145			0x1002506c4		aa1f03e5		MOVD ZR, R5													
+  span_migration.go:146			0x1002506c8		aa1f03e6		MOVD ZR, R6													
+  span_migration.go:146			0x1002506cc		aa1f03e7		MOVD ZR, R7													
+  span_migration.go:148			0x1002506d0		aa1f03e8		MOVD ZR, R8													
+  map.go:242				0x1002506d4		1400000d		JMP 13(PC)													
+  map.go:242				0x1002506d8		f9409bf3		MOVD 304(RSP), R19												
+  map.go:242				0x1002506dc		91000673		ADD $1, R19, R19												
+  map.go:242				0x1002506e0		f940a7ef		MOVD 328(RSP), R15												
+  span_migration.go:144			0x1002506e4		aa0103e4		MOVD R1, R4													
+  span_migration.go:145			0x1002506e8		aa0303e5		MOVD R3, R5													
+  span_migration.go:146			0x1002506ec		aa1103e6		MOVD R17, R6													
+  span_migration.go:146			0x1002506f0		aa0e03e7		MOVD R14, R7													
+  span_migration.go:148			0x1002506f4		b94107e8		MOVWU 260(RSP), R8												
+  map.go:243				0x1002506f8		f9416fe1		MOVD 728(RSP), R1												
+  span_migration.go:142			0x1002506fc		f94177ee		MOVD 744(RSP), R14												
+  span_migration.go:144			0x100250700		aa0003e3		MOVD R0, R3													
+  map.go:242				0x100250704		aa1303e0		MOVD R19, R0													
+  span_migration.go:144			0x100250708		f9008be3		MOVD R3, 272(RSP)												
+  span_migration.go:144			0x10025070c		f900cfe4		MOVD R4, 408(RSP)												
+  span_migration.go:146			0x100250710		f900d3e7		MOVD R7, 416(RSP)												
+  span_migration.go:146			0x100250714		f9008fe6		MOVD R6, 280(RSP)												
+  span_migration.go:148			0x100250718		b90107e8		MOVW R8, 260(RSP)												
+  span_migration.go:145			0x10025071c		39040fe5		MOVB R5, 259(RSP)												
+  map.go:242				0x100250720		eb0f001f		CMP R15, R0													
+  map.go:242				0x100250724		5400212a		BGE 265(PC)													
+  map.go:243				0x100250728		a9422829		LDP 32(R1), (R9, R10)												
+  map.go:243				0x10025072c		eb0a001f		CMP R10, R0													
+  map.go:243				0x100250730		54003282		BCS 404(PC)													
+  map.go:242				0x100250734		f9009be0		MOVD R0, 304(RSP)												
+  map.go:243				0x100250738		f9016be9		MOVD R9, 720(RSP)												
+  span_migration.go:137			0x10025073c		f9009fe2		MOVD R2, 312(RSP)												
+  map.go:243				0x100250740		8b000802		ADD R0<<2, R0, R2												
+  map.go:243				0x100250744		f900a3e2		MOVD R2, 320(RSP)												
+  map.go:243				0x100250748		8b020d22		ADD R2<<3, R9, R2												
+  map.go:243				0x10025074c		f90153e2		MOVD R2, 672(RSP)												
+  map.go:244				0x100250750		a9410440		LDP 16(R2), (R0, R1)												
+  map.go:244				0x100250754		f90157e0		MOVD R0, 680(RSP)												
+  map.go:244				0x100250758		f90097e1		MOVD R1, 296(RSP)												
+  span_migration.go:116			0x10025075c		94000325		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.migrationWorkForKey(SB)			
+  span_migration.go:116			0x100250760		b94107e2		MOVWU 260(RSP), R2												
+  span_migration.go:116			0x100250764		aa000042		ORR R0, R2, R2													
+  span_migration.go:116			0x100250768		b90107e2		MOVW R2, 260(RSP)												
+  span_migration.go:117			0x10025076c		f94157e0		MOVD 680(RSP), R0												
+  span_migration.go:117			0x100250770		f94097e1		MOVD 296(RSP), R1												
+  span_migration.go:117			0x100250774		94000587		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.mayProjectContextAttribute(SB)		
+  span_migration.go:117			0x100250778		36000240		TBZ $0, R0, 18(PC)												
+  span_migration.go:118			0x10025077c		f9409fe0		MOVD 312(RSP), R0												
+  span_migration.go:118			0x100250780		f100081f		CMP $2, R0													
+  span_migration.go:118			0x100250784		5400014a		BGE 10(PC)													
+  span_migration.go:119			0x100250788		54002f82		BCS 380(PC)													
+  span_migration.go:119			0x10025078c		910ac3eb		ADD $688, RSP, R11												
+  span_migration.go:119			0x100250790		8b00116e		ADD R0<<4, R11, R14												
+  span_migration.go:119			0x100250794		d37cec0f		LSL $4, R0, R15													
+  span_migration.go:119			0x100250798		f94157f0		MOVD 680(RSP), R16												
+  span_migration.go:119			0x10025079c		f82f6970		MOVD R16, (R11)(R15)												
+  span_migration.go:119			0x1002507a0		f94097ef		MOVD 296(RSP), R15												
+  span_migration.go:119			0x1002507a4		f90005cf		MOVD R15, 8(R14)												
+  span_migration.go:119			0x1002507a8		14000004		JMP 4(PC)													
+  span_migration.go:111			0x1002507ac		910ac3eb		ADD $688, RSP, R11												
+  span_migration.go:124			0x1002507b0		f94097ef		MOVD 296(RSP), R15												
+  span_migration.go:124			0x1002507b4		f94157f0		MOVD 680(RSP), R16												
+  span_migration.go:121			0x1002507b8		91000402		ADD $1, R0, R2													
+  span_migration.go:121			0x1002507bc		14000005		JMP 5(PC)													
+  span_migration.go:111			0x1002507c0		910ac3eb		ADD $688, RSP, R11												
+  span_migration.go:124			0x1002507c4		f94097ef		MOVD 296(RSP), R15												
+  span_migration.go:124			0x1002507c8		f94157f0		MOVD 680(RSP), R16												
+  span_migration.go:137			0x1002507cc		f9409fe2		MOVD 312(RSP), R2												
+  span_migration.go:124			0x1002507d0		f10029ff		CMP $10, R15													
+  span_migration.go:124			0x1002507d4		54000cc1		BNE 102(PC)													
+  span_migration.go:124			0x1002507d8		f940020e		MOVD (R16), R14													
+  span_migration.go:124			0x1002507dc		d28e0e4f		MOVD $28786, R15												
+  span_migration.go:124			0x1002507e0		f2a5cc6f		MOVK $(11875<<16), R15												
+  span_migration.go:124			0x1002507e4		f2cf2e6f		MOVK $(31091<<32), R15												
+  span_migration.go:124			0x1002507e8		f2ee8e6f		MOVK $(29811<<48), R15												
+  span_migration.go:124			0x1002507ec		eb0f01df		CMP R15, R14													
+  span_migration.go:124			0x1002507f0		54001981		BNE 204(PC)													
+  span_migration.go:124			0x1002507f4		7940120e		MOVHU 8(R16), R14												
+  span_migration.go:124			0x1002507f8		d28dacaf		MOVD $28005, R15												
+  span_migration.go:124			0x1002507fc		6b0f01df		CMPW R15, R14													
+  span_migration.go:124			0x100250800		54001901		BNE 200(PC)													
+  value.go:199				0x100250804		f940a3ee		MOVD 320(RSP), R14												
+  value.go:199				0x100250808		f9416bef		MOVD 720(RSP), R15												
+  value.go:199				0x10025080c		f86e79ee		MOVD (R15)(R14<<3), R14												
+  value.go:199				0x100250810		b40007ae		CBZ R14, 61(PC)													
+  value.go:199				0x100250814		b94011cf		MOVWU 16(R14), R15												
+  value.go:199				0x100250818		d34625ef		UBFX $6, R15, $4, R15												
+  value.go:199				0x10025081c		f0000b40		ADRP 1486848(PC), R0												
+  value.go:199				0x100250820		91308000		ADD $3104, R0, R0												
+  value.go:199				0x100250824		f86f781b		MOVD (R0)(R15<<3), R27												
+  value.go:199				0x100250828		d61f0360		JMP (R27)													
+  value.go:204				0x10025082c		9000074f		ADRP 950272(PC), R15												
+  value.go:204				0x100250830		912c81ef		ADD $2848, R15, R15												
+  value.go:204				0x100250834		eb0f01df		CMP R15, R14													
+  value.go:204				0x100250838		54000661		BNE 51(PC)													
+  value.go:204				0x10025083c		b27f03e0		ORR $2, ZR, R0													
+  span_migration.go:125			0x100250840		14000034		JMP 52(PC)													
+  value.go:206				0x100250844		9000074f		ADRP 950272(PC), R15												
+  value.go:206				0x100250848		912b81ef		ADD $2784, R15, R15												
+  value.go:206				0x10025084c		eb0f01df		CMP R15, R14													
+  value.go:206				0x100250850		540005a1		BNE 45(PC)													
+  value.go:206				0x100250854		9000074f		ADRP 950272(PC), R15												
+  value.go:206				0x100250858		912c81ef		ADD $2848, R15, R15												
+  value.go:206				0x10025085c		b24007e0		ORR $3, ZR, R0													
+  span_migration.go:125			0x100250860		1400002c		JMP 44(PC)													
+  value.go:202				0x100250864		9000074f		ADRP 950272(PC), R15												
+  value.go:202				0x100250868		912981ef		ADD $2656, R15, R15												
+  value.go:202				0x10025086c		eb0f01df		CMP R15, R14													
+  value.go:202				0x100250870		540004a1		BNE 37(PC)													
+  value.go:202				0x100250874		9000074f		ADRP 950272(PC), R15												
+  value.go:202				0x100250878		912c81ef		ADD $2848, R15, R15												
+  value.go:202				0x10025087c		b27e03e0		ORR $4, ZR, R0													
+  span_migration.go:125			0x100250880		14000024		JMP 36(PC)													
+  value.go:208				0x100250884		9000074f		ADRP 950272(PC), R15												
+  value.go:208				0x100250888		912d81ef		ADD $2912, R15, R15												
+  value.go:208				0x10025088c		eb0f01df		CMP R15, R14													
+  value.go:208				0x100250890		540003a1		BNE 29(PC)													
+  value.go:208				0x100250894		9000074f		ADRP 950272(PC), R15												
+  value.go:208				0x100250898		912c81ef		ADD $2848, R15, R15												
+  value.go:208				0x10025089c		d28000a0		MOVD $5, R0													
+  span_migration.go:125			0x1002508a0		1400001c		JMP 28(PC)													
+  value.go:210				0x1002508a4		9000074f		ADRP 950272(PC), R15												
+  value.go:210				0x1002508a8		912881ef		ADD $2592, R15, R15												
+  value.go:210				0x1002508ac		eb0f01df		CMP R15, R14													
+  value.go:210				0x1002508b0		540002a1		BNE 21(PC)													
+  value.go:210				0x1002508b4		9000074f		ADRP 950272(PC), R15												
+  value.go:210				0x1002508b8		912c81ef		ADD $2848, R15, R15												
+  value.go:210				0x1002508bc		b27f07e0		ORR $6, ZR, R0													
+  span_migration.go:125			0x1002508c0		14000014		JMP 20(PC)													
+  value.go:200				0x1002508c4		9000074f		ADRP 950272(PC), R15												
+  value.go:200				0x1002508c8		912e81ef		ADD $2976, R15, R15												
+  value.go:200				0x1002508cc		eb0f01df		CMP R15, R14													
+  value.go:200				0x1002508d0		540001a1		BNE 13(PC)													
+  value.go:200				0x1002508d4		9000074f		ADRP 950272(PC), R15												
+  value.go:200				0x1002508d8		912c81ef		ADD $2848, R15, R15												
+  value.go:200				0x1002508dc		b24003e0		ORR $1, ZR, R0													
+  span_migration.go:125			0x1002508e0		1400000c		JMP 12(PC)													
+  value.go:212				0x1002508e4		9000074f		ADRP 950272(PC), R15												
+  value.go:212				0x1002508e8		912a81ef		ADD $2720, R15, R15												
+  value.go:212				0x1002508ec		eb0f01df		CMP R15, R14													
+  value.go:212				0x1002508f0		540000a1		BNE 5(PC)													
+  value.go:212				0x1002508f4		9000074f		ADRP 950272(PC), R15												
+  value.go:212				0x1002508f8		912c81ef		ADD $2848, R15, R15												
+  value.go:212				0x1002508fc		b2400be0		ORR $7, ZR, R0													
+  span_migration.go:125			0x100250900		14000004		JMP 4(PC)													
+  span_migration.go:125			0x100250904		9000074f		ADRP 950272(PC), R15												
+  span_migration.go:125			0x100250908		912c81ef		ADD $2848, R15, R15												
+  span_migration.go:125			0x10025090c		aa1f03e0		MOVD ZR, R0													
+  span_migration.go:125			0x100250910		7100041f		CMPW $1, R0													
+  span_migration.go:125			0x100250914		54000181		BNE 12(PC)													
+  generated_proto_anyvalue.go:32	0x100250918		90000750		ADRP 950272(PC), R16												
+  generated_proto_anyvalue.go:32	0x10025091c		912e8210		ADD $2976, R16, R16												
+  generated_proto_anyvalue.go:32	0x100250920		eb1001df		CMP R16, R14													
+  generated_proto_anyvalue.go:32	0x100250924		540000a1		BNE 5(PC)													
+  value.go:199				0x100250928		f94153ee		MOVD 672(RSP), R14												
+  value.go:199				0x10025092c		f94005ce		MOVD 8(R14), R14												
+  generated_proto_anyvalue.go:33	0x100250930		a94045ce		LDP (R14), (R14, R17)												
+  value.go:222				0x100250934		14000008		JMP 8(PC)													
+  span_migration.go:126			0x100250938		aa1f03f1		MOVD ZR, R17													
+  span_migration.go:126			0x10025093c		aa1f03ee		MOVD ZR, R14													
+  value.go:222				0x100250940		14000005		JMP 5(PC)													
+  value.go:222				0x100250944		90000750		ADRP 950272(PC), R16												
+  value.go:222				0x100250948		912e8210		ADD $2976, R16, R16												
+  span_migration.go:144			0x10025094c		f9408bf1		MOVD 272(RSP), R17												
+  span_migration.go:144			0x100250950		f940cfee		MOVD 408(RSP), R14												
+  span_migration.go:144			0x100250954		aa1103e0		MOVD R17, R0													
+  span_migration.go:144			0x100250958		aa0e03e1		MOVD R14, R1													
+  span_migration.go:145			0x10025095c		39440fe3		MOVBU 259(RSP), R3												
+  span_migration.go:146			0x100250960		f9408ff1		MOVD 280(RSP), R17												
+  span_migration.go:146			0x100250964		f940d3ee		MOVD 416(RSP), R14												
+  span_migration.go:125			0x100250968		17ffff5c		JMP -164(PC)													
+  span_migration.go:128			0x10025096c		f1003dff		CMP $15, R15													
+  span_migration.go:128			0x100250970		54000d81		BNE 108(PC)													
+  span_migration.go:128			0x100250974		f940020e		MOVD (R16), R14													
+  span_migration.go:128			0x100250978		d28e0e4f		MOVD $28786, R15												
+  span_migration.go:128			0x10025097c		f2a5cc6f		MOVK $(11875<<16), R15												
+  span_migration.go:128			0x100250980		f2cf2e6f		MOVK $(31091<<32), R15												
+  span_migration.go:128			0x100250984		f2ee8e6f		MOVK $(29811<<48), R15												
+  span_migration.go:128			0x100250988		eb0f01df		CMP R15, R14													
+  span_migration.go:128			0x10025098c		54000ca1		BNE 101(PC)													
+  span_migration.go:128			0x100250990		b9400a0e		MOVWU 8(R16), R14												
+  span_migration.go:128			0x100250994		d28dacaf		MOVD $28005, R15												
+  span_migration.go:128			0x100250998		f2adc5cf		MOVK $(28206<<16), R15												
+  span_migration.go:128			0x10025099c		6b0f01df		CMPW R15, R14													
+  span_migration.go:128			0x1002509a0		54000c01		BNE 96(PC)													
+  span_migration.go:128			0x1002509a4		79401a0e		MOVHU 12(R16), R14												
+  span_migration.go:128			0x1002509a8		d28dac2f		MOVD $28001, R15												
+  span_migration.go:128			0x1002509ac		6b0f01df		CMPW R15, R14													
+  span_migration.go:128			0x1002509b0		54000b81		BNE 92(PC)													
+  span_migration.go:128			0x1002509b4		39403a0e		MOVBU 14(R16), R14												
+  span_migration.go:128			0x1002509b8		710195df		CMPW $101, R14													
+  span_migration.go:128			0x1002509bc		54000b21		BNE 89(PC)													
+  value.go:199				0x1002509c0		f940a3ee		MOVD 320(RSP), R14												
+  value.go:199				0x1002509c4		f9416bef		MOVD 720(RSP), R15												
+  value.go:199				0x1002509c8		f86e79ee		MOVD (R15)(R14<<3), R14												
+  value.go:199				0x1002509cc		b40007ae		CBZ R14, 61(PC)													
+  value.go:199				0x1002509d0		b94011cf		MOVWU 16(R14), R15												
+  value.go:199				0x1002509d4		d34625ef		UBFX $6, R15, $4, R15												
+  value.go:199				0x1002509d8		f0000b40		ADRP 1486848(PC), R0												
+  value.go:199				0x1002509dc		91328000		ADD $3232, R0, R0												
+  value.go:199				0x1002509e0		f86f781b		MOVD (R0)(R15<<3), R27												
+  value.go:199				0x1002509e4		d61f0360		JMP (R27)													
+  value.go:204				0x1002509e8		9000074f		ADRP 950272(PC), R15												
+  value.go:204				0x1002509ec		912c81ef		ADD $2848, R15, R15												
+  value.go:204				0x1002509f0		eb0f01df		CMP R15, R14													
+  value.go:204				0x1002509f4		54000661		BNE 51(PC)													
+  value.go:204				0x1002509f8		b27f03e0		ORR $2, ZR, R0													
+  span_migration.go:130			0x1002509fc		14000034		JMP 52(PC)													
+  value.go:206				0x100250a00		9000074f		ADRP 950272(PC), R15												
+  value.go:206				0x100250a04		912b81ef		ADD $2784, R15, R15												
+  value.go:206				0x100250a08		eb0f01df		CMP R15, R14													
+  value.go:206				0x100250a0c		540005a1		BNE 45(PC)													
+  value.go:206				0x100250a10		9000074f		ADRP 950272(PC), R15												
+  value.go:206				0x100250a14		912c81ef		ADD $2848, R15, R15												
+  value.go:206				0x100250a18		b24007e0		ORR $3, ZR, R0													
+  span_migration.go:130			0x100250a1c		1400002c		JMP 44(PC)													
+  value.go:202				0x100250a20		9000074f		ADRP 950272(PC), R15												
+  value.go:202				0x100250a24		912981ef		ADD $2656, R15, R15												
+  value.go:202				0x100250a28		eb0f01df		CMP R15, R14													
+  value.go:202				0x100250a2c		540004a1		BNE 37(PC)													
+  value.go:202				0x100250a30		9000074f		ADRP 950272(PC), R15												
+  value.go:202				0x100250a34		912c81ef		ADD $2848, R15, R15												
+  value.go:202				0x100250a38		b27e03e0		ORR $4, ZR, R0													
+  span_migration.go:130			0x100250a3c		14000024		JMP 36(PC)													
+  value.go:208				0x100250a40		9000074f		ADRP 950272(PC), R15												
+  value.go:208				0x100250a44		912d81ef		ADD $2912, R15, R15												
+  value.go:208				0x100250a48		eb0f01df		CMP R15, R14													
+  value.go:208				0x100250a4c		540003a1		BNE 29(PC)													
+  value.go:208				0x100250a50		9000074f		ADRP 950272(PC), R15												
+  value.go:208				0x100250a54		912c81ef		ADD $2848, R15, R15												
+  value.go:208				0x100250a58		d28000a0		MOVD $5, R0													
+  span_migration.go:130			0x100250a5c		1400001c		JMP 28(PC)													
+  value.go:210				0x100250a60		9000074f		ADRP 950272(PC), R15												
+  value.go:210				0x100250a64		912881ef		ADD $2592, R15, R15												
+  value.go:210				0x100250a68		eb0f01df		CMP R15, R14													
+  value.go:210				0x100250a6c		540002a1		BNE 21(PC)													
+  value.go:210				0x100250a70		9000074f		ADRP 950272(PC), R15												
+  value.go:210				0x100250a74		912c81ef		ADD $2848, R15, R15												
+  value.go:210				0x100250a78		b27f07e0		ORR $6, ZR, R0													
+  span_migration.go:130			0x100250a7c		14000014		JMP 20(PC)													
+  value.go:200				0x100250a80		9000074f		ADRP 950272(PC), R15												
+  value.go:200				0x100250a84		912e81ef		ADD $2976, R15, R15												
+  value.go:200				0x100250a88		eb0f01df		CMP R15, R14													
+  value.go:200				0x100250a8c		540001a1		BNE 13(PC)													
+  value.go:200				0x100250a90		9000074f		ADRP 950272(PC), R15												
+  value.go:200				0x100250a94		912c81ef		ADD $2848, R15, R15												
+  value.go:200				0x100250a98		b24003e0		ORR $1, ZR, R0													
+  span_migration.go:130			0x100250a9c		1400000c		JMP 12(PC)													
+  value.go:212				0x100250aa0		9000074f		ADRP 950272(PC), R15												
+  value.go:212				0x100250aa4		912a81ef		ADD $2720, R15, R15												
+  value.go:212				0x100250aa8		eb0f01df		CMP R15, R14													
+  value.go:212				0x100250aac		540000a1		BNE 5(PC)													
+  value.go:212				0x100250ab0		9000074f		ADRP 950272(PC), R15												
+  value.go:212				0x100250ab4		912c81ef		ADD $2848, R15, R15												
+  value.go:212				0x100250ab8		b2400be0		ORR $7, ZR, R0													
+  span_migration.go:130			0x100250abc		14000004		JMP 4(PC)													
+  span_migration.go:130			0x100250ac0		9000074f		ADRP 950272(PC), R15												
+  span_migration.go:130			0x100250ac4		912c81ef		ADD $2848, R15, R15												
+  span_migration.go:130			0x100250ac8		aa1f03e0		MOVD ZR, R0													
+  span_migration.go:130			0x100250acc		7100041f		CMPW $1, R0													
+  span_migration.go:130			0x100250ad0		54000181		BNE 12(PC)													
+  generated_proto_anyvalue.go:32	0x100250ad4		90000750		ADRP 950272(PC), R16												
+  generated_proto_anyvalue.go:32	0x100250ad8		912e8210		ADD $2976, R16, R16												
+  generated_proto_anyvalue.go:32	0x100250adc		eb1001df		CMP R16, R14													
+  generated_proto_anyvalue.go:32	0x100250ae0		540000a1		BNE 5(PC)													
+  value.go:199				0x100250ae4		f94153ee		MOVD 672(RSP), R14												
+  value.go:199				0x100250ae8		f94005ce		MOVD 8(R14), R14												
+  generated_proto_anyvalue.go:33	0x100250aec		a94045ce		LDP (R14), (R14, R17)												
+  value.go:222				0x100250af0		14000008		JMP 8(PC)													
+  span_migration.go:131			0x100250af4		aa1f03f1		MOVD ZR, R17													
+  span_migration.go:131			0x100250af8		aa1f03ee		MOVD ZR, R14													
+  value.go:222				0x100250afc		14000005		JMP 5(PC)													
+  value.go:222				0x100250b00		90000750		ADRP 950272(PC), R16												
+  value.go:222				0x100250b04		912e8210		ADD $2976, R16, R16												
+  span_migration.go:146			0x100250b08		f9408ff1		MOVD 280(RSP), R17												
+  span_migration.go:146			0x100250b0c		f940d3ee		MOVD 416(RSP), R14												
+  span_migration.go:144			0x100250b10		f9408be0		MOVD 272(RSP), R0												
+  span_migration.go:144			0x100250b14		f940cfe1		MOVD 408(RSP), R1												
+  span_migration.go:144			0x100250b18		b24003e3		ORR $1, ZR, R3													
+  span_migration.go:130			0x100250b1c		17fffeef		JMP -273(PC)													
+  span_migration.go:130			0x100250b20		9000074f		ADRP 950272(PC), R15												
+  span_migration.go:130			0x100250b24		912c81ef		ADD $2848, R15, R15												
+  span_migration.go:130			0x100250b28		90000750		ADRP 950272(PC), R16												
+  span_migration.go:130			0x100250b2c		912e8210		ADD $2976, R16, R16												
+  span_migration.go:144			0x100250b30		f9408be0		MOVD 272(RSP), R0												
+  span_migration.go:144			0x100250b34		f940cfe1		MOVD 408(RSP), R1												
+  span_migration.go:145			0x100250b38		39440fe3		MOVBU 259(RSP), R3												
+  span_migration.go:146			0x100250b3c		f9408ff1		MOVD 280(RSP), R17												
+  span_migration.go:146			0x100250b40		f940d3ee		MOVD 416(RSP), R14												
+  span_migration.go:123			0x100250b44		17fffee5		JMP -283(PC)													
+  generated_span.go:147			0x100250b48		91008020		ADD $32, R1, R0													
+  generated_span.go:147			0x100250b4c		f900d7e0		MOVD R0, 424(RSP)												
+  span_migration.go:137			0x100250b50		b40003c2		CBZ R2, 30(PC)													
+  map.go:231				0x100250b54		f940142f		MOVD 40(R1), R15												
+  span_migration.go:139			0x100250b58		f10081ff		CMP $32, R15													
+  span_migration.go:139			0x100250b5c		5400022b		BLT 17(PC)													
+  span_migration.go:139			0x100250b60		f100085f		CMP $2, R2													
+  span_migration.go:139			0x100250b64		540001ec		BGT 15(PC)													
+  span_migration.go:140			0x100250b68		54001028		BHI 129(PC)													
+  span_migration.go:140			0x100250b6c		a95b1be5		LDP 432(RSP), (R5, R6)												
+  span_migration.go:140			0x100250b70		a95ca7e8		LDP 456(RSP), (R8, R9)												
+  span_migration.go:140			0x100250b74		b981c3e7		MOVW 448(RSP), R7												
+  span_migration.go:140			0x100250b78		f940efea		MOVD 472(RSP), R10												
+  span_migration.go:140			0x100250b7c		a94011c3		LDP (R14), (R3, R4)												
+  span_migration.go:140			0x100250b80		aa0003e1		MOVD R0, R1													
+  span_migration.go:140			0x100250b84		910ac3eb		ADD $688, RSP, R11												
+  span_migration.go:140			0x100250b88		aa0203ec		MOVD R2, R12													
+  span_migration.go:140			0x100250b8c		b27f03ed		ORR $2, ZR, R13													
+  span_migration.go:140			0x100250b90		794763e0		MOVHU 944(RSP), R0												
+  span_migration.go:140			0x100250b94		f94173e2		MOVD 736(RSP), R2												
+  span_migration.go:140			0x100250b98		940005da		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.projectSparseAttributeMap(SB)	
+  span_migration.go:140			0x100250b9c		1400000e		JMP 14(PC)													
+  span_migration.go:142			0x100250ba0		a95b1be5		LDP 432(RSP), (R5, R6)												
+  span_migration.go:142			0x100250ba4		a95ca7e8		LDP 456(RSP), (R8, R9)												
+  span_migration.go:142			0x100250ba8		b981c3e7		MOVW 448(RSP), R7												
+  span_migration.go:142			0x100250bac		f940efea		MOVD 472(RSP), R10												
+  span_migration.go:142			0x100250bb0		a94011c3		LDP (R14), (R3, R4)												
+  span_migration.go:142			0x100250bb4		aa0003e1		MOVD R0, R1													
+  span_migration.go:142			0x100250bb8		f94173e2		MOVD 736(RSP), R2												
+  span_migration.go:142			0x100250bbc		794763e0		MOVHU 944(RSP), R0												
+  span_migration.go:142			0x100250bc0		94000508		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.projectAttributeMap(SB)		
+  span_migration.go:142			0x100250bc4		14000004		JMP 4(PC)													
+  span_migration.go:138			0x100250bc8		a9400dc2		LDP (R14), (R2, R3)												
+  span_migration.go:138			0x100250bcc		f94173e1		MOVD 736(RSP), R1												
+  span_migration.go:138			0x100250bd0		97ffa004		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.CopyTo(SB)							
+  span_migration.go:148			0x100250bd4		9106c3f4		ADD $432, RSP, R20												
+  span_migration.go:148			0x100250bd8		1000009b		ADR 16(PC), R27													
+  span_migration.go:148			0x100250bdc		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:148			0x100250be0		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:148			0x100250be4		97f8c26c		CALL -474516(PC)												
+  span_migration.go:148			0x100250be8		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:148			0x100250bec		794763e7		MOVHU 944(RSP), R7												
+  span_migration.go:148			0x100250bf0		790363e7		MOVH R7, 432(RSP)												
+  span_migration.go:148			0x100250bf4		f9416fe7		MOVD 728(RSP), R7												
+  span_migration.go:148			0x100250bf8		f900dfe7		MOVD R7, 440(RSP)												
+  span_migration.go:148			0x100250bfc		f94173e7		MOVD 736(RSP), R7												
+  span_migration.go:148			0x100250c00		f940d7e8		MOVD 424(RSP), R8												
+  span_migration.go:148			0x100250c04		a91c23e7		STP (R7, R8), 448(RSP)												
+  span_migration.go:148			0x100250c08		f94177e8		MOVD 744(RSP), R8												
+  span_migration.go:148			0x100250c0c		a91d23e7		STP (R7, R8), 464(RSP)												
+  span_migration.go:148			0x100250c10		910783f5		ADD $480, RSP, R21												
+  span_migration.go:148			0x100250c14		910c23f4		ADD $776, RSP, R20												
+  span_migration.go:148			0x100250c18		1000009b		ADR 16(PC), R27													
+  span_migration.go:148			0x100250c1c		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:148			0x100250c20		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:148			0x100250c24		97f8c2db		CALL -474405(PC)												
+  span_migration.go:148			0x100250c28		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:148			0x100250c2c		f941d7e7		MOVD 936(RSP), R7												
+  span_migration.go:148			0x100250c30		f90143e7		MOVD R7, 640(RSP)												
+  span_migration.go:148			0x100250c34		b94107e7		MOVWU 260(RSP), R7												
+  span_migration.go:148			0x100250c38		b9028be7		MOVW R7, 648(RSP)												
+  span_migration.go:148			0x100250c3c		39440fe9		MOVBU 259(RSP), R9												
+  span_migration.go:148			0x100250c40		7200013f		TSTW $1, R9													
+  span_migration.go:148			0x100250c44		f9408fe9		MOVD 280(RSP), R9												
+  span_migration.go:148			0x100250c48		f9408bea		MOVD 272(RSP), R10												
+  span_migration.go:148			0x100250c4c		9a8a1129		CSEL NE, R9, R10, R9												
+  span_migration.go:148			0x100250c50		f90093e9		MOVD R9, 288(RSP)												
+  span_migration.go:148			0x100250c54		f940d3ea		MOVD 416(RSP), R10												
+  span_migration.go:148			0x100250c58		f940cfeb		MOVD 408(RSP), R11												
+  span_migration.go:148			0x100250c5c		9a8b114a		CSEL NE, R10, R11, R10												
+  span_migration.go:148			0x100250c60		910a43fb		ADD $656, RSP, R27												
+  span_migration.go:148			0x100250c64		a900276a		STP (R10, R9), (R27)												
+  span_migration.go:149			0x100250c68		720020ff		TSTW $511, R7													
+  span_migration.go:145			0x100250c6c		54000180		BEQ 12(PC)													
+  span_migration.go:150			0x100250c70		910023f5		ADD $8, RSP, R21												
+  span_migration.go:150			0x100250c74		9106c3f4		ADD $432, RSP, R20												
+  span_migration.go:150			0x100250c78		1000009b		ADR 16(PC), R27													
+  span_migration.go:150			0x100250c7c		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:150			0x100250c80		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:150			0x100250c84		97f8c2b9		CALL -474439(PC)												
+  span_migration.go:150			0x100250c88		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:150			0x100250c8c		97ffd575		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.spanMigration.projectHTTP(SB)		
+  span_migration.go:152			0x100250c90		b94107e7		MOVWU 260(RSP), R7												
+  span_migration.go:161			0x100250c94		f94177e8		MOVD 744(RSP), R8												
+  span_migration.go:155			0x100250c98		f94093e9		MOVD 288(RSP), R9												
+  span_migration.go:152			0x100250c9c		721614ff		TSTW $64512, R7													
+  span_migration.go:152			0x100250ca0		54000180		BEQ 12(PC)													
+  span_migration.go:153			0x100250ca4		910023f5		ADD $8, RSP, R21												
+  span_migration.go:153			0x100250ca8		9106c3f4		ADD $432, RSP, R20												
+  span_migration.go:153			0x100250cac		1000009b		ADR 16(PC), R27													
+  span_migration.go:153			0x100250cb0		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:153			0x100250cb4		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:153			0x100250cb8		97f8c2ac		CALL -474452(PC)												
+  span_migration.go:153			0x100250cbc		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:153			0x100250cc0		97ffce04		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.spanMigration.projectDatabase(SB)		
+  span_migration.go:155			0x100250cc4		b94107e7		MOVWU 260(RSP), R7												
+  span_migration.go:161			0x100250cc8		f94177e8		MOVD 744(RSP), R8												
+  span_migration.go:155			0x100250ccc		f94093e9		MOVD 288(RSP), R9												
+  span_migration.go:155			0x100250cd0		72100cff		TSTW $983040, R7												
+  span_migration.go:155			0x100250cd4		54000061		BNE 3(PC)													
+  span_migration.go:155			0x100250cd8		36380187		TBZ $7, R7, 12(PC)												
+  span_migration.go:155			0x100250cdc		b4000169		CBZ R9, 11(PC)													
+  span_migration.go:156			0x100250ce0		910023f5		ADD $8, RSP, R21												
+  span_migration.go:156			0x100250ce4		9106c3f4		ADD $432, RSP, R20												
+  span_migration.go:156			0x100250ce8		1000009b		ADR 16(PC), R27													
+  span_migration.go:156			0x100250cec		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:156			0x100250cf0		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:156			0x100250cf4		97f8c29d		CALL -474467(PC)												
+  span_migration.go:156			0x100250cf8		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:156			0x100250cfc		97ffea55		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.spanMigration.projectRPC(SB)			
+  span_migration.go:158			0x100250d00		b94107e7		MOVWU 260(RSP), R7												
+  span_migration.go:161			0x100250d04		f94177e8		MOVD 744(RSP), R8												
+  span_migration.go:158			0x100250d08		36480147		TBZ $9, R7, 10(PC)												
+  span_migration.go:159			0x100250d0c		910023f5		ADD $8, RSP, R21												
+  span_migration.go:159			0x100250d10		9106c3f4		ADD $432, RSP, R20												
+  span_migration.go:159			0x100250d14		1000009b		ADR 16(PC), R27													
+  span_migration.go:159			0x100250d18		a93eeffd		STP (R29, R27), -24(RSP)											
+  span_migration.go:159			0x100250d1c		d10063fd		SUB $24, RSP, R29												
+  span_migration.go:159			0x100250d20		97f8c292		CALL -474478(PC)												
+  span_migration.go:159			0x100250d24		d10023fd		SUB $8, RSP, R29												
+  span_migration.go:159			0x100250d28		97ffdd02		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.spanMigration.reportInvalidHTTPMethod(SB)	
+  span_migration.go:161			0x100250d2c		f94177e8		MOVD 744(RSP), R8												
+  span_migration.go:161			0x100250d30		a9402507		LDP (R8), (R7, R9)												
+  span_migration.go:161			0x100250d34		a9412d0a		LDP 16(R8), (R10, R11)												
+  span_migration.go:161			0x100250d38		a942350c		LDP 32(R8), (R12, R13)												
+  span_migration.go:161			0x100250d3c		f9401908		MOVD 48(R8), R8													
+  span_migration.go:161			0x100250d40		a915a7e7		STP (R7, R9), 344(RSP)												
+  span_migration.go:161			0x100250d44		a916afea		STP (R10, R11), 360(RSP)											
+  span_migration.go:161			0x100250d48		a917b7ec		STP (R12, R13), 376(RSP)											
+  span_migration.go:161			0x100250d4c		f900c7e8		MOVD R8, 392(RSP)												
+  span_migration.go:161			0x100250d50		a95587e0		LDP 344(RSP), (R0, R1)												
+  span_migration.go:161			0x100250d54		a9568fe2		LDP 360(RSP), (R2, R3)												
+  span_migration.go:161			0x100250d58		a95797e4		LDP 376(RSP), (R4, R5)												
+  span_migration.go:161			0x100250d5c		f940c7e6		MOVD 392(RSP), R6												
+  span_migration.go:161			0x100250d60		a97ffbfd		LDP -8(RSP), (R29, R30)												
+  span_migration.go:161			0x100250d64		910c03ff		ADD $768, RSP, RSP												
+  span_migration.go:161			0x100250d68		d65f03c0		RET														
+  span_migration.go:140			0x100250d6c		aa0203e1		MOVD R2, R1													
+  span_migration.go:140			0x100250d70		b27f03e2		ORR $2, ZR, R2													
+  span_migration.go:140			0x100250d74		97f8c1a3		CALL runtime.panicSliceAlen(SB)											
+  span_migration.go:119			0x100250d78		b27f03e1		ORR $2, ZR, R1													
+  span_migration.go:119			0x100250d7c		97f8c199		CALL runtime.panicIndex(SB)											
+  map.go:243				0x100250d80		aa0a03e1		MOVD R10, R1													
+  map.go:243				0x100250d84		97f8c197		CALL runtime.panicIndex(SB)											
+  map.go:243				0x100250d88		d503201f		NOOP														
+  span_migration.go:106			0x100250d8c		790163e0		MOVH R0, 176(RSP)												
+  span_migration.go:106			0x100250d90		a90b8be1		STP (R1, R2), 184(RSP)												
+  span_migration.go:106			0x100250d94		aa1e03e3		MOVD R30, R3													
+  span_migration.go:106			0x100250d98		97f8b83e		CALL runtime.morestack_noctxt.abi0(SB)										
+  span_migration.go:106			0x100250d9c		794163e0		MOVHU 176(RSP), R0												
+  span_migration.go:106			0x100250da0		a94b8be1		LDP 184(RSP), (R1, R2)												
+  span_migration.go:106			0x100250da4		17fffdef		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan(SB)			
+  span_migration.go:106			0x100250da8		00000000		?														
+  span_migration.go:106			0x100250dac		00000000		?														
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.projectSparseAttributeMap(SB) /workspace/otel-semconv-normalizer/semconvweave/span_migration.go
+  span_migration.go:329	0x100252300		f9400b90		MOVD 16(R28), R16											
+  span_migration.go:329	0x100252304		d10983f1		SUB $608, RSP, R17											
+  span_migration.go:329	0x100252308		eb10023f		CMP R16, R17												
+  span_migration.go:329	0x10025230c		540031e9		BLS 399(PC)												
+  span_migration.go:329	0x100252310		d10b83f4		SUB $736, RSP, R20											
+  span_migration.go:329	0x100252314		a93ffa9d		STP (R29, R30), -8(R20)											
+  span_migration.go:329	0x100252318		9100029f		MOVD R20, RSP												
+  span_migration.go:329	0x10025231c		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:329	0x100252320		f9017be1		MOVD R1, 752(RSP)											
+  span_migration.go:329	0x100252324		f9017fe2		MOVD R2, 760(RSP)											
+  span_migration.go:329	0x100252328		f90183e3		MOVD R3, 768(RSP)											
+  span_migration.go:329	0x10025232c		f90187e4		MOVD R4, 776(RSP)											
+  span_migration.go:332	0x100252330		7905d3e0		MOVH R0, 744(RSP)											
+  span_migration.go:332	0x100252334		f9016be4		MOVD R4, 720(RSP)											
+  span_migration.go:332	0x100252338		f901a7ec		MOVD R12, 840(RSP)											
+  span_migration.go:332	0x10025233c		f901a3eb		MOVD R11, 832(RSP)											
+  span_migration.go:332	0x100252340		f90167e3		MOVD R3, 712(RSP)											
+  span_migration.go:332	0x100252344		f90163e2		MOVD R2, 704(RSP)											
+  span_migration.go:332	0x100252348		f9015fe1		MOVD R1, 696(RSP)											
+  span_migration.go:329	0x10025234c		910c43fb		ADD $784, RSP, R27											
+  span_migration.go:329	0x100252350		a9001b65		STP (R5, R6), (R27)											
+  span_migration.go:329	0x100252354		b90323e7		MOVW R7, 800(RSP)											
+  span_migration.go:329	0x100252358		f90197e8		MOVD R8, 808(RSP)											
+  span_migration.go:329	0x10025235c		910cc3fb		ADD $816, RSP, R27											
+  span_migration.go:329	0x100252360		a9002b69		STP (R9, R10), (R27)											
+  span_migration.go:330	0x100252364		910443f4		ADD $272, RSP, R20											
+  span_migration.go:330	0x100252368		1000009b		ADR 16(PC), R27												
+  span_migration.go:330	0x10025236c		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:330	0x100252370		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:330	0x100252374		97f8bc8d		CALL -476019(PC)											
+  span_migration.go:330	0x100252378		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:331	0x10025237c		d503201f		NOOP													
+  span_migration.go:332	0x100252380		aa0b03e5		MOVD R11, R5												
+  map.go:231		0x100252384		f9400426		MOVD 8(R1), R6												
+  span_migration.go:332	0x100252388		aa1f03e7		MOVD ZR, R7												
+  span_migration.go:346	0x10025238c		aa0603e8		MOVD R6, R8												
+  span_migration.go:332	0x100252390		14000012		JMP 18(PC)												
+  span_migration.go:332	0x100252394		f9415be9		MOVD 688(RSP), R9											
+  span_migration.go:348	0x100252398		d10004ca		SUB $1, R6, R10												
+  span_migration.go:332	0x10025239c		9100412b		ADD $16, R9, R11											
+  span_migration.go:332	0x1002523a0		91000407		ADD $1, R0, R7												
+  span_migration.go:343	0x1002523a4		7200005f		TSTW $1, R2												
+  span_migration.go:343	0x1002523a8		9a8a10c9		CSEL NE, R6, R10, R9											
+  span_migration.go:346	0x1002523ac		f9407fea		MOVD 248(RSP), R10											
+  span_migration.go:346	0x1002523b0		eb06015f		CMP R6, R10												
+  span_migration.go:346	0x1002523b4		9a8ab0c8		CSEL LT, R6, R10, R8											
+  span_migration.go:334	0x1002523b8		7945d3e0		MOVHU 744(RSP), R0											
+  span_migration.go:333	0x1002523bc		f9415fe1		MOVD 696(RSP), R1											
+  span_migration.go:333	0x1002523c0		f94163e2		MOVD 704(RSP), R2											
+  map.go:48		0x1002523c4		f94167e3		MOVD 712(RSP), R3											
+  state.go:39		0x1002523c8		f9416be4		MOVD 720(RSP), R4											
+  span_migration.go:353	0x1002523cc		f941a3e5		MOVD 832(RSP), R5											
+  span_migration.go:332	0x1002523d0		f941a7ec		MOVD 840(RSP), R12											
+  span_migration.go:343	0x1002523d4		aa0903e6		MOVD R9, R6												
+  span_migration.go:346	0x1002523d8		f9007fe8		MOVD R8, 248(RSP)											
+  span_migration.go:332	0x1002523dc		eb07019f		CMP R7, R12												
+  span_migration.go:332	0x1002523e0		5400074d		BLE 58(PC)												
+  span_migration.go:332	0x1002523e4		f9007be7		MOVD R7, 240(RSP)											
+  span_migration.go:343	0x1002523e8		f90067e6		MOVD R6, 200(RSP)											
+  span_migration.go:332	0x1002523ec		f9015beb		MOVD R11, 688(RSP)											
+  span_migration.go:332	0x1002523f0		a9400d64		LDP (R11), (R4, R3)											
+  span_migration.go:332	0x1002523f4		f90073e3		MOVD R3, 224(RSP)											
+  span_migration.go:332	0x1002523f8		f900e3e4		MOVD R4, 448(RSP)											
+  span_migration.go:333	0x1002523fc		aa0103e0		MOVD R1, R0												
+  span_migration.go:333	0x100252400		aa0203e1		MOVD R2, R1												
+  span_migration.go:333	0x100252404		aa0403e2		MOVD R4, R2												
+  span_migration.go:333	0x100252408		97ff9436		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  span_migration.go:334	0x10025240c		910c43fb		ADD $784, RSP, R27											
+  span_migration.go:334	0x100252410		a9401363		LDP (R27), (R3, R4)											
+  span_migration.go:334	0x100252414		910ca3fb		ADD $808, RSP, R27											
+  span_migration.go:334	0x100252418		a9401f66		LDP (R27), (R6, R7)											
+  span_migration.go:334	0x10025241c		b98323e5		MOVW 800(RSP), R5											
+  span_migration.go:334	0x100252420		f9419fe8		MOVD 824(RSP), R8											
+  span_migration.go:334	0x100252424		f94163e2		MOVD 704(RSP), R2											
+  span_migration.go:334	0x100252428		f940e3e9		MOVD 448(RSP), R9											
+  span_migration.go:334	0x10025242c		f94073ea		MOVD 224(RSP), R10											
+  span_migration.go:334	0x100252430		aa0003eb		MOVD R0, R11												
+  span_migration.go:334	0x100252434		aa0103ec		MOVD R1, R12												
+  span_migration.go:334	0x100252438		7945d3e0		MOVHU 744(RSP), R0											
+  span_migration.go:334	0x10025243c		f9415fe1		MOVD 696(RSP), R1											
+  span_migration.go:334	0x100252440		97fff0b0		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.SpanAttributeWithContext(SB)	
+  span_migration.go:334	0x100252444		910903f5		ADD $576, RSP, R21											
+  span_migration.go:334	0x100252448		910023f4		ADD $8, RSP, R20											
+  span_migration.go:334	0x10025244c		1000009b		ADR 16(PC), R27												
+  span_migration.go:334	0x100252450		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:334	0x100252454		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:334	0x100252458		97f8bcd8		CALL -475944(PC)											
+  span_migration.go:334	0x10025245c		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:334	0x100252460		f9407be0		MOVD 240(RSP), R0											
+  span_migration.go:334	0x100252464		f100081f		CMP $2, R0												
+  span_migration.go:334	0x100252468		540026a2		BCS 309(PC)												
+  span_migration.go:334	0x10025246c		8b000804		ADD R0<<2, R0, R4											
+  span_migration.go:334	0x100252470		910443e5		ADD $272, RSP, R5											
+  span_migration.go:334	0x100252474		8b0410b5		ADD R4<<4, R5, R21											
+  span_migration.go:334	0x100252478		f90157f5		MOVD R21, 680(RSP)											
+  span_migration.go:334	0x10025247c		910903f4		ADD $576, RSP, R20											
+  span_migration.go:334	0x100252480		1000009b		ADR 16(PC), R27												
+  span_migration.go:334	0x100252484		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:334	0x100252488		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:334	0x10025248c		97f8bccb		CALL -475957(PC)											
+  span_migration.go:334	0x100252490		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:336	0x100252494		910903f5		ADD $576, RSP, R21											
+  span_migration.go:336	0x100252498		f94157f4		MOVD 680(RSP), R20											
+  span_migration.go:336	0x10025249c		1000009b		ADR 16(PC), R27												
+  span_migration.go:336	0x1002524a0		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:336	0x1002524a4		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:336	0x1002524a8		97f8bcc4		CALL -475964(PC)											
+  span_migration.go:336	0x1002524ac		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:336	0x1002524b0		910903e4		ADD $576, RSP, R4											
+  span_migration.go:336	0x1002524b4		f94073e7		MOVD 224(RSP), R7											
+  span_migration.go:336	0x1002524b8		f94067e6		MOVD 200(RSP), R6											
+  span_migration.go:336	0x1002524bc		aa1f03e1		MOVD ZR, R1												
+  span_migration.go:347	0x1002524c0		aa1f03e2		MOVD ZR, R2												
+  span_migration.go:336	0x1002524c4		140000f7		JMP 247(PC)												
+  span_migration.go:351	0x1002524c8		d503201f		NOOP													
+  map.go:47		0x1002524cc		d503201f		NOOP													
+  state.go:39		0x1002524d0		b9400486		MOVWU 4(R4), R6												
+  state.go:39		0x1002524d4		37001d86		TBNZ $0, R6, 236(PC)											
+  map.go:48		0x1002524d8		a9401c66		LDP (R3), (R6, R7)											
+  map.go:48		0x1002524dc		f9400869		MOVD 16(R3), R9												
+  map.go:49		0x1002524e0		eb09011f		CMP R9, R8												
+  map.go:49		0x1002524e4		540003ad		BLE 29(PC)												
+  map.go:48		0x1002524e8		f9006be7		MOVD R7, 208(RSP)											
+  map.go:48		0x1002524ec		f900dbe6		MOVD R6, 432(RSP)											
+  map.go:52		0x1002524f0		b0000980		ADRP 1249280(PC), R0											
+  map.go:52		0x1002524f4		911d8000		ADD $1888, R0, R0											
+  map.go:52		0x1002524f8		aa0703e1		MOVD R7, R1												
+  map.go:52		0x1002524fc		aa0803e2		MOVD R8, R2												
+  map.go:52		0x100252500		97f8a370		CALL runtime.makeslice(SB)										
+  map.go:52		0x100252504		f9406be4		MOVD 208(RSP), R4											
+  map.go:52		0x100252508		f9407fe3		MOVD 248(RSP), R3											
+  map.go:52		0x10025250c		f94167e5		MOVD 712(RSP), R5											
+  map.go:52		0x100252510		a9008ca4		STP (R4, R3), 8(R5)											
+  map.go:52		0x100252514		f0001e9b		ADRP 4009984(PC), R27											
+  map.go:52		0x100252518		b9462363		MOVWU 1568(R27), R3											
+  map.go:52		0x10025251c		34000083		CBZW R3, 4(PC)												
+  map.go:52		0x100252520		f94000a6		MOVD (R5), R6												
+  map.go:52		0x100252524		97f8bafb		CALL runtime.gcWriteBarrier2(SB)									
+  map.go:52		0x100252528		a9001b20		STP (R0, R6), (R25)											
+  map.go:52		0x10025252c		f90000a0		MOVD R0, (R5)												
+  map.go:53		0x100252530		aa0003e1		MOVD R0, R1												
+  map.go:53		0x100252534		aa0403e2		MOVD R4, R2												
+  map.go:53		0x100252538		f940dbe3		MOVD 432(RSP), R3											
+  map.go:53		0x10025253c		b0000980		ADRP 1249280(PC), R0											
+  map.go:53		0x100252540		911d8000		ADD $1888, R0, R0											
+  map.go:53		0x100252544		97f8936b		CALL runtime.typedslicecopy(SB)										
+  span_migration.go:352	0x100252548		f9415fe1		MOVD 696(RSP), R1											
+  span_migration.go:352	0x10025254c		f94163e2		MOVD 704(RSP), R2											
+  span_migration.go:352	0x100252550		f94167e3		MOVD 712(RSP), R3											
+  span_migration.go:352	0x100252554		f9416be4		MOVD 720(RSP), R4											
+  span_migration.go:352	0x100252558		aa0103e0		MOVD R1, R0												
+  span_migration.go:352	0x10025255c		aa0203e1		MOVD R2, R1												
+  span_migration.go:352	0x100252560		aa0303e2		MOVD R3, R2												
+  span_migration.go:352	0x100252564		aa0403e3		MOVD R4, R3												
+  span_migration.go:352	0x100252568		97ff999e		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.CopyTo(SB)						
+  span_migration.go:353	0x10025256c		f941a3e4		MOVD 832(RSP), R4											
+  span_migration.go:353	0x100252570		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:353	0x100252574		aa1f03e0		MOVD ZR, R0												
+  span_migration.go:353	0x100252578		14000003		JMP 3(PC)												
+  span_migration.go:353	0x10025257c		91004084		ADD $16, R4, R4												
+  span_migration.go:353	0x100252580		91000400		ADD $1, R0, R0												
+  span_migration.go:353	0x100252584		eb0000bf		CMP R0, R5												
+  span_migration.go:353	0x100252588		540005ed		BLE 47(PC)												
+  span_migration.go:353	0x10025258c		a9400c82		LDP (R4), (R2, R3)											
+  span_migration.go:354	0x100252590		f100081f		CMP $2, R0												
+  span_migration.go:354	0x100252594		54001742		BCS 186(PC)												
+  span_migration.go:353	0x100252598		f90077e0		MOVD R0, 232(RSP)											
+  span_migration.go:353	0x10025259c		f9015be4		MOVD R4, 688(RSP)											
+  span_migration.go:353	0x1002525a0		f9006fe3		MOVD R3, 216(RSP)											
+  span_migration.go:353	0x1002525a4		f900dfe2		MOVD R2, 440(RSP)											
+  span_migration.go:354	0x1002525a8		8b000806		ADD R0<<2, R0, R6											
+  span_migration.go:354	0x1002525ac		910443e7		ADD $272, RSP, R7											
+  span_migration.go:354	0x1002525b0		8b0610f4		ADD R6<<4, R7, R20											
+  span_migration.go:354	0x1002525b4		910723f5		ADD $456, RSP, R21											
+  span_migration.go:354	0x1002525b8		1000009b		ADR 16(PC), R27												
+  span_migration.go:354	0x1002525bc		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:354	0x1002525c0		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:354	0x1002525c4		97f8bc7d		CALL -476035(PC)											
+  span_migration.go:354	0x1002525c8		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:355	0x1002525cc		910903f5		ADD $576, RSP, R21											
+  span_migration.go:355	0x1002525d0		910723f4		ADD $456, RSP, R20											
+  span_migration.go:355	0x1002525d4		1000009b		ADR 16(PC), R27												
+  span_migration.go:355	0x1002525d8		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:355	0x1002525dc		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:355	0x1002525e0		97f8bc76		CALL -476042(PC)											
+  span_migration.go:355	0x1002525e4		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:355	0x1002525e8		910903f5		ADD $576, RSP, R21											
+  span_migration.go:355	0x1002525ec		aa1f03e1		MOVD ZR, R1												
+  span_migration.go:355	0x1002525f0		1400001a		JMP 26(PC)												
+  span_migration.go:376	0x1002525f4		910903f5		ADD $576, RSP, R21											
+  span_migration.go:376	0x1002525f8		910723f4		ADD $456, RSP, R20											
+  span_migration.go:376	0x1002525fc		1000009b		ADR 16(PC), R27												
+  span_migration.go:376	0x100252600		a93eeffd		STP (R29, R27), -24(RSP)										
+  span_migration.go:376	0x100252604		d10063fd		SUB $24, RSP, R29											
+  span_migration.go:376	0x100252608		97f8bc6c		CALL -476052(PC)											
+  span_migration.go:376	0x10025260c		d10023fd		SUB $8, RSP, R29											
+  span_migration.go:376	0x100252610		910903e6		ADD $576, RSP, R6											
+  span_migration.go:376	0x100252614		aa1f03e1		MOVD ZR, R1												
+  span_migration.go:379	0x100252618		aa1f03e8		MOVD ZR, R8												
+  span_migration.go:376	0x10025261c		14000074		JMP 116(PC)												
+  span_migration.go:379	0x100252620		3707fae8		TBNZ $0, R8, -41(PC)											
+  span_migration.go:380	0x100252624		f94167e0		MOVD 712(RSP), R0											
+  span_migration.go:380	0x100252628		f9416be1		MOVD 720(RSP), R1											
+  span_migration.go:380	0x10025262c		97ff93ed		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Remove(SB)						
+  span_migration.go:353	0x100252630		f94077e0		MOVD 232(RSP), R0											
+  span_migration.go:353	0x100252634		f9415be4		MOVD 688(RSP), R4											
+  span_migration.go:353	0x100252638		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:330	0x10025263c		910443e7		ADD $272, RSP, R7											
+  span_migration.go:380	0x100252640		17ffffcf		JMP -49(PC)												
+  span_migration.go:383	0x100252644		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  span_migration.go:383	0x100252648		910b83ff		ADD $736, RSP, RSP											
+  span_migration.go:383	0x10025264c		d65f03c0		RET													
+  span_migration.go:355	0x100252650		9100a2b5		ADD $40, R21, R21											
+  span_migration.go:355	0x100252654		91000421		ADD $1, R1, R1												
+  span_migration.go:355	0x100252658		f100083f		CMP $2, R1												
+  span_migration.go:355	0x10025265c		54fffcca		BGE -26(PC)												
+  span_migration.go:355	0x100252660		f90087e1		MOVD R1, 264(RSP)											
+  span_migration.go:355	0x100252664		f90153f5		MOVD R21, 672(RSP)											
+  span_migration.go:355	0x100252668		a94022a6		LDP (R21), (R6, R8)											
+  span_migration.go:355	0x10025266c		a9412aa9		LDP 16(R21), (R9, R10)											
+  span_migration.go:355	0x100252670		f94012ab		MOVD 32(R21), R11											
+  span_migration.go:355	0x100252674		910863fb		ADD $536, RSP, R27											
+  span_migration.go:355	0x100252678		a9002366		STP (R6, R8), (R27)											
+  span_migration.go:355	0x10025267c		9108a3fb		ADD $552, RSP, R27											
+  span_migration.go:355	0x100252680		a9002b69		STP (R9, R10), (R27)											
+  span_migration.go:355	0x100252684		f9011feb		MOVD R11, 568(RSP)											
+  span_migration.go:356	0x100252688		3948e3e6		MOVBU 568(RSP), R6											
+  span_migration.go:357	0x10025268c		710004df		CMPW $1, R6												
+  span_migration.go:357	0x100252690		54000260		BEQ 19(PC)												
+  span_migration.go:371	0x100252694		710008df		CMPW $2, R6												
+  span_migration.go:371	0x100252698		54fffdc1		BNE -18(PC)												
+  span_migration.go:372	0x10025269c		910863fb		ADD $536, RSP, R27											
+  span_migration.go:372	0x1002526a0		a9400f62		LDP (R27), (R2, R3)											
+  span_migration.go:372	0x1002526a4		9108a3fb		ADD $552, RSP, R27											
+  span_migration.go:372	0x1002526a8		a9401764		LDP (R27), (R4, R5)											
+  span_migration.go:372	0x1002526ac		f94167e0		MOVD 712(RSP), R0											
+  span_migration.go:372	0x1002526b0		f9416be1		MOVD 720(RSP), R1											
+  span_migration.go:372	0x1002526b4		97ff958f		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutStr(SB)						
+  span_migration.go:353	0x1002526b8		f94077e0		MOVD 232(RSP), R0											
+  span_migration.go:355	0x1002526bc		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:358	0x1002526c0		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:358	0x1002526c4		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:353	0x1002526c8		f9415be4		MOVD 688(RSP), R4											
+  span_migration.go:353	0x1002526cc		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:330	0x1002526d0		910443e7		ADD $272, RSP, R7											
+  span_migration.go:355	0x1002526d4		f94153f5		MOVD 672(RSP), R21											
+  span_migration.go:372	0x1002526d8		17ffffde		JMP -34(PC)												
+  span_migration.go:358	0x1002526dc		910863fb		ADD $536, RSP, R27											
+  span_migration.go:358	0x1002526e0		a9402366		LDP (R27), (R6, R8)											
+  span_migration.go:358	0x1002526e4		eb03011f		CMP R3, R8												
+  span_migration.go:358	0x1002526e8		540001e1		BNE 15(PC)												
+  span_migration.go:358	0x1002526ec		aa0603e0		MOVD R6, R0												
+  span_migration.go:358	0x1002526f0		aa0203e1		MOVD R2, R1												
+  span_migration.go:358	0x1002526f4		aa0803e2		MOVD R8, R2												
+  span_migration.go:358	0x1002526f8		97f6bdd6		CALL runtime.memequal(SB)										
+  span_migration.go:358	0x1002526fc		36000140		TBZ $0, R0, 10(PC)											
+  span_migration.go:353	0x100252700		f94077e0		MOVD 232(RSP), R0											
+  span_migration.go:355	0x100252704		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:358	0x100252708		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:358	0x10025270c		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:353	0x100252710		f9415be4		MOVD 688(RSP), R4											
+  span_migration.go:353	0x100252714		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:330	0x100252718		910443e7		ADD $272, RSP, R7											
+  span_migration.go:355	0x10025271c		f94153f5		MOVD 672(RSP), R21											
+  span_migration.go:359	0x100252720		17ffffcc		JMP -52(PC)												
+  span_migration.go:361	0x100252724		910863fb		ADD $536, RSP, R27											
+  span_migration.go:361	0x100252728		a9400f62		LDP (R27), (R2, R3)											
+  span_migration.go:361	0x10025272c		f94167e0		MOVD 712(RSP), R0											
+  span_migration.go:361	0x100252730		f9416be1		MOVD 720(RSP), R1											
+  span_migration.go:361	0x100252734		97ff94a7		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutEmpty(SB)					
+  span_migration.go:362	0x100252738		f94167e0		MOVD 712(RSP), R0											
+  span_migration.go:362	0x10025273c		f9416be1		MOVD 720(RSP), R1											
+  span_migration.go:362	0x100252740		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:362	0x100252744		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:362	0x100252748		97ff9366		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  span_migration.go:362	0x10025274c		f9014fe0		MOVD R0, 664(RSP)											
+  span_migration.go:362	0x100252750		f9014be1		MOVD R1, 656(RSP)											
+  span_migration.go:363	0x100252754		910863fb		ADD $536, RSP, R27											
+  span_migration.go:363	0x100252758		a9400f62		LDP (R27), (R2, R3)											
+  span_migration.go:363	0x10025275c		f94167e0		MOVD 712(RSP), R0											
+  span_migration.go:363	0x100252760		f9416be1		MOVD 720(RSP), R1											
+  span_migration.go:363	0x100252764		97ff935f		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  span_migration.go:365	0x100252768		3947a3e4		MOVBU 488(RSP), R4											
+  span_migration.go:365	0x10025276c		7100049f		CMPW $1, R4												
+  span_migration.go:365	0x100252770		540001e1		BNE 15(PC)												
+  span_migration.go:365	0x100252774		394843e4		MOVBU 528(RSP), R4											
+  span_migration.go:365	0x100252778		7100049f		CMPW $1, R4												
+  span_migration.go:365	0x10025277c		54000181		BNE 12(PC)												
+  span_migration.go:363	0x100252780		f9014be1		MOVD R1, 656(RSP)											
+  span_migration.go:363	0x100252784		f9014fe0		MOVD R0, 664(RSP)											
+  span_migration.go:366	0x100252788		f9415fe0		MOVD 696(RSP), R0											
+  span_migration.go:366	0x10025278c		f94163e1		MOVD 704(RSP), R1											
+  span_migration.go:366	0x100252790		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:366	0x100252794		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:366	0x100252798		97ff9352		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  span_migration.go:367	0x10025279c		f9414fe2		MOVD 664(RSP), R2											
+  span_migration.go:367	0x1002527a0		f9414be3		MOVD 656(RSP), R3											
+  span_migration.go:367	0x1002527a4		97ffa0bf		CALL go.opentelemetry.io/collector/pdata/pcommon.Value.CopyTo(SB)					
+  span_migration.go:367	0x1002527a8		14000006		JMP 6(PC)												
+  span_migration.go:369	0x1002527ac		aa0003e2		MOVD R0, R2												
+  span_migration.go:369	0x1002527b0		aa0103e3		MOVD R1, R3												
+  span_migration.go:369	0x1002527b4		f9414fe0		MOVD 664(RSP), R0											
+  span_migration.go:369	0x1002527b8		f9414be1		MOVD 656(RSP), R1											
+  span_migration.go:369	0x1002527bc		97ffa07d		CALL go.opentelemetry.io/collector/pdata/pcommon.Value.MoveTo(SB)					
+  span_migration.go:353	0x1002527c0		f94077e0		MOVD 232(RSP), R0											
+  span_migration.go:355	0x1002527c4		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:358	0x1002527c8		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:358	0x1002527cc		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:353	0x1002527d0		f9415be4		MOVD 688(RSP), R4											
+  span_migration.go:353	0x1002527d4		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:330	0x1002527d8		910443e7		ADD $272, RSP, R7											
+  span_migration.go:355	0x1002527dc		f94153f5		MOVD 672(RSP), R21											
+  span_migration.go:365	0x1002527e0		17ffff9c		JMP -100(PC)												
+  span_migration.go:376	0x1002527e4		9100a0c6		ADD $40, R6, R6												
+  span_migration.go:376	0x1002527e8		91000421		ADD $1, R1, R1												
+  span_migration.go:376	0x1002527ec		f100083f		CMP $2, R1												
+  span_migration.go:376	0x1002527f0		54fff18a		BGE -116(PC)												
+  span_migration.go:376	0x1002527f4		a94028c9		LDP (R6), (R9, R10)											
+  span_migration.go:376	0x1002527f8		a94130cb		LDP 16(R6), (R11, R12)											
+  span_migration.go:376	0x1002527fc		f94010cd		MOVD 32(R6), R13											
+  span_migration.go:376	0x100252800		a91cabe9		STP (R9, R10), 456(RSP)											
+  span_migration.go:376	0x100252804		a91db3eb		STP (R11, R12), 472(RSP)										
+  span_migration.go:376	0x100252808		f900f7ed		MOVD R13, 488(RSP)											
+  span_migration.go:377	0x10025280c		36000068		TBZ $0, R8, 3(PC)											
+  span_migration.go:377	0x100252810		b24003e8		ORR $1, ZR, R8												
+  span_migration.go:377	0x100252814		17fffff4		JMP -12(PC)												
+  span_migration.go:377	0x100252818		3947a3e8		MOVBU 488(RSP), R8											
+  span_migration.go:377	0x10025281c		340002c8		CBZW R8, 22(PC)												
+  span_migration.go:377	0x100252820		a95ca7e8		LDP 456(RSP), (R8, R9)											
+  span_migration.go:377	0x100252824		eb03013f		CMP R3, R9												
+  span_migration.go:377	0x100252828		54000060		BEQ 3(PC)												
+  span_migration.go:377	0x10025282c		aa1f03e8		MOVD ZR, R8												
+  span_migration.go:377	0x100252830		17ffffed		JMP -19(PC)												
+  span_migration.go:376	0x100252834		f90087e1		MOVD R1, 264(RSP)											
+  span_migration.go:376	0x100252838		f90153e6		MOVD R6, 672(RSP)											
+  span_migration.go:377	0x10025283c		aa0803e0		MOVD R8, R0												
+  span_migration.go:377	0x100252840		aa0203e1		MOVD R2, R1												
+  span_migration.go:377	0x100252844		aa0903e2		MOVD R9, R2												
+  span_migration.go:377	0x100252848		97f6bd82		CALL runtime.memequal(SB)										
+  span_migration.go:376	0x10025284c		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:377	0x100252850		f940dfe2		MOVD 440(RSP), R2											
+  span_migration.go:377	0x100252854		f9406fe3		MOVD 216(RSP), R3											
+  span_migration.go:353	0x100252858		f9415be4		MOVD 688(RSP), R4											
+  span_migration.go:353	0x10025285c		f941a7e5		MOVD 840(RSP), R5											
+  span_migration.go:376	0x100252860		f94153e6		MOVD 672(RSP), R6											
+  span_migration.go:330	0x100252864		910443e7		ADD $272, RSP, R7											
+  span_migration.go:377	0x100252868		aa0003e8		MOVD R0, R8												
+  span_migration.go:353	0x10025286c		f94077e0		MOVD 232(RSP), R0											
+  span_migration.go:377	0x100252870		17ffffdd		JMP -35(PC)												
+  span_migration.go:377	0x100252874		aa1f03e8		MOVD ZR, R8												
+  span_migration.go:377	0x100252878		17ffffdb		JMP -37(PC)												
+  span_migration.go:354	0x10025287c		b27f03e1		ORR $2, ZR, R1												
+  span_migration.go:354	0x100252880		97f8bad8		CALL runtime.panicIndex(SB)										
+  state.go:40		0x100252884		b0000760		ADRP 970752(PC), R0											
+  state.go:40		0x100252888		91070000		ADD $448, R0, R0											
+  state.go:40		0x10025288c		b0000b01		ADRP 1445888(PC), R1											
+  state.go:40		0x100252890		911bc021		ADD $1776, R1, R1											
+  state.go:40		0x100252894		97f898ff		CALL runtime.gopanic(SB)										
+  span_migration.go:336	0x100252898		9100a084		ADD $40, R4, R4												
+  span_migration.go:336	0x10025289c		91000421		ADD $1, R1, R1												
+  span_migration.go:336	0x1002528a0		f100083f		CMP $2, R1												
+  span_migration.go:336	0x1002528a4		54ffd78a		BGE -324(PC)												
+  span_migration.go:336	0x1002528a8		a9402488		LDP (R4), (R8, R9)											
+  span_migration.go:336	0x1002528ac		a9412c8a		LDP 16(R4), (R10, R11)											
+  span_migration.go:336	0x1002528b0		f940108c		MOVD 32(R4), R12											
+  span_migration.go:336	0x1002528b4		a91ca7e8		STP (R8, R9), 456(RSP)											
+  span_migration.go:336	0x1002528b8		a91dafea		STP (R10, R11), 472(RSP)										
+  span_migration.go:336	0x1002528bc		f900f7ec		MOVD R12, 488(RSP)											
+  span_migration.go:337	0x1002528c0		3947a3e8		MOVBU 488(RSP), R8											
+  span_migration.go:337	0x1002528c4		34fffea8		CBZW R8, -11(PC)											
+  span_migration.go:340	0x1002528c8		a95ca7e8		LDP 456(RSP), (R8, R9)											
+  span_migration.go:340	0x1002528cc		eb07013f		CMP R7, R9												
+  span_migration.go:340	0x1002528d0		54000321		BNE 25(PC)												
+  span_migration.go:336	0x1002528d4		f90087e1		MOVD R1, 264(RSP)											
+  span_migration.go:336	0x1002528d8		f90153e4		MOVD R4, 672(RSP)											
+  span_migration.go:347	0x1002528dc		39031fe2		MOVB R2, 199(RSP)											
+  span_migration.go:343	0x1002528e0		f90083e6		MOVD R6, 256(RSP)											
+  span_migration.go:340	0x1002528e4		aa0803e0		MOVD R8, R0												
+  span_migration.go:340	0x1002528e8		f940e3e1		MOVD 448(RSP), R1											
+  span_migration.go:340	0x1002528ec		aa0903e2		MOVD R9, R2												
+  span_migration.go:340	0x1002528f0		97f6bd58		CALL runtime.memequal(SB)										
+  span_migration.go:340	0x1002528f4		36000120		TBZ $0, R0, 9(PC)											
+  span_migration.go:332	0x1002528f8		f9407be0		MOVD 240(RSP), R0											
+  span_migration.go:336	0x1002528fc		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:336	0x100252900		f94153e4		MOVD 672(RSP), R4											
+  span_migration.go:330	0x100252904		910443e5		ADD $272, RSP, R5											
+  span_migration.go:340	0x100252908		f94073e7		MOVD 224(RSP), R7											
+  span_migration.go:343	0x10025290c		f94083e6		MOVD 256(RSP), R6											
+  span_migration.go:343	0x100252910		b24003e2		ORR $1, ZR, R2												
+  span_migration.go:340	0x100252914		17ffffe1		JMP -31(PC)												
+  span_migration.go:332	0x100252918		f9407be0		MOVD 240(RSP), R0											
+  span_migration.go:336	0x10025291c		f94087e1		MOVD 264(RSP), R1											
+  span_migration.go:347	0x100252920		39431fe2		MOVBU 199(RSP), R2											
+  span_migration.go:336	0x100252924		f94153e4		MOVD 672(RSP), R4											
+  span_migration.go:330	0x100252928		910443e5		ADD $272, RSP, R5											
+  span_migration.go:343	0x10025292c		f94083e6		MOVD 256(RSP), R6											
+  span_migration.go:340	0x100252930		f94073e7		MOVD 224(RSP), R7											
+  span_migration.go:343	0x100252934		910004c6		ADD $1, R6, R6												
+  span_migration.go:343	0x100252938		17ffffd8		JMP -40(PC)												
+  span_migration.go:334	0x10025293c		b27f03e1		ORR $2, ZR, R1												
+  span_migration.go:334	0x100252940		97f8baa8		CALL runtime.panicIndex(SB)										
+  span_migration.go:334	0x100252944		d503201f		NOOP													
+  span_migration.go:329	0x100252948		790013e0		MOVH R0, 8(RSP)												
+  span_migration.go:329	0x10025294c		a9010be1		STP (R1, R2), 16(RSP)											
+  span_migration.go:329	0x100252950		a90213e3		STP (R3, R4), 32(RSP)											
+  span_migration.go:329	0x100252954		a9031be5		STP (R5, R6), 48(RSP)											
+  span_migration.go:329	0x100252958		b90043e7		MOVW R7, 64(RSP)											
+  span_migration.go:329	0x10025295c		a904a7e8		STP (R8, R9), 72(RSP)											
+  span_migration.go:329	0x100252960		a905afea		STP (R10, R11), 88(RSP)											
+  span_migration.go:329	0x100252964		a906b7ec		STP (R12, R13), 104(RSP)										
+  span_migration.go:329	0x100252968		aa1e03e3		MOVD R30, R3												
+  span_migration.go:329	0x10025296c		97f8b149		CALL runtime.morestack_noctxt.abi0(SB)									
+  span_migration.go:329	0x100252970		794013e0		MOVHU 8(RSP), R0											
+  span_migration.go:329	0x100252974		a9410be1		LDP 16(RSP), (R1, R2)											
+  span_migration.go:329	0x100252978		a94213e3		LDP 32(RSP), (R3, R4)											
+  span_migration.go:329	0x10025297c		a9431be5		LDP 48(RSP), (R5, R6)											
+  span_migration.go:329	0x100252980		b98043e7		MOVW 64(RSP), R7											
+  span_migration.go:329	0x100252984		a944a7e8		LDP 72(RSP), (R8, R9)											
+  span_migration.go:329	0x100252988		a945afea		LDP 88(RSP), (R10, R11)											
+  span_migration.go:329	0x10025298c		a946b7ec		LDP 104(RSP), (R12, R13)										
+  span_migration.go:329	0x100252990		17fffe5c		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.projectSparseAttributeMap(SB)	
+  span_migration.go:329	0x100252994		00000000		?													
+  span_migration.go:329	0x100252998		00000000		?													
+  span_migration.go:329	0x10025299c		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_baseline_test.go
+  projection_baseline_test.go:23	0x100256dc0		f9400b90		MOVD 16(R28), R16														
+  projection_baseline_test.go:23	0x100256dc4		d10983f1		SUB $608, RSP, R17														
+  projection_baseline_test.go:23	0x100256dc8		eb10023f		CMP R16, R17															
+  projection_baseline_test.go:23	0x100256dcc		54001f49		BLS 250(PC)															
+  projection_baseline_test.go:23	0x100256dd0		d10b83f4		SUB $736, RSP, R20														
+  projection_baseline_test.go:23	0x100256dd4		a93ffa9d		STP (R29, R30), -8(R20)														
+  projection_baseline_test.go:23	0x100256dd8		9100029f		MOVD R20, RSP															
+  projection_baseline_test.go:23	0x100256ddc		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:23	0x100256de0		f901cfe1		MOVD R1, 920(RSP)														
+  projection_baseline_test.go:23	0x100256de4		f901d3e2		MOVD R2, 928(RSP)														
+  map.go:242				0x100256de8		790723e0		MOVH R0, 912(RSP)														
+  map.go:242				0x100256dec		f90163e2		MOVD R2, 704(RSP)														
+  map.go:242				0x100256df0		f9015fe1		MOVD R1, 696(RSP)														
+  projection_baseline_test.go:23	0x100256df4		a910ffff		STP (ZR, ZR), 264(RSP)														
+  projection_baseline_test.go:23	0x100256df8		a911ffff		STP (ZR, ZR), 280(RSP)														
+  projection_baseline_test.go:23	0x100256dfc		a912ffff		STP (ZR, ZR), 296(RSP)														
+  projection_baseline_test.go:23	0x100256e00		f9009fff		MOVD ZR, 312(RSP)														
+  generated_span.go:147			0x100256e04		3980003b		MOVB (R1), R27															
+  projection_baseline_test.go:24	0x100256e08		d503201f		NOOP																
+  projection_baseline_test.go:25	0x100256e0c		b00009a0		ADRP 1265664(PC), R0														
+  projection_baseline_test.go:25	0x100256e10		91148000		ADD $1312, R0, R0														
+  projection_baseline_test.go:25	0x100256e14		97f7051b		CALL runtime.newobject(SB)													
+  projection_baseline_test.go:25	0x100256e18		f90167e0		MOVD R0, 712(RSP)														
+  map.go:22				0x100256e1c		90000720		ADRP 933888(PC), R0														
+  map.go:22				0x100256e20		91278000		ADD $2528, R0, R0														
+  map.go:22				0x100256e24		97f70517		CALL runtime.newobject(SB)													
+  map.go:22				0x100256e28		f9016be0		MOVD R0, 720(RSP)														
+  map.go:23				0x100256e2c		d503201f		NOOP																
+  state.go:22				0x100256e30		d0000900		ADRP 1187840(PC), R0														
+  state.go:22				0x100256e34		91308000		ADD $3104, R0, R0														
+  state.go:22				0x100256e38		97f70512		CALL runtime.newobject(SB)													
+  state.go:25				0x100256e3c		d503201f		NOOP																
+  type.go:83				0x100256e40		b24003e1		ORR $1, ZR, R1															
+  type.go:83				0x100256e44		889ffc01		STLRW R1, (R0)															
+  generated_status.go:53		0x100256e48		f9415fe1		MOVD 696(RSP), R1														
+  generated_status.go:53		0x100256e4c		a9468c22		LDP 104(R1), (R2, R3)														
+  projection_baseline_test.go:25	0x100256e50		f0001e7b		ADRP 3993600(PC), R27														
+  projection_baseline_test.go:25	0x100256e54		b9462364		MOVWU 1568(R27), R4														
+  projection_baseline_test.go:25	0x100256e58		34000264		CBZW R4, 19(PC)															
+  state.go:22				0x100256e5c		f900a3e0		MOVD R0, 320(RSP)														
+  generated_status.go:53		0x100256e60		f90083e2		MOVD R2, 256(RSP)														
+  generated_status.go:53		0x100256e64		f90073e3		MOVD R3, 224(RSP)														
+  projection_baseline_test.go:25	0x100256e68		f94167e1		MOVD 712(RSP), R1														
+  projection_baseline_test.go:25	0x100256e6c		a9401023		LDP (R1), (R3, R4)														
+  projection_baseline_test.go:25	0x100256e70		f9400825		MOVD 16(R1), R5															
+  projection_baseline_test.go:25	0x100256e74		97f8a8b7		CALL runtime.gcWriteBarrier6(SB)												
+  projection_baseline_test.go:25	0x100256e78		f9416be6		MOVD 720(RSP), R6														
+  projection_baseline_test.go:25	0x100256e7c		a9000f26		STP (R6, R3), (R25)														
+  projection_baseline_test.go:25	0x100256e80		a9011320		STP (R0, R4), 16(R25)														
+  projection_baseline_test.go:25	0x100256e84		a9021722		STP (R2, R5), 32(R25)														
+  projection_baseline_test.go:25	0x100256e88		b00009a0		ADRP 1265664(PC), R0														
+  projection_baseline_test.go:25	0x100256e8c		91148000		ADD $1312, R0, R0														
+  projection_baseline_test.go:25	0x100256e90		97f70704		CALL runtime.wbZero(SB)														
+  projection_baseline_test.go:25	0x100256e94		f940a3e0		MOVD 320(RSP), R0														
+  generated_span.go:103			0x100256e98		f9415fe1		MOVD 696(RSP), R1														
+  projection_baseline_test.go:25	0x100256e9c		f94083e2		MOVD 256(RSP), R2														
+  projection_baseline_test.go:25	0x100256ea0		f94073e3		MOVD 224(RSP), R3														
+  projection_baseline_test.go:25	0x100256ea4		f94167ed		MOVD 712(RSP), R13														
+  projection_baseline_test.go:25	0x100256ea8		a9007dbf		STP (ZR, ZR), (R13)														
+  projection_baseline_test.go:25	0x100256eac		a9017dbf		STP (ZR, ZR), 16(R13)														
+  projection_baseline_test.go:25	0x100256eb0		a9027dbf		STP (ZR, ZR), 32(R13)														
+  projection_baseline_test.go:25	0x100256eb4		f90019bf		MOVD ZR, 48(R13)														
+  projection_baseline_test.go:25	0x100256eb8		f9416bee		MOVD 720(RSP), R14														
+  projection_baseline_test.go:25	0x100256ebc		f90001ae		MOVD R14, (R13)															
+  projection_baseline_test.go:25	0x100256ec0		a90089a0		STP (R0, R2), 8(R13)														
+  projection_baseline_test.go:25	0x100256ec4		f9000da3		MOVD R3, 24(R13)														
+  generated_span.go:103			0x100256ec8		a9413c2e		LDP 16(R1), (R14, R15)														
+  generated_span.go:114			0x100256ecc		b9809430		MOVW 148(R1), R16														
+  projection_baseline_test.go:26	0x100256ed0		9108c3fb		ADD $560, RSP, R27														
+  projection_baseline_test.go:26	0x100256ed4		a9007f7f		STP (ZR, ZR), (R27)														
+  projection_baseline_test.go:26	0x100256ed8		910903fb		ADD $576, RSP, R27														
+  projection_baseline_test.go:26	0x100256edc		a9007f7f		STP (ZR, ZR), (R27)														
+  projection_baseline_test.go:26	0x100256ee0		910943fb		ADD $592, RSP, R27														
+  projection_baseline_test.go:26	0x100256ee4		a9007f7f		STP (ZR, ZR), (R27)														
+  projection_baseline_test.go:26	0x100256ee8		9108c3fb		ADD $560, RSP, R27														
+  projection_baseline_test.go:26	0x100256eec		a9003f6e		STP (R14, R15), (R27)														
+  projection_baseline_test.go:26	0x100256ef0		b90243f0		MOVW R16, 576(RSP)														
+  projection_baseline_test.go:26	0x100256ef4		910ba3fb		ADD $744, RSP, R27														
+  projection_baseline_test.go:26	0x100256ef8		a9403f6e		LDP (R27), (R14, R15)														
+  projection_baseline_test.go:26	0x100256efc		f9417ff0		MOVD 760(RSP), R16														
+  projection_baseline_test.go:26	0x100256f00		f90127ee		MOVD R14, 584(RSP)														
+  projection_baseline_test.go:26	0x100256f04		910943fb		ADD $592, RSP, R27														
+  projection_baseline_test.go:26	0x100256f08		a900436f		STP (R15, R16), (R27)														
+  projection_baseline_test.go:27	0x100256f0c		d503201f		NOOP																
+  generated_span.go:147			0x100256f10		9100802e		ADD $32, R1, R14														
+  generated_span.go:147			0x100256f14		f900a7ee		MOVD R14, 328(RSP)														
+  map.go:242				0x100256f18		f940142f		MOVD 40(R1), R15														
+  map.go:242				0x100256f1c		f9007fef		MOVD R15, 248(RSP)														
+  map.go:242				0x100256f20		f94163ec		MOVD 704(RSP), R12														
+  map.go:242				0x100256f24		794723e0		MOVHU 912(RSP), R0														
+  map.go:242				0x100256f28		aa1f03e2		MOVD ZR, R2															
+  map.go:242				0x100256f2c		14000009		JMP 9(PC)															
+  map.go:242				0x100256f30		f94077f0		MOVD 232(RSP), R16														
+  map.go:242				0x100256f34		91000602		ADD $1, R16, R2															
+  projection_baseline_test.go:28	0x100256f38		794723e0		MOVHU 912(RSP), R0														
+  map.go:243				0x100256f3c		f9415fe1		MOVD 696(RSP), R1														
+  projection_baseline_test.go:28	0x100256f40		f94163ec		MOVD 704(RSP), R12														
+  projection_baseline_test.go:38	0x100256f44		f94167ed		MOVD 712(RSP), R13														
+  projection_baseline_test.go:28	0x100256f48		f940a7ee		MOVD 328(RSP), R14														
+  map.go:242				0x100256f4c		f9407fef		MOVD 248(RSP), R15														
+  map.go:242				0x100256f50		eb0f005f		CMP R15, R2															
+  map.go:242				0x100256f54		5400046a		BGE 35(PC)															
+  map.go:243				0x100256f58		a9424430		LDP 32(R1), (R16, R17)														
+  map.go:243				0x100256f5c		eb11005f		CMP R17, R2															
+  map.go:243				0x100256f60		54001222		BCS 145(PC)															
+  map.go:242				0x100256f64		f90077e2		MOVD R2, 232(RSP)														
+  map.go:243				0x100256f68		8b02084d		ADD R2<<2, R2, R13														
+  map.go:243				0x100256f6c		8b0d0e0b		ADD R13<<3, R16, R11														
+  map.go:243				0x100256f70		f90117eb		MOVD R11, 552(RSP)														
+  map.go:244				0x100256f74		a9412969		LDP 16(R11), (R9, R10)														
+  projection_baseline_test.go:28	0x100256f78		9108c3fb		ADD $560, RSP, R27														
+  projection_baseline_test.go:28	0x100256f7c		a9401363		LDP (R27), (R3, R4)														
+  projection_baseline_test.go:28	0x100256f80		910923fb		ADD $584, RSP, R27														
+  projection_baseline_test.go:28	0x100256f84		a9401f66		LDP (R27), (R6, R7)														
+  projection_baseline_test.go:28	0x100256f88		b98243e5		MOVW 576(RSP), R5														
+  projection_baseline_test.go:28	0x100256f8c		f9412fe8		MOVD 600(RSP), R8														
+  projection_baseline_test.go:28	0x100256f90		aa0e03e1		MOVD R14, R1															
+  projection_baseline_test.go:28	0x100256f94		aa0c03e2		MOVD R12, R2															
+  projection_baseline_test.go:28	0x100256f98		94002162		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineSpanAttributeWithContext(SB)			
+  projection_baseline_test.go:28	0x100256f9c		910543f5		ADD $336, RSP, R21														
+  projection_baseline_test.go:28	0x100256fa0		910023f4		ADD $8, RSP, R20														
+  projection_baseline_test.go:28	0x100256fa4		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:28	0x100256fa8		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:28	0x100256fac		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:28	0x100256fb0		97f8aa02		CALL -480766(PC)														
+  projection_baseline_test.go:28	0x100256fb4		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:28	0x100256fb8		910983f5		ADD $608, RSP, R21														
+  projection_baseline_test.go:28	0x100256fbc		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:28	0x100256fc0		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:28	0x100256fc4		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:28	0x100256fc8		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:28	0x100256fcc		97f8a9fb		CALL -480773(PC)														
+  projection_baseline_test.go:28	0x100256fd0		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:28	0x100256fd4		910983ed		ADD $608, RSP, R13														
+  projection_baseline_test.go:28	0x100256fd8		aa1f03e0		MOVD ZR, R0															
+  projection_baseline_test.go:28	0x100256fdc		1400004f		JMP 79(PC)															
+  projection_baseline_test.go:38	0x100256fe0		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:38	0x100256fe4		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:38	0x100256fe8		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:38	0x100256fec		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:38	0x100256ff0		97f8a96b		CALL -480917(PC)														
+  projection_baseline_test.go:38	0x100256ff4		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:38	0x100256ff8		f90113ff		MOVD ZR, 544(RSP)														
+  projection_baseline_test.go:38	0x100256ffc		7902a3e0		MOVH R0, 336(RSP)														
+  projection_baseline_test.go:38	0x100257000		f900afe1		MOVD R1, 344(RSP)														
+  projection_baseline_test.go:38	0x100257004		a9163bec		STP (R12, R14), 352(RSP)													
+  projection_baseline_test.go:38	0x100257008		a91737ec		STP (R12, R13), 368(RSP)													
+  projection_baseline_test.go:38	0x10025700c		910603f5		ADD $384, RSP, R21														
+  projection_baseline_test.go:38	0x100257010		910ba3f4		ADD $744, RSP, R20														
+  projection_baseline_test.go:38	0x100257014		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:38	0x100257018		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:38	0x10025701c		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:38	0x100257020		97f8a9dc		CALL -480804(PC)														
+  projection_baseline_test.go:38	0x100257024		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:38	0x100257028		f941c7e0		MOVD 904(RSP), R0														
+  projection_baseline_test.go:38	0x10025702c		f90113e0		MOVD R0, 544(RSP)														
+  projection_baseline_test.go:39	0x100257030		910023f5		ADD $8, RSP, R21														
+  projection_baseline_test.go:39	0x100257034		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:39	0x100257038		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:39	0x10025703c		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:39	0x100257040		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:39	0x100257044		97f8a9cd		CALL -480819(PC)														
+  projection_baseline_test.go:39	0x100257048		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:39	0x10025704c		f94113e0		MOVD 544(RSP), R0														
+  projection_baseline_test.go:39	0x100257050		f9006fe0		MOVD R0, 216(RSP)														
+  projection_baseline_test.go:39	0x100257054		94000277		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectHTTP(SB)		
+  projection_baseline_test.go:40	0x100257058		910023f5		ADD $8, RSP, R21														
+  projection_baseline_test.go:40	0x10025705c		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:40	0x100257060		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:40	0x100257064		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:40	0x100257068		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:40	0x10025706c		97f8a9c3		CALL -480829(PC)														
+  projection_baseline_test.go:40	0x100257070		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:40	0x100257074		f94113e0		MOVD 544(RSP), R0														
+  projection_baseline_test.go:40	0x100257078		f9006fe0		MOVD R0, 216(RSP)														
+  projection_baseline_test.go:40	0x10025707c		94001229		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectDatabase(SB)		
+  projection_baseline_test.go:41	0x100257080		910023f5		ADD $8, RSP, R21														
+  projection_baseline_test.go:41	0x100257084		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:41	0x100257088		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:41	0x10025708c		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:41	0x100257090		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:41	0x100257094		97f8a9b9		CALL -480839(PC)														
+  projection_baseline_test.go:41	0x100257098		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:41	0x10025709c		f94113e0		MOVD 544(RSP), R0														
+  projection_baseline_test.go:41	0x1002570a0		f9006fe0		MOVD R0, 216(RSP)														
+  projection_baseline_test.go:41	0x1002570a4		9400167b		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectRPC(SB)			
+  projection_baseline_test.go:42	0x1002570a8		910023f5		ADD $8, RSP, R21														
+  projection_baseline_test.go:42	0x1002570ac		910543f4		ADD $336, RSP, R20														
+  projection_baseline_test.go:42	0x1002570b0		1000009b		ADR 16(PC), R27															
+  projection_baseline_test.go:42	0x1002570b4		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_baseline_test.go:42	0x1002570b8		d10063fd		SUB $24, RSP, R29														
+  projection_baseline_test.go:42	0x1002570bc		97f8a9af		CALL -480849(PC)														
+  projection_baseline_test.go:42	0x1002570c0		d10023fd		SUB $8, RSP, R29														
+  projection_baseline_test.go:42	0x1002570c4		f94113e0		MOVD 544(RSP), R0														
+  projection_baseline_test.go:42	0x1002570c8		f9006fe0		MOVD R0, 216(RSP)														
+  projection_baseline_test.go:42	0x1002570cc		94000ffd		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineReportInvalidHTTPMethod(SB)	
+  projection_baseline_test.go:43	0x1002570d0		f94167e0		MOVD 712(RSP), R0														
+  projection_baseline_test.go:43	0x1002570d4		a9400801		LDP (R0), (R1, R2)														
+  projection_baseline_test.go:43	0x1002570d8		a9411003		LDP 16(R0), (R3, R4)														
+  projection_baseline_test.go:43	0x1002570dc		a9421805		LDP 32(R0), (R5, R6)														
+  projection_baseline_test.go:43	0x1002570e0		f9401800		MOVD 48(R0), R0															
+  projection_baseline_test.go:43	0x1002570e4		a9108be1		STP (R1, R2), 264(RSP)														
+  projection_baseline_test.go:43	0x1002570e8		a91193e3		STP (R3, R4), 280(RSP)														
+  projection_baseline_test.go:43	0x1002570ec		a9129be5		STP (R5, R6), 296(RSP)														
+  projection_baseline_test.go:43	0x1002570f0		f9009fe0		MOVD R0, 312(RSP)														
+  projection_baseline_test.go:43	0x1002570f4		a95087e0		LDP 264(RSP), (R0, R1)														
+  projection_baseline_test.go:43	0x1002570f8		a9518fe2		LDP 280(RSP), (R2, R3)														
+  projection_baseline_test.go:43	0x1002570fc		a95297e4		LDP 296(RSP), (R4, R5)														
+  projection_baseline_test.go:43	0x100257100		f9409fe6		MOVD 312(RSP), R6														
+  projection_baseline_test.go:43	0x100257104		a97ffbfd		LDP -8(RSP), (R29, R30)														
+  projection_baseline_test.go:43	0x100257108		910b83ff		ADD $736, RSP, RSP														
+  projection_baseline_test.go:43	0x10025710c		d65f03c0		RET																
+  projection_baseline_test.go:28	0x100257110		9100a1ad		ADD $40, R13, R13														
+  projection_baseline_test.go:28	0x100257114		91000400		ADD $1, R0, R0															
+  projection_baseline_test.go:28	0x100257118		f100081f		CMP $2, R0															
+  projection_baseline_test.go:28	0x10025711c		54fff0aa		BGE -123(PC)															
+  projection_baseline_test.go:28	0x100257120		f9007be0		MOVD R0, 240(RSP)														
+  projection_baseline_test.go:28	0x100257124		f9015bed		MOVD R13, 688(RSP)														
+  projection_baseline_test.go:28	0x100257128		a9403dae		LDP (R13), (R14, R15)														
+  projection_baseline_test.go:28	0x10025712c		a94145b0		LDP 16(R13), (R16, R17)														
+  projection_baseline_test.go:28	0x100257130		f94011b3		MOVD 32(R13), R19														
+  projection_baseline_test.go:28	0x100257134		a9153fee		STP (R14, R15), 336(RSP)													
+  projection_baseline_test.go:28	0x100257138		a91647f0		STP (R16, R17), 352(RSP)													
+  projection_baseline_test.go:28	0x10025713c		f900bbf3		MOVD R19, 368(RSP)														
+  projection_baseline_test.go:29	0x100257140		3945c3ee		MOVBU 368(RSP), R14														
+  projection_baseline_test.go:30	0x100257144		710005df		CMPW $1, R14															
+  projection_baseline_test.go:30	0x100257148		54000160		BEQ 11(PC)															
+  projection_baseline_test.go:32	0x10025714c		710009df		CMPW $2, R14															
+  projection_baseline_test.go:32	0x100257150		54fffe01		BNE -16(PC)															
+  projection_baseline_test.go:33	0x100257154		f94167e6		MOVD 712(RSP), R6														
+  projection_baseline_test.go:33	0x100257158		a94004c0		LDP (R6), (R0, R1)														
+  projection_baseline_test.go:33	0x10025715c		a9550fe2		LDP 336(RSP), (R2, R3)														
+  projection_baseline_test.go:33	0x100257160		a95617e4		LDP 352(RSP), (R4, R5)														
+  projection_baseline_test.go:33	0x100257164		97ff82e3		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutStr(SB)									
+  projection_baseline_test.go:28	0x100257168		f9407be0		MOVD 240(RSP), R0														
+  projection_baseline_test.go:28	0x10025716c		f9415bed		MOVD 688(RSP), R13														
+  projection_baseline_test.go:33	0x100257170		17ffffe8		JMP -24(PC)															
+  projection_baseline_test.go:31	0x100257174		f94167e4		MOVD 712(RSP), R4														
+  projection_baseline_test.go:31	0x100257178		a9400480		LDP (R4), (R0, R1)														
+  projection_baseline_test.go:31	0x10025717c		a9550fe2		LDP 336(RSP), (R2, R3)														
+  projection_baseline_test.go:31	0x100257180		97ff8214		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutEmpty(SB)								
+  projection_baseline_test.go:31	0x100257184		aa0003e2		MOVD R0, R2															
+  projection_baseline_test.go:31	0x100257188		aa0103e3		MOVD R1, R3															
+  projection_baseline_test.go:31	0x10025718c		f94117e0		MOVD 552(RSP), R0														
+  projection_baseline_test.go:31	0x100257190		f94163e1		MOVD 704(RSP), R1														
+  projection_baseline_test.go:31	0x100257194		97ff8e43		CALL go.opentelemetry.io/collector/pdata/pcommon.Value.CopyTo(SB)								
+  projection_baseline_test.go:28	0x100257198		f9407be0		MOVD 240(RSP), R0														
+  projection_baseline_test.go:28	0x10025719c		f9415bed		MOVD 688(RSP), R13														
+  projection_baseline_test.go:31	0x1002571a0		17ffffdc		JMP -36(PC)															
+  map.go:243				0x1002571a4		aa0203e0		MOVD R2, R0															
+  map.go:243				0x1002571a8		aa1103e1		MOVD R17, R1															
+  map.go:243				0x1002571ac		97f8a88d		CALL runtime.panicIndex(SB)													
+  map.go:243				0x1002571b0		d503201f		NOOP																
+  projection_baseline_test.go:23	0x1002571b4		790163e0		MOVH R0, 176(RSP)														
+  projection_baseline_test.go:23	0x1002571b8		a90b8be1		STP (R1, R2), 184(RSP)														
+  projection_baseline_test.go:23	0x1002571bc		aa1e03e3		MOVD R30, R3															
+  projection_baseline_test.go:23	0x1002571c0		97f89f34		CALL runtime.morestack_noctxt.abi0(SB)												
+  projection_baseline_test.go:23	0x1002571c4		794163e0		MOVHU 176(RSP), R0														
+  projection_baseline_test.go:23	0x1002571c8		a94b8be1		LDP 184(RSP), (R1, R2)														
+  projection_baseline_test.go:23	0x1002571cc		17fffefd		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan(SB)				
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.BenchmarkProjectSpanBaseline(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_optimization_test.go
+  projection_optimization_test.go:167	0x100265810		f9400b90		MOVD 16(R28), R16											
+  projection_optimization_test.go:167	0x100265814		eb3063ff		CMP R16, RSP												
+  projection_optimization_test.go:167	0x100265818		54000269		BLS 19(PC)												
+  projection_optimization_test.go:167	0x10026581c		f81d0ffe		MOVD.W R30, -48(RSP)											
+  projection_optimization_test.go:167	0x100265820		f81f83fd		MOVD R29, -8(RSP)											
+  projection_optimization_test.go:167	0x100265824		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:169	0x100265828		f9001fe0		MOVD R0, 56(RSP)											
+  projection_optimization_test.go:168	0x10026582c		f0000820		ADRP 1077248(PC), R0											
+  projection_optimization_test.go:168	0x100265830		911c8000		ADD $1824, R0, R0											
+  projection_optimization_test.go:168	0x100265834		97f6ca93		CALL runtime.newobject(SB)										
+  projection_optimization_test.go:168	0x100265838		b00000c1		ADRP 102400(PC), R1											
+  projection_optimization_test.go:168	0x10026583c		91358021		ADD $3424, R1, R1											
+  projection_optimization_test.go:168	0x100265840		f9000001		MOVD R1, (R0)												
+  projection_optimization_test.go:168	0x100265844		b24003e1		ORR $1, ZR, R1												
+  projection_optimization_test.go:168	0x100265848		79001001		MOVH R1, 8(R0)												
+  projection_optimization_test.go:168	0x10026584c		aa0003e1		MOVD R0, R1												
+  projection_optimization_test.go:168	0x100265850		f9401fe0		MOVD 56(RSP), R0											
+  projection_optimization_test.go:168	0x100265854		94000027		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan(SB)		
+  projection_optimization_test.go:169	0x100265858		f85f83fd		MOVD -8(RSP), R29											
+  projection_optimization_test.go:169	0x10026585c		f84307fe		MOVD.P 48(RSP), R30											
+  projection_optimization_test.go:169	0x100265860		d65f03c0		RET													
+  projection_optimization_test.go:167	0x100265864		f90007e0		MOVD R0, 8(RSP)												
+  projection_optimization_test.go:167	0x100265868		aa1e03e3		MOVD R30, R3												
+  projection_optimization_test.go:167	0x10026586c		97f86589		CALL runtime.morestack_noctxt.abi0(SB)									
+  projection_optimization_test.go:167	0x100265870		f94007e0		MOVD 8(RSP), R0												
+  projection_optimization_test.go:167	0x100265874		17ffffe7		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.BenchmarkProjectSpanBaseline(SB)	
+  projection_optimization_test.go:167	0x100265878		00000000		?													
+  projection_optimization_test.go:167	0x10026587c		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.BenchmarkProjectSpanCandidate(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_optimization_test.go
+  projection_optimization_test.go:170	0x100265880		f9400b90		MOVD 16(R28), R16											
+  projection_optimization_test.go:170	0x100265884		eb3063ff		CMP R16, RSP												
+  projection_optimization_test.go:170	0x100265888		54000269		BLS 19(PC)												
+  projection_optimization_test.go:170	0x10026588c		f81d0ffe		MOVD.W R30, -48(RSP)											
+  projection_optimization_test.go:170	0x100265890		f81f83fd		MOVD R29, -8(RSP)											
+  projection_optimization_test.go:170	0x100265894		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:170	0x100265898		f9001fe0		MOVD R0, 56(RSP)											
+  projection_optimization_test.go:170	0x10026589c		f0000820		ADRP 1077248(PC), R0											
+  projection_optimization_test.go:170	0x1002658a0		911c8000		ADD $1824, R0, R0											
+  projection_optimization_test.go:170	0x1002658a4		97f6ca77		CALL runtime.newobject(SB)										
+  projection_optimization_test.go:170	0x1002658a8		b00000c1		ADRP 102400(PC), R1											
+  projection_optimization_test.go:170	0x1002658ac		912d8021		ADD $2912, R1, R1											
+  projection_optimization_test.go:170	0x1002658b0		f9000001		MOVD R1, (R0)												
+  projection_optimization_test.go:170	0x1002658b4		b24003e1		ORR $1, ZR, R1												
+  projection_optimization_test.go:170	0x1002658b8		79001001		MOVH R1, 8(R0)												
+  projection_optimization_test.go:170	0x1002658bc		aa0003e1		MOVD R0, R1												
+  projection_optimization_test.go:170	0x1002658c0		f9401fe0		MOVD 56(RSP), R0											
+  projection_optimization_test.go:170	0x1002658c4		9400000b		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan(SB)		
+  projection_optimization_test.go:170	0x1002658c8		f85f83fd		MOVD -8(RSP), R29											
+  projection_optimization_test.go:170	0x1002658cc		f84307fe		MOVD.P 48(RSP), R30											
+  projection_optimization_test.go:170	0x1002658d0		d65f03c0		RET													
+  projection_optimization_test.go:170	0x1002658d4		f90007e0		MOVD R0, 8(RSP)												
+  projection_optimization_test.go:170	0x1002658d8		aa1e03e3		MOVD R30, R3												
+  projection_optimization_test.go:170	0x1002658dc		97f8656d		CALL runtime.morestack_noctxt.abi0(SB)									
+  projection_optimization_test.go:170	0x1002658e0		f94007e0		MOVD 8(RSP), R0												
+  projection_optimization_test.go:170	0x1002658e4		17ffffe7		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.BenchmarkProjectSpanCandidate(SB)	
+  projection_optimization_test.go:170	0x1002658e8		00000000		?													
+  projection_optimization_test.go:170	0x1002658ec		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_optimization_test.go
+  projection_optimization_test.go:171	0x1002658f0		f9400b90		MOVD 16(R28), R16										
+  projection_optimization_test.go:171	0x1002658f4		d102c3f1		SUB $176, RSP, R17										
+  projection_optimization_test.go:171	0x1002658f8		eb10023f		CMP R16, R17											
+  projection_optimization_test.go:171	0x1002658fc		54000d89		BLS 108(PC)											
+  projection_optimization_test.go:171	0x100265900		d104c3f4		SUB $304, RSP, R20										
+  projection_optimization_test.go:171	0x100265904		a93ffa9d		STP (R29, R30), -8(R20)										
+  projection_optimization_test.go:171	0x100265908		9100029f		MOVD R20, RSP											
+  projection_optimization_test.go:171	0x10026590c		d10023fd		SUB $8, RSP, R29										
+  projection_optimization_test.go:173	0x100265910		f9009fe0		MOVD R0, 312(RSP)										
+  projection_optimization_test.go:173	0x100265914		f900a3e1		MOVD R1, 320(RSP)										
+  projection_optimization_test.go:172	0x100265918		97fff6a6		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.projectionFixtures(SB)	
+  projection_optimization_test.go:172	0x10026591c		f90027e0		MOVD R0, 72(RSP)										
+  projection_optimization_test.go:172	0x100265920		f9001be1		MOVD R1, 48(RSP)										
+  projection_optimization_test.go:172	0x100265924		f9001fe2		MOVD R2, 56(RSP)										
+  projection_optimization_test.go:173	0x100265928		aa0003e3		MOVD R0, R3											
+  projection_optimization_test.go:172	0x10026592c		aa0103e4		MOVD R1, R4											
+  projection_optimization_test.go:173	0x100265930		1400000d		JMP 13(PC)											
+  projection_optimization_test.go:174	0x100265934		a9009404		STP (R4, R5), 8(R0)										
+  projection_optimization_test.go:174	0x100265938		a9400881		LDP (R4), (R1, R2)										
+  projection_optimization_test.go:174	0x10026593c		aa0003e3		MOVD R0, R3											
+  projection_optimization_test.go:174	0x100265940		f9409fe0		MOVD 312(RSP), R0										
+  projection_optimization_test.go:174	0x100265944		97facd17		CALL testing.(*B).Run(SB)									
+  projection_optimization_test.go:173	0x100265948		f9408fe4		MOVD 280(RSP), R4										
+  projection_optimization_test.go:173	0x10026594c		91032080		ADD $200, R4, R0										
+  projection_optimization_test.go:173	0x100265950		f94023e4		MOVD 64(RSP), R4										
+  projection_optimization_test.go:173	0x100265954		d1000481		SUB $1, R4, R1											
+  projection_optimization_test.go:183	0x100265958		f9401fe2		MOVD 56(RSP), R2										
+  projection_optimization_test.go:183	0x10026595c		f94027e3		MOVD 72(RSP), R3										
+  projection_optimization_test.go:183	0x100265960		f9401be4		MOVD 48(RSP), R4										
+  projection_optimization_test.go:173	0x100265964		f100003f		CMP $0, R1											
+  projection_optimization_test.go:173	0x100265968		5400066d		BLE 51(PC)											
+  projection_optimization_test.go:173	0x10026596c		f90023e1		MOVD R1, 64(RSP)										
+  projection_optimization_test.go:173	0x100265970		f9008fe0		MOVD R0, 280(RSP)										
+  projection_optimization_test.go:173	0x100265974		910143f5		ADD $80, RSP, R21										
+  projection_optimization_test.go:173	0x100265978		aa0003f4		MOVD R0, R20											
+  projection_optimization_test.go:173	0x10026597c		1000009b		ADR 16(PC), R27											
+  projection_optimization_test.go:173	0x100265980		a93eeffd		STP (R29, R27), -24(RSP)									
+  projection_optimization_test.go:173	0x100265984		d10063fd		SUB $24, RSP, R29										
+  projection_optimization_test.go:173	0x100265988		97f86f7e		CALL -495746(PC)										
+  projection_optimization_test.go:173	0x10026598c		d10023fd		SUB $8, RSP, R29										
+  projection_optimization_test.go:173	0x100265990		f9406001		MOVD 192(R0), R1										
+  projection_optimization_test.go:173	0x100265994		f9008be1		MOVD R1, 272(RSP)										
+  projection_optimization_test.go:173	0x100265998		b00008c0		ADRP 1150976(PC), R0										
+  projection_optimization_test.go:173	0x10026599c		912e8000		ADD $2976, R0, R0										
+  projection_optimization_test.go:173	0x1002659a0		97f6ca38		CALL runtime.newobject(SB)									
+  projection_optimization_test.go:173	0x1002659a4		f90093e0		MOVD R0, 288(RSP)										
+  projection_optimization_test.go:173	0x1002659a8		90001e1b		ADRP 3932160(PC), R27										
+  projection_optimization_test.go:173	0x1002659ac		b9462361		MOVWU 1568(R27), R1										
+  projection_optimization_test.go:173	0x1002659b0		340000e1		CBZW R1, 7(PC)											
+  projection_optimization_test.go:173	0x1002659b4		aa0003e1		MOVD R0, R1											
+  projection_optimization_test.go:173	0x1002659b8		910143e2		ADD $80, RSP, R2										
+  projection_optimization_test.go:173	0x1002659bc		b00008c0		ADRP 1150976(PC), R0										
+  projection_optimization_test.go:173	0x1002659c0		912e8000		ADD $2976, R0, R0										
+  projection_optimization_test.go:173	0x1002659c4		97f6cc43		CALL runtime.wbMove(SB)										
+  projection_optimization_test.go:173	0x1002659c8		f94093e0		MOVD 288(RSP), R0										
+  projection_optimization_test.go:173	0x1002659cc		aa0003f5		MOVD R0, R21											
+  projection_optimization_test.go:173	0x1002659d0		910143f4		ADD $80, RSP, R20										
+  projection_optimization_test.go:173	0x1002659d4		1000009b		ADR 16(PC), R27											
+  projection_optimization_test.go:173	0x1002659d8		a93eeffd		STP (R29, R27), -24(RSP)									
+  projection_optimization_test.go:173	0x1002659dc		d10063fd		SUB $24, RSP, R29										
+  projection_optimization_test.go:173	0x1002659e0		97f86f68		CALL -495768(PC)										
+  projection_optimization_test.go:173	0x1002659e4		d10023fd		SUB $8, RSP, R29										
+  projection_optimization_test.go:173	0x1002659e8		f9408be1		MOVD 272(RSP), R1										
+  projection_optimization_test.go:173	0x1002659ec		f9006001		MOVD R1, 192(R0)										
+  projection_optimization_test.go:174	0x1002659f0		900008c0		ADRP 1146880(PC), R0										
+  projection_optimization_test.go:174	0x1002659f4		91068000		ADD $416, R0, R0										
+  projection_optimization_test.go:174	0x1002659f8		97f6ca22		CALL runtime.newobject(SB)									
+  projection_optimization_test.go:174	0x1002659fc		90000001		ADRP 0(PC), R1											
+  projection_optimization_test.go:174	0x100265a00		9131c021		ADD $3184, R1, R1										
+  projection_optimization_test.go:174	0x100265a04		f9000001		MOVD R1, (R0)											
+  projection_optimization_test.go:174	0x100265a08		90001e1b		ADRP 3932160(PC), R27										
+  projection_optimization_test.go:174	0x100265a0c		b9462362		MOVWU 1568(R27), R2										
+  projection_optimization_test.go:174	0x100265a10		35000082		CBNZW R2, 4(PC)											
+  projection_optimization_test.go:174	0x100265a14		f94093e4		MOVD 288(RSP), R4										
+  projection_optimization_test.go:174	0x100265a18		f940a3e5		MOVD 320(RSP), R5										
+  projection_optimization_test.go:174	0x100265a1c		17ffffc6		JMP -58(PC)											
+  projection_optimization_test.go:174	0x100265a20		97f86dbc		CALL runtime.gcWriteBarrier2(SB)								
+  projection_optimization_test.go:174	0x100265a24		f94093e4		MOVD 288(RSP), R4										
+  projection_optimization_test.go:174	0x100265a28		f940a3e5		MOVD 320(RSP), R5										
+  projection_optimization_test.go:174	0x100265a2c		a9001724		STP (R4, R5), (R25)										
+  projection_optimization_test.go:174	0x100265a30		17ffffc1		JMP -63(PC)											
+  projection_optimization_test.go:183	0x100265a34		900008c0		ADRP 1146880(PC), R0										
+  projection_optimization_test.go:183	0x100265a38		91090000		ADD $576, R0, R0										
+  projection_optimization_test.go:183	0x100265a3c		97f6ca11		CALL runtime.newobject(SB)									
+  projection_optimization_test.go:183	0x100265a40		90000001		ADRP 0(PC), R1											
+  projection_optimization_test.go:183	0x100265a44		912b0021		ADD $2752, R1, R1										
+  projection_optimization_test.go:183	0x100265a48		f9000001		MOVD R1, (R0)											
+  projection_optimization_test.go:183	0x100265a4c		f9401be1		MOVD 48(RSP), R1										
+  projection_optimization_test.go:183	0x100265a50		f9401fe2		MOVD 56(RSP), R2										
+  projection_optimization_test.go:183	0x100265a54		a9010801		STP (R1, R2), 16(R0)										
+  projection_optimization_test.go:183	0x100265a58		90001e1b		ADRP 3932160(PC), R27										
+  projection_optimization_test.go:183	0x100265a5c		b9462361		MOVWU 1568(R27), R1										
+  projection_optimization_test.go:183	0x100265a60		35000081		CBNZW R1, 4(PC)											
+  projection_optimization_test.go:183	0x100265a64		f94027e4		MOVD 72(RSP), R4										
+  projection_optimization_test.go:183	0x100265a68		f940a3e5		MOVD 320(RSP), R5										
+  projection_optimization_test.go:183	0x100265a6c		14000005		JMP 5(PC)											
+  projection_optimization_test.go:183	0x100265a70		97f86da8		CALL runtime.gcWriteBarrier2(SB)								
+  projection_optimization_test.go:183	0x100265a74		f94027e4		MOVD 72(RSP), R4										
+  projection_optimization_test.go:183	0x100265a78		f940a3e5		MOVD 320(RSP), R5										
+  projection_optimization_test.go:183	0x100265a7c		a9001724		STP (R4, R5), (R25)										
+  projection_optimization_test.go:183	0x100265a80		f9000404		MOVD R4, 8(R0)											
+  projection_optimization_test.go:183	0x100265a84		f9001005		MOVD R5, 32(R0)											
+  projection_optimization_test.go:183	0x100265a88		b00001a1		ADRP 217088(PC), R1										
+  projection_optimization_test.go:183	0x100265a8c		912da021		ADD $2920, R1, R1										
+  projection_optimization_test.go:183	0x100265a90		d28000a2		MOVD $5, R2											
+  projection_optimization_test.go:183	0x100265a94		aa0003e3		MOVD R0, R3											
+  projection_optimization_test.go:183	0x100265a98		f9409fe0		MOVD 312(RSP), R0										
+  projection_optimization_test.go:183	0x100265a9c		97faccc1		CALL testing.(*B).Run(SB)									
+  projection_optimization_test.go:191	0x100265aa0		a97ffbfd		LDP -8(RSP), (R29, R30)										
+  projection_optimization_test.go:191	0x100265aa4		9104c3ff		ADD $304, RSP, RSP										
+  projection_optimization_test.go:191	0x100265aa8		d65f03c0		RET												
+  projection_optimization_test.go:171	0x100265aac		a90087e0		STP (R0, R1), 8(RSP)										
+  projection_optimization_test.go:171	0x100265ab0		aa1e03e3		MOVD R30, R3											
+  projection_optimization_test.go:171	0x100265ab4		97f864f7		CALL runtime.morestack_noctxt.abi0(SB)								
+  projection_optimization_test.go:171	0x100265ab8		a94087e0		LDP 8(RSP), (R0, R1)										
+  projection_optimization_test.go:171	0x100265abc		17ffff8d		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan(SB)	
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan.func2(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_optimization_test.go
+  projection_optimization_test.go:183	0x100265ac0		f9400b90		MOVD 16(R28), R16											
+  projection_optimization_test.go:183	0x100265ac4		d10503f1		SUB $320, RSP, R17											
+  projection_optimization_test.go:183	0x100265ac8		eb10023f		CMP R16, R17												
+  projection_optimization_test.go:183	0x100265acc		54000c49		BLS 98(PC)												
+  projection_optimization_test.go:183	0x100265ad0		d10703f4		SUB $448, RSP, R20											
+  projection_optimization_test.go:183	0x100265ad4		a93ffa9d		STP (R29, R30), -8(R20)											
+  projection_optimization_test.go:183	0x100265ad8		9100029f		MOVD R20, RSP												
+  projection_optimization_test.go:183	0x100265adc		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:184	0x100265ae0		f900e7e0		MOVD R0, 456(RSP)											
+  projection_optimization_test.go:183	0x100265ae4		a9408f42		LDP 8(R26), (R2, R3)											
+  projection_optimization_test.go:183	0x100265ae8		f90067e3		MOVD R3, 200(RSP)											
+  projection_optimization_test.go:183	0x100265aec		f90073e2		MOVD R2, 224(RSP)											
+  projection_optimization_test.go:183	0x100265af0		f9401344		MOVD 32(R26), R4											
+  projection_optimization_test.go:183	0x100265af4		f9006fe4		MOVD R4, 216(RSP)											
+  benchmark.go:193			0x100265af8		b24003e5		ORR $1, ZR, R5												
+  benchmark.go:193			0x100265afc		39082805		MOVB R5, 522(R0)											
+  projection_optimization_test.go:184	0x100265b00		14000003		JMP 3(PC)												
+  projection_optimization_test.go:186	0x100265b04		aa0503e2		MOVD R5, R2												
+  projection_optimization_test.go:186	0x100265b08		aa0103e3		MOVD R1, R3												
+  benchmark.go:510			0x100265b0c		9109c01b		ADD $624, R0, R27											
+  benchmark.go:510			0x100265b10		a9401b65		LDP (R27), (R5, R6)											
+  benchmark.go:510			0x100265b14		eb0600bf		CMP R6, R5												
+  benchmark.go:510			0x100265b18		54000089		BLS 4(PC)												
+  benchmark.go:511			0x100265b1c		910004c5		ADD $1, R6, R5												
+  benchmark.go:511			0x100265b20		f9013c05		MOVD R5, 632(R0)											
+  projection_optimization_test.go:185	0x100265b24		14000007		JMP 7(PC)												
+  benchmark.go:514			0x100265b28		97fac616		CALL testing.(*B).loopSlowPath(SB)									
+  projection_optimization_test.go:185	0x100265b2c		36000100		TBZ $0, R0, 8(PC)											
+  benchmark.go:510			0x100265b30		f940e7e0		MOVD 456(RSP), R0											
+  projection_optimization_test.go:186	0x100265b34		f94073e2		MOVD 224(RSP), R2											
+  projection_optimization_test.go:186	0x100265b38		f94067e3		MOVD 200(RSP), R3											
+  projection_optimization_test.go:187	0x100265b3c		f9406fe4		MOVD 216(RSP), R4											
+  projection_optimization_test.go:186	0x100265b40		aa0203e5		MOVD R2, R5												
+  projection_optimization_test.go:183	0x100265b44		aa0303e1		MOVD R3, R1												
+  projection_optimization_test.go:186	0x100265b48		1400001b		JMP 27(PC)												
+  projection_optimization_test.go:190	0x100265b4c		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  projection_optimization_test.go:190	0x100265b50		910703ff		ADD $448, RSP, RSP											
+  projection_optimization_test.go:190	0x100265b54		d65f03c0		RET													
+  projection_optimization_test.go:187	0x100265b58		a94e9fe6		LDP 232(RSP), (R6, R7)											
+  projection_optimization_test.go:187	0x100265b5c		a94fa7e8		LDP 248(RSP), (R8, R9)											
+  projection_optimization_test.go:187	0x100265b60		a950afea		LDP 264(RSP), (R10, R11)										
+  projection_optimization_test.go:187	0x100265b64		f9408fec		MOVD 280(RSP), R12											
+  projection_optimization_test.go:187	0x100265b68		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:187	0x100265b6c		913d037b		ADD $3904, R27, R27											
+  projection_optimization_test.go:187	0x100265b70		a9001f66		STP (R6, R7), (R27)											
+  projection_optimization_test.go:187	0x100265b74		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:187	0x100265b78		913d437b		ADD $3920, R27, R27											
+  projection_optimization_test.go:187	0x100265b7c		a9002768		STP (R8, R9), (R27)											
+  projection_optimization_test.go:187	0x100265b80		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:187	0x100265b84		913d837b		ADD $3936, R27, R27											
+  projection_optimization_test.go:187	0x100265b88		a9002f6a		STP (R10, R11), (R27)											
+  projection_optimization_test.go:187	0x100265b8c		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:187	0x100265b90		f907bb6c		MOVD R12, 3952(R27)											
+  projection_optimization_test.go:186	0x100265b94		f940dbe6		MOVD 432(RSP), R6											
+  projection_optimization_test.go:186	0x100265b98		910320c2		ADD $200, R6, R2											
+  projection_optimization_test.go:186	0x100265b9c		f9406be6		MOVD 208(RSP), R6											
+  projection_optimization_test.go:186	0x100265ba0		d10004c3		SUB $1, R6, R3												
+  benchmark.go:510			0x100265ba4		f940e7e0		MOVD 456(RSP), R0											
+  projection_optimization_test.go:186	0x100265ba8		f94067e1		MOVD 200(RSP), R1											
+  projection_optimization_test.go:187	0x100265bac		f9406fe4		MOVD 216(RSP), R4											
+  projection_optimization_test.go:186	0x100265bb0		f94073e5		MOVD 224(RSP), R5											
+  projection_optimization_test.go:186	0x100265bb4		f100007f		CMP $0, R3												
+  projection_optimization_test.go:186	0x100265bb8		54fffa6d		BLE -45(PC)												
+  projection_optimization_test.go:186	0x100265bbc		f9006be3		MOVD R3, 208(RSP)											
+  projection_optimization_test.go:186	0x100265bc0		f900dbe2		MOVD R2, 432(RSP)											
+  projection_optimization_test.go:186	0x100265bc4		9103a3f5		ADD $232, RSP, R21											
+  projection_optimization_test.go:186	0x100265bc8		aa0203f4		MOVD R2, R20												
+  projection_optimization_test.go:186	0x100265bcc		1000009b		ADR 16(PC), R27												
+  projection_optimization_test.go:186	0x100265bd0		a93eeffd		STP (R29, R27), -24(RSP)										
+  projection_optimization_test.go:186	0x100265bd4		d10063fd		SUB $24, RSP, R29											
+  projection_optimization_test.go:186	0x100265bd8		97f86eea		CALL -495894(PC)											
+  projection_optimization_test.go:186	0x100265bdc		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:186	0x100265be0		f9406042		MOVD 192(R2), R2											
+  projection_optimization_test.go:186	0x100265be4		f900d7e2		MOVD R2, 424(RSP)											
+  projection_optimization_test.go:187	0x100265be8		f9400082		MOVD (R4), R2												
+  projection_optimization_test.go:187	0x100265bec		a94f87e0		LDP 248(RSP), (R0, R1)											
+  projection_optimization_test.go:187	0x100265bf0		910023f5		ADD $8, RSP, R21											
+  projection_optimization_test.go:187	0x100265bf4		910423f4		ADD $264, RSP, R20											
+  projection_optimization_test.go:187	0x100265bf8		1000009b		ADR 16(PC), R27												
+  projection_optimization_test.go:187	0x100265bfc		a93eeffd		STP (R29, R27), -24(RSP)										
+  projection_optimization_test.go:187	0x100265c00		d10063fd		SUB $24, RSP, R29											
+  projection_optimization_test.go:187	0x100265c04		97f86ee3		CALL -495901(PC)											
+  projection_optimization_test.go:187	0x100265c08		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:187	0x100265c0c		f940d7e3		MOVD 424(RSP), R3											
+  projection_optimization_test.go:187	0x100265c10		f90057e3		MOVD R3, 168(RSP)											
+  projection_optimization_test.go:187	0x100265c14		aa0403fa		MOVD R4, R26												
+  projection_optimization_test.go:187	0x100265c18		d63f0040		CALL (R2)												
+  projection_optimization_test.go:187	0x100265c1c		f90077e0		MOVD R0, 232(RSP)											
+  projection_optimization_test.go:187	0x100265c20		a90f0be1		STP (R1, R2), 240(RSP)											
+  projection_optimization_test.go:187	0x100265c24		a91013e3		STP (R3, R4), 256(RSP)											
+  projection_optimization_test.go:187	0x100265c28		a9111be5		STP (R5, R6), 272(RSP)											
+  projection_optimization_test.go:187	0x100265c2c		90001e1b		ADRP 3932160(PC), R27											
+  projection_optimization_test.go:187	0x100265c30		b9462362		MOVWU 1568(R27), R2											
+  projection_optimization_test.go:187	0x100265c34		34fff922		CBZW R2, -55(PC)											
+  projection_optimization_test.go:187	0x100265c38		d0000920		ADRP 1204224(PC), R0											
+  projection_optimization_test.go:187	0x100265c3c		91148000		ADD $1312, R0, R0											
+  projection_optimization_test.go:187	0x100265c40		90001cc1		ADRP 3768320(PC), R1											
+  projection_optimization_test.go:187	0x100265c44		913d0021		ADD $3904, R1, R1											
+  projection_optimization_test.go:187	0x100265c48		9103a3e2		ADD $232, RSP, R2											
+  projection_optimization_test.go:187	0x100265c4c		97f6cba1		CALL runtime.wbMove(SB)											
+  projection_optimization_test.go:187	0x100265c50		17ffffc2		JMP -62(PC)												
+  projection_optimization_test.go:183	0x100265c54		f90007e0		MOVD R0, 8(RSP)												
+  projection_optimization_test.go:183	0x100265c58		aa1e03e3		MOVD R30, R3												
+  projection_optimization_test.go:183	0x100265c5c		97f8646d		CALL runtime.morestack.abi0(SB)										
+  projection_optimization_test.go:183	0x100265c60		f94007e0		MOVD 8(RSP), R0												
+  projection_optimization_test.go:183	0x100265c64		17ffff97		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan.func2(SB)	
+  projection_optimization_test.go:183	0x100265c68		00000000		?													
+  projection_optimization_test.go:183	0x100265c6c		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan.func1(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_optimization_test.go
+  projection_optimization_test.go:174	0x100265c70		f9400b90		MOVD 16(R28), R16											
+  projection_optimization_test.go:174	0x100265c74		d102c3f1		SUB $176, RSP, R17											
+  projection_optimization_test.go:174	0x100265c78		eb10023f		CMP R16, R17												
+  projection_optimization_test.go:174	0x100265c7c		54000b09		BLS 88(PC)												
+  projection_optimization_test.go:174	0x100265c80		d104c3f4		SUB $304, RSP, R20											
+  projection_optimization_test.go:174	0x100265c84		a93ffa9d		STP (R29, R30), -8(R20)											
+  projection_optimization_test.go:174	0x100265c88		9100029f		MOVD R20, RSP												
+  projection_optimization_test.go:174	0x100265c8c		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:178	0x100265c90		f9009fe0		MOVD R0, 312(RSP)											
+  projection_optimization_test.go:174	0x100265c94		a9409b45		LDP 8(R26), (R5, R6)											
+  projection_optimization_test.go:174	0x100265c98		f90093e5		MOVD R5, 288(RSP)											
+  projection_optimization_test.go:174	0x100265c9c		f9006fe6		MOVD R6, 216(RSP)											
+  projection_optimization_test.go:175	0x100265ca0		a9410ca2		LDP 16(R5), (R2, R3)											
+  projection_optimization_test.go:175	0x100265ca4		910080b4		ADD $32, R5, R20											
+  projection_optimization_test.go:175	0x100265ca8		f90073f4		MOVD R20, 224(RSP)											
+  projection_optimization_test.go:175	0x100265cac		910023f5		ADD $8, RSP, R21											
+  projection_optimization_test.go:175	0x100265cb0		1000009b		ADR 16(PC), R27												
+  projection_optimization_test.go:175	0x100265cb4		a93eeffd		STP (R29, R27), -24(RSP)										
+  projection_optimization_test.go:175	0x100265cb8		d10063fd		SUB $24, RSP, R29											
+  projection_optimization_test.go:175	0x100265cbc		97f86eb5		CALL -495947(PC)											
+  projection_optimization_test.go:175	0x100265cc0		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:175	0x100265cc4		f94060a5		MOVD 192(R5), R5											
+  projection_optimization_test.go:175	0x100265cc8		f90057e5		MOVD R5, 168(RSP)											
+  projection_optimization_test.go:175	0x100265ccc		aa0003e1		MOVD R0, R1												
+  projection_optimization_test.go:175	0x100265cd0		b24003e4		ORR $1, ZR, R4												
+  projection_optimization_test.go:175	0x100265cd4		d0000ac0		ADRP 1417216(PC), R0											
+  projection_optimization_test.go:175	0x100265cd8		91228000		ADD $2208, R0, R0											
+  projection_optimization_test.go:175	0x100265cdc		97fff921		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.assertProjectionEquivalent(SB)	
+  projection_optimization_test.go:176	0x100265ce0		d503201f		NOOP													
+  benchmark.go:193			0x100265ce4		b24003e5		ORR $1, ZR, R5												
+  benchmark.go:193			0x100265ce8		f9409fe0		MOVD 312(RSP), R0											
+  benchmark.go:193			0x100265cec		39082805		MOVB R5, 522(R0)											
+  projection_optimization_test.go:177	0x100265cf0		97fac158		CALL testing.(*B).ResetTimer(SB)									
+  projection_optimization_test.go:178	0x100265cf4		14000010		JMP 16(PC)												
+  projection_optimization_test.go:179	0x100265cf8		a94e8fe2		LDP 232(RSP), (R2, R3)											
+  projection_optimization_test.go:179	0x100265cfc		a94f97e4		LDP 248(RSP), (R4, R5)											
+  projection_optimization_test.go:179	0x100265d00		a9509fe6		LDP 264(RSP), (R6, R7)											
+  projection_optimization_test.go:179	0x100265d04		f9408fe8		MOVD 280(RSP), R8											
+  projection_optimization_test.go:179	0x100265d08		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:179	0x100265d0c		913d037b		ADD $3904, R27, R27											
+  projection_optimization_test.go:179	0x100265d10		a9000f62		STP (R2, R3), (R27)											
+  projection_optimization_test.go:179	0x100265d14		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:179	0x100265d18		913d437b		ADD $3920, R27, R27											
+  projection_optimization_test.go:179	0x100265d1c		a9001764		STP (R4, R5), (R27)											
+  projection_optimization_test.go:179	0x100265d20		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:179	0x100265d24		913d837b		ADD $3936, R27, R27											
+  projection_optimization_test.go:179	0x100265d28		a9001f66		STP (R6, R7), (R27)											
+  projection_optimization_test.go:179	0x100265d2c		90001cdb		ADRP 3768320(PC), R27											
+  projection_optimization_test.go:179	0x100265d30		f907bb68		MOVD R8, 3952(R27)											
+  benchmark.go:510			0x100265d34		f9409fe0		MOVD 312(RSP), R0											
+  benchmark.go:510			0x100265d38		9109c01b		ADD $624, R0, R27											
+  benchmark.go:510			0x100265d3c		a9400f62		LDP (R27), (R2, R3)											
+  benchmark.go:510			0x100265d40		eb03005f		CMP R3, R2												
+  benchmark.go:510			0x100265d44		54000089		BLS 4(PC)												
+  benchmark.go:511			0x100265d48		91000462		ADD $1, R3, R2												
+  benchmark.go:511			0x100265d4c		f9013c02		MOVD R2, 632(R0)											
+  projection_optimization_test.go:178	0x100265d50		14000003		JMP 3(PC)												
+  benchmark.go:514			0x100265d54		97fac58b		CALL testing.(*B).loopSlowPath(SB)									
+  projection_optimization_test.go:178	0x100265d58		360003c0		TBZ $0, R0, 30(PC)											
+  projection_optimization_test.go:179	0x100265d5c		f9406fe2		MOVD 216(RSP), R2											
+  projection_optimization_test.go:179	0x100265d60		f9400043		MOVD (R2), R3												
+  projection_optimization_test.go:179	0x100265d64		f94093e4		MOVD 288(RSP), R4											
+  projection_optimization_test.go:179	0x100265d68		a9410480		LDP 16(R4), (R0, R1)											
+  projection_optimization_test.go:179	0x100265d6c		910023f5		ADD $8, RSP, R21											
+  projection_optimization_test.go:179	0x100265d70		f94073f4		MOVD 224(RSP), R20											
+  projection_optimization_test.go:179	0x100265d74		1000009b		ADR 16(PC), R27												
+  projection_optimization_test.go:179	0x100265d78		a93eeffd		STP (R29, R27), -24(RSP)										
+  projection_optimization_test.go:179	0x100265d7c		d10063fd		SUB $24, RSP, R29											
+  projection_optimization_test.go:179	0x100265d80		97f86e84		CALL -495996(PC)											
+  projection_optimization_test.go:179	0x100265d84		d10023fd		SUB $8, RSP, R29											
+  projection_optimization_test.go:179	0x100265d88		f9406084		MOVD 192(R4), R4											
+  projection_optimization_test.go:179	0x100265d8c		f90057e4		MOVD R4, 168(RSP)											
+  projection_optimization_test.go:179	0x100265d90		aa0203fa		MOVD R2, R26												
+  projection_optimization_test.go:179	0x100265d94		d63f0060		CALL (R3)												
+  projection_optimization_test.go:179	0x100265d98		f90077e0		MOVD R0, 232(RSP)											
+  projection_optimization_test.go:179	0x100265d9c		a90f0be1		STP (R1, R2), 240(RSP)											
+  projection_optimization_test.go:179	0x100265da0		a91013e3		STP (R3, R4), 256(RSP)											
+  projection_optimization_test.go:179	0x100265da4		a9111be5		STP (R5, R6), 272(RSP)											
+  projection_optimization_test.go:179	0x100265da8		90001e1b		ADRP 3932160(PC), R27											
+  projection_optimization_test.go:179	0x100265dac		b9462362		MOVWU 1568(R27), R2											
+  projection_optimization_test.go:179	0x100265db0		34fffa42		CBZW R2, -46(PC)											
+  projection_optimization_test.go:179	0x100265db4		d0000920		ADRP 1204224(PC), R0											
+  projection_optimization_test.go:179	0x100265db8		91148000		ADD $1312, R0, R0											
+  projection_optimization_test.go:179	0x100265dbc		90001cc1		ADRP 3768320(PC), R1											
+  projection_optimization_test.go:179	0x100265dc0		913d0021		ADD $3904, R1, R1											
+  projection_optimization_test.go:179	0x100265dc4		9103a3e2		ADD $232, RSP, R2											
+  projection_optimization_test.go:179	0x100265dc8		97f6cb42		CALL runtime.wbMove(SB)											
+  projection_optimization_test.go:179	0x100265dcc		17ffffcb		JMP -53(PC)												
+  projection_optimization_test.go:181	0x100265dd0		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  projection_optimization_test.go:181	0x100265dd4		9104c3ff		ADD $304, RSP, RSP											
+  projection_optimization_test.go:181	0x100265dd8		d65f03c0		RET													
+  projection_optimization_test.go:174	0x100265ddc		f90007e0		MOVD R0, 8(RSP)												
+  projection_optimization_test.go:174	0x100265de0		aa1e03e3		MOVD R30, R3												
+  projection_optimization_test.go:174	0x100265de4		97f8640b		CALL runtime.morestack.abi0(SB)										
+  projection_optimization_test.go:174	0x100265de8		f94007e0		MOVD 8(RSP), R0												
+  projection_optimization_test.go:174	0x100265dec		17ffffa1		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.benchmarkProjectSpan.func1(SB)	
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectSpan(SB) /workspace/otel-semconv-normalizer/semconvweave/projection_prior_test.go
+  projection_prior_test.go:11	0x100265df0		f9400b90		MOVD 16(R28), R16														
+  projection_prior_test.go:11	0x100265df4		d10783f1		SUB $480, RSP, R17														
+  projection_prior_test.go:11	0x100265df8		eb10023f		CMP R16, R17															
+  projection_prior_test.go:11	0x100265dfc		54001c69		BLS 227(PC)															
+  projection_prior_test.go:11	0x100265e00		d10983f4		SUB $608, RSP, R20														
+  projection_prior_test.go:11	0x100265e04		a93ffa9d		STP (R29, R30), -8(R20)														
+  projection_prior_test.go:11	0x100265e08		9100029f		MOVD R20, RSP															
+  projection_prior_test.go:11	0x100265e0c		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:11	0x100265e10		f9018fe1		MOVD R1, 792(RSP)														
+  projection_prior_test.go:11	0x100265e14		f90193e2		MOVD R2, 800(RSP)														
+  map.go:242			0x100265e18		790623e0		MOVH R0, 784(RSP)														
+  map.go:242			0x100265e1c		f90123e2		MOVD R2, 576(RSP)														
+  map.go:242			0x100265e20		f9011fe1		MOVD R1, 568(RSP)														
+  projection_prior_test.go:11	0x100265e24		a9117fff		STP (ZR, ZR), 272(RSP)														
+  projection_prior_test.go:11	0x100265e28		a9127fff		STP (ZR, ZR), 288(RSP)														
+  projection_prior_test.go:11	0x100265e2c		a9137fff		STP (ZR, ZR), 304(RSP)														
+  projection_prior_test.go:11	0x100265e30		f900a3ff		MOVD ZR, 320(RSP)														
+  generated_span.go:147		0x100265e34		3980003b		MOVB (R1), R27															
+  projection_prior_test.go:12	0x100265e38		d503201f		NOOP																
+  projection_prior_test.go:13	0x100265e3c		d0000920		ADRP 1204224(PC), R0														
+  projection_prior_test.go:13	0x100265e40		91148000		ADD $1312, R0, R0														
+  projection_prior_test.go:13	0x100265e44		97f6c90f		CALL runtime.newobject(SB)													
+  projection_prior_test.go:13	0x100265e48		f90127e0		MOVD R0, 584(RSP)														
+  map.go:22			0x100265e4c		b00006a0		ADRP 872448(PC), R0														
+  map.go:22			0x100265e50		91278000		ADD $2528, R0, R0														
+  map.go:22			0x100265e54		97f6c90b		CALL runtime.newobject(SB)													
+  map.go:22			0x100265e58		f9012be0		MOVD R0, 592(RSP)														
+  map.go:23			0x100265e5c		d503201f		NOOP																
+  state.go:22			0x100265e60		f0000880		ADRP 1126400(PC), R0														
+  state.go:22			0x100265e64		91308000		ADD $3104, R0, R0														
+  state.go:22			0x100265e68		97f6c906		CALL runtime.newobject(SB)													
+  state.go:25			0x100265e6c		d503201f		NOOP																
+  type.go:83			0x100265e70		b24003e1		ORR $1, ZR, R1															
+  type.go:83			0x100265e74		889ffc01		STLRW R1, (R0)															
+  generated_status.go:53	0x100265e78		f9411fe1		MOVD 568(RSP), R1														
+  generated_status.go:53	0x100265e7c		a9468c22		LDP 104(R1), (R2, R3)														
+  projection_prior_test.go:13	0x100265e80		90001e1b		ADRP 3932160(PC), R27														
+  projection_prior_test.go:13	0x100265e84		b9462364		MOVWU 1568(R27), R4														
+  projection_prior_test.go:13	0x100265e88		34000264		CBZW R4, 19(PC)															
+  state.go:22			0x100265e8c		f900a7e0		MOVD R0, 328(RSP)														
+  generated_status.go:53	0x100265e90		f90087e2		MOVD R2, 264(RSP)														
+  generated_status.go:53	0x100265e94		f90077e3		MOVD R3, 232(RSP)														
+  projection_prior_test.go:13	0x100265e98		f94127e1		MOVD 584(RSP), R1														
+  projection_prior_test.go:13	0x100265e9c		a9401023		LDP (R1), (R3, R4)														
+  projection_prior_test.go:13	0x100265ea0		f9400825		MOVD 16(R1), R5															
+  projection_prior_test.go:13	0x100265ea4		97f86cab		CALL runtime.gcWriteBarrier6(SB)												
+  projection_prior_test.go:13	0x100265ea8		f9412be6		MOVD 592(RSP), R6														
+  projection_prior_test.go:13	0x100265eac		a9000f26		STP (R6, R3), (R25)														
+  projection_prior_test.go:13	0x100265eb0		a9011320		STP (R0, R4), 16(R25)														
+  projection_prior_test.go:13	0x100265eb4		a9021722		STP (R2, R5), 32(R25)														
+  projection_prior_test.go:13	0x100265eb8		d0000920		ADRP 1204224(PC), R0														
+  projection_prior_test.go:13	0x100265ebc		91148000		ADD $1312, R0, R0														
+  projection_prior_test.go:13	0x100265ec0		97f6caf8		CALL runtime.wbZero(SB)														
+  projection_prior_test.go:13	0x100265ec4		f940a7e0		MOVD 328(RSP), R0														
+  generated_span.go:103		0x100265ec8		f9411fe1		MOVD 568(RSP), R1														
+  projection_prior_test.go:13	0x100265ecc		f94087e2		MOVD 264(RSP), R2														
+  projection_prior_test.go:13	0x100265ed0		f94077e3		MOVD 232(RSP), R3														
+  projection_prior_test.go:13	0x100265ed4		f94127eb		MOVD 584(RSP), R11														
+  projection_prior_test.go:13	0x100265ed8		a9007d7f		STP (ZR, ZR), (R11)														
+  projection_prior_test.go:13	0x100265edc		a9017d7f		STP (ZR, ZR), 16(R11)														
+  projection_prior_test.go:13	0x100265ee0		a9027d7f		STP (ZR, ZR), 32(R11)														
+  projection_prior_test.go:13	0x100265ee4		f900197f		MOVD ZR, 48(R11)														
+  projection_prior_test.go:13	0x100265ee8		f9412bec		MOVD 592(RSP), R12														
+  projection_prior_test.go:13	0x100265eec		f900016c		MOVD R12, (R11)															
+  projection_prior_test.go:13	0x100265ef0		a9008960		STP (R0, R2), 8(R11)														
+  projection_prior_test.go:13	0x100265ef4		f9000d63		MOVD R3, 24(R11)														
+  generated_span.go:103		0x100265ef8		a941342c		LDP 16(R1), (R12, R13)														
+  generated_span.go:114		0x100265efc		b980942e		MOVW 148(R1), R14														
+  projection_prior_test.go:14	0x100265f00		a915ffff		STP (ZR, ZR), 344(RSP)														
+  projection_prior_test.go:14	0x100265f04		a916ffff		STP (ZR, ZR), 360(RSP)														
+  projection_prior_test.go:14	0x100265f08		a917ffff		STP (ZR, ZR), 376(RSP)														
+  projection_prior_test.go:14	0x100265f0c		a915b7ec		STP (R12, R13), 344(RSP)													
+  projection_prior_test.go:14	0x100265f10		b9016bee		MOVW R14, 360(RSP)														
+  projection_prior_test.go:14	0x100265f14		9109a3fb		ADD $616, RSP, R27														
+  projection_prior_test.go:14	0x100265f18		a940376c		LDP (R27), (R12, R13)														
+  projection_prior_test.go:14	0x100265f1c		f9413fee		MOVD 632(RSP), R14														
+  projection_prior_test.go:14	0x100265f20		f900bbec		MOVD R12, 368(RSP)														
+  projection_prior_test.go:14	0x100265f24		a917bbed		STP (R13, R14), 376(RSP)													
+  projection_prior_test.go:17	0x100265f28		d503201f		NOOP																
+  map.go:242			0x100265f2c		f940142c		MOVD 40(R1), R12														
+  map.go:242			0x100265f30		f90083ec		MOVD R12, 256(RSP)														
+  map.go:242			0x100265f34		aa1f03e0		MOVD ZR, R0															
+  projection_prior_test.go:22	0x100265f38		aa1f03e2		MOVD ZR, R2															
+  projection_prior_test.go:30	0x100265f3c		aa1f03e3		MOVD ZR, R3															
+  map.go:242			0x100265f40		14000009		JMP 9(PC)															
+  map.go:242			0x100265f44		f9407fed		MOVD 248(RSP), R13														
+  map.go:242			0x100265f48		910005ad		ADD $1, R13, R13														
+  map.go:243			0x100265f4c		f9411fe1		MOVD 568(RSP), R1														
+  projection_prior_test.go:25	0x100265f50		f94127eb		MOVD 584(RSP), R11														
+  map.go:242			0x100265f54		f94083ec		MOVD 256(RSP), R12														
+  projection_prior_test.go:30	0x100265f58		aa0203e3		MOVD R2, R3															
+  projection_prior_test.go:22	0x100265f5c		aa0003e2		MOVD R0, R2															
+  map.go:242			0x100265f60		aa0d03e0		MOVD R13, R0															
+  projection_prior_test.go:30	0x100265f64		390397e3		MOVB R3, 229(RSP)														
+  map.go:242			0x100265f68		eb0c001f		CMP R12, R0															
+  map.go:242			0x100265f6c		5400030a		BGE 24(PC)															
+  map.go:243			0x100265f70		a9421424		LDP 32(R1), (R4, R5)														
+  map.go:243			0x100265f74		eb05001f		CMP R5, R0															
+  map.go:243			0x100265f78		54001022		BCS 129(PC)															
+  map.go:242			0x100265f7c		f9007fe0		MOVD R0, 248(RSP)														
+  projection_prior_test.go:22	0x100265f80		39039be2		MOVB R2, 230(RSP)														
+  map.go:243			0x100265f84		8b000802		ADD R0<<2, R0, R2														
+  map.go:243			0x100265f88		8b020c82		ADD R2<<3, R4, R2														
+  map.go:244			0x100265f8c		a9410440		LDP 16(R2), (R0, R1)														
+  map.go:244			0x100265f90		f9007be1		MOVD R1, 240(RSP)														
+  map.go:244			0x100265f94		f9011be0		MOVD R0, 560(RSP)														
+  projection_prior_test.go:18	0x100265f98		94000086		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.priorMigrationWorkForKey(SB)					
+  projection_prior_test.go:18	0x100265f9c		394397e2		MOVBU 229(RSP), R2														
+  projection_prior_test.go:18	0x100265fa0		aa000042		ORR R0, R2, R2															
+  projection_prior_test.go:19	0x100265fa4		39439be0		MOVBU 230(RSP), R0														
+  projection_prior_test.go:19	0x100265fa8		36000060		TBZ $0, R0, 3(PC)														
+  projection_prior_test.go:19	0x100265fac		b24003e0		ORR $1, ZR, R0															
+  projection_prior_test.go:19	0x100265fb0		17ffffe5		JMP -27(PC)															
+  projection_prior_test.go:18	0x100265fb4		39039fe2		MOVB R2, 231(RSP)														
+  projection_prior_test.go:19	0x100265fb8		f9411be0		MOVD 560(RSP), R0														
+  projection_prior_test.go:19	0x100265fbc		f9407be1		MOVD 240(RSP), R1														
+  projection_prior_test.go:19	0x100265fc0		940000f8		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.priorMayProjectContextAttribute(SB)				
+  projection_prior_test.go:30	0x100265fc4		39439fe2		MOVBU 231(RSP), R2														
+  projection_prior_test.go:19	0x100265fc8		17ffffdf		JMP -33(PC)															
+  generated_span.go:147		0x100265fcc		91008020		ADD $32, R1, R0															
+  generated_span.go:147		0x100265fd0		f900abe0		MOVD R0, 336(RSP)														
+  projection_prior_test.go:22	0x100265fd4		36000162		TBZ $0, R2, 11(PC)														
+  projection_prior_test.go:27	0x100265fd8		a9559be5		LDP 344(RSP), (R5, R6)														
+  projection_prior_test.go:27	0x100265fdc		a95727e8		LDP 368(RSP), (R8, R9)														
+  projection_prior_test.go:27	0x100265fe0		b9816be7		MOVW 360(RSP), R7														
+  projection_prior_test.go:27	0x100265fe4		f940c3ea		MOVD 384(RSP), R10														
+  projection_prior_test.go:27	0x100265fe8		a9401163		LDP (R11), (R3, R4)														
+  projection_prior_test.go:27	0x100265fec		aa0003e1		MOVD R0, R1															
+  projection_prior_test.go:27	0x100265ff0		f94123e2		MOVD 576(RSP), R2														
+  projection_prior_test.go:27	0x100265ff4		794623e0		MOVHU 784(RSP), R0														
+  projection_prior_test.go:27	0x100265ff8		9400017e		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectAttributeMap(SB)				
+  projection_prior_test.go:27	0x100265ffc		14000004		JMP 4(PC)															
+  projection_prior_test.go:25	0x100266000		a9400d62		LDP (R11), (R2, R3)														
+  projection_prior_test.go:25	0x100266004		f94123e1		MOVD 576(RSP), R1														
+  projection_prior_test.go:25	0x100266008		97ff4af6		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.CopyTo(SB)									
+  projection_prior_test.go:29	0x10026600c		910563f4		ADD $344, RSP, R20														
+  projection_prior_test.go:29	0x100266010		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:29	0x100266014		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:29	0x100266018		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:29	0x10026601c		97f86d60		CALL -496288(PC)														
+  projection_prior_test.go:29	0x100266020		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:29	0x100266024		f90117ff		MOVD ZR, 552(RSP)														
+  projection_prior_test.go:29	0x100266028		794623e7		MOVHU 784(RSP), R7														
+  projection_prior_test.go:29	0x10026602c		7902b3e7		MOVH R7, 344(RSP)														
+  projection_prior_test.go:29	0x100266030		f9411fe7		MOVD 568(RSP), R7														
+  projection_prior_test.go:29	0x100266034		f900b3e7		MOVD R7, 352(RSP)														
+  projection_prior_test.go:29	0x100266038		f94123e7		MOVD 576(RSP), R7														
+  projection_prior_test.go:29	0x10026603c		f940abe8		MOVD 336(RSP), R8														
+  projection_prior_test.go:29	0x100266040		a916a3e7		STP (R7, R8), 360(RSP)														
+  projection_prior_test.go:29	0x100266044		f94127e8		MOVD 584(RSP), R8														
+  projection_prior_test.go:29	0x100266048		a917a3e7		STP (R7, R8), 376(RSP)														
+  projection_prior_test.go:29	0x10026604c		910623f5		ADD $392, RSP, R21														
+  projection_prior_test.go:29	0x100266050		9109a3f4		ADD $616, RSP, R20														
+  projection_prior_test.go:29	0x100266054		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:29	0x100266058		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:29	0x10026605c		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:29	0x100266060		97f86dcc		CALL -496180(PC)														
+  projection_prior_test.go:29	0x100266064		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:29	0x100266068		f94187e7		MOVD 776(RSP), R7														
+  projection_prior_test.go:29	0x10026606c		f90117e7		MOVD R7, 552(RSP)														
+  projection_prior_test.go:30	0x100266070		394397e0		MOVBU 229(RSP), R0														
+  projection_prior_test.go:30	0x100266074		360001a0		TBZ $0, R0, 13(PC)														
+  projection_prior_test.go:31	0x100266078		910023f5		ADD $8, RSP, R21														
+  projection_prior_test.go:31	0x10026607c		910563f4		ADD $344, RSP, R20														
+  projection_prior_test.go:31	0x100266080		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:31	0x100266084		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:31	0x100266088		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:31	0x10026608c		97f86dbb		CALL -496197(PC)														
+  projection_prior_test.go:31	0x100266090		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:31	0x100266094		f94117e0		MOVD 552(RSP), R0														
+  projection_prior_test.go:31	0x100266098		f9006fe0		MOVD R0, 216(RSP)														
+  projection_prior_test.go:31	0x10026609c		97ffc665		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectHTTP(SB)		
+  projection_prior_test.go:33	0x1002660a0		394397e0		MOVBU 229(RSP), R0														
+  projection_prior_test.go:42	0x1002660a4		f94127e8		MOVD 584(RSP), R8														
+  projection_prior_test.go:33	0x1002660a8		360801a0		TBZ $1, R0, 13(PC)														
+  projection_prior_test.go:34	0x1002660ac		910023f5		ADD $8, RSP, R21														
+  projection_prior_test.go:34	0x1002660b0		910563f4		ADD $344, RSP, R20														
+  projection_prior_test.go:34	0x1002660b4		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:34	0x1002660b8		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:34	0x1002660bc		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:34	0x1002660c0		97f86dae		CALL -496210(PC)														
+  projection_prior_test.go:34	0x1002660c4		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:34	0x1002660c8		f94117e0		MOVD 552(RSP), R0														
+  projection_prior_test.go:34	0x1002660cc		f9006fe0		MOVD R0, 216(RSP)														
+  projection_prior_test.go:34	0x1002660d0		97ffd614		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectDatabase(SB)		
+  projection_prior_test.go:36	0x1002660d4		394397e0		MOVBU 229(RSP), R0														
+  projection_prior_test.go:42	0x1002660d8		f94127e8		MOVD 584(RSP), R8														
+  projection_prior_test.go:36	0x1002660dc		361001a0		TBZ $2, R0, 13(PC)														
+  projection_prior_test.go:37	0x1002660e0		910023f5		ADD $8, RSP, R21														
+  projection_prior_test.go:37	0x1002660e4		910563f4		ADD $344, RSP, R20														
+  projection_prior_test.go:37	0x1002660e8		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:37	0x1002660ec		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:37	0x1002660f0		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:37	0x1002660f4		97f86da1		CALL -496223(PC)														
+  projection_prior_test.go:37	0x1002660f8		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:37	0x1002660fc		f94117e0		MOVD 552(RSP), R0														
+  projection_prior_test.go:37	0x100266100		f9006fe0		MOVD R0, 216(RSP)														
+  projection_prior_test.go:37	0x100266104		97ffda63		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineProjectRPC(SB)			
+  projection_prior_test.go:39	0x100266108		394397e0		MOVBU 229(RSP), R0														
+  projection_prior_test.go:42	0x10026610c		f94127e8		MOVD 584(RSP), R8														
+  projection_prior_test.go:39	0x100266110		36000180		TBZ $0, R0, 12(PC)														
+  projection_prior_test.go:40	0x100266114		910023f5		ADD $8, RSP, R21														
+  projection_prior_test.go:40	0x100266118		910563f4		ADD $344, RSP, R20														
+  projection_prior_test.go:40	0x10026611c		1000009b		ADR 16(PC), R27															
+  projection_prior_test.go:40	0x100266120		a93eeffd		STP (R29, R27), -24(RSP)													
+  projection_prior_test.go:40	0x100266124		d10063fd		SUB $24, RSP, R29														
+  projection_prior_test.go:40	0x100266128		97f86d94		CALL -496236(PC)														
+  projection_prior_test.go:40	0x10026612c		d10023fd		SUB $8, RSP, R29														
+  projection_prior_test.go:40	0x100266130		f94117e0		MOVD 552(RSP), R0														
+  projection_prior_test.go:40	0x100266134		f9006fe0		MOVD R0, 216(RSP)														
+  projection_prior_test.go:40	0x100266138		97ffd3e2		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.baselineSpanMigration.baselineReportInvalidHTTPMethod(SB)	
+  projection_prior_test.go:42	0x10026613c		f94127e8		MOVD 584(RSP), R8														
+  projection_prior_test.go:42	0x100266140		a9402507		LDP (R8), (R7, R9)														
+  projection_prior_test.go:42	0x100266144		a9412d0a		LDP 16(R8), (R10, R11)														
+  projection_prior_test.go:42	0x100266148		a942350c		LDP 32(R8), (R12, R13)														
+  projection_prior_test.go:42	0x10026614c		f9401908		MOVD 48(R8), R8															
+  projection_prior_test.go:42	0x100266150		a91127e7		STP (R7, R9), 272(RSP)														
+  projection_prior_test.go:42	0x100266154		a9122fea		STP (R10, R11), 288(RSP)													
+  projection_prior_test.go:42	0x100266158		a91337ec		STP (R12, R13), 304(RSP)													
+  projection_prior_test.go:42	0x10026615c		f900a3e8		MOVD R8, 320(RSP)														
+  projection_prior_test.go:42	0x100266160		a95107e0		LDP 272(RSP), (R0, R1)														
+  projection_prior_test.go:42	0x100266164		a9520fe2		LDP 288(RSP), (R2, R3)														
+  projection_prior_test.go:42	0x100266168		a95317e4		LDP 304(RSP), (R4, R5)														
+  projection_prior_test.go:42	0x10026616c		f940a3e6		MOVD 320(RSP), R6														
+  projection_prior_test.go:42	0x100266170		a97ffbfd		LDP -8(RSP), (R29, R30)														
+  projection_prior_test.go:42	0x100266174		910983ff		ADD $608, RSP, RSP														
+  projection_prior_test.go:42	0x100266178		d65f03c0		RET																
+  map.go:243			0x10026617c		aa0503e1		MOVD R5, R1															
+  map.go:243			0x100266180		97f86c98		CALL runtime.panicIndex(SB)													
+  map.go:243			0x100266184		d503201f		NOOP																
+  projection_prior_test.go:11	0x100266188		790163e0		MOVH R0, 176(RSP)														
+  projection_prior_test.go:11	0x10026618c		a90b8be1		STP (R1, R2), 184(RSP)														
+  projection_prior_test.go:11	0x100266190		aa1e03e3		MOVD R30, R3															
+  projection_prior_test.go:11	0x100266194		97f8633f		CALL runtime.morestack_noctxt.abi0(SB)												
+  projection_prior_test.go:11	0x100266198		794163e0		MOVHU 176(RSP), R0														
+  projection_prior_test.go:11	0x10026619c		a94b8be1		LDP 184(RSP), (R1, R2)														
+  projection_prior_test.go:11	0x1002661a0		17ffff14		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectSpan(SB)					
+  projection_prior_test.go:11	0x1002661a4		00000000		?																
+  projection_prior_test.go:11	0x1002661a8		00000000		?																
+  projection_prior_test.go:11	0x1002661ac		00000000		?																
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.(*WeaveID).ProjectSpan(SB) <autogenerated>
+  <autogenerated>:1	0x10027e490		f9400b90		MOVD 16(R28), R16										
+  <autogenerated>:1	0x10027e494		d10303f1		SUB $192, RSP, R17										
+  <autogenerated>:1	0x10027e498		eb10023f		CMP R16, R17											
+  <autogenerated>:1	0x10027e49c		540005c9		BLS 46(PC)											
+  <autogenerated>:1	0x10027e4a0		d10503f4		SUB $320, RSP, R20										
+  <autogenerated>:1	0x10027e4a4		a93ffa9d		STP (R29, R30), -8(R20)										
+  <autogenerated>:1	0x10027e4a8		9100029f		MOVD R20, RSP											
+  <autogenerated>:1	0x10027e4ac		d10023fd		SUB $8, RSP, R29										
+  <autogenerated>:1	0x10027e4b0		f9401390		MOVD 32(R28), R16										
+  <autogenerated>:1	0x10027e4b4		b50005f0		CBNZ R16, 47(PC)										
+  <autogenerated>:1	0x10027e4b8		f900ffe1		MOVD R1, 504(RSP)										
+  <autogenerated>:1	0x10027e4bc		f90103e2		MOVD R2, 512(RSP)										
+  <autogenerated>:1	0x10027e4c0		a90cffff		STP (ZR, ZR), 200(RSP)										
+  <autogenerated>:1	0x10027e4c4		a90dffff		STP (ZR, ZR), 216(RSP)										
+  <autogenerated>:1	0x10027e4c8		a90effff		STP (ZR, ZR), 232(RSP)										
+  <autogenerated>:1	0x10027e4cc		f9007fff		MOVD ZR, 248(RSP)										
+  <autogenerated>:1	0x10027e4d0		b40003e0		CBZ R0, 31(PC)											
+  <autogenerated>:1	0x10027e4d4		79400000		MOVHU (R0), R0											
+  <autogenerated>:1	0x10027e4d8		910023f5		ADD $8, RSP, R21										
+  <autogenerated>:1	0x10027e4dc		910523f4		ADD $328, RSP, R20										
+  <autogenerated>:1	0x10027e4e0		1000009b		ADR 16(PC), R27											
+  <autogenerated>:1	0x10027e4e4		a93eeffd		STP (R29, R27), -24(RSP)									
+  <autogenerated>:1	0x10027e4e8		d10063fd		SUB $24, RSP, R29										
+  <autogenerated>:1	0x10027e4ec		97f80ca9		CALL -521047(PC)										
+  <autogenerated>:1	0x10027e4f0		d10023fd		SUB $8, RSP, R29										
+  <autogenerated>:1	0x10027e4f4		f940f7e3		MOVD 488(RSP), R3										
+  <autogenerated>:1	0x10027e4f8		f90057e3		MOVD R3, 168(RSP)										
+  <autogenerated>:1	0x10027e4fc		97ff4819		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan(SB)	
+  <autogenerated>:1	0x10027e500		f90083e0		MOVD R0, 256(RSP)										
+  <autogenerated>:1	0x10027e504		a9108be1		STP (R1, R2), 264(RSP)										
+  <autogenerated>:1	0x10027e508		a91193e3		STP (R3, R4), 280(RSP)										
+  <autogenerated>:1	0x10027e50c		a9129be5		STP (R5, R6), 296(RSP)										
+  <autogenerated>:1	0x10027e510		a95013e3		LDP 256(RSP), (R3, R4)										
+  <autogenerated>:1	0x10027e514		a9511be5		LDP 272(RSP), (R5, R6)										
+  <autogenerated>:1	0x10027e518		a95223e7		LDP 288(RSP), (R7, R8)										
+  <autogenerated>:1	0x10027e51c		f9409be9		MOVD 304(RSP), R9										
+  <autogenerated>:1	0x10027e520		a90c93e3		STP (R3, R4), 200(RSP)										
+  <autogenerated>:1	0x10027e524		a90d9be5		STP (R5, R6), 216(RSP)										
+  <autogenerated>:1	0x10027e528		a90ea3e7		STP (R7, R8), 232(RSP)										
+  <autogenerated>:1	0x10027e52c		f9007fe9		MOVD R9, 248(RSP)										
+  <autogenerated>:1	0x10027e530		a94c87e0		LDP 200(RSP), (R0, R1)										
+  <autogenerated>:1	0x10027e534		a94d8fe2		LDP 216(RSP), (R2, R3)										
+  <autogenerated>:1	0x10027e538		a94e97e4		LDP 232(RSP), (R4, R5)										
+  <autogenerated>:1	0x10027e53c		f9407fe6		MOVD 248(RSP), R6										
+  <autogenerated>:1	0x10027e540		a97ffbfd		LDP -8(RSP), (R29, R30)										
+  <autogenerated>:1	0x10027e544		910503ff		ADD $320, RSP, RSP										
+  <autogenerated>:1	0x10027e548		d65f03c0		RET												
+  <autogenerated>:1	0x10027e54c		97f652fd		CALL runtime.panicwrap(SB)									
+  <autogenerated>:1	0x10027e550		d503201f		NOOP												
+  <autogenerated>:1	0x10027e554		a90b07e0		STP (R0, R1), 176(RSP)										
+  <autogenerated>:1	0x10027e558		f90063e2		MOVD R2, 192(RSP)										
+  <autogenerated>:1	0x10027e55c		aa1e03e3		MOVD R30, R3											
+  <autogenerated>:1	0x10027e560		97f8024c		CALL runtime.morestack_noctxt.abi0(SB)								
+  <autogenerated>:1	0x10027e564		a94b07e0		LDP 176(RSP), (R0, R1)										
+  <autogenerated>:1	0x10027e568		f94063e2		MOVD 192(RSP), R2										
+  <autogenerated>:1	0x10027e56c		17ffffc9		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.(*WeaveID).ProjectSpan(SB)	
+  <autogenerated>:1	0x10027e570		f9400211		MOVD (R16), R17											
+  <autogenerated>:1	0x10027e574		910523f4		ADD $328, RSP, R20										
+  <autogenerated>:1	0x10027e578		eb11029f		CMP R17, R20											
+  <autogenerated>:1	0x10027e57c		54fff9e1		BNE -49(PC)											
+  <autogenerated>:1	0x10027e580		910023f4		ADD $8, RSP, R20										
+  <autogenerated>:1	0x10027e584		f9000214		MOVD R20, (R16)											
+  <autogenerated>:1	0x10027e588		17ffffcc		JMP -52(PC)											
+  <autogenerated>:1	0x10027e58c		00000000		?												
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan-fm(SB) <autogenerated>
+  <autogenerated>:1	0x10027eb60		f9400b90		MOVD 16(R28), R16										
+  <autogenerated>:1	0x10027eb64		d10303f1		SUB $192, RSP, R17										
+  <autogenerated>:1	0x10027eb68		eb10023f		CMP R16, R17											
+  <autogenerated>:1	0x10027eb6c		540005c9		BLS 46(PC)											
+  <autogenerated>:1	0x10027eb70		d10503f4		SUB $320, RSP, R20										
+  <autogenerated>:1	0x10027eb74		a93ffa9d		STP (R29, R30), -8(R20)										
+  <autogenerated>:1	0x10027eb78		9100029f		MOVD R20, RSP											
+  <autogenerated>:1	0x10027eb7c		d10023fd		SUB $8, RSP, R29										
+  <autogenerated>:1	0x10027eb80		f9401390		MOVD 32(R28), R16										
+  <autogenerated>:1	0x10027eb84		b50005b0		CBNZ R16, 45(PC)										
+  <autogenerated>:1	0x10027eb88		f900fbe0		MOVD R0, 496(RSP)										
+  <autogenerated>:1	0x10027eb8c		f900ffe1		MOVD R1, 504(RSP)										
+  <autogenerated>:1	0x10027eb90		79401343		MOVHU 8(R26), R3										
+  <autogenerated>:1	0x10027eb94		a90cffff		STP (ZR, ZR), 200(RSP)										
+  <autogenerated>:1	0x10027eb98		a90dffff		STP (ZR, ZR), 216(RSP)										
+  <autogenerated>:1	0x10027eb9c		a90effff		STP (ZR, ZR), 232(RSP)										
+  <autogenerated>:1	0x10027eba0		f9007fff		MOVD ZR, 248(RSP)										
+  <autogenerated>:1	0x10027eba4		910023f5		ADD $8, RSP, R21										
+  <autogenerated>:1	0x10027eba8		910523f4		ADD $328, RSP, R20										
+  <autogenerated>:1	0x10027ebac		1000009b		ADR 16(PC), R27											
+  <autogenerated>:1	0x10027ebb0		a93eeffd		STP (R29, R27), -24(RSP)									
+  <autogenerated>:1	0x10027ebb4		d10063fd		SUB $24, RSP, R29										
+  <autogenerated>:1	0x10027ebb8		97f80af6		CALL -521482(PC)										
+  <autogenerated>:1	0x10027ebbc		d10023fd		SUB $8, RSP, R29										
+  <autogenerated>:1	0x10027ebc0		f940f7e4		MOVD 488(RSP), R4										
+  <autogenerated>:1	0x10027ebc4		f90057e4		MOVD R4, 168(RSP)										
+  <autogenerated>:1	0x10027ebc8		aa0103e2		MOVD R1, R2											
+  <autogenerated>:1	0x10027ebcc		aa0003e1		MOVD R0, R1											
+  <autogenerated>:1	0x10027ebd0		aa0303e0		MOVD R3, R0											
+  <autogenerated>:1	0x10027ebd4		97ff4663		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan(SB)	
+  <autogenerated>:1	0x10027ebd8		f90083e0		MOVD R0, 256(RSP)										
+  <autogenerated>:1	0x10027ebdc		a9108be1		STP (R1, R2), 264(RSP)										
+  <autogenerated>:1	0x10027ebe0		a91193e3		STP (R3, R4), 280(RSP)										
+  <autogenerated>:1	0x10027ebe4		a9129be5		STP (R5, R6), 296(RSP)										
+  <autogenerated>:1	0x10027ebe8		a95013e3		LDP 256(RSP), (R3, R4)										
+  <autogenerated>:1	0x10027ebec		a9511be5		LDP 272(RSP), (R5, R6)										
+  <autogenerated>:1	0x10027ebf0		a95223e7		LDP 288(RSP), (R7, R8)										
+  <autogenerated>:1	0x10027ebf4		f9409be9		MOVD 304(RSP), R9										
+  <autogenerated>:1	0x10027ebf8		a90c93e3		STP (R3, R4), 200(RSP)										
+  <autogenerated>:1	0x10027ebfc		a90d9be5		STP (R5, R6), 216(RSP)										
+  <autogenerated>:1	0x10027ec00		a90ea3e7		STP (R7, R8), 232(RSP)										
+  <autogenerated>:1	0x10027ec04		f9007fe9		MOVD R9, 248(RSP)										
+  <autogenerated>:1	0x10027ec08		a94c87e0		LDP 200(RSP), (R0, R1)										
+  <autogenerated>:1	0x10027ec0c		a94d8fe2		LDP 216(RSP), (R2, R3)										
+  <autogenerated>:1	0x10027ec10		a94e97e4		LDP 232(RSP), (R4, R5)										
+  <autogenerated>:1	0x10027ec14		f9407fe6		MOVD 248(RSP), R6										
+  <autogenerated>:1	0x10027ec18		a97ffbfd		LDP -8(RSP), (R29, R30)										
+  <autogenerated>:1	0x10027ec1c		910503ff		ADD $320, RSP, RSP										
+  <autogenerated>:1	0x10027ec20		d65f03c0		RET												
+  <autogenerated>:1	0x10027ec24		a90b07e0		STP (R0, R1), 176(RSP)										
+  <autogenerated>:1	0x10027ec28		aa1e03e3		MOVD R30, R3											
+  <autogenerated>:1	0x10027ec2c		97f80079		CALL runtime.morestack.abi0(SB)									
+  <autogenerated>:1	0x10027ec30		a94b07e0		LDP 176(RSP), (R0, R1)										
+  <autogenerated>:1	0x10027ec34		17ffffcb		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan-fm(SB)	
+  <autogenerated>:1	0x10027ec38		f9400211		MOVD (R16), R17											
+  <autogenerated>:1	0x10027ec3c		910523f4		ADD $328, RSP, R20										
+  <autogenerated>:1	0x10027ec40		eb11029f		CMP R17, R20											
+  <autogenerated>:1	0x10027ec44		54fffa21		BNE -47(PC)											
+  <autogenerated>:1	0x10027ec48		910023f4		ADD $8, RSP, R20										
+  <autogenerated>:1	0x10027ec4c		f9000214		MOVD R20, (R16)											
+  <autogenerated>:1	0x10027ec50		17ffffce		JMP -50(PC)											
+  <autogenerated>:1	0x10027ec54		00000000		?												
+  <autogenerated>:1	0x10027ec58		00000000		?												
+  <autogenerated>:1	0x10027ec5c		00000000		?												
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectSpan-fm(SB) <autogenerated>
+  <autogenerated>:1	0x10027ec60		f9400b90		MOVD 16(R28), R16											
+  <autogenerated>:1	0x10027ec64		d10303f1		SUB $192, RSP, R17											
+  <autogenerated>:1	0x10027ec68		eb10023f		CMP R16, R17												
+  <autogenerated>:1	0x10027ec6c		540005c9		BLS 46(PC)												
+  <autogenerated>:1	0x10027ec70		d10503f4		SUB $320, RSP, R20											
+  <autogenerated>:1	0x10027ec74		a93ffa9d		STP (R29, R30), -8(R20)											
+  <autogenerated>:1	0x10027ec78		9100029f		MOVD R20, RSP												
+  <autogenerated>:1	0x10027ec7c		d10023fd		SUB $8, RSP, R29											
+  <autogenerated>:1	0x10027ec80		f9401390		MOVD 32(R28), R16											
+  <autogenerated>:1	0x10027ec84		b50005b0		CBNZ R16, 45(PC)											
+  <autogenerated>:1	0x10027ec88		f900fbe0		MOVD R0, 496(RSP)											
+  <autogenerated>:1	0x10027ec8c		f900ffe1		MOVD R1, 504(RSP)											
+  <autogenerated>:1	0x10027ec90		79401343		MOVHU 8(R26), R3											
+  <autogenerated>:1	0x10027ec94		a90cffff		STP (ZR, ZR), 200(RSP)											
+  <autogenerated>:1	0x10027ec98		a90dffff		STP (ZR, ZR), 216(RSP)											
+  <autogenerated>:1	0x10027ec9c		a90effff		STP (ZR, ZR), 232(RSP)											
+  <autogenerated>:1	0x10027eca0		f9007fff		MOVD ZR, 248(RSP)											
+  <autogenerated>:1	0x10027eca4		910023f5		ADD $8, RSP, R21											
+  <autogenerated>:1	0x10027eca8		910523f4		ADD $328, RSP, R20											
+  <autogenerated>:1	0x10027ecac		1000009b		ADR 16(PC), R27												
+  <autogenerated>:1	0x10027ecb0		a93eeffd		STP (R29, R27), -24(RSP)										
+  <autogenerated>:1	0x10027ecb4		d10063fd		SUB $24, RSP, R29											
+  <autogenerated>:1	0x10027ecb8		97f80ab6		CALL -521546(PC)											
+  <autogenerated>:1	0x10027ecbc		d10023fd		SUB $8, RSP, R29											
+  <autogenerated>:1	0x10027ecc0		f940f7e4		MOVD 488(RSP), R4											
+  <autogenerated>:1	0x10027ecc4		f90057e4		MOVD R4, 168(RSP)											
+  <autogenerated>:1	0x10027ecc8		aa0103e2		MOVD R1, R2												
+  <autogenerated>:1	0x10027eccc		aa0003e1		MOVD R0, R1												
+  <autogenerated>:1	0x10027ecd0		aa0303e0		MOVD R3, R0												
+  <autogenerated>:1	0x10027ecd4		97ff9c47		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectSpan(SB)		
+  <autogenerated>:1	0x10027ecd8		f90083e0		MOVD R0, 256(RSP)											
+  <autogenerated>:1	0x10027ecdc		a9108be1		STP (R1, R2), 264(RSP)											
+  <autogenerated>:1	0x10027ece0		a91193e3		STP (R3, R4), 280(RSP)											
+  <autogenerated>:1	0x10027ece4		a9129be5		STP (R5, R6), 296(RSP)											
+  <autogenerated>:1	0x10027ece8		a95013e3		LDP 256(RSP), (R3, R4)											
+  <autogenerated>:1	0x10027ecec		a9511be5		LDP 272(RSP), (R5, R6)											
+  <autogenerated>:1	0x10027ecf0		a95223e7		LDP 288(RSP), (R7, R8)											
+  <autogenerated>:1	0x10027ecf4		f9409be9		MOVD 304(RSP), R9											
+  <autogenerated>:1	0x10027ecf8		a90c93e3		STP (R3, R4), 200(RSP)											
+  <autogenerated>:1	0x10027ecfc		a90d9be5		STP (R5, R6), 216(RSP)											
+  <autogenerated>:1	0x10027ed00		a90ea3e7		STP (R7, R8), 232(RSP)											
+  <autogenerated>:1	0x10027ed04		f9007fe9		MOVD R9, 248(RSP)											
+  <autogenerated>:1	0x10027ed08		a94c87e0		LDP 200(RSP), (R0, R1)											
+  <autogenerated>:1	0x10027ed0c		a94d8fe2		LDP 216(RSP), (R2, R3)											
+  <autogenerated>:1	0x10027ed10		a94e97e4		LDP 232(RSP), (R4, R5)											
+  <autogenerated>:1	0x10027ed14		f9407fe6		MOVD 248(RSP), R6											
+  <autogenerated>:1	0x10027ed18		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  <autogenerated>:1	0x10027ed1c		910503ff		ADD $320, RSP, RSP											
+  <autogenerated>:1	0x10027ed20		d65f03c0		RET													
+  <autogenerated>:1	0x10027ed24		a90b07e0		STP (R0, R1), 176(RSP)											
+  <autogenerated>:1	0x10027ed28		aa1e03e3		MOVD R30, R3												
+  <autogenerated>:1	0x10027ed2c		97f80039		CALL runtime.morestack.abi0(SB)										
+  <autogenerated>:1	0x10027ed30		a94b07e0		LDP 176(RSP), (R0, R1)											
+  <autogenerated>:1	0x10027ed34		17ffffcb		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.priorProjectSpan-fm(SB)	
+  <autogenerated>:1	0x10027ed38		f9400211		MOVD (R16), R17												
+  <autogenerated>:1	0x10027ed3c		910523f4		ADD $328, RSP, R20											
+  <autogenerated>:1	0x10027ed40		eb11029f		CMP R17, R20												
+  <autogenerated>:1	0x10027ed44		54fffa21		BNE -47(PC)												
+  <autogenerated>:1	0x10027ed48		910023f4		ADD $8, RSP, R20											
+  <autogenerated>:1	0x10027ed4c		f9000214		MOVD R20, (R16)												
+  <autogenerated>:1	0x10027ed50		17ffffce		JMP -50(PC)												
+  <autogenerated>:1	0x10027ed54		00000000		?													
+  <autogenerated>:1	0x10027ed58		00000000		?													
+  <autogenerated>:1	0x10027ed5c		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan-fm(SB) <autogenerated>
+  <autogenerated>:1	0x10027ed60		f9400b90		MOVD 16(R28), R16											
+  <autogenerated>:1	0x10027ed64		d10303f1		SUB $192, RSP, R17											
+  <autogenerated>:1	0x10027ed68		eb10023f		CMP R16, R17												
+  <autogenerated>:1	0x10027ed6c		540005c9		BLS 46(PC)												
+  <autogenerated>:1	0x10027ed70		d10503f4		SUB $320, RSP, R20											
+  <autogenerated>:1	0x10027ed74		a93ffa9d		STP (R29, R30), -8(R20)											
+  <autogenerated>:1	0x10027ed78		9100029f		MOVD R20, RSP												
+  <autogenerated>:1	0x10027ed7c		d10023fd		SUB $8, RSP, R29											
+  <autogenerated>:1	0x10027ed80		f9401390		MOVD 32(R28), R16											
+  <autogenerated>:1	0x10027ed84		b50005b0		CBNZ R16, 45(PC)											
+  <autogenerated>:1	0x10027ed88		f900fbe0		MOVD R0, 496(RSP)											
+  <autogenerated>:1	0x10027ed8c		f900ffe1		MOVD R1, 504(RSP)											
+  <autogenerated>:1	0x10027ed90		79401343		MOVHU 8(R26), R3											
+  <autogenerated>:1	0x10027ed94		a90cffff		STP (ZR, ZR), 200(RSP)											
+  <autogenerated>:1	0x10027ed98		a90dffff		STP (ZR, ZR), 216(RSP)											
+  <autogenerated>:1	0x10027ed9c		a90effff		STP (ZR, ZR), 232(RSP)											
+  <autogenerated>:1	0x10027eda0		f9007fff		MOVD ZR, 248(RSP)											
+  <autogenerated>:1	0x10027eda4		910023f5		ADD $8, RSP, R21											
+  <autogenerated>:1	0x10027eda8		910523f4		ADD $328, RSP, R20											
+  <autogenerated>:1	0x10027edac		1000009b		ADR 16(PC), R27												
+  <autogenerated>:1	0x10027edb0		a93eeffd		STP (R29, R27), -24(RSP)										
+  <autogenerated>:1	0x10027edb4		d10063fd		SUB $24, RSP, R29											
+  <autogenerated>:1	0x10027edb8		97f80a76		CALL -521610(PC)											
+  <autogenerated>:1	0x10027edbc		d10023fd		SUB $8, RSP, R29											
+  <autogenerated>:1	0x10027edc0		f940f7e4		MOVD 488(RSP), R4											
+  <autogenerated>:1	0x10027edc4		f90057e4		MOVD R4, 168(RSP)											
+  <autogenerated>:1	0x10027edc8		aa0103e2		MOVD R1, R2												
+  <autogenerated>:1	0x10027edcc		aa0003e1		MOVD R0, R1												
+  <autogenerated>:1	0x10027edd0		aa0303e0		MOVD R3, R0												
+  <autogenerated>:1	0x10027edd4		97ff5ffb		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan(SB)	
+  <autogenerated>:1	0x10027edd8		f90083e0		MOVD R0, 256(RSP)											
+  <autogenerated>:1	0x10027eddc		a9108be1		STP (R1, R2), 264(RSP)											
+  <autogenerated>:1	0x10027ede0		a91193e3		STP (R3, R4), 280(RSP)											
+  <autogenerated>:1	0x10027ede4		a9129be5		STP (R5, R6), 296(RSP)											
+  <autogenerated>:1	0x10027ede8		a95013e3		LDP 256(RSP), (R3, R4)											
+  <autogenerated>:1	0x10027edec		a9511be5		LDP 272(RSP), (R5, R6)											
+  <autogenerated>:1	0x10027edf0		a95223e7		LDP 288(RSP), (R7, R8)											
+  <autogenerated>:1	0x10027edf4		f9409be9		MOVD 304(RSP), R9											
+  <autogenerated>:1	0x10027edf8		a90c93e3		STP (R3, R4), 200(RSP)											
+  <autogenerated>:1	0x10027edfc		a90d9be5		STP (R5, R6), 216(RSP)											
+  <autogenerated>:1	0x10027ee00		a90ea3e7		STP (R7, R8), 232(RSP)											
+  <autogenerated>:1	0x10027ee04		f9007fe9		MOVD R9, 248(RSP)											
+  <autogenerated>:1	0x10027ee08		a94c87e0		LDP 200(RSP), (R0, R1)											
+  <autogenerated>:1	0x10027ee0c		a94d8fe2		LDP 216(RSP), (R2, R3)											
+  <autogenerated>:1	0x10027ee10		a94e97e4		LDP 232(RSP), (R4, R5)											
+  <autogenerated>:1	0x10027ee14		f9407fe6		MOVD 248(RSP), R6											
+  <autogenerated>:1	0x10027ee18		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  <autogenerated>:1	0x10027ee1c		910503ff		ADD $320, RSP, RSP											
+  <autogenerated>:1	0x10027ee20		d65f03c0		RET													
+  <autogenerated>:1	0x10027ee24		a90b07e0		STP (R0, R1), 176(RSP)											
+  <autogenerated>:1	0x10027ee28		aa1e03e3		MOVD R30, R3												
+  <autogenerated>:1	0x10027ee2c		97f7fff9		CALL runtime.morestack.abi0(SB)										
+  <autogenerated>:1	0x10027ee30		a94b07e0		LDP 176(RSP), (R0, R1)											
+  <autogenerated>:1	0x10027ee34		17ffffcb		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.baselineProjectSpan-fm(SB)	
+  <autogenerated>:1	0x10027ee38		f9400211		MOVD (R16), R17												
+  <autogenerated>:1	0x10027ee3c		910523f4		ADD $328, RSP, R20											
+  <autogenerated>:1	0x10027ee40		eb11029f		CMP R17, R20												
+  <autogenerated>:1	0x10027ee44		54fffa21		BNE -47(PC)												
+  <autogenerated>:1	0x10027ee48		910023f4		ADD $8, RSP, R20											
+  <autogenerated>:1	0x10027ee4c		f9000214		MOVD R20, (R16)												
+  <autogenerated>:1	0x10027ee50		17ffffce		JMP -50(PC)												
+  <autogenerated>:1	0x10027ee54		00000000		?													
+  <autogenerated>:1	0x10027ee58		00000000		?													
+  <autogenerated>:1	0x10027ee5c		00000000		?													
+
+TEXT github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave_test.ExampleWeaveID_ProjectSpan(SB) /workspace/otel-semconv-normalizer/semconvweave/quickstart_test.go
+  quickstart_test.go:111		0x10028f5f0		f9400b90		MOVD 16(R28), R16											
+  quickstart_test.go:111		0x10028f5f4		d10543f1		SUB $336, RSP, R17											
+  quickstart_test.go:111		0x10028f5f8		eb10023f		CMP R16, R17												
+  quickstart_test.go:111		0x10028f5fc		540019a9		BLS 205(PC)												
+  quickstart_test.go:111		0x10028f600		d10743f4		SUB $464, RSP, R20											
+  quickstart_test.go:111		0x10028f604		a93ffa9d		STP (R29, R30), -8(R20)											
+  quickstart_test.go:111		0x10028f608		9100029f		MOVD R20, RSP												
+  quickstart_test.go:111		0x10028f60c		d10023fd		SUB $8, RSP, R29											
+  quickstart_test.go:112		0x10028f610		97febddc		CALL go.opentelemetry.io/collector/pdata/ptrace.NewSpan(SB)						
+  quickstart_test.go:113		0x10028f614		d503201f		NOOP													
+  generated_span.go:119			0x10028f618		d503201f		NOOP													
+  state.go:39				0x10028f61c		b9400422		MOVWU 4(R1), R2												
+  state.go:39				0x10028f620		370017c2		TBNZ $0, R2, 190(PC)											
+  quickstart_test.go:112		0x10028f624		f900a7e1		MOVD R1, 328(RSP)											
+  quickstart_test.go:112		0x10028f628		f900a3e0		MOVD R0, 320(RSP)											
+  generated_span.go:120			0x10028f62c		b27f03e6		ORR $2, ZR, R6												
+  generated_span.go:120			0x10028f630		b9009406		MOVW R6, 148(R0)											
+  generated_span.go:147			0x10028f634		91008000		ADD $32, R0, R0												
+  generated_span.go:147			0x10028f638		f90097e0		MOVD R0, 296(RSP)											
+  quickstart_test.go:114		0x10028f63c		b0000062		ADRP 53248(PC), R2											
+  quickstart_test.go:114		0x10028f640		9129a442		ADD $2665, R2, R2											
+  quickstart_test.go:114		0x10028f644		d2800163		MOVD $11, R3												
+  quickstart_test.go:114		0x10028f648		f0000044		ADRP 45056(PC), R4											
+  quickstart_test.go:114		0x10028f64c		911c3484		ADD $1805, R4, R4											
+  quickstart_test.go:114		0x10028f650		b24007e5		ORR $3, ZR, R5												
+  quickstart_test.go:114		0x10028f654		97fea1a7		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutStr(SB)						
+  quickstart_test.go:115		0x10028f658		f94097e0		MOVD 296(RSP), R0											
+  quickstart_test.go:115		0x10028f65c		f940a7e1		MOVD 328(RSP), R1											
+  quickstart_test.go:115		0x10028f660		b0000062		ADRP 53248(PC), R2											
+  quickstart_test.go:115		0x10028f664		91297842		ADD $2654, R2, R2											
+  quickstart_test.go:115		0x10028f668		d2800163		MOVD $11, R3												
+  quickstart_test.go:115		0x10028f66c		b00000a4		ADRP 86016(PC), R4											
+  quickstart_test.go:115		0x10028f670		91029c84		ADD $167, R4, R4											
+  quickstart_test.go:115		0x10028f674		d2800325		MOVD $25, R5												
+  quickstart_test.go:115		0x10028f678		97fea19e		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutStr(SB)						
+  quickstart_test.go:116		0x10028f67c		f94097e0		MOVD 296(RSP), R0											
+  quickstart_test.go:116		0x10028f680		f940a7e1		MOVD 328(RSP), R1											
+  quickstart_test.go:116		0x10028f684		90000082		ADRP 65536(PC), R2											
+  quickstart_test.go:116		0x10028f688		91394042		ADD $3664, R2, R2											
+  quickstart_test.go:116		0x10028f68c		d2800243		MOVD $18, R3												
+  quickstart_test.go:116		0x10028f690		90000064		ADRP 49152(PC), R4											
+  quickstart_test.go:116		0x10028f694		911c9884		ADD $1830, R4, R4											
+  quickstart_test.go:116		0x10028f698		b27d03e5		ORR $8, ZR, R5												
+  quickstart_test.go:116		0x10028f69c		97fea195		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.PutStr(SB)						
+  quickstart_test.go:117		0x10028f6a0		910023f4		ADD $8, RSP, R20											
+  quickstart_test.go:117		0x10028f6a4		1000009b		ADR 16(PC), R27												
+  quickstart_test.go:117		0x10028f6a8		a93eeffd		STP (R29, R27), -24(RSP)										
+  quickstart_test.go:117		0x10028f6ac		d10063fd		SUB $24, RSP, R29											
+  quickstart_test.go:117		0x10028f6b0		97f7c7be		CALL -538690(PC)											
+  quickstart_test.go:117		0x10028f6b4		d10023fd		SUB $8, RSP, R29											
+  quickstart_test.go:117		0x10028f6b8		f90057ff		MOVD ZR, 168(RSP)											
+  quickstart_test.go:117		0x10028f6bc		b24003e0		ORR $1, ZR, R0												
+  quickstart_test.go:117		0x10028f6c0		f940a3e1		MOVD 320(RSP), R1											
+  quickstart_test.go:117		0x10028f6c4		f940a7e2		MOVD 328(RSP), R2											
+  quickstart_test.go:117		0x10028f6c8		97ff03a6		CALL github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave.WeaveID.ProjectSpan(SB)		
+  quickstart_test.go:117		0x10028f6cc		f900abe0		MOVD R0, 336(RSP)											
+  quickstart_test.go:117		0x10028f6d0		a9158be1		STP (R1, R2), 344(RSP)											
+  quickstart_test.go:117		0x10028f6d4		a91693e3		STP (R3, R4), 360(RSP)											
+  quickstart_test.go:117		0x10028f6d8		a9179be5		STP (R5, R6), 376(RSP)											
+  quickstart_test.go:117		0x10028f6dc		a9551fe6		LDP 336(RSP), (R6, R7)											
+  quickstart_test.go:117		0x10028f6e0		a95627e8		LDP 352(RSP), (R8, R9)											
+  quickstart_test.go:117		0x10028f6e4		a9572fea		LDP 368(RSP), (R10, R11)										
+  quickstart_test.go:117		0x10028f6e8		f940c3ec		MOVD 384(RSP), R12											
+  quickstart_test.go:117		0x10028f6ec		a90f1fe6		STP (R6, R7), 240(RSP)											
+  quickstart_test.go:117		0x10028f6f0		a91027e8		STP (R8, R9), 256(RSP)											
+  quickstart_test.go:117		0x10028f6f4		a9112fea		STP (R10, R11), 272(RSP)										
+  quickstart_test.go:117		0x10028f6f8		f90093ec		MOVD R12, 288(RSP)											
+  quickstart_test.go:118		0x10028f6fc		a94f07e0		LDP 240(RSP), (R0, R1)											
+  quickstart_test.go:118		0x10028f700		90000062		ADRP 49152(PC), R2											
+  quickstart_test.go:118		0x10028f704		911bd842		ADD $1782, R2, R2											
+  quickstart_test.go:118		0x10028f708		b27d03e3		ORR $8, ZR, R3												
+  quickstart_test.go:118		0x10028f70c		97fe9f75		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  quickstart_test.go:118		0x10028f710		f9009fe0		MOVD R0, 312(RSP)											
+  quickstart_test.go:119		0x10028f714		a94f07e0		LDP 240(RSP), (R0, R1)											
+  quickstart_test.go:119		0x10028f718		90000062		ADRP 49152(PC), R2											
+  quickstart_test.go:119		0x10028f71c		91360842		ADD $3458, R2, R2											
+  quickstart_test.go:119		0x10028f720		d2800123		MOVD $9, R3												
+  quickstart_test.go:119		0x10028f724		97fe9f6f		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  quickstart_test.go:119		0x10028f728		f9009be0		MOVD R0, 304(RSP)											
+  quickstart_test.go:120		0x10028f72c		a94f07e0		LDP 240(RSP), (R0, R1)											
+  quickstart_test.go:120		0x10028f730		d0000062		ADRP 57344(PC), R2											
+  quickstart_test.go:120		0x10028f734		913f8042		ADD $4064, R2, R2											
+  quickstart_test.go:120		0x10028f738		b27f0be3		ORR $14, ZR, R3												
+  quickstart_test.go:120		0x10028f73c		97fe9f69		CALL go.opentelemetry.io/collector/pdata/pcommon.Map.Get(SB)						
+  quickstart_test.go:121		0x10028f740		a94f1fe6		LDP 240(RSP), (R6, R7)											
+  quickstart_test.go:121		0x10028f744		a95027e8		LDP 256(RSP), (R8, R9)											
+  quickstart_test.go:121		0x10028f748		a9512fea		LDP 272(RSP), (R10, R11)										
+  quickstart_test.go:121		0x10028f74c		f94093ec		MOVD 288(RSP), R12											
+  quickstart_test.go:121		0x10028f750		a9151fe6		STP (R6, R7), 336(RSP)											
+  quickstart_test.go:121		0x10028f754		a91627e8		STP (R8, R9), 352(RSP)											
+  quickstart_test.go:121		0x10028f758		a9172fea		STP (R10, R11), 368(RSP)										
+  quickstart_test.go:121		0x10028f75c		f900c3ec		MOVD R12, 384(RSP)											
+  span_migration.go:91			0x10028f760		a9571fe6		LDP 368(RSP), (R6, R7)											
+  span_migration.go:91			0x10028f764		14000003		JMP 3(PC)												
+  span_migration.go:91			0x10028f768		9100c0c6		ADD $48, R6, R6												
+  span_migration.go:91			0x10028f76c		d10004e7		SUB $1, R7, R7												
+  span_migration.go:91			0x10028f770		f10000ff		CMP $0, R7												
+  span_migration.go:91			0x10028f774		540002cd		BLE 22(PC)												
+  span_migration.go:91			0x10028f778		a9400cc2		LDP (R6), (R2, R3)											
+  span_migration.go:91			0x10028f77c		a94114c4		LDP 16(R6), (R4, R5)											
+  span_migration.go:91			0x10028f780		a94224c8		LDP 32(R6), (R8, R9)											
+  span_migration.go:91			0x10028f784		a9150fe2		STP (R2, R3), 336(RSP)											
+  span_migration.go:91			0x10028f788		a91617e4		STP (R4, R5), 352(RSP)											
+  span_migration.go:91			0x10028f78c		a91727e8		STP (R8, R9), 368(RSP)											
+  span_migration.go:92			0x10028f790		a9560fe2		LDP 352(RSP), (R2, R3)											
+  span_migration.go:92			0x10028f794		f1001c7f		CMP $7, R3												
+  span_migration.go:92			0x10028f798		540001a1		BNE 13(PC)												
+  span_migration.go:92			0x10028f79c		b9400043		MOVWU (R2), R3												
+  span_migration.go:92			0x10028f7a0		d28cae44		MOVD $25970, R4												
+  span_migration.go:92			0x10028f7a4		f2adeda4		MOVK $(28525<<16), R4											
+  span_migration.go:92			0x10028f7a8		6b04007f		CMPW R4, R3												
+  span_migration.go:92			0x10028f7ac		54000101		BNE 8(PC)												
+  span_migration.go:92			0x10028f7b0		79400843		MOVHU 4(R2), R3												
+  span_migration.go:92			0x10028f7b4		d28caec4		MOVD $25974, R4												
+  span_migration.go:92			0x10028f7b8		6b04007f		CMPW R4, R3												
+  span_migration.go:92			0x10028f7bc		54000081		BNE 4(PC)												
+  span_migration.go:92			0x10028f7c0		39401842		MOVBU 6(R2), R2												
+  span_migration.go:92			0x10028f7c4		7101905f		CMPW $100, R2												
+  span_migration.go:92			0x10028f7c8		54fffd00		BEQ -24(PC)												
+  generated_proto_anyvalue.go:21	0x10028f7cc		f9409fe1		MOVD 312(RSP), R1											
+  generated_proto_anyvalue.go:21	0x10028f7d0		b4000061		CBZ R1, 3(PC)												
+  generated_proto_anyvalue.go:22	0x10028f7d4		a9400c22		LDP (R1), (R2, R3)											
+  generated_proto_anyvalue.go:32	0x10028f7d8		14000003		JMP 3(PC)												
+  generated_proto_anyvalue.go:32	0x10028f7dc		aa1f03e2		MOVD ZR, R2												
+  generated_proto_anyvalue.go:32	0x10028f7e0		aa1f03e3		MOVD ZR, R3												
+  generated_proto_anyvalue.go:32	0x10028f7e4		b0000544		ADRP 692224(PC), R4											
+  generated_proto_anyvalue.go:32	0x10028f7e8		912e8084		ADD $2976, R4, R4											
+  generated_proto_anyvalue.go:32	0x10028f7ec		eb04005f		CMP R4, R2												
+  generated_proto_anyvalue.go:32	0x10028f7f0		54000061		BNE 3(PC)												
+  generated_proto_anyvalue.go:33	0x10028f7f4		a9400c62		LDP (R3), (R2, R3)											
+  value.go:222				0x10028f7f8		14000003		JMP 3(PC)												
+  quickstart_test.go:121		0x10028f7fc		aa1f03e3		MOVD ZR, R3												
+  quickstart_test.go:121		0x10028f800		aa1f03e2		MOVD ZR, R2												
+  generated_proto_anyvalue.go:21	0x10028f804		f9409be1		MOVD 304(RSP), R1											
+  generated_proto_anyvalue.go:21	0x10028f808		b4000061		CBZ R1, 3(PC)												
+  generated_proto_anyvalue.go:22	0x10028f80c		a9401825		LDP (R1), (R5, R6)											
+  generated_proto_anyvalue.go:32	0x10028f810		14000003		JMP 3(PC)												
+  generated_proto_anyvalue.go:32	0x10028f814		aa1f03e5		MOVD ZR, R5												
+  generated_proto_anyvalue.go:32	0x10028f818		aa1f03e6		MOVD ZR, R6												
+  generated_proto_anyvalue.go:32	0x10028f81c		eb0400bf		CMP R4, R5												
+  generated_proto_anyvalue.go:32	0x10028f820		54000061		BNE 3(PC)												
+  generated_proto_anyvalue.go:33	0x10028f824		a94018c5		LDP (R6), (R5, R6)											
+  value.go:222				0x10028f828		14000003		JMP 3(PC)												
+  quickstart_test.go:121		0x10028f82c		aa1f03e6		MOVD ZR, R6												
+  quickstart_test.go:121		0x10028f830		aa1f03e5		MOVD ZR, R5												
+  generated_proto_anyvalue.go:21	0x10028f834		b4000060		CBZ R0, 3(PC)												
+  generated_proto_anyvalue.go:22	0x10028f838		a9402408		LDP (R0), (R8, R9)											
+  generated_proto_anyvalue.go:32	0x10028f83c		14000003		JMP 3(PC)												
+  generated_proto_anyvalue.go:32	0x10028f840		aa1f03e8		MOVD ZR, R8												
+  generated_proto_anyvalue.go:32	0x10028f844		aa1f03e9		MOVD ZR, R9												
+  quickstart_test.go:121		0x10028f848		f9006fe6		MOVD R6, 216(RSP)											
+  quickstart_test.go:121		0x10028f84c		f90077e5		MOVD R5, 232(RSP)											
+  generated_proto_anyvalue.go:32	0x10028f850		eb04011f		CMP R4, R8												
+  generated_proto_anyvalue.go:32	0x10028f854		54000081		BNE 4(PC)												
+  generated_proto_anyvalue.go:33	0x10028f858		a9402124		LDP (R9), (R4, R8)											
+  span_migration.go:91			0x10028f85c		f10000ff		CMP $0, R7												
+  value.go:222				0x10028f860		14000004		JMP 4(PC)												
+  span_migration.go:91			0x10028f864		f10000ff		CMP $0, R7												
+  quickstart_test.go:121		0x10028f868		aa1f03e8		MOVD ZR, R8												
+  quickstart_test.go:121		0x10028f86c		aa1f03e4		MOVD ZR, R4												
+  quickstart_test.go:121		0x10028f870		f9006be8		MOVD R8, 208(RSP)											
+  quickstart_test.go:121		0x10028f874		f90073e4		MOVD R4, 224(RSP)											
+  quickstart_test.go:121		0x10028f878		9a9fc7e4		CSET LE, R4												
+  quickstart_test.go:121		0x10028f87c		a918ffff		STP (ZR, ZR), 392(RSP)											
+  quickstart_test.go:121		0x10028f880		a919ffff		STP (ZR, ZR), 408(RSP)											
+  quickstart_test.go:121		0x10028f884		a91affff		STP (ZR, ZR), 424(RSP)											
+  quickstart_test.go:121		0x10028f888		a91bffff		STP (ZR, ZR), 440(RSP)											
+  quickstart_test.go:121		0x10028f88c		f0000425		ADRP 552960(PC), R5											
+  quickstart_test.go:121		0x10028f890		910780a5		ADD $480, R5, R5											
+  quickstart_test.go:121		0x10028f894		8b040ca4		ADD R4<<3, R5, R4											
+  quickstart_test.go:121		0x10028f898		90000585		ADRP 720896(PC), R5											
+  quickstart_test.go:121		0x10028f89c		911700a5		ADD $1472, R5, R5											
+  quickstart_test.go:121		0x10028f8a0		a91893e5		STP (R5, R4), 392(RSP)											
+  quickstart_test.go:121		0x10028f8a4		aa0203e0		MOVD R2, R0												
+  quickstart_test.go:121		0x10028f8a8		aa0303e1		MOVD R3, R1												
+  quickstart_test.go:121		0x10028f8ac		97f79b41		CALL runtime.convTstring(SB)										
+  quickstart_test.go:121		0x10028f8b0		90000582		ADRP 720896(PC), R2											
+  quickstart_test.go:121		0x10028f8b4		91070042		ADD $448, R2, R2											
+  quickstart_test.go:121		0x10028f8b8		a91983e2		STP (R2, R0), 408(RSP)											
+  quickstart_test.go:121		0x10028f8bc		f94077e0		MOVD 232(RSP), R0											
+  quickstart_test.go:121		0x10028f8c0		f9406fe1		MOVD 216(RSP), R1											
+  quickstart_test.go:121		0x10028f8c4		97f79b3b		CALL runtime.convTstring(SB)										
+  quickstart_test.go:121		0x10028f8c8		90000582		ADRP 720896(PC), R2											
+  quickstart_test.go:121		0x10028f8cc		91070042		ADD $448, R2, R2											
+  quickstart_test.go:121		0x10028f8d0		a91a83e2		STP (R2, R0), 424(RSP)											
+  quickstart_test.go:121		0x10028f8d4		f94073e0		MOVD 224(RSP), R0											
+  quickstart_test.go:121		0x10028f8d8		f9406be1		MOVD 208(RSP), R1											
+  quickstart_test.go:121		0x10028f8dc		97f79b35		CALL runtime.convTstring(SB)										
+  quickstart_test.go:121		0x10028f8e0		90000582		ADRP 720896(PC), R2											
+  quickstart_test.go:121		0x10028f8e4		91070042		ADD $448, R2, R2											
+  quickstart_test.go:121		0x10028f8e8		a91b83e2		STP (R2, R0), 440(RSP)											
+  print.go:314				0x10028f8ec		b0001b7b		ADRP 3592192(PC), R27											
+  print.go:314				0x10028f8f0		f946b761		MOVD 3432(R27), R1											
+  print.go:314				0x10028f8f4		f0000920		ADRP 1208320(PC), R0											
+  print.go:314				0x10028f8f8		91012000		ADD $72, R0, R0												
+  print.go:314				0x10028f8fc		910623e2		ADD $392, RSP, R2											
+  print.go:314				0x10028f900		b27e03e3		ORR $4, ZR, R3												
+  print.go:314				0x10028f904		aa0303e4		MOVD R3, R4												
+  print.go:314				0x10028f908		97f9ba1e		CALL fmt.Fprintln(SB)											
+  quickstart_test.go:123		0x10028f90c		a97ffbfd		LDP -8(RSP), (R29, R30)											
+  quickstart_test.go:123		0x10028f910		910743ff		ADD $464, RSP, RSP											
+  quickstart_test.go:123		0x10028f914		d65f03c0		RET													
+  state.go:40				0x10028f918		90000580		ADRP 720896(PC), R0											
+  state.go:40				0x10028f91c		91070000		ADD $448, R0, R0											
+  state.go:40				0x10028f920		90000921		ADRP 1196032(PC), R1											
+  state.go:40				0x10028f924		911bc021		ADD $1776, R1, R1											
+  state.go:40				0x10028f928		97f7a4da		CALL runtime.gopanic(SB)										
+  state.go:40				0x10028f92c		d503201f		NOOP													
+  quickstart_test.go:111		0x10028f930		aa1e03e3		MOVD R30, R3												
+  quickstart_test.go:111		0x10028f934		97f7bd57		CALL runtime.morestack_noctxt.abi0(SB)									
+  quickstart_test.go:111		0x10028f938		17ffff2e		JMP github.com/XiaoWeiKIN/otel-semconv-normalizer/semconvweave_test.ExampleWeaveID_ProjectSpan(SB)	
+  quickstart_test.go:111		0x10028f93c		00000000		?													

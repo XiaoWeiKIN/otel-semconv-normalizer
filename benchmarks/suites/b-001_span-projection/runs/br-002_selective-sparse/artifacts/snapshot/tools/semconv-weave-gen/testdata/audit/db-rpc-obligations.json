@@ -1,0 +1,2785 @@
+{
+  "schema_version": 1,
+  "canonical_target": "https://opentelemetry.io/schemas/1.41.0",
+  "sources": {
+    "telemetry_schema_sha256": "d73002442a640ce74a185359843b9046884d16eec198c3576d2dcc779deaf740",
+    "db_guide_sha256": "52746f889ec489c988d49a8cbd2ab021d33bff436d81dfff307c0bec7a67e32d",
+    "rpc_guide_sha256": "30a1b88fae6dc349f6ca5bb3095b2c7cd4f793bd63601f234c68e504faaa306b",
+    "weaver_diff_sha256": "f84540f9826ebf8e84769d1ed888bb515aacaaca510f5e22a8cac2d7c8921693",
+    "alias_corpus_sha256": "9eb438e8d06c8b00f628c313d262a431257b53b0078765ce7fc88fdc3cbc19fa",
+    "root_source_sha256": "6ab059dcaa8a24050aee72187ca7ed90a499c118c36d61dbd6ab94a8a631f8ae"
+  },
+  "required_source_urls": [
+    "https://opentelemetry.io/schemas/1.7.0",
+    "https://opentelemetry.io/schemas/1.4.0"
+  ],
+  "obligations": [
+    {
+      "id": "db-guide:span-attributes:01",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[1]@line:49",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.connection_string",
+      "summary": "`db.connection_string` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:02",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[2]@line:50",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.user",
+      "summary": "`db.user` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:03",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[3]@line:51",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "network.transport",
+      "summary": "`network.transport` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:04",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[4]@line:52",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "network.type",
+      "summary": "`network.type` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:05",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[5]@line:53",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.name",
+      "summary": "`db.name` | Removed, integrated into the new `db.namespace`. Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:06",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[6]@line:54",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.redis.database_index",
+      "summary": "`db.redis.database_index` | Removed, integrated into the new `db.namespace`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:07",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[7]@line:55",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.mssql.instance_name",
+      "summary": "`db.mssql.instance_name` | Removed, integrated into the new `db.namespace`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:08",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[8]@line:56",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "db.instance.id",
+      "target_keys": [
+        "server.address",
+        "db.namespace"
+      ],
+      "summary": "`db.instance.id` | Removed, replaced by `server.address` or integrated into `db.namespace` as appropriate",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:09",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[9]@line:57",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.system",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "`db.system` \u0026rarr; `db.system.name`",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:span-attributes:10",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[10]@line:58",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.statement",
+      "target_keys": [
+        "db.query.text"
+      ],
+      "summary": "`db.statement` \u0026rarr; `db.query.text` | Clarified, SHOULD be collected by default only if there is sanitization that excludes sensitive information",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:11",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[11]@line:59",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.operation",
+      "target_keys": [
+        "db.operation.name"
+      ],
+      "summary": "`db.operation` \u0026rarr; `db.operation.name` | Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:span-attributes:12",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[12]@line:60",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.sql.table",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "`db.sql.table` \u0026rarr; `db.collection.name` | Should not be captured if extracting the value from `db.query.text` since there could be multiple. Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:13",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[13]@line:61",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.cassandra.table",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "`db.cassandra.table` \u0026rarr; `db.collection.name` | Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:span-attributes:14",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[14]@line:62",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.mongodb.collection",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "`db.mongodb.collection` \u0026rarr; `db.collection.name` | Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:span-attributes:15",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[15]@line:63",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "db.cosmosdb.container",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "`db.cosmosdb.container` \u0026rarr; `db.collection.name` | Clarified, it is RECOMMENDED to capture the value as provided by the application without attempting to do any case normalization",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:span-attributes:16",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[16]@line:64",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.query.summary",
+      "summary": "New: `db.query.summary`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:17",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[17]@line:65",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.operation.batch.size",
+      "summary": "New: `db.operation.batch.size`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:18",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[18]@line:66",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.response.status_code",
+      "summary": "New: `db.response.status_code`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:19",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[19]@line:67",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.stored_procedure.name",
+      "summary": "New: `db.stored_procedure.name`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:20",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[20]@line:68",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "error.type",
+      "summary": "New: `error.type`",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:21",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[21]@line:69",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.operation.parameter.\u003ckey\u003e",
+      "summary": "New: `db.operation.parameter.\u003ckey\u003e` | _Not marked stable yet_",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:22",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[22]@line:70",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.query.parameter.\u003ckey\u003e",
+      "summary": "New: `db.query.parameter.\u003ckey\u003e` | _Not marked stable yet_",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-attributes:23",
+      "authority": "db_guide_migration_guide",
+      "locator": "db-guide:span-attributes.table[23]@line:71",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "db.response.returned_rows",
+      "summary": "New: `db.response.returned_rows` | _Not marked stable yet_",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:span-name:01",
+      "authority": "db_migration_guide",
+      "locator": "database-client-span-names@line:80",
+      "domain": "span_names",
+      "phase": "post_schema",
+      "category": "name",
+      "kind": "context_recompute",
+      "source_key": "$span.name",
+      "summary": "The recommended span name has changed.",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:01:adabas",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[1]@line:105",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "adabas",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "softwareag.adabas",
+      "summary": "| Adabas (Adaptable Database System) | `adabas`              | `softwareag.adabas`        |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:02:cache",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[2]@line:106",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "cache",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| InterSystems Caché (old alias)     | `cache`               | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:03:intersystems_cache",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[3]@line:107",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "intersystems_cache",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "intersystems.cache",
+      "summary": "| InterSystems Caché                 | `intersystems_cache`  | `intersystems.cache`       |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:04:cloudscape",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[4]@line:108",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "cloudscape",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Cloudscape                         | `cloudscape`          | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:05:coldfusion",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[5]@line:109",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "coldfusion",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| ColdFusion                         | `coldfusion`          | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:06:cosmosdb",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[6]@line:110",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "cosmosdb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "azure.cosmosdb",
+      "summary": "| Azure Cosmos DB                    | `cosmosdb`            | `azure.cosmosdb`           |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:07:db2",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[7]@line:111",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "db2",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.db2",
+      "summary": "| IBM Db2                            | `db2`                 | `ibm.db2`                  |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:08:dynamodb",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[8]@line:112",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "dynamodb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "aws.dynamodb",
+      "summary": "| Amazon DynamoDB                    | `dynamodb`            | `aws.dynamodb`             |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:09:edb",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[9]@line:113",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "edb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| EnterpriseDB                       | `edb`                 | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:10:filemaker",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[10]@line:114",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "filemaker",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| FileMaker                          | `filemaker`           | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:11:firebird",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[11]@line:115",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "firebird",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "firebirdsql",
+      "summary": "| Firebird                           | `firebird`            | `firebirdsql`              |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:12:firstsql",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[12]@line:116",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "firstsql",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| FirstSQL                           | `firstsql`            | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:13:h2",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[13]@line:117",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "h2",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "h2database",
+      "summary": "| H2 Database                        | `h2`                  | `h2database`               |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:14:hanadb",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[14]@line:118",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "hanadb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "sap.hana",
+      "summary": "| SAP HANA                           | `hanadb`              | `sap.hana`                 |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:15:informix",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[15]@line:119",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "informix",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.informix",
+      "summary": "| IBM Informix                       | `informix`            | `ibm.informix`             |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:16:ingres",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[16]@line:120",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "ingres",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "actian.ingres",
+      "summary": "| Actian Ingres                      | `ingres`              | `actian.ingres`            |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:17:interbase",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[17]@line:121",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "interbase",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| InterBase                          | `interbase`           | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:18:maxdb",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[18]@line:122",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "maxdb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "sap.maxdb",
+      "summary": "| SAP MaxDB                          | `maxdb`               | `sap.maxdb`                |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:19:mssql",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[19]@line:123",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "mssql",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "microsoft.sql_server",
+      "summary": "| Microsoft SQL Server               | `mssql`               | `microsoft.sql_server`     |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:20:mssqlcompact",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[20]@line:124",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "mssqlcompact",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Microsoft SQL Server Compact       | `mssqlcompact`        | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:21:netezza",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[21]@line:125",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "netezza",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.netezza",
+      "summary": "| IBM Netezza                        | `netezza`             | `ibm.netezza`              |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:22:oracle",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[22]@line:126",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "oracle",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "oracle.db",
+      "summary": "| Oracle Database                    | `oracle`              | `oracle.db`                |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:23:pervasive",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[23]@line:127",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "pervasive",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Pervasive PSQL                     | `pervasive`           | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:24:pointbase",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[24]@line:128",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "pointbase",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| PointBase                          | `pointbase`           | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:25:progress",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[25]@line:129",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "progress",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Progress Database                  | `progress`            | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:26:redshift",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[26]@line:130",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "redshift",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "aws.redshift",
+      "summary": "| Amazon Redshift                    | `redshift`            | `aws.redshift`             |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:27:spanner",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[27]@line:131",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "spanner",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "gcp.spanner",
+      "summary": "| Google Cloud Spanner               | `spanner`             | `gcp.spanner`              |",
+      "translation_eligible": true
+    },
+    {
+      "id": "db-guide:system-values:28:sybase",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[28]@line:132",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "sybase",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Sybase                             | `sybase`              | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "db-guide:system-values:29:vertica",
+      "authority": "db_migration_guide",
+      "locator": "db-guide:system-values.table[29]@line:133",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "db.system",
+      "source_value": "vertica",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "| Vertica                            | `vertica`             | Removed                    |",
+      "translation_eligible": false
+    },
+    {
+      "id": "root-alias:db:adabas",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/adabas]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "adabas",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "softwareag.adabas",
+      "summary": "adabas -\u003e softwareag.adabas",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:cache",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/cache]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "cache",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "intersystems.cache",
+      "summary": "cache -\u003e intersystems.cache",
+      "translation_eligible": false
+    },
+    {
+      "id": "root-alias:db:cosmosdb",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/cosmosdb]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "cosmosdb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "azure.cosmosdb",
+      "summary": "cosmosdb -\u003e azure.cosmosdb",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:db2",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/db2]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "db2",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.db2",
+      "summary": "db2 -\u003e ibm.db2",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:dynamodb",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/dynamodb]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "dynamodb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "aws.dynamodb",
+      "summary": "dynamodb -\u003e aws.dynamodb",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:firebird",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/firebird]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "firebird",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "firebirdsql",
+      "summary": "firebird -\u003e firebirdsql",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:h2",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/h2]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "h2",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "h2database",
+      "summary": "h2 -\u003e h2database",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:hanadb",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/hanadb]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "hanadb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "sap.hana",
+      "summary": "hanadb -\u003e sap.hana",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:informix",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/informix]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "informix",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.informix",
+      "summary": "informix -\u003e ibm.informix",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:ingres",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/ingres]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "ingres",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "actian.ingres",
+      "summary": "ingres -\u003e actian.ingres",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:intersystems_cache",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/intersystems_cache]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "intersystems_cache",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "intersystems.cache",
+      "summary": "intersystems_cache -\u003e intersystems.cache",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:maxdb",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/maxdb]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "maxdb",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "sap.maxdb",
+      "summary": "maxdb -\u003e sap.maxdb",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:mssql",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/mssql]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "mssql",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "microsoft.sql_server",
+      "summary": "mssql -\u003e microsoft.sql_server",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:netezza",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/netezza]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "netezza",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "ibm.netezza",
+      "summary": "netezza -\u003e ibm.netezza",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:oracle",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/oracle]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "oracle",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "oracle.db",
+      "summary": "oracle -\u003e oracle.db",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:redshift",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/redshift]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "redshift",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "aws.redshift",
+      "summary": "redshift -\u003e aws.redshift",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:db:spanner",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[db/spanner]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "db.system",
+      "source_value": "spanner",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "target_value": "gcp.spanner",
+      "summary": "spanner -\u003e gcp.spanner",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:rpc:apache_dubbo",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[rpc/apache_dubbo]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "rpc.system",
+      "source_value": "apache_dubbo",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "target_value": "dubbo",
+      "summary": "apache_dubbo -\u003e dubbo",
+      "translation_eligible": true
+    },
+    {
+      "id": "root-alias:rpc:connect_rpc",
+      "authority": "classifier_alias_contract",
+      "locator": "internal/semconvmeta/meta.go#technologyAliases[rpc/connect_rpc]",
+      "domain": "spans",
+      "phase": "classifier_fallback",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "rpc.system",
+      "source_value": "connect_rpc",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "target_value": "connectrpc",
+      "summary": "connect_rpc -\u003e connectrpc",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:deprecated-events:01",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:deprecated-events.table[1]@line:173",
+      "domain": "span_events",
+      "phase": "post_schema",
+      "category": "event",
+      "kind": "removed",
+      "source_key": "rpc.message",
+      "summary": "`rpc.message` event | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:deprecated-events:02",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:deprecated-events.table[2]@line:174",
+      "domain": "span_events",
+      "phase": "post_schema",
+      "category": "event",
+      "kind": "removed",
+      "source_key": "rpc.message.type",
+      "summary": "`rpc.message.type` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:deprecated-events:03",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:deprecated-events.table[3]@line:175",
+      "domain": "span_events",
+      "phase": "post_schema",
+      "category": "event",
+      "kind": "removed",
+      "source_key": "rpc.message.id",
+      "summary": "`rpc.message.id` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:deprecated-events:04",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:deprecated-events.table[4]@line:176",
+      "domain": "span_events",
+      "phase": "post_schema",
+      "category": "event",
+      "kind": "removed",
+      "source_key": "rpc.message.compressed_size",
+      "summary": "`rpc.message.compressed_size` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:deprecated-events:05",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:deprecated-events.table[5]@line:177",
+      "domain": "span_events",
+      "phase": "post_schema",
+      "category": "event",
+      "kind": "removed",
+      "source_key": "rpc.message.uncompressed_size",
+      "summary": "`rpc.message.uncompressed_size` | [#3283](https://github.com/open-telemetry/semantic-conventions/pull/3283)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:event-names:exception",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-exception-events@line:164",
+      "domain": "event_names",
+      "phase": "post_schema",
+      "category": "name",
+      "kind": "added",
+      "source_key": "$event.name",
+      "summary": "`rpc.client.call.exception` and `rpc.server.call.exception`",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:01",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[1]@line:55",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "rpc.system",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "`rpc.system` \u0026rarr; `rpc.system.name` | See [below](#rpcsystemname-values) for changes to the values, also now marked as sampling-relevant",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:02",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[2]@line:56",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "rpc.method",
+      "summary": "`rpc.method` | Now contains fully-qualified method name (e.g., `com.example.ExampleService/exampleMethod`), also now marked as sampling-relevant",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:03",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[3]@line:57",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "rpc.service",
+      "summary": "`rpc.service` | Removed, integrated into `rpc.method`",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:04",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[4]@line:58",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "network.transport",
+      "summary": "`network.transport` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:05",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[5]@line:59",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "network.type",
+      "summary": "`network.type` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:06",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[6]@line:60",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "rpc.grpc.status_code",
+      "target_keys": [
+        "rpc.response.status_code"
+      ],
+      "summary": "`rpc.grpc.status_code` \u0026rarr; `rpc.response.status_code` | Changed from int to string (e.g., `0` \u0026rarr; `\"OK\"`)",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:07",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[7]@line:61",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "rename_or_recompute",
+      "source_key": "rpc.connect_rpc.error_code",
+      "target_keys": [
+        "rpc.response.status_code"
+      ],
+      "summary": "`rpc.connect_rpc.error_code` \u0026rarr; `rpc.response.status_code`",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:08",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[8]@line:62",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "rpc.grpc.request.metadata.\u003ckey\u003e",
+      "target_keys": [
+        "rpc.request.metadata.\u003ckey\u003e"
+      ],
+      "summary": "`rpc.grpc.request.metadata.\u003ckey\u003e` | Replaced by `rpc.request.metadata.\u003ckey\u003e`",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:09",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[9]@line:63",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "rpc.grpc.response.metadata.\u003ckey\u003e",
+      "target_keys": [
+        "rpc.response.metadata.\u003ckey\u003e"
+      ],
+      "summary": "`rpc.grpc.response.metadata.\u003ckey\u003e` | Replaced by `rpc.response.metadata.\u003ckey\u003e`",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:10",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[10]@line:64",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "rpc.connect_rpc.request.metadata.\u003ckey\u003e",
+      "target_keys": [
+        "rpc.request.metadata.\u003ckey\u003e"
+      ],
+      "summary": "`rpc.connect_rpc.request.metadata.\u003ckey\u003e` | Replaced by `rpc.request.metadata.\u003ckey\u003e`",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:11",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[11]@line:65",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "rpc.connect_rpc.response.metadata.\u003ckey\u003e",
+      "target_keys": [
+        "rpc.response.metadata.\u003ckey\u003e"
+      ],
+      "summary": "`rpc.connect_rpc.response.metadata.\u003ckey\u003e` | Replaced by `rpc.response.metadata.\u003ckey\u003e`",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:span-attributes:12",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[12]@line:66",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "server.address",
+      "summary": "`server.address` | Now marked as sampling-relevant;\u003cbr\u003eNow it’s taken from static configuration and can be any string identifying a group of server instances.",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:13",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[13]@line:67",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "requirement_or_normalization_change",
+      "source_key": "server.port",
+      "summary": "`server.port` | Now marked as sampling-relevant;\u003cbr\u003eNow it’s taken from static configuration.",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:14",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[14]@line:68",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "error.type",
+      "summary": "New: `error.type`",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:15",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[15]@line:69",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "added",
+      "source_key": "rpc.method_original",
+      "summary": "New: `rpc.method_original` | Original method name when `rpc.method` is set to `_OTHER`",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:16",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[16]@line:70",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "client.address",
+      "summary": "`client.address` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:span-attributes:17",
+      "authority": "rpc_guide_migration_guide",
+      "locator": "rpc-guide:span-attributes.table[17]@line:71",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "removed",
+      "source_key": "client.port",
+      "summary": "`client.port` | Removed",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:system-values:01:apache_dubbo",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-guide:system-values.table[1]@line:85",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "rpc.system",
+      "source_value": "apache_dubbo",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "target_value": "dubbo",
+      "summary": "| `apache_dubbo` \u0026rarr; `dubbo`     | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) |                                                  |",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:system-values:02:connect_rpc",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-guide:system-values.table[2]@line:86",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "value_map",
+      "source_key": "rpc.system",
+      "source_value": "connect_rpc",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "target_value": "connectrpc",
+      "summary": "| `connect_rpc` \u0026rarr; `connectrpc` | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) |                                                  |",
+      "translation_eligible": true
+    },
+    {
+      "id": "rpc-guide:system-values:03:java_rmi",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-guide:system-values.table[3]@line:87",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "rpc.system",
+      "source_value": "java_rmi",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "| `java_rmi`                        | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) | Removed, but can still be used as a custom value |",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:system-values:04:dotnet_wcf",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-guide:system-values.table[4]@line:88",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "removed",
+      "source_key": "rpc.system",
+      "source_value": "dotnet_wcf",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "| `dotnet_wcf`                      | [#3176](https://github.com/open-telemetry/semantic-conventions/pull/3176) | Removed, but can still be used as a custom value |",
+      "translation_eligible": false
+    },
+    {
+      "id": "rpc-guide:system-values:05:jsonrpc",
+      "authority": "rpc_migration_guide",
+      "locator": "rpc-guide:system-values.table[5]@line:89",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "value",
+      "kind": "added_or_unchanged",
+      "source_key": "rpc.system",
+      "source_value": "jsonrpc",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "| New: `jsonrpc`                    | [#2503](https://github.com/open-telemetry/semantic-conventions/pull/2503) |                                                  |",
+      "translation_eligible": false
+    },
+    {
+      "id": "schema:1.25.0:all:00:00:message.type",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.all.changes[0].rename_attributes[0]@line:447",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "message.type",
+      "target_keys": [
+        "rpc.message.type"
+      ],
+      "summary": "message.type -\u003e rpc.message.type",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:all:00:01:message.id",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.all.changes[0].rename_attributes[1]@line:448",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "message.id",
+      "target_keys": [
+        "rpc.message.id"
+      ],
+      "summary": "message.id -\u003e rpc.message.id",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:all:00:02:message.compressed_size",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.all.changes[0].rename_attributes[2]@line:449",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "message.compressed_size",
+      "target_keys": [
+        "rpc.message.compressed_size"
+      ],
+      "summary": "message.compressed_size -\u003e rpc.message.compressed_size",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:all:00:03:message.uncompressed_size",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.all.changes[0].rename_attributes[3]@line:450",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "message.uncompressed_size",
+      "target_keys": [
+        "rpc.message.uncompressed_size"
+      ],
+      "summary": "message.uncompressed_size -\u003e rpc.message.uncompressed_size",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:spans:00:00:db.name",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[0].rename_attributes[0]@line:372",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.name",
+      "target_keys": [
+        "db.namespace"
+      ],
+      "summary": "db.name -\u003e db.namespace",
+      "translation_eligible": false
+    },
+    {
+      "id": "schema:1.25.0:spans:01:00:db.sql.table",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[1].rename_attributes[0]@line:376",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.sql.table",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "db.sql.table -\u003e db.collection.name",
+      "translation_eligible": false
+    },
+    {
+      "id": "schema:1.25.0:spans:01:01:db.mongodb.collection",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[1].rename_attributes[1]@line:377",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.mongodb.collection",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "db.mongodb.collection -\u003e db.collection.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:spans:01:02:db.cosmosdb.container",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[1].rename_attributes[2]@line:378",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.container",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "db.cosmosdb.container -\u003e db.collection.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:spans:01:03:db.cassandra.table",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[1].rename_attributes[3]@line:379",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.table",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "db.cassandra.table -\u003e db.collection.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:spans:03:00:db.operation",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[3].rename_attributes[0]@line:387",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.operation",
+      "target_keys": [
+        "db.operation.name"
+      ],
+      "summary": "db.operation -\u003e db.operation.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.25.0:spans:05:00:db.statement",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.25.0.spans.changes[5].rename_attributes[0]@line:395",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.statement",
+      "target_keys": [
+        "db.query.text"
+      ],
+      "summary": "db.statement -\u003e db.query.text",
+      "translation_eligible": false
+    },
+    {
+      "id": "schema:1.27.0:spans:00:00:db.elasticsearch.cluster.name",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.27.0.spans.changes[0].rename_attributes[0]@line:285",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.elasticsearch.cluster.name",
+      "target_keys": [
+        "db.namespace"
+      ],
+      "summary": "db.elasticsearch.cluster.name -\u003e db.namespace",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:00:db.system",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[0]@line:196",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.system",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "db.system -\u003e db.system.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:01:db.cassandra.coordinator.dc",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[1]@line:197",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.coordinator.dc",
+      "target_keys": [
+        "cassandra.coordinator.dc"
+      ],
+      "summary": "db.cassandra.coordinator.dc -\u003e cassandra.coordinator.dc",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:02:db.cassandra.coordinator.id",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[2]@line:198",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.coordinator.id",
+      "target_keys": [
+        "cassandra.coordinator.id"
+      ],
+      "summary": "db.cassandra.coordinator.id -\u003e cassandra.coordinator.id",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:03:db.cassandra.consistency_level",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[3]@line:199",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.consistency_level",
+      "target_keys": [
+        "cassandra.consistency.level"
+      ],
+      "summary": "db.cassandra.consistency_level -\u003e cassandra.consistency.level",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:04:db.cassandra.idempotence",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[4]@line:200",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.idempotence",
+      "target_keys": [
+        "cassandra.query.idempotent"
+      ],
+      "summary": "db.cassandra.idempotence -\u003e cassandra.query.idempotent",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:05:db.cassandra.page_size",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[5]@line:201",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.page_size",
+      "target_keys": [
+        "cassandra.page.size"
+      ],
+      "summary": "db.cassandra.page_size -\u003e cassandra.page.size",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:06:db.cassandra.speculative_execution_count",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[6]@line:202",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.speculative_execution_count",
+      "target_keys": [
+        "cassandra.speculative_execution.count"
+      ],
+      "summary": "db.cassandra.speculative_execution_count -\u003e cassandra.speculative_execution.count",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:07:db.cosmosdb.client_id",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[7]@line:203",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.client_id",
+      "target_keys": [
+        "azure.client.id"
+      ],
+      "summary": "db.cosmosdb.client_id -\u003e azure.client.id",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:08:db.cosmosdb.connection_mode",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[8]@line:204",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.connection_mode",
+      "target_keys": [
+        "azure.cosmosdb.connection.mode"
+      ],
+      "summary": "db.cosmosdb.connection_mode -\u003e azure.cosmosdb.connection.mode",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:09:db.cosmosdb.consistency_level",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[9]@line:205",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.consistency_level",
+      "target_keys": [
+        "azure.cosmosdb.consistency.level"
+      ],
+      "summary": "db.cosmosdb.consistency_level -\u003e azure.cosmosdb.consistency.level",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:10:db.cosmosdb.request_charge",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[10]@line:206",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.request_charge",
+      "target_keys": [
+        "azure.cosmosdb.operation.request_charge"
+      ],
+      "summary": "db.cosmosdb.request_charge -\u003e azure.cosmosdb.operation.request_charge",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:11:db.cosmosdb.request_content_length",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[11]@line:207",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.request_content_length",
+      "target_keys": [
+        "azure.cosmosdb.request.body.size"
+      ],
+      "summary": "db.cosmosdb.request_content_length -\u003e azure.cosmosdb.request.body.size",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:12:db.cosmosdb.regions_contacted",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[12]@line:208",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.regions_contacted",
+      "target_keys": [
+        "azure.cosmosdb.operation.contacted_regions"
+      ],
+      "summary": "db.cosmosdb.regions_contacted -\u003e azure.cosmosdb.operation.contacted_regions",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:13:db.cosmosdb.sub_status_code",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[13]@line:209",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cosmosdb.sub_status_code",
+      "target_keys": [
+        "azure.cosmosdb.response.sub_status_code"
+      ],
+      "summary": "db.cosmosdb.sub_status_code -\u003e azure.cosmosdb.response.sub_status_code",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.30.0:all:02:14:db.elasticsearch.node.name",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.30.0.all.changes[2].rename_attributes[14]@line:210",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.elasticsearch.node.name",
+      "target_keys": [
+        "elasticsearch.node.name"
+      ],
+      "summary": "db.elasticsearch.node.name -\u003e elasticsearch.node.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:02:rpc.connect_rpc.error_code",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[2]@line:33",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.connect_rpc.error_code",
+      "target_keys": [
+        "rpc.response.status_code"
+      ],
+      "summary": "rpc.connect_rpc.error_code -\u003e rpc.response.status_code",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:03:rpc.connect_rpc.request.metadata",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[3]@line:34",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.connect_rpc.request.metadata",
+      "target_keys": [
+        "rpc.request.metadata"
+      ],
+      "summary": "rpc.connect_rpc.request.metadata -\u003e rpc.request.metadata",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:04:rpc.connect_rpc.response.metadata",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[4]@line:35",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.connect_rpc.response.metadata",
+      "target_keys": [
+        "rpc.response.metadata"
+      ],
+      "summary": "rpc.connect_rpc.response.metadata -\u003e rpc.response.metadata",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:05:rpc.grpc.request.metadata",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[5]@line:36",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.grpc.request.metadata",
+      "target_keys": [
+        "rpc.request.metadata"
+      ],
+      "summary": "rpc.grpc.request.metadata -\u003e rpc.request.metadata",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:06:rpc.grpc.response.metadata",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[6]@line:37",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.grpc.response.metadata",
+      "target_keys": [
+        "rpc.response.metadata"
+      ],
+      "summary": "rpc.grpc.response.metadata -\u003e rpc.response.metadata",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:07:rpc.jsonrpc.request_id",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[7]@line:38",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.jsonrpc.request_id",
+      "target_keys": [
+        "jsonrpc.request.id"
+      ],
+      "summary": "rpc.jsonrpc.request_id -\u003e jsonrpc.request.id",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:08:rpc.jsonrpc.version",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[8]@line:39",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.jsonrpc.version",
+      "target_keys": [
+        "jsonrpc.protocol.version"
+      ],
+      "summary": "rpc.jsonrpc.version -\u003e jsonrpc.protocol.version",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.39.0:all:00:09:rpc.system",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.39.0.all.changes[0].rename_attributes[9]@line:40",
+      "domain": "all",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "rpc.system",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "rpc.system -\u003e rpc.system.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.8.0:spans:00:00:db.cassandra.keyspace",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.8.0.spans.changes[0].rename_attributes[0]@line:749",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.cassandra.keyspace",
+      "target_keys": [
+        "db.name"
+      ],
+      "summary": "db.cassandra.keyspace -\u003e db.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "schema:1.8.0:spans:00:01:db.hbase.namespace",
+      "authority": "telemetry_schema",
+      "locator": "versions.1.8.0.spans.changes[0].rename_attributes[1]@line:750",
+      "domain": "spans",
+      "phase": "schema",
+      "category": "key",
+      "kind": "rename_attribute",
+      "source_key": "db.hbase.namespace",
+      "target_keys": [
+        "db.name"
+      ],
+      "summary": "db.hbase.namespace -\u003e db.name",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0105:db.connection_string",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[105]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "db.connection_string",
+      "summary": "uncategorized db.connection_string | Replaced by `server.address` and `server.port`.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0107:db.cosmosdb.operation_type",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[107]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "db.cosmosdb.operation_type",
+      "summary": "obsoleted db.cosmosdb.operation_type | Removed, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0109:db.cosmosdb.status_code",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[109]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "db.cosmosdb.status_code",
+      "summary": "uncategorized db.cosmosdb.status_code | Use `db.response.status_code` instead.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0110:db.instance.id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[110]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "db.instance.id",
+      "summary": "obsoleted db.instance.id | Removed, no general replacement at this time. For Elasticsearch, use `db.elasticsearch.node.name` instead.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0111:db.jdbc.driver_classname",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[111]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "db.jdbc.driver_classname",
+      "summary": "obsoleted db.jdbc.driver_classname | Removed, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0112:db.mssql.instance_name",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[112]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "db.mssql.instance_name",
+      "summary": "obsoleted db.mssql.instance_name | Removed, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0116:db.redis.database_index",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[116]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "db.redis.database_index",
+      "summary": "uncategorized db.redis.database_index | Uncategorized.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0119:db.sql.table",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[119]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "db.sql.table",
+      "summary": "uncategorized db.sql.table | Replaced by `db.collection.name`, but only if not extracting the value from `db.query.text`.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0122:db.user",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[122]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "db.user",
+      "summary": "obsoleted db.user | Removed, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0349:message.compressed_size",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[349]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "message.compressed_size",
+      "summary": "obsoleted message.compressed_size | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0350:message.id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[350]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "message.id",
+      "summary": "obsoleted message.id | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0351:message.type",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[351]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "message.type",
+      "summary": "obsoleted message.type | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0352:message.uncompressed_size",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[352]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "message.uncompressed_size",
+      "summary": "obsoleted message.uncompressed_size | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0414:rpc.grpc.status_code",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[414]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "rpc.grpc.status_code",
+      "summary": "uncategorized rpc.grpc.status_code | Use string representation of the gRPC status code on the `rpc.response.status_code` attribute.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0415:rpc.jsonrpc.error_code",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[415]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "rpc.jsonrpc.error_code",
+      "summary": "uncategorized rpc.jsonrpc.error_code | Use string representation of the error code on the `rpc.response.status_code` attribute.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0416:rpc.jsonrpc.error_message",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[416]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "rpc.jsonrpc.error_message",
+      "summary": "uncategorized rpc.jsonrpc.error_message | Use the span status description when reporting JSON-RPC spans.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0417:rpc.message.compressed_size",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[417]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "rpc.message.compressed_size",
+      "summary": "obsoleted rpc.message.compressed_size | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0418:rpc.message.id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[418]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "rpc.message.id",
+      "summary": "obsoleted rpc.message.id | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0419:rpc.message.type",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[419]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "rpc.message.type",
+      "summary": "obsoleted rpc.message.type | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0420:rpc.message.uncompressed_size",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[420]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_obsoleted",
+      "source_key": "rpc.message.uncompressed_size",
+      "summary": "obsoleted rpc.message.uncompressed_size | Deprecated, no replacement at this time.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0425:rpc.service",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[425]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_uncategorized",
+      "source_key": "rpc.service",
+      "summary": "uncategorized rpc.service | Value should be included in `rpc.method` which is expected to be a fully-qualified name.",
+      "translation_eligible": false
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0481:db.cosmosdb.client_id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[481]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.client_id",
+      "target_keys": [
+        "azure.client.id"
+      ],
+      "summary": "renamed db.cosmosdb.client_id -\u003e azure.client.id | Replaced by `azure.client.id`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0482:db.cosmosdb.connection_mode",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[482]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.connection_mode",
+      "target_keys": [
+        "azure.cosmosdb.connection.mode"
+      ],
+      "summary": "renamed db.cosmosdb.connection_mode -\u003e azure.cosmosdb.connection.mode | Replaced by `azure.cosmosdb.connection.mode`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0483:db.cosmosdb.request_charge",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[483]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.request_charge",
+      "target_keys": [
+        "azure.cosmosdb.operation.request_charge"
+      ],
+      "summary": "renamed db.cosmosdb.request_charge -\u003e azure.cosmosdb.operation.request_charge | Replaced by `azure.cosmosdb.operation.request_charge`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0484:db.cosmosdb.request_content_length",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[484]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.request_content_length",
+      "target_keys": [
+        "azure.cosmosdb.request.body.size"
+      ],
+      "summary": "renamed db.cosmosdb.request_content_length -\u003e azure.cosmosdb.request.body.size | Replaced by `azure.cosmosdb.request.body.size`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0485:db.cosmosdb.sub_status_code",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[485]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.sub_status_code",
+      "target_keys": [
+        "azure.cosmosdb.response.sub_status_code"
+      ],
+      "summary": "renamed db.cosmosdb.sub_status_code -\u003e azure.cosmosdb.response.sub_status_code | Replaced by `azure.cosmosdb.response.sub_status_code`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0486:db.cassandra.consistency_level",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[486]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.consistency_level",
+      "target_keys": [
+        "cassandra.consistency.level"
+      ],
+      "summary": "renamed db.cassandra.consistency_level -\u003e cassandra.consistency.level | Replaced by `cassandra.consistency.level`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0487:db.cassandra.coordinator.dc",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[487]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.coordinator.dc",
+      "target_keys": [
+        "cassandra.coordinator.dc"
+      ],
+      "summary": "renamed db.cassandra.coordinator.dc -\u003e cassandra.coordinator.dc | Replaced by `cassandra.coordinator.dc`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0488:db.cassandra.coordinator.id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[488]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.coordinator.id",
+      "target_keys": [
+        "cassandra.coordinator.id"
+      ],
+      "summary": "renamed db.cassandra.coordinator.id -\u003e cassandra.coordinator.id | Replaced by `cassandra.coordinator.id`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0489:db.cassandra.page_size",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[489]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.page_size",
+      "target_keys": [
+        "cassandra.page.size"
+      ],
+      "summary": "renamed db.cassandra.page_size -\u003e cassandra.page.size | Replaced by `cassandra.page.size`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0490:db.cassandra.idempotence",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[490]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.idempotence",
+      "target_keys": [
+        "cassandra.query.idempotent"
+      ],
+      "summary": "renamed db.cassandra.idempotence -\u003e cassandra.query.idempotent | Replaced by `cassandra.query.idempotent`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0491:db.cassandra.speculative_execution_count",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[491]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.speculative_execution_count",
+      "target_keys": [
+        "cassandra.speculative_execution.count"
+      ],
+      "summary": "renamed db.cassandra.speculative_execution_count -\u003e cassandra.speculative_execution.count | Replaced by `cassandra.speculative_execution.count`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0502:db.client.connections.pool.name",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[502]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.client.connections.pool.name",
+      "target_keys": [
+        "db.client.connection.pool.name"
+      ],
+      "summary": "renamed db.client.connections.pool.name -\u003e db.client.connection.pool.name | Replaced by `db.client.connection.pool.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0504:db.client.connections.state",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[504]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.client.connections.state",
+      "target_keys": [
+        "db.client.connection.state"
+      ],
+      "summary": "renamed db.client.connections.state -\u003e db.client.connection.state | Replaced by `db.client.connection.state`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0506:db.cassandra.table",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[506]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cassandra.table",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "renamed db.cassandra.table -\u003e db.collection.name | Replaced by `db.collection.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0507:db.cosmosdb.container",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[507]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.cosmosdb.container",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "renamed db.cosmosdb.container -\u003e db.collection.name | Replaced by `db.collection.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0508:db.mongodb.collection",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[508]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.mongodb.collection",
+      "target_keys": [
+        "db.collection.name"
+      ],
+      "summary": "renamed db.mongodb.collection -\u003e db.collection.name | Replaced by `db.collection.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0509:db.elasticsearch.cluster.name",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[509]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.elasticsearch.cluster.name",
+      "target_keys": [
+        "db.namespace"
+      ],
+      "summary": "renamed db.elasticsearch.cluster.name -\u003e db.namespace | Replaced by `db.namespace`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0510:db.name",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[510]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.name",
+      "target_keys": [
+        "db.namespace"
+      ],
+      "summary": "renamed db.name -\u003e db.namespace | Replaced by `db.namespace`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0511:db.operation",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[511]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.operation",
+      "target_keys": [
+        "db.operation.name"
+      ],
+      "summary": "renamed db.operation -\u003e db.operation.name | Replaced by `db.operation.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0512:db.elasticsearch.path_parts",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[512]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.elasticsearch.path_parts",
+      "target_keys": [
+        "db.operation.parameter"
+      ],
+      "summary": "renamed db.elasticsearch.path_parts -\u003e db.operation.parameter | Replaced by `db.operation.parameter`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0513:db.statement",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[513]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.statement",
+      "target_keys": [
+        "db.query.text"
+      ],
+      "summary": "renamed db.statement -\u003e db.query.text | Replaced by `db.query.text`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0514:db.system",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[514]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.system",
+      "target_keys": [
+        "db.system.name"
+      ],
+      "summary": "renamed db.system -\u003e db.system.name | Replaced by `db.system.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0516:db.elasticsearch.node.name",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[516]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "db.elasticsearch.node.name",
+      "target_keys": [
+        "elasticsearch.node.name"
+      ],
+      "summary": "renamed db.elasticsearch.node.name -\u003e elasticsearch.node.name | Replaced by `elasticsearch.node.name`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0527:rpc.jsonrpc.version",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[527]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.jsonrpc.version",
+      "target_keys": [
+        "jsonrpc.protocol.version"
+      ],
+      "summary": "renamed rpc.jsonrpc.version -\u003e jsonrpc.protocol.version | Replaced by `jsonrpc.protocol.version`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0528:rpc.jsonrpc.request_id",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[528]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.jsonrpc.request_id",
+      "target_keys": [
+        "jsonrpc.request.id"
+      ],
+      "summary": "renamed rpc.jsonrpc.request_id -\u003e jsonrpc.request.id | Replaced by `jsonrpc.request.id`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0551:rpc.connect_rpc.request.metadata",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[551]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.connect_rpc.request.metadata",
+      "target_keys": [
+        "rpc.request.metadata"
+      ],
+      "summary": "renamed rpc.connect_rpc.request.metadata -\u003e rpc.request.metadata | Replaced by `rpc.request.metadata`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0552:rpc.grpc.request.metadata",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[552]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.grpc.request.metadata",
+      "target_keys": [
+        "rpc.request.metadata"
+      ],
+      "summary": "renamed rpc.grpc.request.metadata -\u003e rpc.request.metadata | Replaced by `rpc.request.metadata`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0553:rpc.connect_rpc.response.metadata",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[553]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.connect_rpc.response.metadata",
+      "target_keys": [
+        "rpc.response.metadata"
+      ],
+      "summary": "renamed rpc.connect_rpc.response.metadata -\u003e rpc.response.metadata | Replaced by `rpc.response.metadata`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0554:rpc.grpc.response.metadata",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[554]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.grpc.response.metadata",
+      "target_keys": [
+        "rpc.response.metadata"
+      ],
+      "summary": "renamed rpc.grpc.response.metadata -\u003e rpc.response.metadata | Replaced by `rpc.response.metadata`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0555:rpc.connect_rpc.error_code",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[555]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.connect_rpc.error_code",
+      "target_keys": [
+        "rpc.response.status_code"
+      ],
+      "summary": "renamed rpc.connect_rpc.error_code -\u003e rpc.response.status_code | Replaced by `rpc.response.status_code`.",
+      "translation_eligible": true
+    },
+    {
+      "id": "weaver-diff:v1.26.0-to-v1.41.0:registry_attributes:0556:rpc.system",
+      "authority": "weaver_diff",
+      "locator": "changes.registry_attributes[556]",
+      "domain": "spans",
+      "phase": "post_schema",
+      "category": "key",
+      "kind": "registry_renamed",
+      "source_key": "rpc.system",
+      "target_keys": [
+        "rpc.system.name"
+      ],
+      "summary": "renamed rpc.system -\u003e rpc.system.name | Replaced by `rpc.system.name`.",
+      "translation_eligible": true
+    }
+  ]
+}

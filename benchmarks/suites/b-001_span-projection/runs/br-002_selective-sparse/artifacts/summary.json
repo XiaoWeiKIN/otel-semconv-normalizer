@@ -1,0 +1,469 @@
+{
+  "cases": {
+    "Unchanged8": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 341.55,
+        "mad_ns": 6.550000000000011,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 391.3,
+        "mad_ns": 26.099999999999966,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.8728596984410938,
+      "noise_band": 0.25763406349857293,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Unchanged32": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1062.0,
+        "mad_ns": 46.5,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1178.5,
+        "mad_ns": 41.0,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "ratio": 0.9011455239711498,
+      "noise_band": 0.23572589401925748,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Unchanged64": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 2008.5,
+        "mad_ns": 83.5,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 2257.5,
+        "mad_ns": 189.0,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "ratio": 0.8897009966777408,
+      "noise_band": 0.3758827309515953,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "CanonicalHTTP8": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 582.5999999999999,
+        "mad_ns": 28.999999999999886,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 842.5,
+        "mad_ns": 63.55000000000001,
+        "bytes": 544.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.6915133531157269,
+      "noise_band": 0.37562138821063,
+      "threshold": 0.8,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "HTTP": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 2007.0,
+        "mad_ns": 170.5,
+        "bytes": 872.0,
+        "allocs": 21.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1906.0,
+        "mad_ns": 109.5,
+        "bytes": 872.0,
+        "allocs": 21.0
+      },
+      "ratio": 1.05299055613851,
+      "noise_band": 0.4272084692035379,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "DB": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1578.5,
+        "mad_ns": 124.5,
+        "bytes": 536.0,
+        "allocs": 12.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 2110.5,
+        "mad_ns": 251.5,
+        "bytes": 536.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.7479270315091211,
+      "noise_band": 0.5941152646649552,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "RPC": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1839.5,
+        "mad_ns": 212.5,
+        "bytes": 608.0,
+        "allocs": 17.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 2325.0,
+        "mad_ns": 317.5,
+        "bytes": 608.0,
+        "allocs": 17.0
+      },
+      "ratio": 0.7911827956989247,
+      "noise_band": 0.7562389849976764,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "MissingContext": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 870.9000000000001,
+        "mad_ns": 111.24999999999989,
+        "bytes": 656.0,
+        "allocs": 11.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1171.5,
+        "mad_ns": 191.2,
+        "bytes": 656.0,
+        "allocs": 11.0
+      },
+      "ratio": 0.7434058898847632,
+      "noise_band": 0.8728529319530368,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Invalid": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 868.55,
+        "mad_ns": 124.09999999999997,
+        "bytes": 816.0,
+        "allocs": 14.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1347.0,
+        "mad_ns": 208.0,
+        "bytes": 816.0,
+        "allocs": 14.0
+      },
+      "ratio": 0.6448032665181885,
+      "noise_band": 0.8918971139339699,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Sparse1Of32": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1389.0,
+        "mad_ns": 155.0,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 3774.5,
+        "mad_ns": 646.5,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "ratio": 0.36799576102795073,
+      "noise_band": 0.8486161112409721,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Sparse2Of32": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 1600.5,
+        "mad_ns": 155.0,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 4167.0,
+        "mad_ns": 764.5,
+        "bytes": 2016.0,
+        "allocs": 36.0
+      },
+      "ratio": 0.38408927285817135,
+      "noise_band": 0.8409301763825154,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Dense32": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 4435.0,
+        "mad_ns": 379.0,
+        "bytes": 6960.0,
+        "allocs": 138.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 5008.0,
+        "mad_ns": 590.5,
+        "bytes": 6960.0,
+        "allocs": 138.0
+      },
+      "ratio": 0.8855830670926518,
+      "noise_band": 0.6101038113539194,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Sparse1Of64": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 2450.5,
+        "mad_ns": 119.0,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 8554.5,
+        "mad_ns": 784.5,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "ratio": 0.2864574200713075,
+      "noise_band": 0.420802912931166,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Sparse2Of64": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 2901.5,
+        "mad_ns": 210.5,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 9066.5,
+        "mad_ns": 892.0,
+        "bytes": 3808.0,
+        "allocs": 68.0
+      },
+      "ratio": 0.32002426515193294,
+      "noise_band": 0.5127985295697303,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Dense64": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 8694.5,
+        "mad_ns": 772.0,
+        "bytes": 14384.0,
+        "allocs": 267.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 9399.0,
+        "mad_ns": 857.0,
+        "bytes": 14384.0,
+        "allocs": 267.0
+      },
+      "ratio": 0.925045217576338,
+      "noise_band": 0.53991503299658,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Sparse1Of128": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 5144.0,
+        "mad_ns": 763.0,
+        "bytes": 7520.0,
+        "allocs": 132.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 24696.0,
+        "mad_ns": 1477.5,
+        "bytes": 7520.0,
+        "allocs": 132.0
+      },
+      "ratio": 0.20829284094590217,
+      "noise_band": 0.6244669551890963,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "Sparse2Of128": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 5568.5,
+        "mad_ns": 325.5,
+        "bytes": 7520.0,
+        "allocs": 132.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 24998.5,
+        "mad_ns": 1677.0,
+        "bytes": 7520.0,
+        "allocs": 132.0
+      },
+      "ratio": 0.2227533652019121,
+      "noise_band": 0.3766134830440549,
+      "threshold": 0.75,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Dense128": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 17723.0,
+        "mad_ns": 1614.0,
+        "bytes": 29360.0,
+        "allocs": 524.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 17877.5,
+        "mad_ns": 879.0,
+        "bytes": 29360.0,
+        "allocs": 524.0
+      },
+      "ratio": 0.9913578520486646,
+      "noise_band": 0.42070815639859666,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": false
+    },
+    "CanonicalDB8": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 719.6,
+        "mad_ns": 46.549999999999955,
+        "bytes": 528.0,
+        "allocs": 12.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1103.5,
+        "mad_ns": 69.5,
+        "bytes": 528.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.6521069324875397,
+      "noise_band": 0.3830104160973483,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "CanonicalRPC8": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 846.25,
+        "mad_ns": 21.600000000000023,
+        "bytes": 528.0,
+        "allocs": 12.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 1304.0,
+        "mad_ns": 85.5,
+        "bytes": 528.0,
+        "allocs": 12.0
+      },
+      "ratio": 0.6489647239263804,
+      "noise_band": 0.2732755706790152,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    },
+    "Mixed": {
+      "Candidate": {
+        "n": 8,
+        "median_ns": 60500.0,
+        "mad_ns": 3793.5,
+        "bytes": 88848.0,
+        "allocs": 1628.0
+      },
+      "Prior": {
+        "n": 8,
+        "median_ns": 123166.0,
+        "mad_ns": 6448.0,
+        "bytes": 88848.0,
+        "allocs": 1628.0
+      },
+      "ratio": 0.4912069889417534,
+      "noise_band": 0.3451637684973434,
+      "threshold": 1.1,
+      "latency_pass": true,
+      "allocation_pass": true,
+      "margin_pass": true
+    }
+  },
+  "protocol_geometric_mean": 0.7853129397736462,
+  "protocol_noise_band": 0.7084625529506352,
+  "outcome": "inconclusive"
+}
